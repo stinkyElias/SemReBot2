@@ -1,0 +1,95 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.7 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found ament_index_cpp: 1.4.0 (/opt/ros/humble/share/ament_index_cpp/cmake)
+-- Found rclcpp: 16.0.8 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+-- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Found rclcpp_action: 16.0.8 (/opt/ros/humble/share/rclcpp_action/cmake)
+-- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)
+-- Found tf2_geometry_msgs: 0.25.5 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+-- Found Eigen3: TRUE (found version "3.4.0") 
+-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+-- Found nav2_msgs: 1.1.12 (/opt/ros/humble/share/nav2_msgs/cmake)
+-- Found plansys2_msgs: 2.0.9 (/opt/ros/humble/share/plansys2_msgs/cmake)
+-- Found plansys2_executor: 2.0.9 (/opt/ros/humble/share/plansys2_executor/cmake)
+-- Found plansys2_bt_actions: 2.0.9 (/opt/ros/humble/share/plansys2_bt_actions/cmake)
+-- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: /home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot/include
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot
+[ 25%] [32mBuilding CXX object CMakeFiles/approach_pallet_bt_node.dir/src/bt_nodes/ApproachPallet.cpp.o[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/move_bt_node.dir/src/bt_nodes/Move.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/lower_fork_bt_node.dir/src/bt_nodes/LowerFork.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/hello_world_node.dir/src/hello_world_node.cpp.o[0m
+[ 41%] [32mBuilding CXX object CMakeFiles/recharge_bt_node.dir/src/bt_nodes/Recharge.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/lift_fork_bt_node.dir/src/bt_nodes/LiftFork.cpp.o[0m
+[01m[K/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot/src/hello_world_node.cpp:3:10:[m[K [01;31m[Kfatal error: [m[Krclcpp/rclcpp.hpp: No such file or directory
+    3 | #include [01;31m[K"rclcpp/rclcpp.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/hello_world_node.dir/build.make:76: CMakeFiles/hello_world_node.dir/src/hello_world_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:277: CMakeFiles/hello_world_node.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+[01m[K/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot/src/bt_nodes/LowerFork.cpp:1:10:[m[K [01;31m[Kfatal error: [m[KLowerFork.hpp: No such file or directory
+    1 | #include [01;31m[K"LowerFork.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot/src/bt_nodes/LiftFork.cpp:1:10:[m[K [01;31m[Kfatal error: [m[KLiftFork.hpp: No such file or directory
+    1 | #include [01;31m[K"LiftFork.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~[m[K
+compilation terminated.
+compilation terminated.
+[01m[K/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot/src/bt_nodes/Move.cpp:1:10:[m[K [01;31m[Kfatal error: [m[KMove.hpp: No such file or directory
+    1 | #include [01;31m[K"Move.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~[m[K
+compilation terminated.
+[01m[K/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot/src/bt_nodes/ApproachPallet.cpp:1:10:[m[K [01;31m[Kfatal error: [m[KApproachPallet.hpp: No such file or directory
+    1 | #include [01;31m[K"ApproachPallet.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot/src/bt_nodes/Recharge.cpp:1:10:[m[K [01;31m[Kfatal error: [m[KRecharge.hpp: No such file or directory
+    1 | #include [01;31m[K"Recharge.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~[m[K
+compilation terminated.
+compilation terminated.
+gmake[2]: *** [CMakeFiles/lift_fork_bt_node.dir/build.make:76: CMakeFiles/lift_fork_bt_node.dir/src/bt_nodes/LiftFork.cpp.o] Error 1
+gmake[2]: *** [CMakeFiles/lower_fork_bt_node.dir/build.make:76: CMakeFiles/lower_fork_bt_node.dir/src/bt_nodes/LowerFork.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:225: CMakeFiles/lift_fork_bt_node.dir/all] Error 2
+gmake[1]: *** [CMakeFiles/Makefile2:251: CMakeFiles/lower_fork_bt_node.dir/all] Error 2
+gmake[2]: *** [CMakeFiles/approach_pallet_bt_node.dir/build.make:76: CMakeFiles/approach_pallet_bt_node.dir/src/bt_nodes/ApproachPallet.cpp.o] Error 1
+gmake[2]: *** [CMakeFiles/move_bt_node.dir/build.make:76: CMakeFiles/move_bt_node.dir/src/bt_nodes/Move.cpp.o] Error 1
+gmake[2]: *** [CMakeFiles/recharge_bt_node.dir/build.make:76: CMakeFiles/recharge_bt_node.dir/src/bt_nodes/Recharge.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:173: CMakeFiles/approach_pallet_bt_node.dir/all] Error 2
+gmake[1]: *** [CMakeFiles/Makefile2:147: CMakeFiles/move_bt_node.dir/all] Error 2
+gmake[1]: *** [CMakeFiles/Makefile2:199: CMakeFiles/recharge_bt_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

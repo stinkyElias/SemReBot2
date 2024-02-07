@@ -1,0 +1,201 @@
+[0.813s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.813s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f0b209033a0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f0b20ac1510>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f0b20ac1510>>)
+[0.848s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.848s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.848s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.848s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.848s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.848s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.848s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/stinky/Documents/semantic-robot/ros2_ws'
+[0.848s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.848s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.848s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.848s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.848s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.848s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.848s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.849s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.849s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.856s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.856s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.856s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.856s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.856s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.856s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.856s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.856s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.856s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.856s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.856s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.856s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.856s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.856s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.856s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.856s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.856s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.856s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.856s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.856s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.857s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.857s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.857s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.857s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.857s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.857s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.857s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.857s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.857s] Level 1:colcon.colcon_core.package_identification:_identify(src/BehaviorTree.CPP-master) by extensions ['ignore', 'ignore_ament_install']
+[0.857s] Level 1:colcon.colcon_core.package_identification:_identify(src/BehaviorTree.CPP-master) by extension 'ignore'
+[0.857s] Level 1:colcon.colcon_core.package_identification:_identify(src/BehaviorTree.CPP-master) by extension 'ignore_ament_install'
+[0.857s] Level 1:colcon.colcon_core.package_identification:_identify(src/BehaviorTree.CPP-master) by extensions ['colcon_pkg']
+[0.857s] Level 1:colcon.colcon_core.package_identification:_identify(src/BehaviorTree.CPP-master) by extension 'colcon_pkg'
+[0.857s] Level 1:colcon.colcon_core.package_identification:_identify(src/BehaviorTree.CPP-master) by extensions ['colcon_meta']
+[0.857s] Level 1:colcon.colcon_core.package_identification:_identify(src/BehaviorTree.CPP-master) by extension 'colcon_meta'
+[0.857s] Level 1:colcon.colcon_core.package_identification:_identify(src/BehaviorTree.CPP-master) by extensions ['ros']
+[0.857s] Level 1:colcon.colcon_core.package_identification:_identify(src/BehaviorTree.CPP-master) by extension 'ros'
+[0.861s] DEBUG:colcon.colcon_core.package_identification:Package 'src/BehaviorTree.CPP-master' with type 'ros.catkin' and name 'behaviortree_cpp'
+[0.862s] Level 1:colcon.colcon_core.package_identification:_identify(src/bt_plansys_turtlebot) by extensions ['ignore', 'ignore_ament_install']
+[0.862s] Level 1:colcon.colcon_core.package_identification:_identify(src/bt_plansys_turtlebot) by extension 'ignore'
+[0.862s] Level 1:colcon.colcon_core.package_identification:_identify(src/bt_plansys_turtlebot) by extension 'ignore_ament_install'
+[0.862s] Level 1:colcon.colcon_core.package_identification:_identify(src/bt_plansys_turtlebot) by extensions ['colcon_pkg']
+[0.862s] Level 1:colcon.colcon_core.package_identification:_identify(src/bt_plansys_turtlebot) by extension 'colcon_pkg'
+[0.862s] Level 1:colcon.colcon_core.package_identification:_identify(src/bt_plansys_turtlebot) by extensions ['colcon_meta']
+[0.862s] Level 1:colcon.colcon_core.package_identification:_identify(src/bt_plansys_turtlebot) by extension 'colcon_meta'
+[0.862s] Level 1:colcon.colcon_core.package_identification:_identify(src/bt_plansys_turtlebot) by extensions ['ros']
+[0.862s] Level 1:colcon.colcon_core.package_identification:_identify(src/bt_plansys_turtlebot) by extension 'ros'
+[0.863s] DEBUG:colcon.colcon_core.package_identification:Package 'src/bt_plansys_turtlebot' with type 'ros.ament_cmake' and name 'bt_plansys_turtlebot'
+[0.863s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) by extensions ['ignore', 'ignore_ament_install']
+[0.863s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) by extension 'ignore'
+[0.863s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) ignored
+[0.863s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) by extensions ['ignore', 'ignore_ament_install']
+[0.863s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) by extension 'ignore'
+[0.863s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) ignored
+[0.863s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extensions ['ignore', 'ignore_ament_install']
+[0.863s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extension 'ignore'
+[0.863s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) ignored
+[0.863s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.863s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.863s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.863s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.863s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.936s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.936s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.970s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 0 installed packages in /home/stinky/Documents/semantic-robot/ros2_ws/install
+[0.982s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 6 installed packages in /home/stinky/Documents/plansys2_ws/install
+[0.994s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/stinky/Documents/ros2_ws/install
+[1.007s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 421 installed packages in /opt/ros/humble
+[1.008s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.085s] Level 5:colcon.colcon_core.verb:set package 'behaviortree_cpp' build argument 'cmake_args' from command line to 'None'
+[1.085s] Level 5:colcon.colcon_core.verb:set package 'behaviortree_cpp' build argument 'cmake_target' from command line to 'None'
+[1.085s] Level 5:colcon.colcon_core.verb:set package 'behaviortree_cpp' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.085s] Level 5:colcon.colcon_core.verb:set package 'behaviortree_cpp' build argument 'cmake_clean_cache' from command line to 'False'
+[1.085s] Level 5:colcon.colcon_core.verb:set package 'behaviortree_cpp' build argument 'cmake_clean_first' from command line to 'False'
+[1.085s] Level 5:colcon.colcon_core.verb:set package 'behaviortree_cpp' build argument 'cmake_force_configure' from command line to 'False'
+[1.085s] Level 5:colcon.colcon_core.verb:set package 'behaviortree_cpp' build argument 'ament_cmake_args' from command line to 'None'
+[1.085s] Level 5:colcon.colcon_core.verb:set package 'behaviortree_cpp' build argument 'catkin_cmake_args' from command line to 'None'
+[1.085s] Level 5:colcon.colcon_core.verb:set package 'behaviortree_cpp' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.085s] DEBUG:colcon.colcon_core.verb:Building package 'behaviortree_cpp' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/stinky/Documents/semantic-robot/ros2_ws/build/behaviortree_cpp', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp', 'merge_install': False, 'path': '/home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master', 'symlink_install': True, 'test_result_base': None}
+[1.097s] Level 5:colcon.colcon_core.verb:set package 'bt_plansys_turtlebot' build argument 'cmake_args' from command line to 'None'
+[1.097s] Level 5:colcon.colcon_core.verb:set package 'bt_plansys_turtlebot' build argument 'cmake_target' from command line to 'None'
+[1.097s] Level 5:colcon.colcon_core.verb:set package 'bt_plansys_turtlebot' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.097s] Level 5:colcon.colcon_core.verb:set package 'bt_plansys_turtlebot' build argument 'cmake_clean_cache' from command line to 'False'
+[1.097s] Level 5:colcon.colcon_core.verb:set package 'bt_plansys_turtlebot' build argument 'cmake_clean_first' from command line to 'False'
+[1.097s] Level 5:colcon.colcon_core.verb:set package 'bt_plansys_turtlebot' build argument 'cmake_force_configure' from command line to 'False'
+[1.097s] Level 5:colcon.colcon_core.verb:set package 'bt_plansys_turtlebot' build argument 'ament_cmake_args' from command line to 'None'
+[1.097s] Level 5:colcon.colcon_core.verb:set package 'bt_plansys_turtlebot' build argument 'catkin_cmake_args' from command line to 'None'
+[1.097s] Level 5:colcon.colcon_core.verb:set package 'bt_plansys_turtlebot' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.097s] DEBUG:colcon.colcon_core.verb:Building package 'bt_plansys_turtlebot' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot', 'merge_install': False, 'path': '/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot', 'symlink_install': True, 'test_result_base': None}
+[1.109s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.121s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.121s] INFO:colcon.colcon_ros.task.catkin.build:Building ROS package in '/home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master' with build type 'catkin'
+[1.121s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master'
+[1.134s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.134s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.134s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.198s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot' with build type 'ament_cmake'
+[1.198s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot'
+[1.210s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.210s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.275s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/stinky/Documents/semantic-robot/ros2_ws/build/behaviortree_cpp': /usr/bin/cmake /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCATKIN_SYMLINK_INSTALL=ON -DCMAKE_INSTALL_PREFIX=/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp
+[1.277s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot
+[1.950s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/stinky/Documents/semantic-robot/ros2_ws/build/behaviortree_cpp' returned '0': /usr/bin/cmake /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCATKIN_SYMLINK_INSTALL=ON -DCMAKE_INSTALL_PREFIX=/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp
+[1.952s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/stinky/Documents/semantic-robot/ros2_ws/build/behaviortree_cpp': /usr/bin/cmake --build /home/stinky/Documents/semantic-robot/ros2_ws/build/behaviortree_cpp -- -j12 -l12
+[42.219s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/stinky/Documents/semantic-robot/ros2_ws/build/behaviortree_cpp' returned '0': /usr/bin/cmake --build /home/stinky/Documents/semantic-robot/ros2_ws/build/behaviortree_cpp -- -j12 -l12
+[42.473s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/stinky/Documents/semantic-robot/ros2_ws/build/behaviortree_cpp': /usr/bin/cmake --install /home/stinky/Documents/semantic-robot/ros2_ws/build/behaviortree_cpp
+[42.498s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/stinky/Documents/semantic-robot/ros2_ws/build/behaviortree_cpp' returned '0': /usr/bin/cmake --install /home/stinky/Documents/semantic-robot/ros2_ws/build/behaviortree_cpp
+[42.618s] Level 1:colcon.colcon_core.shell:create_environment_hook('behaviortree_cpp', 'ros_package_path')
+[42.632s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/hook/ros_package_path.ps1'
+[42.633s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/hook/ros_package_path.dsv'
+[42.633s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/hook/ros_package_path.sh'
+[42.633s] Level 1:colcon.colcon_core.shell:create_environment_hook('behaviortree_cpp', 'pkg_config_path')
+[42.646s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/hook/pkg_config_path.ps1'
+[42.646s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/hook/pkg_config_path.dsv'
+[42.646s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/hook/pkg_config_path.sh'
+[42.648s] Level 1:colcon.colcon_core.shell:create_environment_hook('behaviortree_cpp', 'pkg_config_path_multiarch')
+[42.661s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/hook/pkg_config_path_multiarch.ps1'
+[42.661s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/hook/pkg_config_path_multiarch.dsv'
+[42.661s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/hook/pkg_config_path_multiarch.sh'
+[42.674s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(behaviortree_cpp)
+[42.688s] Level 1:colcon.colcon_core.environment:checking '/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp' for CMake module files
+[42.688s] Level 1:colcon.colcon_core.environment:checking '/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp' for CMake config files
+[42.689s] Level 1:colcon.colcon_core.shell:create_environment_hook('behaviortree_cpp', 'cmake_prefix_path')
+[42.703s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/hook/cmake_prefix_path.ps1'
+[42.703s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/hook/cmake_prefix_path.dsv'
+[42.703s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/hook/cmake_prefix_path.sh'
+[42.704s] Level 1:colcon.colcon_core.environment:checking '/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/lib'
+[42.704s] Level 1:colcon.colcon_core.shell:create_environment_hook('behaviortree_cpp', 'ld_library_path_lib')
+[42.719s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/hook/ld_library_path_lib.ps1'
+[42.719s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/hook/ld_library_path_lib.dsv'
+[42.720s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/hook/ld_library_path_lib.sh'
+[42.720s] Level 1:colcon.colcon_core.environment:checking '/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/bin'
+[42.720s] Level 1:colcon.colcon_core.shell:create_environment_hook('behaviortree_cpp', 'path')
+[42.733s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/hook/path.ps1'
+[42.733s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/hook/path.dsv'
+[42.734s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/hook/path.sh'
+[42.734s] Level 1:colcon.colcon_core.environment:checking '/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/lib/pkgconfig/behaviortree_cpp.pc'
+[42.734s] Level 1:colcon.colcon_core.environment:checking '/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/lib/python3.10/site-packages'
+[42.734s] Level 1:colcon.colcon_core.environment:checking '/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/bin'
+[42.734s] Level 1:colcon.colcon_core.shell:create_environment_hook('behaviortree_cpp', 'pythonscriptspath')
+[42.747s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/hook/pythonscriptspath.ps1'
+[42.747s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/hook/pythonscriptspath.dsv'
+[42.747s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/hook/pythonscriptspath.sh'
+[42.760s] INFO:colcon.colcon_core.shell:Creating package script '/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/package.ps1'
+[42.760s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/package.dsv'
+[42.761s] INFO:colcon.colcon_core.shell:Creating package script '/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/package.sh'
+[42.761s] INFO:colcon.colcon_core.shell:Creating package script '/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/package.bash'
+[42.762s] INFO:colcon.colcon_core.shell:Creating package script '/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/package.zsh'
+[42.762s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/colcon-core/packages/behaviortree_cpp)
+[44.841s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot
+[44.842s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot -- -j12 -l12
+[44.895s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot -- -j12 -l12
+[44.944s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(bt_plansys_turtlebot)
+[44.959s] Level 1:colcon.colcon_core.environment:checking '/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot' for CMake module files
+[44.959s] Level 1:colcon.colcon_core.environment:checking '/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot' for CMake config files
+[44.959s] Level 1:colcon.colcon_core.environment:checking '/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/bin'
+[44.959s] Level 1:colcon.colcon_core.environment:checking '/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/lib/pkgconfig/bt_plansys_turtlebot.pc'
+[44.959s] Level 1:colcon.colcon_core.environment:checking '/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/lib/python3.10/site-packages'
+[44.959s] Level 1:colcon.colcon_core.environment:checking '/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/bin'
+[44.973s] INFO:colcon.colcon_core.shell:Creating package script '/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/package.ps1'
+[44.974s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/package.dsv'
+[44.974s] INFO:colcon.colcon_core.shell:Creating package script '/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/package.sh'
+[44.974s] INFO:colcon.colcon_core.shell:Creating package script '/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/package.bash'
+[44.974s] INFO:colcon.colcon_core.shell:Creating package script '/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/package.zsh'
+[44.975s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/colcon-core/packages/bt_plansys_turtlebot)
+[44.985s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[44.985s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[44.985s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '2'
+[44.985s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[45.001s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[45.001s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[45.001s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[45.008s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[45.021s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/stinky/Documents/semantic-robot/ros2_ws/install/local_setup.ps1'
+[45.021s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/stinky/Documents/semantic-robot/ros2_ws/install/_local_setup_util_ps1.py'
+[45.022s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/stinky/Documents/semantic-robot/ros2_ws/install/setup.ps1'
+[45.035s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/stinky/Documents/semantic-robot/ros2_ws/install/local_setup.sh'
+[45.035s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/stinky/Documents/semantic-robot/ros2_ws/install/_local_setup_util_sh.py'
+[45.035s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/stinky/Documents/semantic-robot/ros2_ws/install/setup.sh'
+[45.048s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/stinky/Documents/semantic-robot/ros2_ws/install/local_setup.bash'
+[45.048s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/stinky/Documents/semantic-robot/ros2_ws/install/setup.bash'
+[45.061s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/stinky/Documents/semantic-robot/ros2_ws/install/local_setup.zsh'
+[45.061s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/stinky/Documents/semantic-robot/ros2_ws/install/setup.zsh'

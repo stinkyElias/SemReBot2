@@ -1,0 +1,871 @@
+[0.000000] (-) TimerEvent: {}
+[0.000302] (behaviortree_cpp) JobQueued: {'identifier': 'behaviortree_cpp', 'dependencies': OrderedDict()}
+[0.000395] (bt_plansys_turtlebot) JobQueued: {'identifier': 'bt_plansys_turtlebot', 'dependencies': OrderedDict()}
+[0.000475] (behaviortree_cpp) JobStarted: {'identifier': 'behaviortree_cpp'}
+[0.077183] (bt_plansys_turtlebot) JobStarted: {'identifier': 'bt_plansys_turtlebot'}
+[0.099887] (-) TimerEvent: {}
+[0.151760] (behaviortree_cpp) JobProgress: {'identifier': 'behaviortree_cpp', 'progress': 'cmake'}
+[0.151899] (behaviortree_cpp) Command: {'cmd': ['/usr/bin/cmake', '/home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master', '-DCATKIN_INSTALL_INTO_PREFIX_ROOT=0', '-DCATKIN_SYMLINK_INSTALL=ON', '-DCMAKE_INSTALL_PREFIX=/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp'], 'cwd': '/home/stinky/Documents/semantic-robot/ros2_ws/build/behaviortree_cpp', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'stinky'), ('LC_TIME', 'nb_NO.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/stinky/Documents/plansys2_ws/install/plansys2_bt_example/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/stinky'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/stinky/Documents/semantic-robot/ros2_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/home/stinky/.config/autostart/guake.desktop'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'nb_NO.UTF-8'), ('MANAGERPID', '3621'), ('SYSTEMD_EXEC_PID', '3888'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4065'), ('COLCON_PREFIX_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install:/home/stinky/Documents/plansys2_ws/install:/home/stinky/Documents/ros2_ws/install'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'stinky'), ('DESKTOP_AUTOSTART_ID', '103d8713d862813ad5170729707986704400000038880016'), ('JOURNAL_STREAM', '8:157294'), ('_', '/usr/bin/colcon'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'stinky'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/stinky/miniconda3/condabin:/home/stinky/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/Dorte:@/tmp/.ICE-unix/3888,unix/Dorte:/tmp/.ICE-unix/3888'), ('INVOCATION_ID', 'a2d1c2609abd43468bbc512ede82fe5d'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'nb_NO.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'nb_NO.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example_py:/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example:/home/stinky/Documents/plansys2_ws/install/plansys2_patrol_navigation_example:/home/stinky/Documents/plansys2_ws/install/plansys2_multidomain_example:/home/stinky/Documents/plansys2_ws/install/plansys2_cascade_example:/home/stinky/Documents/plansys2_ws/install/plansys2_bt_example:/home/stinky/Documents/ros2_ws/install/turtlebot3_simulations:/home/stinky/Documents/ros2_ws/install/turtlebot3_gazebo:/home/stinky/Documents/ros2_ws/install/turtlebot3_fake_node:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/stinky/miniconda3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'nb_NO.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'nb_NO.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'nb_NO.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('GUAKE_TAB_UUID', 'f20de7b6-addb-4e25-8dc1-31b553ac6755'), ('PWD', '/home/stinky/Documents/semantic-robot/ros2_ws/build/behaviortree_cpp'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/stinky/miniconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example_py/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'nb_NO.UTF-8'), ('LC_PAPER', 'nb_NO.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example_py:/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example:/home/stinky/Documents/plansys2_ws/install/plansys2_patrol_navigation_example:/home/stinky/Documents/plansys2_ws/install/plansys2_multidomain_example:/home/stinky/Documents/plansys2_ws/install/plansys2_cascade_example:/home/stinky/Documents/plansys2_ws/install/plansys2_bt_example:/home/stinky/Documents/ros2_ws/install/turtlebot3_simulations:/home/stinky/Documents/ros2_ws/install/turtlebot3_gazebo:/home/stinky/Documents/ros2_ws/install/turtlebot3_fake_node')]), 'shell': False}
+[0.154366] (bt_plansys_turtlebot) JobProgress: {'identifier': 'bt_plansys_turtlebot', 'progress': 'cmake'}
+[0.154492] (bt_plansys_turtlebot) Command: {'cmd': ['/usr/bin/cmake', '/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot'], 'cwd': '/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'stinky'), ('LC_TIME', 'nb_NO.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/stinky/Documents/plansys2_ws/install/plansys2_bt_example/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/stinky'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/stinky/Documents/semantic-robot/ros2_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/home/stinky/.config/autostart/guake.desktop'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'nb_NO.UTF-8'), ('MANAGERPID', '3621'), ('SYSTEMD_EXEC_PID', '3888'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4065'), ('COLCON_PREFIX_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install:/home/stinky/Documents/plansys2_ws/install:/home/stinky/Documents/ros2_ws/install'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'stinky'), ('DESKTOP_AUTOSTART_ID', '103d8713d862813ad5170729707986704400000038880016'), ('JOURNAL_STREAM', '8:157294'), ('_', '/usr/bin/colcon'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'stinky'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/stinky/miniconda3/condabin:/home/stinky/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/Dorte:@/tmp/.ICE-unix/3888,unix/Dorte:/tmp/.ICE-unix/3888'), ('INVOCATION_ID', 'a2d1c2609abd43468bbc512ede82fe5d'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'nb_NO.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'nb_NO.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example_py:/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example:/home/stinky/Documents/plansys2_ws/install/plansys2_patrol_navigation_example:/home/stinky/Documents/plansys2_ws/install/plansys2_multidomain_example:/home/stinky/Documents/plansys2_ws/install/plansys2_cascade_example:/home/stinky/Documents/plansys2_ws/install/plansys2_bt_example:/home/stinky/Documents/ros2_ws/install/turtlebot3_simulations:/home/stinky/Documents/ros2_ws/install/turtlebot3_gazebo:/home/stinky/Documents/ros2_ws/install/turtlebot3_fake_node:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/stinky/miniconda3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'nb_NO.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'nb_NO.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'nb_NO.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('GUAKE_TAB_UUID', 'f20de7b6-addb-4e25-8dc1-31b553ac6755'), ('PWD', '/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/stinky/miniconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example_py/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'nb_NO.UTF-8'), ('LC_PAPER', 'nb_NO.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example_py:/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example:/home/stinky/Documents/plansys2_ws/install/plansys2_patrol_navigation_example:/home/stinky/Documents/plansys2_ws/install/plansys2_multidomain_example:/home/stinky/Documents/plansys2_ws/install/plansys2_cascade_example:/home/stinky/Documents/plansys2_ws/install/plansys2_bt_example:/home/stinky/Documents/ros2_ws/install/turtlebot3_simulations:/home/stinky/Documents/ros2_ws/install/turtlebot3_gazebo:/home/stinky/Documents/ros2_ws/install/turtlebot3_fake_node:/opt/ros/humble')]), 'shell': False}
+[0.194780] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.195006] (behaviortree_cpp) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.199963] (-) TimerEvent: {}
+[0.235308] (behaviortree_cpp) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.235504] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.240864] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.241502] (behaviortree_cpp) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.293771] (behaviortree_cpp) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.293968] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.298567] (behaviortree_cpp) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.298674] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.298763] (behaviortree_cpp) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.298845] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.299008] (behaviortree_cpp) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.299074] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.300021] (-) TimerEvent: {}
+[0.301114] (behaviortree_cpp) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.301186] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.362402] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.363354] (behaviortree_cpp) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.367345] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.367552] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.367862] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.368414] (behaviortree_cpp) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.368624] (behaviortree_cpp) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.368931] (behaviortree_cpp) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.369401] (behaviortree_cpp) StdoutLine: {'line': b"-- Setting build type to 'Release' as none was specified.\n"}
+[0.370859] (behaviortree_cpp) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[0.370941] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.7 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.400111] (-) TimerEvent: {}
+[0.427138] (behaviortree_cpp) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[0.427346] (behaviortree_cpp) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[0.485689] (behaviortree_cpp) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[0.486366] (behaviortree_cpp) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[0.495528] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter \n'}
+[0.500173] (-) TimerEvent: {}
+[0.536837] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.575721] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found ament_index_cpp: 1.4.0 (/opt/ros/humble/share/ament_index_cpp/cmake)\n'}
+[0.579028] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found rclcpp: 16.0.8 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.600246] (-) TimerEvent: {}
+[0.621267] (behaviortree_cpp) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter \n'}
+[0.626622] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.633152] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.643394] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.657622] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.676368] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.700313] (-) TimerEvent: {}
+[0.702542] (behaviortree_cpp) StdoutLine: {'line': b'-- ------------------------------------------\n'}
+[0.702655] (behaviortree_cpp) StdoutLine: {'line': b'-- BehaviourTree is being built using AMENT.\n'}
+[0.702736] (behaviortree_cpp) StdoutLine: {'line': b'-- ------------------------------------------\n'}
+[0.709375] (behaviortree_cpp) StdoutLine: {'line': b'-- Found ZeroMQ: /usr/lib/x86_64-linux-gnu/libzmq.so  \n'}
+[0.710924] (behaviortree_cpp) StdoutLine: {'line': b'-- Found SQLite3: /usr/include (found version "3.37.2") \n'}
+[0.713248] (behaviortree_cpp) StdoutLine: {'line': b'-- Found ament_index_cpp: 1.4.0 (/opt/ros/humble/share/ament_index_cpp/cmake)\n'}
+[0.716249] (behaviortree_cpp) StdoutLine: {'line': b'-- BTCPP_EXTRA_LIBRARIES: $<BUILD_INTERFACE:ament_index_cpp::ament_index_cpp>;$<BUILD_INTERFACE:/usr/lib/x86_64-linux-gnu/libzmq.so>;$<BUILD_INTERFACE:/usr/lib/x86_64-linux-gnu/libsqlite3.so>\n'}
+[0.716374] (behaviortree_cpp) StdoutLine: {'line': b'-- BTCPP_LIB_DESTINATION:   lib \n'}
+[0.716447] (behaviortree_cpp) StdoutLine: {'line': b'-- BTCPP_INCLUDE_DESTINATION: include \n'}
+[0.716513] (behaviortree_cpp) StdoutLine: {'line': b'-- BTCPP_UNIT_TESTS:   ON \n'}
+[0.719722] (behaviortree_cpp) StdoutLine: {'line': b'-- Found ament_cmake_gtest: 1.3.7 (/opt/ros/humble/share/ament_cmake_gtest/cmake)\n'}
+[0.723123] (behaviortree_cpp) StdoutLine: {'line': b"-- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built\n"}
+[0.741897] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.745833] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)\n'}
+[0.776189] (behaviortree_cpp) StdoutLine: {'line': b'-- Configuring done\n'}
+[0.779410] (bt_plansys_turtlebot) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_cyclonedds_cpp' as default\n"}
+[0.790774] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[0.800384] (-) TimerEvent: {}
+[0.819085] (behaviortree_cpp) StdoutLine: {'line': b'-- Generating done\n'}
+[0.822092] (behaviortree_cpp) StderrLine: {'line': b'\x1b[33mCMake Warning:\n'}
+[0.822206] (behaviortree_cpp) StderrLine: {'line': b'  Manually-specified variables were not used by the project:\n'}
+[0.822279] (behaviortree_cpp) StderrLine: {'line': b'\n'}
+[0.822346] (behaviortree_cpp) StderrLine: {'line': b'    CATKIN_INSTALL_INTO_PREFIX_ROOT\n'}
+[0.822418] (behaviortree_cpp) StderrLine: {'line': b'    CATKIN_SYMLINK_INSTALL\n'}
+[0.822492] (behaviortree_cpp) StderrLine: {'line': b'\n'}
+[0.822595] (behaviortree_cpp) StderrLine: {'line': b'\x1b[0m\n'}
+[0.822669] (behaviortree_cpp) StdoutLine: {'line': b'-- Build files have been written to: /home/stinky/Documents/semantic-robot/ros2_ws/build/behaviortree_cpp\n'}
+[0.828880] (behaviortree_cpp) CommandEnded: {'returncode': 0}
+[0.829409] (behaviortree_cpp) JobProgress: {'identifier': 'behaviortree_cpp', 'progress': 'build'}
+[0.830138] (behaviortree_cpp) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/stinky/Documents/semantic-robot/ros2_ws/build/behaviortree_cpp', '--', '-j12', '-l12'], 'cwd': '/home/stinky/Documents/semantic-robot/ros2_ws/build/behaviortree_cpp', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'stinky'), ('LC_TIME', 'nb_NO.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/stinky/Documents/plansys2_ws/install/plansys2_bt_example/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/stinky'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/stinky/Documents/semantic-robot/ros2_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/home/stinky/.config/autostart/guake.desktop'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'nb_NO.UTF-8'), ('MANAGERPID', '3621'), ('SYSTEMD_EXEC_PID', '3888'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4065'), ('COLCON_PREFIX_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install:/home/stinky/Documents/plansys2_ws/install:/home/stinky/Documents/ros2_ws/install'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'stinky'), ('DESKTOP_AUTOSTART_ID', '103d8713d862813ad5170729707986704400000038880016'), ('JOURNAL_STREAM', '8:157294'), ('_', '/usr/bin/colcon'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'stinky'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/stinky/miniconda3/condabin:/home/stinky/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/Dorte:@/tmp/.ICE-unix/3888,unix/Dorte:/tmp/.ICE-unix/3888'), ('INVOCATION_ID', 'a2d1c2609abd43468bbc512ede82fe5d'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'nb_NO.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'nb_NO.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example_py:/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example:/home/stinky/Documents/plansys2_ws/install/plansys2_patrol_navigation_example:/home/stinky/Documents/plansys2_ws/install/plansys2_multidomain_example:/home/stinky/Documents/plansys2_ws/install/plansys2_cascade_example:/home/stinky/Documents/plansys2_ws/install/plansys2_bt_example:/home/stinky/Documents/ros2_ws/install/turtlebot3_simulations:/home/stinky/Documents/ros2_ws/install/turtlebot3_gazebo:/home/stinky/Documents/ros2_ws/install/turtlebot3_fake_node:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/stinky/miniconda3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'nb_NO.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'nb_NO.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'nb_NO.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('GUAKE_TAB_UUID', 'f20de7b6-addb-4e25-8dc1-31b553ac6755'), ('PWD', '/home/stinky/Documents/semantic-robot/ros2_ws/build/behaviortree_cpp'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/stinky/miniconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example_py/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'nb_NO.UTF-8'), ('LC_PAPER', 'nb_NO.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example_py:/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example:/home/stinky/Documents/plansys2_ws/install/plansys2_patrol_navigation_example:/home/stinky/Documents/plansys2_ws/install/plansys2_multidomain_example:/home/stinky/Documents/plansys2_ws/install/plansys2_cascade_example:/home/stinky/Documents/plansys2_ws/install/plansys2_bt_example:/home/stinky/Documents/ros2_ws/install/turtlebot3_simulations:/home/stinky/Documents/ros2_ws/install/turtlebot3_gazebo:/home/stinky/Documents/ros2_ws/install/turtlebot3_fake_node')]), 'shell': False}
+[0.850548] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[0.850873] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[0.867904] (behaviortree_cpp) StdoutLine: {'line': b'[  1%] \x1b[32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o\x1b[0m\n'}
+[0.868118] (behaviortree_cpp) StdoutLine: {'line': b'[  2%] \x1b[32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o\x1b[0m\n'}
+[0.868214] (behaviortree_cpp) StdoutLine: {'line': b'[  3%] \x1b[32mBuilding CXX object 3rdparty/lexy/src/CMakeFiles/lexy_file.dir/input/file.cpp.o\x1b[0m\n'}
+[0.900503] (-) TimerEvent: {}
+[0.908080] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[0.908763] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[0.958734] (behaviortree_cpp) StdoutLine: {'line': b'[  4%] \x1b[32m\x1b[1mLinking CXX static library liblexy_file.a\x1b[0m\n'}
+[1.000615] (-) TimerEvent: {}
+[1.013256] (behaviortree_cpp) StdoutLine: {'line': b'[  4%] Built target lexy_file\n'}
+[1.033557] (behaviortree_cpp) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding CXX object CMakeFiles/behaviortree_cpp.dir/src/basic_types.cpp.o\x1b[0m\n'}
+[1.033837] (behaviortree_cpp) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding CXX object CMakeFiles/behaviortree_cpp.dir/src/decorator_node.cpp.o\x1b[0m\n'}
+[1.033997] (behaviortree_cpp) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding CXX object CMakeFiles/behaviortree_cpp.dir/src/control_node.cpp.o\x1b[0m\n'}
+[1.034185] (behaviortree_cpp) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding CXX object CMakeFiles/behaviortree_cpp.dir/src/action_node.cpp.o\x1b[0m\n'}
+[1.034347] (behaviortree_cpp) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding CXX object CMakeFiles/behaviortree_cpp.dir/src/bt_factory.cpp.o\x1b[0m\n'}
+[1.034504] (behaviortree_cpp) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding CXX object CMakeFiles/behaviortree_cpp.dir/src/blackboard.cpp.o\x1b[0m\n'}
+[1.036005] (behaviortree_cpp) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding CXX object CMakeFiles/behaviortree_cpp.dir/src/behavior_tree.cpp.o\x1b[0m\n'}
+[1.036156] (behaviortree_cpp) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding CXX object CMakeFiles/behaviortree_cpp.dir/src/condition_node.cpp.o\x1b[0m\n'}
+[1.038163] (behaviortree_cpp) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding CXX object CMakeFiles/behaviortree_cpp.dir/src/shared_library.cpp.o\x1b[0m\n'}
+[1.042718] (behaviortree_cpp) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding CXX object CMakeFiles/behaviortree_cpp.dir/src/tree_node.cpp.o\x1b[0m\n'}
+[1.045357] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found rclcpp_action: 16.0.8 (/opt/ros/humble/share/rclcpp_action/cmake)\n'}
+[1.100724] (-) TimerEvent: {}
+[1.201120] (-) TimerEvent: {}
+[1.223545] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[1.301239] (-) TimerEvent: {}
+[1.366828] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found tf2_geometry_msgs: 0.25.5 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)\n'}
+[1.401350] (-) TimerEvent: {}
+[1.433263] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)\n'}
+[1.434898] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0") \n'}
+[1.435092] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[1.501463] (-) TimerEvent: {}
+[1.601823] (-) TimerEvent: {}
+[1.702179] (-) TimerEvent: {}
+[1.742546] (behaviortree_cpp) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding CXX object CMakeFiles/behaviortree_cpp.dir/src/script_parser.cpp.o\x1b[0m\n'}
+[1.802294] (-) TimerEvent: {}
+[1.872837] (behaviortree_cpp) StdoutLine: {'line': b'[ 13%] \x1b[32m\x1b[1mLinking CXX static library libgtest_main.a\x1b[0m\n'}
+[1.902411] (-) TimerEvent: {}
+[1.991350] (behaviortree_cpp) StdoutLine: {'line': b'[ 13%] Built target gtest_main\n'}
+[2.002537] (-) TimerEvent: {}
+[2.005788] (behaviortree_cpp) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding CXX object CMakeFiles/behaviortree_cpp.dir/src/json_export.cpp.o\x1b[0m\n'}
+[2.008282] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found nav2_msgs: 1.1.12 (/opt/ros/humble/share/nav2_msgs/cmake)\n'}
+[2.102666] (-) TimerEvent: {}
+[2.203081] (-) TimerEvent: {}
+[2.303437] (-) TimerEvent: {}
+[2.403830] (-) TimerEvent: {}
+[2.494997] (behaviortree_cpp) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding CXX object CMakeFiles/behaviortree_cpp.dir/src/xml_parsing.cpp.o\x1b[0m\n'}
+[2.499216] (behaviortree_cpp) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding CXX object CMakeFiles/behaviortree_cpp.dir/src/actions/test_node.cpp.o\x1b[0m\n'}
+[2.503920] (-) TimerEvent: {}
+[2.535019] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found plansys2_msgs: 2.0.9 (/opt/ros/humble/share/plansys2_msgs/cmake)\n'}
+[2.601556] (behaviortree_cpp) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding CXX object CMakeFiles/behaviortree_cpp.dir/src/actions/sleep_node.cpp.o\x1b[0m\n'}
+[2.603993] (-) TimerEvent: {}
+[2.704391] (-) TimerEvent: {}
+[2.712569] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found plansys2_executor: 2.0.9 (/opt/ros/humble/share/plansys2_executor/cmake)\n'}
+[2.759029] (behaviortree_cpp) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding CXX object CMakeFiles/behaviortree_cpp.dir/src/decorators/delay_node.cpp.o\x1b[0m\n'}
+[2.778403] (behaviortree_cpp) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding CXX object CMakeFiles/behaviortree_cpp.dir/src/decorators/inverter_node.cpp.o\x1b[0m\n'}
+[2.804507] (-) TimerEvent: {}
+[2.905038] (-) TimerEvent: {}
+[3.005541] (-) TimerEvent: {}
+[3.106042] (-) TimerEvent: {}
+[3.206529] (-) TimerEvent: {}
+[3.223063] (behaviortree_cpp) StdoutLine: {'line': b'[ 19%] \x1b[32mBuilding CXX object CMakeFiles/behaviortree_cpp.dir/src/decorators/repeat_node.cpp.o\x1b[0m\n'}
+[3.303219] (behaviortree_cpp) StdoutLine: {'line': b'[ 19%] \x1b[32mBuilding CXX object CMakeFiles/behaviortree_cpp.dir/src/decorators/retry_node.cpp.o\x1b[0m\n'}
+[3.306644] (-) TimerEvent: {}
+[3.407162] (-) TimerEvent: {}
+[3.507768] (-) TimerEvent: {}
+[3.608428] (-) TimerEvent: {}
+[3.709102] (-) TimerEvent: {}
+[3.801664] (behaviortree_cpp) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/behaviortree_cpp.dir/src/decorators/timeout_node.cpp.o\x1b[0m\n'}
+[3.809227] (-) TimerEvent: {}
+[3.909780] (-) TimerEvent: {}
+[4.010285] (-) TimerEvent: {}
+[4.110993] (-) TimerEvent: {}
+[4.137634] (behaviortree_cpp) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/behaviortree_cpp.dir/src/decorators/subtree_node.cpp.o\x1b[0m\n'}
+[4.211108] (-) TimerEvent: {}
+[4.265075] (behaviortree_cpp) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding CXX object CMakeFiles/behaviortree_cpp.dir/src/controls/if_then_else_node.cpp.o\x1b[0m\n'}
+[4.311229] (-) TimerEvent: {}
+[4.411801] (-) TimerEvent: {}
+[4.512340] (-) TimerEvent: {}
+[4.612883] (-) TimerEvent: {}
+[4.713421] (-) TimerEvent: {}
+[4.813992] (-) TimerEvent: {}
+[4.914624] (-) TimerEvent: {}
+[5.015148] (-) TimerEvent: {}
+[5.115689] (-) TimerEvent: {}
+[5.193324] (behaviortree_cpp) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding CXX object CMakeFiles/behaviortree_cpp.dir/src/controls/fallback_node.cpp.o\x1b[0m\n'}
+[5.215803] (-) TimerEvent: {}
+[5.316299] (-) TimerEvent: {}
+[5.365639] (behaviortree_cpp) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object CMakeFiles/behaviortree_cpp.dir/src/controls/parallel_node.cpp.o\x1b[0m\n'}
+[5.380206] (behaviortree_cpp) StdoutLine: {'line': b'[ 24%] \x1b[32mBuilding CXX object CMakeFiles/behaviortree_cpp.dir/src/controls/parallel_all_node.cpp.o\x1b[0m\n'}
+[5.416407] (-) TimerEvent: {}
+[5.516896] (-) TimerEvent: {}
+[5.556299] (behaviortree_cpp) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/behaviortree_cpp.dir/src/controls/reactive_sequence.cpp.o\x1b[0m\n'}
+[5.612397] (behaviortree_cpp) StdoutLine: {'line': b'[ 26%] \x1b[32mBuilding CXX object CMakeFiles/behaviortree_cpp.dir/src/controls/reactive_fallback.cpp.o\x1b[0m\n'}
+[5.616992] (-) TimerEvent: {}
+[5.649177] (behaviortree_cpp) StdoutLine: {'line': b'[ 26%] \x1b[32mBuilding CXX object CMakeFiles/behaviortree_cpp.dir/src/controls/sequence_node.cpp.o\x1b[0m\n'}
+[5.717106] (-) TimerEvent: {}
+[5.827781] (-) TimerEvent: {}
+[5.905598] (behaviortree_cpp) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/behaviortree_cpp.dir/src/controls/sequence_with_memory_node.cpp.o\x1b[0m\n'}
+[5.927903] (-) TimerEvent: {}
+[6.021705] (behaviortree_cpp) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/behaviortree_cpp.dir/src/controls/switch_node.cpp.o\x1b[0m\n'}
+[6.027993] (-) TimerEvent: {}
+[6.128461] (-) TimerEvent: {}
+[6.228992] (-) TimerEvent: {}
+[6.329529] (-) TimerEvent: {}
+[6.430062] (-) TimerEvent: {}
+[6.530583] (-) TimerEvent: {}
+[6.631167] (-) TimerEvent: {}
+[6.731706] (-) TimerEvent: {}
+[6.768665] (behaviortree_cpp) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/behaviortree_cpp.dir/src/controls/while_do_else_node.cpp.o\x1b[0m\n'}
+[6.831822] (-) TimerEvent: {}
+[6.840488] (behaviortree_cpp) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/behaviortree_cpp.dir/src/loggers/bt_cout_logger.cpp.o\x1b[0m\n'}
+[6.931940] (-) TimerEvent: {}
+[7.032470] (-) TimerEvent: {}
+[7.132997] (-) TimerEvent: {}
+[7.233519] (-) TimerEvent: {}
+[7.260464] (behaviortree_cpp) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/behaviortree_cpp.dir/src/loggers/bt_file_logger_v2.cpp.o\x1b[0m\n'}
+[7.333682] (behaviortree_cpp) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/behaviortree_cpp.dir/src/loggers/bt_minitrace_logger.cpp.o\x1b[0m\n'}
+[7.334419] (-) TimerEvent: {}
+[7.415432] (behaviortree_cpp) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/behaviortree_cpp.dir/src/loggers/bt_observer.cpp.o\x1b[0m\n'}
+[7.434561] (-) TimerEvent: {}
+[7.503691] (behaviortree_cpp) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/behaviortree_cpp.dir/3rdparty/minitrace/minitrace.cpp.o\x1b[0m\n'}
+[7.517080] (behaviortree_cpp) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/behaviortree_cpp.dir/3rdparty/tinyxml2/tinyxml2.cpp.o\x1b[0m\n'}
+[7.534675] (-) TimerEvent: {}
+[7.635295] (-) TimerEvent: {}
+[7.639202] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found plansys2_bt_actions: 2.0.9 (/opt/ros/humble/share/plansys2_bt_actions/cmake)\n'}
+[7.687553] (behaviortree_cpp) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/behaviortree_cpp.dir/src/loggers/groot2_publisher.cpp.o\x1b[0m\n'}
+[7.735408] (-) TimerEvent: {}
+[7.835995] (-) TimerEvent: {}
+[7.936642] (-) TimerEvent: {}
+[8.037283] (-) TimerEvent: {}
+[8.056285] (behaviortree_cpp) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/behaviortree_cpp.dir/src/loggers/bt_sqlite_logger.cpp.o\x1b[0m\n'}
+[8.137402] (-) TimerEvent: {}
+[8.238024] (-) TimerEvent: {}
+[8.281300] (behaviortree_cpp) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/behaviortree_cpp.dir/src/shared_library_UNIX.cpp.o\x1b[0m\n'}
+[8.338148] (-) TimerEvent: {}
+[8.438787] (-) TimerEvent: {}
+[8.539322] (-) TimerEvent: {}
+[8.639897] (-) TimerEvent: {}
+[8.740450] (-) TimerEvent: {}
+[8.841186] (-) TimerEvent: {}
+[8.941764] (-) TimerEvent: {}
+[9.042310] (-) TimerEvent: {}
+[9.115231] (behaviortree_cpp) StdoutLine: {'line': b'[ 36%] \x1b[32m\x1b[1mLinking CXX static library libgtest.a\x1b[0m\n'}
+[9.142428] (-) TimerEvent: {}
+[9.241841] (behaviortree_cpp) StdoutLine: {'line': b'[ 36%] Built target gtest\n'}
+[9.242491] (-) TimerEvent: {}
+[9.342781] (-) TimerEvent: {}
+[9.443125] (-) TimerEvent: {}
+[9.543504] (-) TimerEvent: {}
+[9.643852] (-) TimerEvent: {}
+[9.744210] (-) TimerEvent: {}
+[9.844556] (-) TimerEvent: {}
+[9.944895] (-) TimerEvent: {}
+[10.045224] (-) TimerEvent: {}
+[10.145565] (-) TimerEvent: {}
+[10.245878] (-) TimerEvent: {}
+[10.346225] (-) TimerEvent: {}
+[10.446559] (-) TimerEvent: {}
+[10.546902] (-) TimerEvent: {}
+[10.647241] (-) TimerEvent: {}
+[10.747589] (-) TimerEvent: {}
+[10.847929] (-) TimerEvent: {}
+[10.948284] (-) TimerEvent: {}
+[11.048614] (-) TimerEvent: {}
+[11.148937] (-) TimerEvent: {}
+[11.249265] (-) TimerEvent: {}
+[11.349572] (-) TimerEvent: {}
+[11.449878] (-) TimerEvent: {}
+[11.550204] (-) TimerEvent: {}
+[11.650527] (-) TimerEvent: {}
+[11.750867] (-) TimerEvent: {}
+[11.851194] (-) TimerEvent: {}
+[11.951512] (-) TimerEvent: {}
+[12.051841] (-) TimerEvent: {}
+[12.152160] (-) TimerEvent: {}
+[12.252468] (-) TimerEvent: {}
+[12.352773] (-) TimerEvent: {}
+[12.453082] (-) TimerEvent: {}
+[12.553394] (-) TimerEvent: {}
+[12.653692] (-) TimerEvent: {}
+[12.754011] (-) TimerEvent: {}
+[12.854336] (-) TimerEvent: {}
+[12.954658] (-) TimerEvent: {}
+[13.054981] (-) TimerEvent: {}
+[13.155303] (-) TimerEvent: {}
+[13.255621] (-) TimerEvent: {}
+[13.355942] (-) TimerEvent: {}
+[13.456253] (-) TimerEvent: {}
+[13.556560] (-) TimerEvent: {}
+[13.656856] (-) TimerEvent: {}
+[13.757170] (-) TimerEvent: {}
+[13.857490] (-) TimerEvent: {}
+[13.957789] (-) TimerEvent: {}
+[14.058090] (-) TimerEvent: {}
+[14.158377] (-) TimerEvent: {}
+[14.258683] (-) TimerEvent: {}
+[14.358981] (-) TimerEvent: {}
+[14.459284] (-) TimerEvent: {}
+[14.479389] (behaviortree_cpp) StdoutLine: {'line': b'[ 37%] \x1b[32m\x1b[1mLinking CXX shared library libbehaviortree_cpp.so\x1b[0m\n'}
+[14.559385] (-) TimerEvent: {}
+[14.600432] (behaviortree_cpp) StdoutLine: {'line': b'[ 37%] Built target behaviortree_cpp\n'}
+[14.625584] (behaviortree_cpp) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object sample_nodes/CMakeFiles/movebase_node_dyn.dir/movebase_node.cpp.o\x1b[0m\n'}
+[14.625853] (behaviortree_cpp) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object sample_nodes/CMakeFiles/crossdoor_nodes_dyn.dir/crossdoor_nodes.cpp.o\x1b[0m\n'}
+[14.625968] (behaviortree_cpp) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object sample_nodes/CMakeFiles/dummy_nodes_dyn.dir/dummy_nodes.cpp.o\x1b[0m\n'}
+[14.626049] (behaviortree_cpp) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object tools/CMakeFiles/bt4_log_cat.dir/bt_log_cat.cpp.o\x1b[0m\n'}
+[14.626543] (behaviortree_cpp) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object sample_nodes/CMakeFiles/bt_sample_nodes.dir/dummy_nodes.cpp.o\x1b[0m\n'}
+[14.626663] (behaviortree_cpp) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object sample_nodes/CMakeFiles/bt_sample_nodes.dir/crossdoor_nodes.cpp.o\x1b[0m\n'}
+[14.629861] (behaviortree_cpp) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding CXX object examples/CMakeFiles/t01_first_tree_dynamic.dir/t01_build_your_first_tree.cpp.o\x1b[0m\n'}
+[14.629988] (behaviortree_cpp) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding CXX object tools/CMakeFiles/bt4_plugin_manifest.dir/bt_plugin_manifest.cpp.o\x1b[0m\n'}
+[14.631214] (behaviortree_cpp) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object examples/CMakeFiles/t13_plugin_action.dir/t13_plugin_action.cpp.o\x1b[0m\n'}
+[14.631322] (behaviortree_cpp) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object sample_nodes/CMakeFiles/bt_sample_nodes.dir/movebase_node.cpp.o\x1b[0m\n'}
+[14.659754] (-) TimerEvent: {}
+[14.760291] (-) TimerEvent: {}
+[14.860839] (-) TimerEvent: {}
+[14.961419] (-) TimerEvent: {}
+[15.062007] (-) TimerEvent: {}
+[15.162673] (-) TimerEvent: {}
+[15.263267] (-) TimerEvent: {}
+[15.363780] (-) TimerEvent: {}
+[15.432497] (behaviortree_cpp) StdoutLine: {'line': b'[ 46%] \x1b[32m\x1b[1mLinking CXX executable bt4_log_cat\x1b[0m\n'}
+[15.463901] (-) TimerEvent: {}
+[15.564332] (-) TimerEvent: {}
+[15.568637] (behaviortree_cpp) StdoutLine: {'line': b'[ 46%] Built target bt4_log_cat\n'}
+[15.664446] (-) TimerEvent: {}
+[15.764858] (-) TimerEvent: {}
+[15.865251] (-) TimerEvent: {}
+[15.965633] (-) TimerEvent: {}
+[16.066052] (-) TimerEvent: {}
+[16.166521] (-) TimerEvent: {}
+[16.266895] (-) TimerEvent: {}
+[16.367258] (-) TimerEvent: {}
+[16.378623] (behaviortree_cpp) StdoutLine: {'line': b'[ 47%] \x1b[32m\x1b[1mLinking CXX executable bt4_plugin_manifest\x1b[0m\n'}
+[16.455905] (behaviortree_cpp) StdoutLine: {'line': b'[ 47%] Built target bt4_plugin_manifest\n'}
+[16.467363] (-) TimerEvent: {}
+[16.567685] (-) TimerEvent: {}
+[16.633877] (behaviortree_cpp) StdoutLine: {'line': b'[ 48%] \x1b[32m\x1b[1mLinking CXX shared library bin/libcrossdoor_nodes_dyn.so\x1b[0m\n'}
+[16.667815] (-) TimerEvent: {}
+[16.694376] (behaviortree_cpp) StdoutLine: {'line': b'[ 49%] \x1b[32m\x1b[1mLinking CXX executable t01_first_tree_dynamic\x1b[0m\n'}
+[16.694983] (behaviortree_cpp) StdoutLine: {'line': b'[ 49%] Built target crossdoor_nodes_dyn\n'}
+[16.764737] (behaviortree_cpp) StdoutLine: {'line': b'[ 49%] Built target t01_first_tree_dynamic\n'}
+[16.767870] (-) TimerEvent: {}
+[16.868131] (-) TimerEvent: {}
+[16.968449] (-) TimerEvent: {}
+[17.068790] (-) TimerEvent: {}
+[17.169098] (-) TimerEvent: {}
+[17.270663] (-) TimerEvent: {}
+[17.321386] (behaviortree_cpp) StdoutLine: {'line': b'[ 50%] \x1b[32m\x1b[1mLinking CXX shared library t13_plugin_action.so\x1b[0m\n'}
+[17.350830] (behaviortree_cpp) StdoutLine: {'line': b'[ 50%] \x1b[32m\x1b[1mLinking CXX shared library bin/libdummy_nodes_dyn.so\x1b[0m\n'}
+[17.370773] (-) TimerEvent: {}
+[17.382162] (behaviortree_cpp) StdoutLine: {'line': b'[ 50%] Built target t13_plugin_action\n'}
+[17.414101] (behaviortree_cpp) StdoutLine: {'line': b'[ 50%] Built target dummy_nodes_dyn\n'}
+[17.470866] (-) TimerEvent: {}
+[17.553433] (behaviortree_cpp) StdoutLine: {'line': b'[ 50%] \x1b[32m\x1b[1mLinking CXX static library lib/libbt_sample_nodes.a\x1b[0m\n'}
+[17.570965] (-) TimerEvent: {}
+[17.612357] (behaviortree_cpp) StdoutLine: {'line': b'[ 50%] Built target bt_sample_nodes\n'}
+[17.634582] (behaviortree_cpp) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding CXX object examples/CMakeFiles/t09_scripting.dir/t09_scripting.cpp.o\x1b[0m\n'}
+[17.634876] (behaviortree_cpp) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding CXX object examples/CMakeFiles/t04_reactive_sequence.dir/t04_reactive_sequence.cpp.o\x1b[0m\n'}
+[17.634969] (behaviortree_cpp) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding CXX object examples/CMakeFiles/t01_first_tree_static.dir/t01_build_your_first_tree.cpp.o\x1b[0m\n'}
+[17.635066] (behaviortree_cpp) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding CXX object examples/CMakeFiles/t05_crossdoor.dir/t05_crossdoor.cpp.o\x1b[0m\n'}
+[17.635187] (behaviortree_cpp) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object examples/CMakeFiles/t07_load_multiple_xml.dir/t07_load_multiple_xml.cpp.o\x1b[0m\n'}
+[17.636231] (behaviortree_cpp) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object tests/CMakeFiles/behaviortree_cpp_test.dir/src/action_test_node.cpp.o\x1b[0m\n'}
+[17.636336] (behaviortree_cpp) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object examples/CMakeFiles/t08_additional_node_args.dir/t08_additional_node_args.cpp.o\x1b[0m\n'}
+[17.636833] (behaviortree_cpp) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object examples/CMakeFiles/t10_observer.dir/t10_observer.cpp.o\x1b[0m\n'}
+[17.638020] (behaviortree_cpp) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding CXX object examples/CMakeFiles/t06_subtree_port_remapping.dir/t06_subtree_port_remapping.cpp.o\x1b[0m\n'}
+[17.638389] (behaviortree_cpp) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding CXX object examples/CMakeFiles/t02_basic_ports.dir/t02_basic_ports.cpp.o\x1b[0m\n'}
+[17.644045] (behaviortree_cpp) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding CXX object examples/CMakeFiles/t03_generic_ports.dir/t03_generic_ports.cpp.o\x1b[0m\n'}
+[17.671119] (-) TimerEvent: {}
+[17.683713] (behaviortree_cpp) StdoutLine: {'line': b'[ 58%] \x1b[32m\x1b[1mLinking CXX shared library bin/libmovebase_node_dyn.so\x1b[0m\n'}
+[17.771238] (-) TimerEvent: {}
+[17.776291] (behaviortree_cpp) StdoutLine: {'line': b'[ 58%] Built target movebase_node_dyn\n'}
+[17.804616] (behaviortree_cpp) StdoutLine: {'line': b'[ 59%] \x1b[32mBuilding CXX object examples/CMakeFiles/t11_replace_rules.dir/t11_replace_rules.cpp.o\x1b[0m\n'}
+[17.871353] (-) TimerEvent: {}
+[17.971748] (-) TimerEvent: {}
+[18.072148] (-) TimerEvent: {}
+[18.172549] (-) TimerEvent: {}
+[18.272965] (-) TimerEvent: {}
+[18.373360] (-) TimerEvent: {}
+[18.473759] (-) TimerEvent: {}
+[18.574354] (-) TimerEvent: {}
+[18.675159] (-) TimerEvent: {}
+[18.775845] (-) TimerEvent: {}
+[18.876527] (-) TimerEvent: {}
+[18.977209] (-) TimerEvent: {}
+[19.077904] (-) TimerEvent: {}
+[19.178618] (-) TimerEvent: {}
+[19.279192] (-) TimerEvent: {}
+[19.379761] (-) TimerEvent: {}
+[19.480316] (-) TimerEvent: {}
+[19.576878] (behaviortree_cpp) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object tests/CMakeFiles/behaviortree_cpp_test.dir/src/condition_test_node.cpp.o\x1b[0m\n'}
+[19.580396] (-) TimerEvent: {}
+[19.680853] (-) TimerEvent: {}
+[19.781384] (-) TimerEvent: {}
+[19.881898] (-) TimerEvent: {}
+[19.897268] (behaviortree_cpp) StdoutLine: {'line': b'[ 60%] \x1b[32m\x1b[1mLinking CXX executable t05_crossdoor\x1b[0m\n'}
+[19.982021] (-) TimerEvent: {}
+[20.018623] (behaviortree_cpp) StdoutLine: {'line': b'[ 61%] \x1b[32m\x1b[1mLinking CXX executable t10_observer\x1b[0m\n'}
+[20.082136] (-) TimerEvent: {}
+[20.130533] (behaviortree_cpp) StdoutLine: {'line': b'[ 61%] Built target t05_crossdoor\n'}
+[20.131931] (behaviortree_cpp) StdoutLine: {'line': b'[ 62%] \x1b[32m\x1b[1mLinking CXX executable t01_first_tree_static\x1b[0m\n'}
+[20.169433] (behaviortree_cpp) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object examples/CMakeFiles/t12_groot_howto.dir/t12_groot_howto.cpp.o\x1b[0m\n'}
+[20.182254] (-) TimerEvent: {}
+[20.229767] (behaviortree_cpp) StdoutLine: {'line': b'[ 63%] Built target t10_observer\n'}
+[20.261372] (behaviortree_cpp) StdoutLine: {'line': b'[ 64%] \x1b[32mBuilding CXX object tests/CMakeFiles/behaviortree_cpp_test.dir/gtest_any.cpp.o\x1b[0m\n'}
+[20.282369] (-) TimerEvent: {}
+[20.304131] (behaviortree_cpp) StdoutLine: {'line': b'[ 65%] \x1b[32m\x1b[1mLinking CXX executable t08_additional_node_args\x1b[0m\n'}
+[20.315845] (behaviortree_cpp) StdoutLine: {'line': b'[ 65%] Built target t01_first_tree_static\n'}
+[20.331731] (behaviortree_cpp) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object tests/CMakeFiles/behaviortree_cpp_test.dir/gtest_blackboard.cpp.o\x1b[0m\n'}
+[20.382501] (-) TimerEvent: {}
+[20.483300] (-) TimerEvent: {}
+[20.496638] (behaviortree_cpp) StdoutLine: {'line': b'[ 67%] \x1b[32m\x1b[1mLinking CXX executable t09_scripting\x1b[0m\n'}
+[20.524219] (behaviortree_cpp) StdoutLine: {'line': b'[ 67%] Built target t08_additional_node_args\n'}
+[20.548896] (behaviortree_cpp) StdoutLine: {'line': b'[ 68%] \x1b[32m\x1b[1mLinking CXX executable t07_load_multiple_xml\x1b[0m\n'}
+[20.560486] (behaviortree_cpp) StdoutLine: {'line': b'[ 69%] \x1b[32mBuilding CXX object examples/CMakeFiles/generate_log.dir/generate_log.cpp.o\x1b[0m\n'}
+[20.583458] (-) TimerEvent: {}
+[20.684284] (-) TimerEvent: {}
+[20.698950] (behaviortree_cpp) StdoutLine: {'line': b'[ 69%] Built target t09_scripting\n'}
+[20.759129] (behaviortree_cpp) StdoutLine: {'line': b'[ 69%] Built target t07_load_multiple_xml\n'}
+[20.784396] (-) TimerEvent: {}
+[20.799607] (behaviortree_cpp) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object examples/CMakeFiles/ex01_wrap_legacy.dir/ex01_wrap_legacy.cpp.o\x1b[0m\n'}
+[20.813410] (behaviortree_cpp) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object examples/CMakeFiles/ex02_runtime_ports.dir/ex02_runtime_ports.cpp.o\x1b[0m\n'}
+[20.884525] (-) TimerEvent: {}
+[20.984952] (-) TimerEvent: {}
+[21.085328] (-) TimerEvent: {}
+[21.112040] (behaviortree_cpp) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object tests/CMakeFiles/behaviortree_cpp_test.dir/gtest_coroutines.cpp.o\x1b[0m\n'}
+[21.112365] (behaviortree_cpp) StdoutLine: {'line': b'[ 72%] \x1b[32m\x1b[1mLinking CXX executable t11_replace_rules\x1b[0m\n'}
+[21.185445] (-) TimerEvent: {}
+[21.285820] (-) TimerEvent: {}
+[21.386204] (-) TimerEvent: {}
+[21.418713] (behaviortree_cpp) StdoutLine: {'line': b'[ 73%] \x1b[32m\x1b[1mLinking CXX executable t02_basic_ports\x1b[0m\n'}
+[21.419054] (behaviortree_cpp) StdoutLine: {'line': b'[ 73%] \x1b[32m\x1b[1mLinking CXX executable t03_generic_ports\x1b[0m\n'}
+[21.432202] (behaviortree_cpp) StdoutLine: {'line': b'[ 73%] Built target t11_replace_rules\n'}
+[21.486345] (-) TimerEvent: {}
+[21.537251] (behaviortree_cpp) StdoutLine: {'line': b'[ 73%] \x1b[32mBuilding CXX object examples/CMakeFiles/ex04_waypoints.dir/ex04_waypoints.cpp.o\x1b[0m\n'}
+[21.586470] (-) TimerEvent: {}
+[21.604161] (behaviortree_cpp) StdoutLine: {'line': b'[ 73%] Built target t03_generic_ports\n'}
+[21.619982] (behaviortree_cpp) StdoutLine: {'line': b'[ 73%] Built target t02_basic_ports\n'}
+[21.640856] (behaviortree_cpp) StdoutLine: {'line': b'[ 74%] \x1b[32mBuilding CXX object examples/CMakeFiles/ex05_subtree_model.dir/ex05_subtree_model.cpp.o\x1b[0m\n'}
+[21.686612] (-) TimerEvent: {}
+[21.688574] (behaviortree_cpp) StdoutLine: {'line': b'[ 74%] \x1b[32mBuilding CXX object examples/CMakeFiles/ex06_access_by_ptr.dir/ex06_access_by_ptr.cpp.o\x1b[0m\n'}
+[21.746762] (behaviortree_cpp) StdoutLine: {'line': b'[ 75%] \x1b[32m\x1b[1mLinking CXX executable t04_reactive_sequence\x1b[0m\n'}
+[21.786676] (-) TimerEvent: {}
+[21.887067] (-) TimerEvent: {}
+[21.894775] (behaviortree_cpp) StdoutLine: {'line': b'[ 76%] \x1b[32m\x1b[1mLinking CXX executable t06_subtree_port_remapping\x1b[0m\n'}
+[21.987191] (-) TimerEvent: {}
+[22.015793] (behaviortree_cpp) StdoutLine: {'line': b'[ 76%] Built target t04_reactive_sequence\n'}
+[22.087307] (-) TimerEvent: {}
+[22.099353] (behaviortree_cpp) StdoutLine: {'line': b'[ 76%] Built target t06_subtree_port_remapping\n'}
+[22.115912] (behaviortree_cpp) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding CXX object tests/CMakeFiles/behaviortree_cpp_test.dir/gtest_decorator.cpp.o\x1b[0m\n'}
+[22.127405] (behaviortree_cpp) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding CXX object examples/CMakeFiles/t13_plugin_executor.dir/t13_plugin_executor.cpp.o\x1b[0m\n'}
+[22.187431] (-) TimerEvent: {}
+[22.287977] (-) TimerEvent: {}
+[22.388488] (-) TimerEvent: {}
+[22.489030] (-) TimerEvent: {}
+[22.589458] (-) TimerEvent: {}
+[22.689908] (-) TimerEvent: {}
+[22.790311] (-) TimerEvent: {}
+[22.890737] (-) TimerEvent: {}
+[22.991129] (-) TimerEvent: {}
+[23.091501] (-) TimerEvent: {}
+[23.191895] (-) TimerEvent: {}
+[23.292269] (-) TimerEvent: {}
+[23.392614] (-) TimerEvent: {}
+[23.492995] (-) TimerEvent: {}
+[23.501026] (behaviortree_cpp) StdoutLine: {'line': b'[ 79%] \x1b[32m\x1b[1mLinking CXX executable ex01_wrap_legacy\x1b[0m\n'}
+[23.593107] (-) TimerEvent: {}
+[23.693496] (-) TimerEvent: {}
+[23.789320] (behaviortree_cpp) StdoutLine: {'line': b'[ 79%] Built target ex01_wrap_legacy\n'}
+[23.793582] (-) TimerEvent: {}
+[23.838775] (behaviortree_cpp) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding CXX object tests/CMakeFiles/behaviortree_cpp_test.dir/gtest_enums.cpp.o\x1b[0m\n'}
+[23.893713] (-) TimerEvent: {}
+[23.994118] (-) TimerEvent: {}
+[24.094469] (-) TimerEvent: {}
+[24.097204] (behaviortree_cpp) StdoutLine: {'line': b'[ 81%] \x1b[32m\x1b[1mLinking CXX executable ex05_subtree_model\x1b[0m\n'}
+[24.194581] (-) TimerEvent: {}
+[24.294970] (-) TimerEvent: {}
+[24.338629] (behaviortree_cpp) StdoutLine: {'line': b'[ 82%] \x1b[32m\x1b[1mLinking CXX executable generate_log\x1b[0m\n'}
+[24.395101] (-) TimerEvent: {}
+[24.402980] (behaviortree_cpp) StdoutLine: {'line': b'[ 82%] Built target ex05_subtree_model\n'}
+[24.415970] (behaviortree_cpp) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding CXX object tests/CMakeFiles/behaviortree_cpp_test.dir/gtest_factory.cpp.o\x1b[0m\n'}
+[24.495209] (-) TimerEvent: {}
+[24.561316] (behaviortree_cpp) StdoutLine: {'line': b'[ 84%] \x1b[32mBuilding CXX object tests/CMakeFiles/behaviortree_cpp_test.dir/gtest_fallback.cpp.o\x1b[0m\n'}
+[24.595322] (-) TimerEvent: {}
+[24.643539] (behaviortree_cpp) StdoutLine: {'line': b'[ 84%] Built target generate_log\n'}
+[24.667182] (behaviortree_cpp) StdoutLine: {'line': b'[ 84%] \x1b[32mBuilding CXX object tests/CMakeFiles/behaviortree_cpp_test.dir/gtest_parallel.cpp.o\x1b[0m\n'}
+[24.677975] (behaviortree_cpp) StdoutLine: {'line': b'[ 85%] \x1b[32m\x1b[1mLinking CXX executable ex02_runtime_ports\x1b[0m\n'}
+[24.695434] (-) TimerEvent: {}
+[24.766260] (behaviortree_cpp) StdoutLine: {'line': b'[ 86%] \x1b[32m\x1b[1mLinking CXX executable t13_plugin_executor\x1b[0m\n'}
+[24.795554] (-) TimerEvent: {}
+[24.824082] (behaviortree_cpp) StdoutLine: {'line': b'[ 86%] Built target ex02_runtime_ports\n'}
+[24.837733] (behaviortree_cpp) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding CXX object tests/CMakeFiles/behaviortree_cpp_test.dir/gtest_preconditions.cpp.o\x1b[0m\n'}
+[24.895699] (behaviortree_cpp) StdoutLine: {'line': b'[ 87%] Built target t13_plugin_executor\n'}
+[24.895940] (-) TimerEvent: {}
+[24.909015] (behaviortree_cpp) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding CXX object tests/CMakeFiles/behaviortree_cpp_test.dir/gtest_ports.cpp.o\x1b[0m\n'}
+[24.996072] (-) TimerEvent: {}
+[25.023977] (behaviortree_cpp) StdoutLine: {'line': b'[ 89%] \x1b[32m\x1b[1mLinking CXX executable ex06_access_by_ptr\x1b[0m\n'}
+[25.096204] (-) TimerEvent: {}
+[25.196595] (-) TimerEvent: {}
+[25.296991] (-) TimerEvent: {}
+[25.397402] (-) TimerEvent: {}
+[25.421468] (behaviortree_cpp) StdoutLine: {'line': b'[ 89%] Built target ex06_access_by_ptr\n'}
+[25.473138] (behaviortree_cpp) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding CXX object tests/CMakeFiles/behaviortree_cpp_test.dir/gtest_postconditions.cpp.o\x1b[0m\n'}
+[25.485470] (behaviortree_cpp) StdoutLine: {'line': b'[ 90%] \x1b[32m\x1b[1mLinking CXX executable t12_groot_howto\x1b[0m\n'}
+[25.497512] (-) TimerEvent: {}
+[25.597866] (-) TimerEvent: {}
+[25.631567] (behaviortree_cpp) StdoutLine: {'line': b'[ 90%] Built target t12_groot_howto\n'}
+[25.644421] (behaviortree_cpp) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding CXX object tests/CMakeFiles/behaviortree_cpp_test.dir/gtest_match.cpp.o\x1b[0m\n'}
+[25.697989] (-) TimerEvent: {}
+[25.798371] (-) TimerEvent: {}
+[25.837534] (behaviortree_cpp) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding CXX object tests/CMakeFiles/behaviortree_cpp_test.dir/gtest_json.cpp.o\x1b[0m\n'}
+[25.898496] (-) TimerEvent: {}
+[25.961220] (behaviortree_cpp) StdoutLine: {'line': b'[ 92%] \x1b[32m\x1b[1mLinking CXX executable ex04_waypoints\x1b[0m\n'}
+[25.998627] (-) TimerEvent: {}
+[26.099017] (-) TimerEvent: {}
+[26.175408] (behaviortree_cpp) StdoutLine: {'line': b'[ 92%] Built target ex04_waypoints\n'}
+[26.187559] (behaviortree_cpp) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding CXX object tests/CMakeFiles/behaviortree_cpp_test.dir/gtest_reactive.cpp.o\x1b[0m\n'}
+[26.199150] (-) TimerEvent: {}
+[26.299559] (-) TimerEvent: {}
+[26.399982] (-) TimerEvent: {}
+[26.500399] (-) TimerEvent: {}
+[26.601048] (-) TimerEvent: {}
+[26.701506] (-) TimerEvent: {}
+[26.801878] (-) TimerEvent: {}
+[26.902266] (-) TimerEvent: {}
+[27.002855] (-) TimerEvent: {}
+[27.103441] (-) TimerEvent: {}
+[27.204008] (-) TimerEvent: {}
+[27.275685] (behaviortree_cpp) StdoutLine: {'line': b'[ 94%] \x1b[32mBuilding CXX object tests/CMakeFiles/behaviortree_cpp_test.dir/gtest_sequence.cpp.o\x1b[0m\n'}
+[27.287514] (behaviortree_cpp) StdoutLine: {'line': b'[ 95%] \x1b[32mBuilding CXX object tests/CMakeFiles/behaviortree_cpp_test.dir/gtest_skipping.cpp.o\x1b[0m\n'}
+[27.304131] (-) TimerEvent: {}
+[27.404654] (-) TimerEvent: {}
+[27.505158] (-) TimerEvent: {}
+[27.605673] (-) TimerEvent: {}
+[27.706181] (-) TimerEvent: {}
+[27.806675] (-) TimerEvent: {}
+[27.907266] (-) TimerEvent: {}
+[28.001274] (behaviortree_cpp) StdoutLine: {'line': b'[ 95%] \x1b[32mBuilding CXX object tests/CMakeFiles/behaviortree_cpp_test.dir/gtest_substitution.cpp.o\x1b[0m\n'}
+[28.007374] (-) TimerEvent: {}
+[28.107849] (-) TimerEvent: {}
+[28.208368] (-) TimerEvent: {}
+[28.308898] (-) TimerEvent: {}
+[28.409455] (-) TimerEvent: {}
+[28.509990] (-) TimerEvent: {}
+[28.610568] (-) TimerEvent: {}
+[28.711119] (-) TimerEvent: {}
+[28.811682] (-) TimerEvent: {}
+[28.912163] (-) TimerEvent: {}
+[29.012672] (-) TimerEvent: {}
+[29.113196] (-) TimerEvent: {}
+[29.136709] (behaviortree_cpp) StdoutLine: {'line': b'[ 96%] \x1b[32mBuilding CXX object tests/CMakeFiles/behaviortree_cpp_test.dir/gtest_subtree.cpp.o\x1b[0m\n'}
+[29.213312] (-) TimerEvent: {}
+[29.313810] (-) TimerEvent: {}
+[29.414386] (-) TimerEvent: {}
+[29.514928] (-) TimerEvent: {}
+[29.615480] (-) TimerEvent: {}
+[29.716016] (-) TimerEvent: {}
+[29.770757] (behaviortree_cpp) StdoutLine: {'line': b'[ 97%] \x1b[32mBuilding CXX object tests/CMakeFiles/behaviortree_cpp_test.dir/gtest_switch.cpp.o\x1b[0m\n'}
+[29.816137] (-) TimerEvent: {}
+[29.916680] (-) TimerEvent: {}
+[30.017194] (-) TimerEvent: {}
+[30.117718] (-) TimerEvent: {}
+[30.218235] (-) TimerEvent: {}
+[30.268049] (behaviortree_cpp) StdoutLine: {'line': b'[ 98%] \x1b[32mBuilding CXX object tests/CMakeFiles/behaviortree_cpp_test.dir/gtest_tree.cpp.o\x1b[0m\n'}
+[30.318353] (-) TimerEvent: {}
+[30.418926] (-) TimerEvent: {}
+[30.506170] (behaviortree_cpp) StdoutLine: {'line': b'[ 99%] \x1b[32mBuilding CXX object tests/CMakeFiles/behaviortree_cpp_test.dir/gtest_wakeup.cpp.o\x1b[0m\n'}
+[30.519034] (-) TimerEvent: {}
+[30.619516] (-) TimerEvent: {}
+[30.720041] (-) TimerEvent: {}
+[30.836513] (-) TimerEvent: {}
+[30.937031] (-) TimerEvent: {}
+[30.956793] (behaviortree_cpp) StdoutLine: {'line': b'[ 99%] \x1b[32mBuilding CXX object tests/CMakeFiles/behaviortree_cpp_test.dir/script_parser_test.cpp.o\x1b[0m\n'}
+[31.037149] (-) TimerEvent: {}
+[31.137677] (-) TimerEvent: {}
+[31.238183] (-) TimerEvent: {}
+[31.338728] (-) TimerEvent: {}
+[31.439400] (-) TimerEvent: {}
+[31.539939] (-) TimerEvent: {}
+[31.640471] (-) TimerEvent: {}
+[31.741302] (-) TimerEvent: {}
+[31.841836] (-) TimerEvent: {}
+[31.942356] (-) TimerEvent: {}
+[32.042761] (-) TimerEvent: {}
+[32.143141] (-) TimerEvent: {}
+[32.243498] (-) TimerEvent: {}
+[32.343849] (-) TimerEvent: {}
+[32.444191] (-) TimerEvent: {}
+[32.544588] (-) TimerEvent: {}
+[32.644927] (-) TimerEvent: {}
+[32.745279] (-) TimerEvent: {}
+[32.845635] (-) TimerEvent: {}
+[32.945999] (-) TimerEvent: {}
+[33.046364] (-) TimerEvent: {}
+[33.146667] (-) TimerEvent: {}
+[33.247016] (-) TimerEvent: {}
+[33.347381] (-) TimerEvent: {}
+[33.447737] (-) TimerEvent: {}
+[33.548087] (-) TimerEvent: {}
+[33.648451] (-) TimerEvent: {}
+[33.748807] (-) TimerEvent: {}
+[33.849134] (-) TimerEvent: {}
+[33.949452] (-) TimerEvent: {}
+[34.049767] (-) TimerEvent: {}
+[34.150087] (-) TimerEvent: {}
+[34.250395] (-) TimerEvent: {}
+[34.350711] (-) TimerEvent: {}
+[34.451033] (-) TimerEvent: {}
+[34.551350] (-) TimerEvent: {}
+[34.651674] (-) TimerEvent: {}
+[34.751987] (-) TimerEvent: {}
+[34.852292] (-) TimerEvent: {}
+[34.952600] (-) TimerEvent: {}
+[35.052916] (-) TimerEvent: {}
+[35.153219] (-) TimerEvent: {}
+[35.253535] (-) TimerEvent: {}
+[35.353861] (-) TimerEvent: {}
+[35.454169] (-) TimerEvent: {}
+[35.554447] (-) TimerEvent: {}
+[35.654738] (-) TimerEvent: {}
+[35.755026] (-) TimerEvent: {}
+[35.855299] (-) TimerEvent: {}
+[35.955577] (-) TimerEvent: {}
+[36.055840] (-) TimerEvent: {}
+[36.156103] (-) TimerEvent: {}
+[36.256375] (-) TimerEvent: {}
+[36.356653] (-) TimerEvent: {}
+[36.456941] (-) TimerEvent: {}
+[36.557214] (-) TimerEvent: {}
+[36.657471] (-) TimerEvent: {}
+[36.757729] (-) TimerEvent: {}
+[36.858111] (-) TimerEvent: {}
+[36.958377] (-) TimerEvent: {}
+[37.058636] (-) TimerEvent: {}
+[37.158895] (-) TimerEvent: {}
+[37.259150] (-) TimerEvent: {}
+[37.359390] (-) TimerEvent: {}
+[37.459656] (-) TimerEvent: {}
+[37.559926] (-) TimerEvent: {}
+[37.660185] (-) TimerEvent: {}
+[37.760461] (-) TimerEvent: {}
+[37.860739] (-) TimerEvent: {}
+[37.961015] (-) TimerEvent: {}
+[38.061598] (-) TimerEvent: {}
+[38.161854] (-) TimerEvent: {}
+[38.262119] (-) TimerEvent: {}
+[38.362377] (-) TimerEvent: {}
+[38.462644] (-) TimerEvent: {}
+[38.562901] (-) TimerEvent: {}
+[38.663170] (-) TimerEvent: {}
+[38.763447] (-) TimerEvent: {}
+[38.864155] (-) TimerEvent: {}
+[38.964437] (-) TimerEvent: {}
+[39.064704] (-) TimerEvent: {}
+[39.164972] (-) TimerEvent: {}
+[39.265247] (-) TimerEvent: {}
+[39.365509] (-) TimerEvent: {}
+[39.465778] (-) TimerEvent: {}
+[39.566046] (-) TimerEvent: {}
+[39.666346] (-) TimerEvent: {}
+[39.766646] (-) TimerEvent: {}
+[39.867060] (-) TimerEvent: {}
+[39.967353] (-) TimerEvent: {}
+[40.067636] (-) TimerEvent: {}
+[40.167906] (-) TimerEvent: {}
+[40.268404] (-) TimerEvent: {}
+[40.368998] (-) TimerEvent: {}
+[40.469264] (-) TimerEvent: {}
+[40.569736] (-) TimerEvent: {}
+[40.669989] (-) TimerEvent: {}
+[40.770262] (-) TimerEvent: {}
+[40.870535] (-) TimerEvent: {}
+[40.916900] (behaviortree_cpp) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable behaviortree_cpp_test\x1b[0m\n'}
+[40.970644] (-) TimerEvent: {}
+[41.070926] (-) TimerEvent: {}
+[41.085794] (behaviortree_cpp) StdoutLine: {'line': b'[100%] Built target behaviortree_cpp_test\n'}
+[41.097698] (behaviortree_cpp) CommandEnded: {'returncode': 0}
+[41.171000] (-) TimerEvent: {}
+[41.271230] (-) TimerEvent: {}
+[41.343100] (behaviortree_cpp) JobProgress: {'identifier': 'behaviortree_cpp', 'progress': 'install'}
+[41.350797] (behaviortree_cpp) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/stinky/Documents/semantic-robot/ros2_ws/build/behaviortree_cpp'], 'cwd': '/home/stinky/Documents/semantic-robot/ros2_ws/build/behaviortree_cpp', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'stinky'), ('LC_TIME', 'nb_NO.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/stinky/Documents/plansys2_ws/install/plansys2_bt_example/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/stinky'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/stinky/Documents/semantic-robot/ros2_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/home/stinky/.config/autostart/guake.desktop'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'nb_NO.UTF-8'), ('MANAGERPID', '3621'), ('SYSTEMD_EXEC_PID', '3888'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4065'), ('COLCON_PREFIX_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install:/home/stinky/Documents/plansys2_ws/install:/home/stinky/Documents/ros2_ws/install'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'stinky'), ('DESKTOP_AUTOSTART_ID', '103d8713d862813ad5170729707986704400000038880016'), ('JOURNAL_STREAM', '8:157294'), ('_', '/usr/bin/colcon'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'stinky'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/stinky/miniconda3/condabin:/home/stinky/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/Dorte:@/tmp/.ICE-unix/3888,unix/Dorte:/tmp/.ICE-unix/3888'), ('INVOCATION_ID', 'a2d1c2609abd43468bbc512ede82fe5d'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'nb_NO.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'nb_NO.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example_py:/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example:/home/stinky/Documents/plansys2_ws/install/plansys2_patrol_navigation_example:/home/stinky/Documents/plansys2_ws/install/plansys2_multidomain_example:/home/stinky/Documents/plansys2_ws/install/plansys2_cascade_example:/home/stinky/Documents/plansys2_ws/install/plansys2_bt_example:/home/stinky/Documents/ros2_ws/install/turtlebot3_simulations:/home/stinky/Documents/ros2_ws/install/turtlebot3_gazebo:/home/stinky/Documents/ros2_ws/install/turtlebot3_fake_node:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/stinky/miniconda3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'nb_NO.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'nb_NO.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'nb_NO.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('GUAKE_TAB_UUID', 'f20de7b6-addb-4e25-8dc1-31b553ac6755'), ('PWD', '/home/stinky/Documents/semantic-robot/ros2_ws/build/behaviortree_cpp'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/stinky/miniconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example_py/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'nb_NO.UTF-8'), ('LC_PAPER', 'nb_NO.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example_py:/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example:/home/stinky/Documents/plansys2_ws/install/plansys2_patrol_navigation_example:/home/stinky/Documents/plansys2_ws/install/plansys2_multidomain_example:/home/stinky/Documents/plansys2_ws/install/plansys2_cascade_example:/home/stinky/Documents/plansys2_ws/install/plansys2_bt_example:/home/stinky/Documents/ros2_ws/install/turtlebot3_simulations:/home/stinky/Documents/ros2_ws/install/turtlebot3_gazebo:/home/stinky/Documents/ros2_ws/install/turtlebot3_fake_node')]), 'shell': False}
+[41.356880] (behaviortree_cpp) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[41.357468] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/bin/bt4_log_cat\n'}
+[41.357815] (behaviortree_cpp) StdoutLine: {'line': b'-- Set runtime path of "/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/bin/bt4_log_cat" to ""\n'}
+[41.357894] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/bin/bt4_plugin_manifest\n'}
+[41.358336] (behaviortree_cpp) StdoutLine: {'line': b'-- Set runtime path of "/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/bin/bt4_plugin_manifest" to ""\n'}
+[41.358521] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/lib/libbehaviortree_cpp.so\n'}
+[41.362191] (behaviortree_cpp) StdoutLine: {'line': b'-- Set runtime path of "/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/lib/libbehaviortree_cpp.so" to ""\n'}
+[41.362282] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include\n'}
+[41.362360] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp\n'}
+[41.362432] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/json_export.h\n'}
+[41.362504] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/utils\n'}
+[41.362574] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/utils/wakeup_signal.hpp\n'}
+[41.362699] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/utils/strcat.hpp\n'}
+[41.362824] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/utils/safe_any.hpp\n'}
+[41.362946] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/utils/shared_library.h\n'}
+[41.363053] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/utils/signal.h\n'}
+[41.363159] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/utils/convert_impl.hpp\n'}
+[41.363270] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/utils/timer_queue.h\n'}
+[41.363379] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/utils/platform.hpp\n'}
+[41.363482] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/utils/demangle_util.h\n'}
+[41.363588] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/utils/locked_reference.hpp\n'}
+[41.363689] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/utils/simple_string.hpp\n'}
+[41.363796] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/controls\n'}
+[41.363867] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/controls/reactive_sequence.h\n'}
+[41.363973] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/controls/parallel_node.h\n'}
+[41.364076] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/controls/fallback_node.h\n'}
+[41.364180] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/controls/reactive_fallback.h\n'}
+[41.364286] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/controls/sequence_with_memory_node.h\n'}
+[41.364390] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/controls/manual_node.h\n'}
+[41.364493] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/controls/switch_node.h\n'}
+[41.364602] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/controls/sequence_node.h\n'}
+[41.364705] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/controls/parallel_all_node.h\n'}
+[41.364808] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/controls/if_then_else_node.h\n'}
+[41.364910] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/controls/while_do_else_node.h\n'}
+[41.365016] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/action_node.h\n'}
+[41.365123] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/decorators\n'}
+[41.365197] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/decorators/force_failure_node.h\n'}
+[41.365301] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/decorators/keep_running_until_failure_node.h\n'}
+[41.365401] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/decorators/subtree_node.h\n'}
+[41.365502] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/decorators/force_success_node.h\n'}
+[41.365602] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/decorators/timeout_node.h\n'}
+[41.365704] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/decorators/script_precondition.h\n'}
+[41.365808] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/decorators/delay_node.h\n'}
+[41.365908] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/decorators/repeat_node.h\n'}
+[41.366010] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/decorators/inverter_node.h\n'}
+[41.366111] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/decorators/run_once_node.h\n'}
+[41.366211] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/decorators/retry_node.h\n'}
+[41.366314] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/decorators/loop_node.h\n'}
+[41.366423] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/decorators/consume_queue.h\n'}
+[41.366533] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/behavior_tree.h\n'}
+[41.366675] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/scripting\n'}
+[41.366741] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/scripting/script_parser.hpp\n'}
+[41.366817] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/scripting/any_types.hpp\n'}
+[41.366922] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/scripting/operators.hpp\n'}
+[41.367047] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/decorator_node.h\n'}
+[41.367148] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/condition_node.h\n'}
+[41.367250] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/actions\n'}
+[41.367315] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/actions/set_blackboard_node.h\n'}
+[41.367417] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/actions/sleep_node.h\n'}
+[41.367518] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/actions/always_success_node.h\n'}
+[41.367620] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/actions/script_condition.h\n'}
+[41.367720] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/actions/script_node.h\n'}
+[41.367820] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/actions/test_node.h\n'}
+[41.367921] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/actions/always_failure_node.h\n'}
+[41.368031] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/actions/unset_blackboard_node.h\n'}
+[41.368134] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/actions/pop_from_queue.hpp\n'}
+[41.368244] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/leaf_node.h\n'}
+[41.368341] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/loggers\n'}
+[41.368409] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/loggers/groot2_publisher.h\n'}
+[41.368510] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/loggers/abstract_logger.h\n'}
+[41.368612] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/loggers/groot2_protocol.h\n'}
+[41.368718] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/loggers/bt_minitrace_logger.h\n'}
+[41.368818] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/loggers/bt_file_logger.h\n'}
+[41.368920] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/loggers/bt_file_logger_v2.h\n'}
+[41.369028] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/loggers/bt_sqlite_logger.h\n'}
+[41.369139] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/loggers/bt_cout_logger.h\n'}
+[41.369241] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/loggers/bt_observer.h\n'}
+[41.369340] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/contrib\n'}
+[41.369414] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/contrib/any.hpp\n'}
+[41.369534] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/contrib/expected.hpp\n'}
+[41.369716] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/contrib/json.hpp\n'}
+[41.370917] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/contrib/magic_enum.hpp\n'}
+[41.371091] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/tree_node.h\n'}
+[41.371212] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/basic_types.h\n'}
+[41.371259] (-) TimerEvent: {}
+[41.371344] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/bt_factory.h\n'}
+[41.371455] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/exceptions.h\n'}
+[41.371556] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/blackboard.h\n'}
+[41.371663] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/bt_parser.h\n'}
+[41.371765] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/control_node.h\n'}
+[41.371865] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/xml_parsing.h\n'}
+[41.371963] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/flatbuffers\n'}
+[41.372034] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/flatbuffers/flatbuffers.h\n'}
+[41.372269] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/flatbuffers/bt_flatbuffer_helper.h\n'}
+[41.372393] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/flatbuffers/stl_emulation.h\n'}
+[41.372520] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/flatbuffers/BT_logger_generated.h\n'}
+[41.372649] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/flatbuffers/base.h\n'}
+[41.372872] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/environment/library_path.sh\n'}
+[41.373004] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/environment/library_path.dsv\n'}
+[41.373224] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/ament_index/resource_index/package_run_dependencies/behaviortree_cpp\n'}
+[41.373390] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/ament_index/resource_index/parent_prefix_path/behaviortree_cpp\n'}
+[41.373520] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/environment/ament_prefix_path.sh\n'}
+[41.373644] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/environment/ament_prefix_path.dsv\n'}
+[41.373778] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/environment/path.sh\n'}
+[41.373901] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/environment/path.dsv\n'}
+[41.374022] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/local_setup.bash\n'}
+[41.374142] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/local_setup.sh\n'}
+[41.374268] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/local_setup.zsh\n'}
+[41.374393] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/local_setup.dsv\n'}
+[41.374512] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/package.dsv\n'}
+[41.374691] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/ament_index/resource_index/packages/behaviortree_cpp\n'}
+[41.374846] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[41.374977] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[41.375094] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[41.375229] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/cmake/behaviortree_cppConfig.cmake\n'}
+[41.375341] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/cmake/behaviortree_cppConfig-version.cmake\n'}
+[41.375469] (behaviortree_cpp) StdoutLine: {'line': b'-- Installing: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/package.xml\n'}
+[41.376746] (behaviortree_cpp) CommandEnded: {'returncode': 0}
+[41.471352] (-) TimerEvent: {}
+[41.571755] (-) TimerEvent: {}
+[41.641813] (behaviortree_cpp) JobEnded: {'identifier': 'behaviortree_cpp', 'rc': 0}
+[41.671823] (-) TimerEvent: {}
+[41.771965] (-) TimerEvent: {}
+[41.872129] (-) TimerEvent: {}
+[41.972342] (-) TimerEvent: {}
+[42.072509] (-) TimerEvent: {}
+[42.172686] (-) TimerEvent: {}
+[42.272890] (-) TimerEvent: {}
+[42.373085] (-) TimerEvent: {}
+[42.473285] (-) TimerEvent: {}
+[42.573460] (-) TimerEvent: {}
+[42.673641] (-) TimerEvent: {}
+[42.773864] (-) TimerEvent: {}
+[42.874081] (-) TimerEvent: {}
+[42.974313] (-) TimerEvent: {}
+[43.074507] (-) TimerEvent: {}
+[43.174726] (-) TimerEvent: {}
+[43.274939] (-) TimerEvent: {}
+[43.375118] (-) TimerEvent: {}
+[43.475322] (-) TimerEvent: {}
+[43.550006] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[43.575388] (-) TimerEvent: {}
+[43.618001] (bt_plansys_turtlebot) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[43.618612] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot/include\n'}
+[43.618689] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[43.619566] (bt_plansys_turtlebot) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[43.621411] (bt_plansys_turtlebot) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[43.621473] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[43.621968] (bt_plansys_turtlebot) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[43.623576] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Configuring done\n'}
+[43.675455] (-) TimerEvent: {}
+[43.708516] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Generating done\n'}
+[43.710473] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Build files have been written to: /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot\n'}
+[43.719480] (bt_plansys_turtlebot) CommandEnded: {'returncode': 0}
+[43.720141] (bt_plansys_turtlebot) JobProgress: {'identifier': 'bt_plansys_turtlebot', 'progress': 'build'}
+[43.720498] (bt_plansys_turtlebot) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot', '--', '-j12', '-l12'], 'cwd': '/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'stinky'), ('LC_TIME', 'nb_NO.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/stinky/Documents/plansys2_ws/install/plansys2_bt_example/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/stinky'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/stinky/Documents/semantic-robot/ros2_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/home/stinky/.config/autostart/guake.desktop'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'nb_NO.UTF-8'), ('MANAGERPID', '3621'), ('SYSTEMD_EXEC_PID', '3888'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4065'), ('COLCON_PREFIX_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install:/home/stinky/Documents/plansys2_ws/install:/home/stinky/Documents/ros2_ws/install'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'stinky'), ('DESKTOP_AUTOSTART_ID', '103d8713d862813ad5170729707986704400000038880016'), ('JOURNAL_STREAM', '8:157294'), ('_', '/usr/bin/colcon'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'stinky'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/stinky/miniconda3/condabin:/home/stinky/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/Dorte:@/tmp/.ICE-unix/3888,unix/Dorte:/tmp/.ICE-unix/3888'), ('INVOCATION_ID', 'a2d1c2609abd43468bbc512ede82fe5d'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'nb_NO.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'nb_NO.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example_py:/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example:/home/stinky/Documents/plansys2_ws/install/plansys2_patrol_navigation_example:/home/stinky/Documents/plansys2_ws/install/plansys2_multidomain_example:/home/stinky/Documents/plansys2_ws/install/plansys2_cascade_example:/home/stinky/Documents/plansys2_ws/install/plansys2_bt_example:/home/stinky/Documents/ros2_ws/install/turtlebot3_simulations:/home/stinky/Documents/ros2_ws/install/turtlebot3_gazebo:/home/stinky/Documents/ros2_ws/install/turtlebot3_fake_node:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/stinky/miniconda3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'nb_NO.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'nb_NO.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'nb_NO.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('GUAKE_TAB_UUID', 'f20de7b6-addb-4e25-8dc1-31b553ac6755'), ('PWD', '/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/stinky/miniconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example_py/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'nb_NO.UTF-8'), ('LC_PAPER', 'nb_NO.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example_py:/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example:/home/stinky/Documents/plansys2_ws/install/plansys2_patrol_navigation_example:/home/stinky/Documents/plansys2_ws/install/plansys2_multidomain_example:/home/stinky/Documents/plansys2_ws/install/plansys2_cascade_example:/home/stinky/Documents/plansys2_ws/install/plansys2_bt_example:/home/stinky/Documents/ros2_ws/install/turtlebot3_simulations:/home/stinky/Documents/ros2_ws/install/turtlebot3_gazebo:/home/stinky/Documents/ros2_ws/install/turtlebot3_fake_node:/opt/ros/humble')]), 'shell': False}
+[43.762634] (bt_plansys_turtlebot) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/approach_pallet_bt_node.dir/src/bt_nodes/ApproachPallet.cpp.o\x1b[0m\n'}
+[43.762835] (bt_plansys_turtlebot) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/move_bt_node.dir/src/bt_nodes/Move.cpp.o\x1b[0m\n'}
+[43.762937] (bt_plansys_turtlebot) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/lower_fork_bt_node.dir/src/bt_nodes/LowerFork.cpp.o\x1b[0m\n'}
+[43.763029] (bt_plansys_turtlebot) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/hello_world_node.dir/src/hello_world_node.cpp.o\x1b[0m\n'}
+[43.763100] (bt_plansys_turtlebot) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/recharge_bt_node.dir/src/bt_nodes/Recharge.cpp.o\x1b[0m\n'}
+[43.763167] (bt_plansys_turtlebot) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/lift_fork_bt_node.dir/src/bt_nodes/LiftFork.cpp.o\x1b[0m\n'}
+[43.768963] (bt_plansys_turtlebot) StderrLine: {'line': b'\x1b[01m\x1b[K/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot/src/hello_world_node.cpp:3:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Krclcpp/rclcpp.hpp: No such file or directory\n'}
+[43.769130] (bt_plansys_turtlebot) StderrLine: {'line': b'    3 | #include \x1b[01;31m\x1b[K"rclcpp/rclcpp.hpp"\x1b[m\x1b[K\n'}
+[43.769200] (bt_plansys_turtlebot) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[43.769284] (bt_plansys_turtlebot) StderrLine: {'line': b'compilation terminated.\n'}
+[43.769663] (bt_plansys_turtlebot) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/hello_world_node.dir/build.make:76: CMakeFiles/hello_world_node.dir/src/hello_world_node.cpp.o] Error 1\n'}
+[43.769888] (bt_plansys_turtlebot) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:277: CMakeFiles/hello_world_node.dir/all] Error 2\n'}
+[43.769966] (bt_plansys_turtlebot) StderrLine: {'line': b'gmake[1]: *** Waiting for unfinished jobs....\n'}
+[43.770138] (bt_plansys_turtlebot) StderrLine: {'line': b'\x1b[01m\x1b[K/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot/src/bt_nodes/LowerFork.cpp:1:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[KLowerFork.hpp: No such file or directory\n'}
+[43.770216] (bt_plansys_turtlebot) StderrLine: {'line': b'    1 | #include \x1b[01;31m\x1b[K"LowerFork.hpp"\x1b[m\x1b[K\n'}
+[43.770323] (bt_plansys_turtlebot) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[43.770436] (bt_plansys_turtlebot) StderrLine: {'line': b'\x1b[01m\x1b[K/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot/src/bt_nodes/LiftFork.cpp:1:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[KLiftFork.hpp: No such file or directory\n'}
+[43.770499] (bt_plansys_turtlebot) StderrLine: {'line': b'    1 | #include \x1b[01;31m\x1b[K"LiftFork.hpp"\x1b[m\x1b[K\n'}
+[43.770558] (bt_plansys_turtlebot) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[43.770634] (bt_plansys_turtlebot) StderrLine: {'line': b'compilation terminated.\n'}
+[43.770699] (bt_plansys_turtlebot) StderrLine: {'line': b'compilation terminated.\n'}
+[43.770758] (bt_plansys_turtlebot) StderrLine: {'line': b'\x1b[01m\x1b[K/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot/src/bt_nodes/Move.cpp:1:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[KMove.hpp: No such file or directory\n'}
+[43.770842] (bt_plansys_turtlebot) StderrLine: {'line': b'    1 | #include \x1b[01;31m\x1b[K"Move.hpp"\x1b[m\x1b[K\n'}
+[43.770911] (bt_plansys_turtlebot) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[43.770958] (bt_plansys_turtlebot) StderrLine: {'line': b'compilation terminated.\n'}
+[43.771053] (bt_plansys_turtlebot) StderrLine: {'line': b'\x1b[01m\x1b[K/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot/src/bt_nodes/ApproachPallet.cpp:1:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[KApproachPallet.hpp: No such file or directory\n'}
+[43.771150] (bt_plansys_turtlebot) StderrLine: {'line': b'    1 | #include \x1b[01;31m\x1b[K"ApproachPallet.hpp"\x1b[m\x1b[K\n'}
+[43.771214] (bt_plansys_turtlebot) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[43.771299] (bt_plansys_turtlebot) StderrLine: {'line': b'\x1b[01m\x1b[K/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot/src/bt_nodes/Recharge.cpp:1:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[KRecharge.hpp: No such file or directory\n'}
+[43.771349] (bt_plansys_turtlebot) StderrLine: {'line': b'    1 | #include \x1b[01;31m\x1b[K"Recharge.hpp"\x1b[m\x1b[K\n'}
+[43.771405] (bt_plansys_turtlebot) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[43.771450] (bt_plansys_turtlebot) StderrLine: {'line': b'compilation terminated.\n'}
+[43.771492] (bt_plansys_turtlebot) StderrLine: {'line': b'compilation terminated.\n'}
+[43.771534] (bt_plansys_turtlebot) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/lift_fork_bt_node.dir/build.make:76: CMakeFiles/lift_fork_bt_node.dir/src/bt_nodes/LiftFork.cpp.o] Error 1\n'}
+[43.771577] (bt_plansys_turtlebot) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/lower_fork_bt_node.dir/build.make:76: CMakeFiles/lower_fork_bt_node.dir/src/bt_nodes/LowerFork.cpp.o] Error 1\n'}
+[43.771620] (bt_plansys_turtlebot) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:225: CMakeFiles/lift_fork_bt_node.dir/all] Error 2\n'}
+[43.771663] (bt_plansys_turtlebot) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:251: CMakeFiles/lower_fork_bt_node.dir/all] Error 2\n'}
+[43.771712] (bt_plansys_turtlebot) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/approach_pallet_bt_node.dir/build.make:76: CMakeFiles/approach_pallet_bt_node.dir/src/bt_nodes/ApproachPallet.cpp.o] Error 1\n'}
+[43.771771] (bt_plansys_turtlebot) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/move_bt_node.dir/build.make:76: CMakeFiles/move_bt_node.dir/src/bt_nodes/Move.cpp.o] Error 1\n'}
+[43.771816] (bt_plansys_turtlebot) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/recharge_bt_node.dir/build.make:76: CMakeFiles/recharge_bt_node.dir/src/bt_nodes/Recharge.cpp.o] Error 1\n'}
+[43.771858] (bt_plansys_turtlebot) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:173: CMakeFiles/approach_pallet_bt_node.dir/all] Error 2\n'}
+[43.771900] (bt_plansys_turtlebot) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:147: CMakeFiles/move_bt_node.dir/all] Error 2\n'}
+[43.771942] (bt_plansys_turtlebot) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:199: CMakeFiles/recharge_bt_node.dir/all] Error 2\n'}
+[43.771983] (bt_plansys_turtlebot) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[43.773548] (bt_plansys_turtlebot) CommandEnded: {'returncode': 2}
+[43.775517] (-) TimerEvent: {}
+[43.853835] (bt_plansys_turtlebot) JobEnded: {'identifier': 'bt_plansys_turtlebot', 'rc': 2}
+[43.864189] (-) EventReactorShutdown: {}
