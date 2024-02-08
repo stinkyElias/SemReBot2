@@ -198,17 +198,17 @@ bt_plansys_turtlebot_uninstall/fast:
 .PHONY : bt_plansys_turtlebot_uninstall/fast
 
 #=============================================================================
-# Target rules for targets named move_bt_node
+# Target rules for targets named navigate_bt_node
 
 # Build rule for target.
-move_bt_node: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 move_bt_node
-.PHONY : move_bt_node
+navigate_bt_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 navigate_bt_node
+.PHONY : navigate_bt_node
 
 # fast build rule for target.
-move_bt_node/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/move_bt_node.dir/build.make CMakeFiles/move_bt_node.dir/build
-.PHONY : move_bt_node/fast
+navigate_bt_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/navigate_bt_node.dir/build.make CMakeFiles/navigate_bt_node.dir/build
+.PHONY : navigate_bt_node/fast
 
 #=============================================================================
 # Target rules for targets named approach_pallet_bt_node
@@ -347,29 +347,29 @@ src/bt_nodes/LowerFork.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lower_fork_bt_node.dir/build.make CMakeFiles/lower_fork_bt_node.dir/src/bt_nodes/LowerFork.cpp.s
 .PHONY : src/bt_nodes/LowerFork.cpp.s
 
-src/bt_nodes/Move.o: src/bt_nodes/Move.cpp.o
-.PHONY : src/bt_nodes/Move.o
+src/bt_nodes/Navigate.o: src/bt_nodes/Navigate.cpp.o
+.PHONY : src/bt_nodes/Navigate.o
 
 # target to build an object file
-src/bt_nodes/Move.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/move_bt_node.dir/build.make CMakeFiles/move_bt_node.dir/src/bt_nodes/Move.cpp.o
-.PHONY : src/bt_nodes/Move.cpp.o
+src/bt_nodes/Navigate.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/navigate_bt_node.dir/build.make CMakeFiles/navigate_bt_node.dir/src/bt_nodes/Navigate.cpp.o
+.PHONY : src/bt_nodes/Navigate.cpp.o
 
-src/bt_nodes/Move.i: src/bt_nodes/Move.cpp.i
-.PHONY : src/bt_nodes/Move.i
+src/bt_nodes/Navigate.i: src/bt_nodes/Navigate.cpp.i
+.PHONY : src/bt_nodes/Navigate.i
 
 # target to preprocess a source file
-src/bt_nodes/Move.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/move_bt_node.dir/build.make CMakeFiles/move_bt_node.dir/src/bt_nodes/Move.cpp.i
-.PHONY : src/bt_nodes/Move.cpp.i
+src/bt_nodes/Navigate.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/navigate_bt_node.dir/build.make CMakeFiles/navigate_bt_node.dir/src/bt_nodes/Navigate.cpp.i
+.PHONY : src/bt_nodes/Navigate.cpp.i
 
-src/bt_nodes/Move.s: src/bt_nodes/Move.cpp.s
-.PHONY : src/bt_nodes/Move.s
+src/bt_nodes/Navigate.s: src/bt_nodes/Navigate.cpp.s
+.PHONY : src/bt_nodes/Navigate.s
 
 # target to generate assembly for a file
-src/bt_nodes/Move.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/move_bt_node.dir/build.make CMakeFiles/move_bt_node.dir/src/bt_nodes/Move.cpp.s
-.PHONY : src/bt_nodes/Move.cpp.s
+src/bt_nodes/Navigate.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/navigate_bt_node.dir/build.make CMakeFiles/navigate_bt_node.dir/src/bt_nodes/Navigate.cpp.s
+.PHONY : src/bt_nodes/Navigate.cpp.s
 
 src/bt_nodes/Recharge.o: src/bt_nodes/Recharge.cpp.o
 .PHONY : src/bt_nodes/Recharge.o
@@ -438,7 +438,7 @@ help:
 	@echo "... hello_world_node"
 	@echo "... lift_fork_bt_node"
 	@echo "... lower_fork_bt_node"
-	@echo "... move_bt_node"
+	@echo "... navigate_bt_node"
 	@echo "... recharge_bt_node"
 	@echo "... src/bt_nodes/ApproachPallet.o"
 	@echo "... src/bt_nodes/ApproachPallet.i"
@@ -449,9 +449,9 @@ help:
 	@echo "... src/bt_nodes/LowerFork.o"
 	@echo "... src/bt_nodes/LowerFork.i"
 	@echo "... src/bt_nodes/LowerFork.s"
-	@echo "... src/bt_nodes/Move.o"
-	@echo "... src/bt_nodes/Move.i"
-	@echo "... src/bt_nodes/Move.s"
+	@echo "... src/bt_nodes/Navigate.o"
+	@echo "... src/bt_nodes/Navigate.i"
+	@echo "... src/bt_nodes/Navigate.s"
 	@echo "... src/bt_nodes/Recharge.o"
 	@echo "... src/bt_nodes/Recharge.i"
 	@echo "... src/bt_nodes/Recharge.s"

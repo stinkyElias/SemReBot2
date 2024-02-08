@@ -1098,7 +1098,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/uninstall.dir/DependInfo.cmake"
   "CMakeFiles/bt_plansys_turtlebot_uninstall.dir/DependInfo.cmake"
-  "CMakeFiles/move_bt_node.dir/DependInfo.cmake"
+  "CMakeFiles/navigate_bt_node.dir/DependInfo.cmake"
   "CMakeFiles/approach_pallet_bt_node.dir/DependInfo.cmake"
   "CMakeFiles/recharge_bt_node.dir/DependInfo.cmake"
   "CMakeFiles/lift_fork_bt_node.dir/DependInfo.cmake"

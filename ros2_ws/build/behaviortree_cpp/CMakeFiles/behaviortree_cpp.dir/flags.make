@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DBTCPP_LIBRARY_VERSION=\"4.5.1\" -DLEXY_HAS_UNICODE_DATABASE=1 -DUSING_ROS2 -Dbehaviortree_cpp_EXPORTS
 
-CXX_INCLUDES = -I/home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/include -I/home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/3rdparty -I/home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/3rdparty/lexy/include -isystem /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/3rdparty/lexy/src/../include -isystem /opt/ros/humble/include/ament_index_cpp
+CXX_INCLUDES = -I/home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/include -I/home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/3rdparty -I/home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/3rdparty/lexy/include -isystem /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/3rdparty/lexy/src/../include -isystem /opt/ros/humble/include/ament_index_cpp
 
 CXX_FLAGS = -O3 -DNDEBUG -fPIC   -Wpedantic -Wall -Wextra -std=gnu++20
 

@@ -53,7 +53,7 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master
+CMAKE_SOURCE_DIR = /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/stinky/Documents/semantic-robot/ros2_ws/build/behaviortree_cpp
@@ -70,18 +70,18 @@ include examples/CMakeFiles/ex04_waypoints.dir/progress.make
 include examples/CMakeFiles/ex04_waypoints.dir/flags.make
 
 examples/CMakeFiles/ex04_waypoints.dir/ex04_waypoints.cpp.o: examples/CMakeFiles/ex04_waypoints.dir/flags.make
-examples/CMakeFiles/ex04_waypoints.dir/ex04_waypoints.cpp.o: /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/examples/ex04_waypoints.cpp
+examples/CMakeFiles/ex04_waypoints.dir/ex04_waypoints.cpp.o: /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/examples/ex04_waypoints.cpp
 examples/CMakeFiles/ex04_waypoints.dir/ex04_waypoints.cpp.o: examples/CMakeFiles/ex04_waypoints.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/stinky/Documents/semantic-robot/ros2_ws/build/behaviortree_cpp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/CMakeFiles/ex04_waypoints.dir/ex04_waypoints.cpp.o"
-	cd /home/stinky/Documents/semantic-robot/ros2_ws/build/behaviortree_cpp/examples && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT examples/CMakeFiles/ex04_waypoints.dir/ex04_waypoints.cpp.o -MF CMakeFiles/ex04_waypoints.dir/ex04_waypoints.cpp.o.d -o CMakeFiles/ex04_waypoints.dir/ex04_waypoints.cpp.o -c /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/examples/ex04_waypoints.cpp
+	cd /home/stinky/Documents/semantic-robot/ros2_ws/build/behaviortree_cpp/examples && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT examples/CMakeFiles/ex04_waypoints.dir/ex04_waypoints.cpp.o -MF CMakeFiles/ex04_waypoints.dir/ex04_waypoints.cpp.o.d -o CMakeFiles/ex04_waypoints.dir/ex04_waypoints.cpp.o -c /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/examples/ex04_waypoints.cpp
 
 examples/CMakeFiles/ex04_waypoints.dir/ex04_waypoints.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex04_waypoints.dir/ex04_waypoints.cpp.i"
-	cd /home/stinky/Documents/semantic-robot/ros2_ws/build/behaviortree_cpp/examples && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/examples/ex04_waypoints.cpp > CMakeFiles/ex04_waypoints.dir/ex04_waypoints.cpp.i
+	cd /home/stinky/Documents/semantic-robot/ros2_ws/build/behaviortree_cpp/examples && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/examples/ex04_waypoints.cpp > CMakeFiles/ex04_waypoints.dir/ex04_waypoints.cpp.i
 
 examples/CMakeFiles/ex04_waypoints.dir/ex04_waypoints.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex04_waypoints.dir/ex04_waypoints.cpp.s"
-	cd /home/stinky/Documents/semantic-robot/ros2_ws/build/behaviortree_cpp/examples && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/examples/ex04_waypoints.cpp -o CMakeFiles/ex04_waypoints.dir/ex04_waypoints.cpp.s
+	cd /home/stinky/Documents/semantic-robot/ros2_ws/build/behaviortree_cpp/examples && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/examples/ex04_waypoints.cpp -o CMakeFiles/ex04_waypoints.dir/ex04_waypoints.cpp.s
 
 # Object files for target ex04_waypoints
 ex04_waypoints_OBJECTS = \
@@ -107,6 +107,6 @@ examples/CMakeFiles/ex04_waypoints.dir/clean:
 .PHONY : examples/CMakeFiles/ex04_waypoints.dir/clean
 
 examples/CMakeFiles/ex04_waypoints.dir/depend:
-	cd /home/stinky/Documents/semantic-robot/ros2_ws/build/behaviortree_cpp && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/examples /home/stinky/Documents/semantic-robot/ros2_ws/build/behaviortree_cpp /home/stinky/Documents/semantic-robot/ros2_ws/build/behaviortree_cpp/examples /home/stinky/Documents/semantic-robot/ros2_ws/build/behaviortree_cpp/examples/CMakeFiles/ex04_waypoints.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/stinky/Documents/semantic-robot/ros2_ws/build/behaviortree_cpp && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/examples /home/stinky/Documents/semantic-robot/ros2_ws/build/behaviortree_cpp /home/stinky/Documents/semantic-robot/ros2_ws/build/behaviortree_cpp/examples /home/stinky/Documents/semantic-robot/ros2_ws/build/behaviortree_cpp/examples/CMakeFiles/ex04_waypoints.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : examples/CMakeFiles/ex04_waypoints.dir/depend
 

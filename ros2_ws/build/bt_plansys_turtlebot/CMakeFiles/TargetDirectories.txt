@@ -1,6 +1,6 @@
 /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles/uninstall.dir
 /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles/bt_plansys_turtlebot_uninstall.dir
-/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles/move_bt_node.dir
+/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles/navigate_bt_node.dir
 /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles/approach_pallet_bt_node.dir
 /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles/recharge_bt_node.dir
 /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles/lift_fork_bt_node.dir

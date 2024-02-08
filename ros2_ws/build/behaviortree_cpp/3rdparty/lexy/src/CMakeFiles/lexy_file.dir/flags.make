@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DUSING_ROS2
 
-CXX_INCLUDES = -I/home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/3rdparty/lexy/src/../include
+CXX_INCLUDES = -I/home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/3rdparty/lexy/src/../include
 
 CXX_FLAGS = -O3 -DNDEBUG   -Wpedantic -pedantic-errors -Werror -Wall -Wextra -Wconversion -Wsign-conversion -Wno-parentheses -Wno-unused-local-typedefs -Wno-array-bounds -Wno-maybe-uninitialized -Wno-restrict -std=gnu++20
 

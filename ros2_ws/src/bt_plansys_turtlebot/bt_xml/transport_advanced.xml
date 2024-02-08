@@ -1,0 +1,31 @@
+<root main_tree_to_execute = "MainTree">
+    <BehaviorTree ID="MainTree">
+        <Sequence name="root_sequence">
+            <Fallback name="lower_fork_fallback">
+                <CheckForkLowered name="check_fork_lowered"/>
+                <LowerFork        name="lower_fork"/>
+            </Fallback>
+
+            <Fallback name="approach_pallet_fallback">
+                <CheckPalletInRange name="check_pallet_in_range"/>
+                <ApproachPallet     name="approach_pallet"/>
+            </Fallback>
+
+            <Fallback name="lift_fork_fallback">
+                <CheckInPallet name="check_in_pallet"/>
+                <LiftFork        name="lift_fork"/>
+            </Fallback>
+
+            <!-- Navigate to third pddl argument-->
+            <Fallback name="navigate_to_pose_fallback">
+                <CheckForkLifted name="check_fork_lifted"/>
+                <Navigate        name="navigate" goal="${arg3}"/>
+            </Fallback>
+
+            <Fallback name="place_pallet_fallback">
+                <CheckCorrectPose   name="check_correct_pose"/>
+                <LowerFork          name="lower_fork"/>
+            </Fallback>
+        </Sequence>
+    </BehaviorTree>
+</root>

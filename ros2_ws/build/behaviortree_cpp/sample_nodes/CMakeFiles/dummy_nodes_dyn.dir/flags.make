@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DBTCPP_LIBRARY_VERSION=\"4.5.1\" -DBT_PLUGIN_EXPORT -DUSING_ROS2 -Ddummy_nodes_dyn_EXPORTS
 
-CXX_INCLUDES = -I/home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include -I/home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/include
+CXX_INCLUDES = -I/home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include -I/home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/include
 
 CXX_FLAGS = -O3 -DNDEBUG -fPIC   -Wpedantic
 

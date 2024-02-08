@@ -1,0 +1,402 @@
+[0.000000] (-) TimerEvent: {}
+[0.000281] (bt_plansys_turtlebot) JobQueued: {'identifier': 'bt_plansys_turtlebot', 'dependencies': OrderedDict()}
+[0.000372] (bt_plansys_turtlebot) JobStarted: {'identifier': 'bt_plansys_turtlebot'}
+[0.079515] (bt_plansys_turtlebot) JobProgress: {'identifier': 'bt_plansys_turtlebot', 'progress': 'cmake'}
+[0.079784] (bt_plansys_turtlebot) Command: {'cmd': ['/usr/bin/cmake', '/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot'], 'cwd': '/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'stinky'), ('LC_TIME', 'nb_NO.UTF-8'), ('ROS_PACKAGE_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/lib:/home/stinky/Documents/plansys2_ws/install/plansys2_bt_example/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/stinky'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/stinky/Documents/semantic-robot/ros2_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/home/stinky/.config/autostart/guake.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'nb_NO.UTF-8'), ('MANAGERPID', '3621'), ('SYSTEMD_EXEC_PID', '3888'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4065'), ('COLCON_PREFIX_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install:/home/stinky/Documents/plansys2_ws/install:/home/stinky/Documents/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'stinky'), ('DESKTOP_AUTOSTART_ID', '103d8713d862813ad5170729707986704400000038880016'), ('JOURNAL_STREAM', '8:157294'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/lib/x86_64-linux-gnu/pkgconfig:/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'stinky'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/bin:/opt/ros/humble/bin:/home/stinky/miniconda3/condabin:/home/stinky/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/Dorte:@/tmp/.ICE-unix/3888,unix/Dorte:/tmp/.ICE-unix/3888'), ('INVOCATION_ID', 'a2d1c2609abd43468bbc512ede82fe5d'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'nb_NO.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'nb_NO.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp:/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example_py:/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example:/home/stinky/Documents/plansys2_ws/install/plansys2_patrol_navigation_example:/home/stinky/Documents/plansys2_ws/install/plansys2_multidomain_example:/home/stinky/Documents/plansys2_ws/install/plansys2_cascade_example:/home/stinky/Documents/plansys2_ws/install/plansys2_bt_example:/home/stinky/Documents/ros2_ws/install/turtlebot3_simulations:/home/stinky/Documents/ros2_ws/install/turtlebot3_gazebo:/home/stinky/Documents/ros2_ws/install/turtlebot3_fake_node:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/stinky/miniconda3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'nb_NO.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'nb_NO.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'nb_NO.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('GUAKE_TAB_UUID', 'f20de7b6-addb-4e25-8dc1-31b553ac6755'), ('PWD', '/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/stinky/miniconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example_py/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'nb_NO.UTF-8'), ('LC_PAPER', 'nb_NO.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp:/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example_py:/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example:/home/stinky/Documents/plansys2_ws/install/plansys2_patrol_navigation_example:/home/stinky/Documents/plansys2_ws/install/plansys2_multidomain_example:/home/stinky/Documents/plansys2_ws/install/plansys2_cascade_example:/home/stinky/Documents/plansys2_ws/install/plansys2_bt_example:/home/stinky/Documents/ros2_ws/install/turtlebot3_simulations:/home/stinky/Documents/ros2_ws/install/turtlebot3_gazebo:/home/stinky/Documents/ros2_ws/install/turtlebot3_fake_node:/opt/ros/humble')]), 'shell': False}
+[0.099899] (-) TimerEvent: {}
+[0.122078] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.161533] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.166800] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.199988] (-) TimerEvent: {}
+[0.219669] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.224384] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.224564] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.224820] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.226938] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.286828] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.291684] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.291889] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.292201] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.295161] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.7 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.300050] (-) TimerEvent: {}
+[0.400242] (-) TimerEvent: {}
+[0.417686] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter \n'}
+[0.459181] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.495850] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found ament_index_cpp: 1.4.0 (/opt/ros/humble/share/ament_index_cpp/cmake)\n'}
+[0.498431] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found rclcpp: 16.0.8 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.500295] (-) TimerEvent: {}
+[0.540431] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.546427] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.554735] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.566777] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.583911] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.600359] (-) TimerEvent: {}
+[0.644144] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.647361] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)\n'}
+[0.675786] (bt_plansys_turtlebot) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_cyclonedds_cpp' as default\n"}
+[0.686481] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[0.700441] (-) TimerEvent: {}
+[0.743388] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[0.743546] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[0.799589] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[0.800139] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[0.800509] (-) TimerEvent: {}
+[0.900713] (-) TimerEvent: {}
+[0.915176] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found rclcpp_action: 16.0.8 (/opt/ros/humble/share/rclcpp_action/cmake)\n'}
+[0.985278] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[1.000784] (-) TimerEvent: {}
+[1.016787] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found tf2_geometry_msgs: 0.25.5 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)\n'}
+[1.034092] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)\n'}
+[1.034758] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0") \n'}
+[1.034838] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[1.100863] (-) TimerEvent: {}
+[1.201021] (-) TimerEvent: {}
+[1.230731] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found nav2_msgs: 1.1.12 (/opt/ros/humble/share/nav2_msgs/cmake)\n'}
+[1.301100] (-) TimerEvent: {}
+[1.401247] (-) TimerEvent: {}
+[1.415211] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found plansys2_msgs: 2.0.9 (/opt/ros/humble/share/plansys2_msgs/cmake)\n'}
+[1.481269] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found plansys2_executor: 2.0.9 (/opt/ros/humble/share/plansys2_executor/cmake)\n'}
+[1.501327] (-) TimerEvent: {}
+[1.601473] (-) TimerEvent: {}
+[1.701621] (-) TimerEvent: {}
+[1.801771] (-) TimerEvent: {}
+[1.901919] (-) TimerEvent: {}
+[2.002071] (-) TimerEvent: {}
+[2.102218] (-) TimerEvent: {}
+[2.202368] (-) TimerEvent: {}
+[2.302513] (-) TimerEvent: {}
+[2.402661] (-) TimerEvent: {}
+[2.502811] (-) TimerEvent: {}
+[2.602960] (-) TimerEvent: {}
+[2.703107] (-) TimerEvent: {}
+[2.803255] (-) TimerEvent: {}
+[2.903409] (-) TimerEvent: {}
+[3.003557] (-) TimerEvent: {}
+[3.103703] (-) TimerEvent: {}
+[3.203849] (-) TimerEvent: {}
+[3.304005] (-) TimerEvent: {}
+[3.361961] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found plansys2_bt_actions: 2.0.9 (/opt/ros/humble/share/plansys2_bt_actions/cmake)\n'}
+[3.404082] (-) TimerEvent: {}
+[3.504230] (-) TimerEvent: {}
+[3.604376] (-) TimerEvent: {}
+[3.704523] (-) TimerEvent: {}
+[3.804670] (-) TimerEvent: {}
+[3.904820] (-) TimerEvent: {}
+[4.004974] (-) TimerEvent: {}
+[4.105121] (-) TimerEvent: {}
+[4.205271] (-) TimerEvent: {}
+[4.305422] (-) TimerEvent: {}
+[4.405587] (-) TimerEvent: {}
+[4.505737] (-) TimerEvent: {}
+[4.605891] (-) TimerEvent: {}
+[4.706040] (-) TimerEvent: {}
+[4.806189] (-) TimerEvent: {}
+[4.906336] (-) TimerEvent: {}
+[5.006484] (-) TimerEvent: {}
+[5.106632] (-) TimerEvent: {}
+[5.206779] (-) TimerEvent: {}
+[5.306926] (-) TimerEvent: {}
+[5.407075] (-) TimerEvent: {}
+[5.507222] (-) TimerEvent: {}
+[5.607385] (-) TimerEvent: {}
+[5.707572] (-) TimerEvent: {}
+[5.807730] (-) TimerEvent: {}
+[5.907879] (-) TimerEvent: {}
+[6.008032] (-) TimerEvent: {}
+[6.108180] (-) TimerEvent: {}
+[6.208326] (-) TimerEvent: {}
+[6.308478] (-) TimerEvent: {}
+[6.408631] (-) TimerEvent: {}
+[6.508783] (-) TimerEvent: {}
+[6.608929] (-) TimerEvent: {}
+[6.709092] (-) TimerEvent: {}
+[6.809242] (-) TimerEvent: {}
+[6.909390] (-) TimerEvent: {}
+[7.009538] (-) TimerEvent: {}
+[7.109685] (-) TimerEvent: {}
+[7.209832] (-) TimerEvent: {}
+[7.310002] (-) TimerEvent: {}
+[7.410169] (-) TimerEvent: {}
+[7.510318] (-) TimerEvent: {}
+[7.610468] (-) TimerEvent: {}
+[7.710617] (-) TimerEvent: {}
+[7.810763] (-) TimerEvent: {}
+[7.910911] (-) TimerEvent: {}
+[8.011061] (-) TimerEvent: {}
+[8.111210] (-) TimerEvent: {}
+[8.211363] (-) TimerEvent: {}
+[8.311510] (-) TimerEvent: {}
+[8.411657] (-) TimerEvent: {}
+[8.511804] (-) TimerEvent: {}
+[8.611952] (-) TimerEvent: {}
+[8.712097] (-) TimerEvent: {}
+[8.812244] (-) TimerEvent: {}
+[8.912402] (-) TimerEvent: {}
+[9.012551] (-) TimerEvent: {}
+[9.112698] (-) TimerEvent: {}
+[9.212849] (-) TimerEvent: {}
+[9.313000] (-) TimerEvent: {}
+[9.413152] (-) TimerEvent: {}
+[9.513300] (-) TimerEvent: {}
+[9.613446] (-) TimerEvent: {}
+[9.713592] (-) TimerEvent: {}
+[9.813739] (-) TimerEvent: {}
+[9.913891] (-) TimerEvent: {}
+[10.014041] (-) TimerEvent: {}
+[10.114187] (-) TimerEvent: {}
+[10.214336] (-) TimerEvent: {}
+[10.314482] (-) TimerEvent: {}
+[10.414631] (-) TimerEvent: {}
+[10.514779] (-) TimerEvent: {}
+[10.614926] (-) TimerEvent: {}
+[10.715072] (-) TimerEvent: {}
+[10.815219] (-) TimerEvent: {}
+[10.915366] (-) TimerEvent: {}
+[11.015513] (-) TimerEvent: {}
+[11.115660] (-) TimerEvent: {}
+[11.215806] (-) TimerEvent: {}
+[11.315954] (-) TimerEvent: {}
+[11.416104] (-) TimerEvent: {}
+[11.516250] (-) TimerEvent: {}
+[11.616397] (-) TimerEvent: {}
+[11.716548] (-) TimerEvent: {}
+[11.816711] (-) TimerEvent: {}
+[11.916867] (-) TimerEvent: {}
+[12.017016] (-) TimerEvent: {}
+[12.117163] (-) TimerEvent: {}
+[12.217309] (-) TimerEvent: {}
+[12.317456] (-) TimerEvent: {}
+[12.417603] (-) TimerEvent: {}
+[12.517755] (-) TimerEvent: {}
+[12.617891] (-) TimerEvent: {}
+[12.718053] (-) TimerEvent: {}
+[12.818203] (-) TimerEvent: {}
+[12.918359] (-) TimerEvent: {}
+[13.018512] (-) TimerEvent: {}
+[13.118659] (-) TimerEvent: {}
+[13.218807] (-) TimerEvent: {}
+[13.318954] (-) TimerEvent: {}
+[13.419106] (-) TimerEvent: {}
+[13.519254] (-) TimerEvent: {}
+[13.619403] (-) TimerEvent: {}
+[13.719550] (-) TimerEvent: {}
+[13.819699] (-) TimerEvent: {}
+[13.919851] (-) TimerEvent: {}
+[14.020002] (-) TimerEvent: {}
+[14.120150] (-) TimerEvent: {}
+[14.220298] (-) TimerEvent: {}
+[14.320449] (-) TimerEvent: {}
+[14.420601] (-) TimerEvent: {}
+[14.520747] (-) TimerEvent: {}
+[14.620897] (-) TimerEvent: {}
+[14.721043] (-) TimerEvent: {}
+[14.821193] (-) TimerEvent: {}
+[14.921340] (-) TimerEvent: {}
+[15.021475] (-) TimerEvent: {}
+[15.121625] (-) TimerEvent: {}
+[15.221772] (-) TimerEvent: {}
+[15.321930] (-) TimerEvent: {}
+[15.422097] (-) TimerEvent: {}
+[15.522245] (-) TimerEvent: {}
+[15.622395] (-) TimerEvent: {}
+[15.722541] (-) TimerEvent: {}
+[15.822687] (-) TimerEvent: {}
+[15.922836] (-) TimerEvent: {}
+[16.022985] (-) TimerEvent: {}
+[16.123133] (-) TimerEvent: {}
+[16.223280] (-) TimerEvent: {}
+[16.323430] (-) TimerEvent: {}
+[16.423577] (-) TimerEvent: {}
+[16.523724] (-) TimerEvent: {}
+[16.623871] (-) TimerEvent: {}
+[16.724020] (-) TimerEvent: {}
+[16.824172] (-) TimerEvent: {}
+[16.924339] (-) TimerEvent: {}
+[17.024489] (-) TimerEvent: {}
+[17.124637] (-) TimerEvent: {}
+[17.224784] (-) TimerEvent: {}
+[17.324931] (-) TimerEvent: {}
+[17.425078] (-) TimerEvent: {}
+[17.525225] (-) TimerEvent: {}
+[17.625376] (-) TimerEvent: {}
+[17.725526] (-) TimerEvent: {}
+[17.825689] (-) TimerEvent: {}
+[17.925844] (-) TimerEvent: {}
+[18.026027] (-) TimerEvent: {}
+[18.126177] (-) TimerEvent: {}
+[18.226324] (-) TimerEvent: {}
+[18.326475] (-) TimerEvent: {}
+[18.426625] (-) TimerEvent: {}
+[18.526773] (-) TimerEvent: {}
+[18.626923] (-) TimerEvent: {}
+[18.727070] (-) TimerEvent: {}
+[18.827219] (-) TimerEvent: {}
+[18.927355] (-) TimerEvent: {}
+[19.027503] (-) TimerEvent: {}
+[19.127650] (-) TimerEvent: {}
+[19.227800] (-) TimerEvent: {}
+[19.327945] (-) TimerEvent: {}
+[19.428093] (-) TimerEvent: {}
+[19.528238] (-) TimerEvent: {}
+[19.628384] (-) TimerEvent: {}
+[19.728530] (-) TimerEvent: {}
+[19.828677] (-) TimerEvent: {}
+[19.928823] (-) TimerEvent: {}
+[20.028970] (-) TimerEvent: {}
+[20.129116] (-) TimerEvent: {}
+[20.229263] (-) TimerEvent: {}
+[20.329413] (-) TimerEvent: {}
+[20.429589] (-) TimerEvent: {}
+[20.529736] (-) TimerEvent: {}
+[20.629882] (-) TimerEvent: {}
+[20.730016] (-) TimerEvent: {}
+[20.830162] (-) TimerEvent: {}
+[20.930311] (-) TimerEvent: {}
+[21.030473] (-) TimerEvent: {}
+[21.130619] (-) TimerEvent: {}
+[21.230765] (-) TimerEvent: {}
+[21.330915] (-) TimerEvent: {}
+[21.431057] (-) TimerEvent: {}
+[21.531182] (-) TimerEvent: {}
+[21.631307] (-) TimerEvent: {}
+[21.731432] (-) TimerEvent: {}
+[21.831561] (-) TimerEvent: {}
+[21.931694] (-) TimerEvent: {}
+[22.031828] (-) TimerEvent: {}
+[22.131955] (-) TimerEvent: {}
+[22.232080] (-) TimerEvent: {}
+[22.332205] (-) TimerEvent: {}
+[22.432351] (-) TimerEvent: {}
+[22.532476] (-) TimerEvent: {}
+[22.632604] (-) TimerEvent: {}
+[22.732734] (-) TimerEvent: {}
+[22.832883] (-) TimerEvent: {}
+[22.933012] (-) TimerEvent: {}
+[23.033139] (-) TimerEvent: {}
+[23.133268] (-) TimerEvent: {}
+[23.233394] (-) TimerEvent: {}
+[23.333521] (-) TimerEvent: {}
+[23.433673] (-) TimerEvent: {}
+[23.533865] (-) TimerEvent: {}
+[23.634026] (-) TimerEvent: {}
+[23.734186] (-) TimerEvent: {}
+[23.834351] (-) TimerEvent: {}
+[23.934503] (-) TimerEvent: {}
+[24.034667] (-) TimerEvent: {}
+[24.134811] (-) TimerEvent: {}
+[24.234944] (-) TimerEvent: {}
+[24.335072] (-) TimerEvent: {}
+[24.435197] (-) TimerEvent: {}
+[24.535324] (-) TimerEvent: {}
+[24.635448] (-) TimerEvent: {}
+[24.735573] (-) TimerEvent: {}
+[24.835698] (-) TimerEvent: {}
+[24.935826] (-) TimerEvent: {}
+[25.035951] (-) TimerEvent: {}
+[25.136078] (-) TimerEvent: {}
+[25.236203] (-) TimerEvent: {}
+[25.336332] (-) TimerEvent: {}
+[25.436458] (-) TimerEvent: {}
+[25.536586] (-) TimerEvent: {}
+[25.636712] (-) TimerEvent: {}
+[25.736839] (-) TimerEvent: {}
+[25.836966] (-) TimerEvent: {}
+[25.937106] (-) TimerEvent: {}
+[26.037235] (-) TimerEvent: {}
+[26.137366] (-) TimerEvent: {}
+[26.237501] (-) TimerEvent: {}
+[26.337641] (-) TimerEvent: {}
+[26.437771] (-) TimerEvent: {}
+[26.537902] (-) TimerEvent: {}
+[26.638029] (-) TimerEvent: {}
+[26.738159] (-) TimerEvent: {}
+[26.838292] (-) TimerEvent: {}
+[26.938421] (-) TimerEvent: {}
+[27.038588] (-) TimerEvent: {}
+[27.138826] (-) TimerEvent: {}
+[27.239043] (-) TimerEvent: {}
+[27.339257] (-) TimerEvent: {}
+[27.439447] (-) TimerEvent: {}
+[27.539620] (-) TimerEvent: {}
+[27.639823] (-) TimerEvent: {}
+[27.739988] (-) TimerEvent: {}
+[27.840166] (-) TimerEvent: {}
+[27.940343] (-) TimerEvent: {}
+[28.040495] (-) TimerEvent: {}
+[28.140659] (-) TimerEvent: {}
+[28.240792] (-) TimerEvent: {}
+[28.340946] (-) TimerEvent: {}
+[28.441074] (-) TimerEvent: {}
+[28.541208] (-) TimerEvent: {}
+[28.641348] (-) TimerEvent: {}
+[28.741485] (-) TimerEvent: {}
+[28.841619] (-) TimerEvent: {}
+[28.874687] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[28.938182] (bt_plansys_turtlebot) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[28.938881] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot/include\n'}
+[28.938969] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[28.939908] (bt_plansys_turtlebot) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[28.941688] (-) TimerEvent: {}
+[28.941790] (bt_plansys_turtlebot) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[28.941889] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[28.942451] (bt_plansys_turtlebot) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[28.944132] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Configuring done\n'}
+[29.026586] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Generating done\n'}
+[29.028584] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Build files have been written to: /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot\n'}
+[29.037711] (bt_plansys_turtlebot) CommandEnded: {'returncode': 0}
+[29.038282] (bt_plansys_turtlebot) JobProgress: {'identifier': 'bt_plansys_turtlebot', 'progress': 'build'}
+[29.038796] (bt_plansys_turtlebot) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot', '--', '-j12', '-l12'], 'cwd': '/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'stinky'), ('LC_TIME', 'nb_NO.UTF-8'), ('ROS_PACKAGE_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/lib:/home/stinky/Documents/plansys2_ws/install/plansys2_bt_example/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/stinky'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/stinky/Documents/semantic-robot/ros2_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/home/stinky/.config/autostart/guake.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'nb_NO.UTF-8'), ('MANAGERPID', '3621'), ('SYSTEMD_EXEC_PID', '3888'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4065'), ('COLCON_PREFIX_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install:/home/stinky/Documents/plansys2_ws/install:/home/stinky/Documents/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'stinky'), ('DESKTOP_AUTOSTART_ID', '103d8713d862813ad5170729707986704400000038880016'), ('JOURNAL_STREAM', '8:157294'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/lib/x86_64-linux-gnu/pkgconfig:/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'stinky'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/bin:/opt/ros/humble/bin:/home/stinky/miniconda3/condabin:/home/stinky/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/Dorte:@/tmp/.ICE-unix/3888,unix/Dorte:/tmp/.ICE-unix/3888'), ('INVOCATION_ID', 'a2d1c2609abd43468bbc512ede82fe5d'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'nb_NO.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'nb_NO.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp:/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example_py:/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example:/home/stinky/Documents/plansys2_ws/install/plansys2_patrol_navigation_example:/home/stinky/Documents/plansys2_ws/install/plansys2_multidomain_example:/home/stinky/Documents/plansys2_ws/install/plansys2_cascade_example:/home/stinky/Documents/plansys2_ws/install/plansys2_bt_example:/home/stinky/Documents/ros2_ws/install/turtlebot3_simulations:/home/stinky/Documents/ros2_ws/install/turtlebot3_gazebo:/home/stinky/Documents/ros2_ws/install/turtlebot3_fake_node:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/stinky/miniconda3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'nb_NO.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'nb_NO.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'nb_NO.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('GUAKE_TAB_UUID', 'f20de7b6-addb-4e25-8dc1-31b553ac6755'), ('PWD', '/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/stinky/miniconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example_py/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'nb_NO.UTF-8'), ('LC_PAPER', 'nb_NO.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp:/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example_py:/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example:/home/stinky/Documents/plansys2_ws/install/plansys2_patrol_navigation_example:/home/stinky/Documents/plansys2_ws/install/plansys2_multidomain_example:/home/stinky/Documents/plansys2_ws/install/plansys2_cascade_example:/home/stinky/Documents/plansys2_ws/install/plansys2_bt_example:/home/stinky/Documents/ros2_ws/install/turtlebot3_simulations:/home/stinky/Documents/ros2_ws/install/turtlebot3_gazebo:/home/stinky/Documents/ros2_ws/install/turtlebot3_fake_node:/opt/ros/humble')]), 'shell': False}
+[29.041751] (-) TimerEvent: {}
+[29.081835] (bt_plansys_turtlebot) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding CXX object CMakeFiles/hello_world_node.dir/src/hello_world_node.cpp.o\x1b[0m\n'}
+[29.082053] (bt_plansys_turtlebot) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding CXX object CMakeFiles/move_bt_node.dir/src/bt_nodes/Move.cpp.o\x1b[0m\n'}
+[29.082169] (bt_plansys_turtlebot) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/lower_fork_bt_node.dir/src/bt_nodes/LowerFork.cpp.o\x1b[0m\n'}
+[29.082349] (bt_plansys_turtlebot) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/lift_fork_bt_node.dir/src/bt_nodes/LiftFork.cpp.o\x1b[0m\n'}
+[29.084036] (bt_plansys_turtlebot) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/approach_pallet_bt_node.dir/src/bt_nodes/ApproachPallet.cpp.o\x1b[0m\n'}
+[29.084154] (bt_plansys_turtlebot) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/recharge_bt_node.dir/src/bt_nodes/Recharge.cpp.o\x1b[0m\n'}
+[29.087879] (bt_plansys_turtlebot) StderrLine: {'line': b'\x1b[01m\x1b[K/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot/src/hello_world_node.cpp:1:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Krclcpp/rclcpp.hpp: No such file or directory\n'}
+[29.088008] (bt_plansys_turtlebot) StderrLine: {'line': b'    1 | #include \x1b[01;31m\x1b[K"rclcpp/rclcpp.hpp"\x1b[m\x1b[K\n'}
+[29.088080] (bt_plansys_turtlebot) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[29.088166] (bt_plansys_turtlebot) StderrLine: {'line': b'compilation terminated.\n'}
+[29.088518] (bt_plansys_turtlebot) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/hello_world_node.dir/build.make:76: CMakeFiles/hello_world_node.dir/src/hello_world_node.cpp.o] Error 1\n'}
+[29.088805] (bt_plansys_turtlebot) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot/src/bt_nodes/Move.cpp:1\x1b[m\x1b[K:\n'}
+[29.088888] (bt_plansys_turtlebot) StderrLine: {'line': b'\x1b[01m\x1b[K/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot/include/bt_plansys_turtlebot/bt_nodes/Move.hpp:4:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kbehaviortree_cpp/bt_factory.h: No such file or directory\n'}
+[29.088991] (bt_plansys_turtlebot) StderrLine: {'line': b'    4 | #include \x1b[01;31m\x1b[K"behaviortree_cpp/bt_factory.h"\x1b[m\x1b[K\n'}
+[29.089087] (bt_plansys_turtlebot) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[29.089160] (bt_plansys_turtlebot) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:277: CMakeFiles/hello_world_node.dir/all] Error 2\n'}
+[29.089242] (bt_plansys_turtlebot) StderrLine: {'line': b'compilation terminated.\n'}
+[29.089311] (bt_plansys_turtlebot) StderrLine: {'line': b'gmake[1]: *** Waiting for unfinished jobs....\n'}
+[29.089377] (bt_plansys_turtlebot) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot/src/bt_nodes/LowerFork.cpp:1\x1b[m\x1b[K:\n'}
+[29.089447] (bt_plansys_turtlebot) StderrLine: {'line': b'\x1b[01m\x1b[K/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot/include/bt_plansys_turtlebot/bt_nodes/LowerFork.hpp:4:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kbehaviortree_cpp/bt_factory.h: No such file or directory\n'}
+[29.089528] (bt_plansys_turtlebot) StderrLine: {'line': b'    4 | #include \x1b[01;31m\x1b[K"behaviortree_cpp/bt_factory.h"\x1b[m\x1b[K\n'}
+[29.089638] (bt_plansys_turtlebot) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[29.089725] (bt_plansys_turtlebot) StderrLine: {'line': b'compilation terminated.\n'}
+[29.089810] (bt_plansys_turtlebot) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot/src/bt_nodes/LiftFork.cpp:1\x1b[m\x1b[K:\n'}
+[29.089907] (bt_plansys_turtlebot) StderrLine: {'line': b'\x1b[01m\x1b[K/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot/include/bt_plansys_turtlebot/bt_nodes/LiftFork.hpp:4:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kbehaviortree_cpp/bt_factory.h: No such file or directory\n'}
+[29.089984] (bt_plansys_turtlebot) StderrLine: {'line': b'    4 | #include \x1b[01;31m\x1b[K"behaviortree_cpp/bt_factory.h"\x1b[m\x1b[K\n'}
+[29.090052] (bt_plansys_turtlebot) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[29.090117] (bt_plansys_turtlebot) StderrLine: {'line': b'compilation terminated.\n'}
+[29.090183] (bt_plansys_turtlebot) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/move_bt_node.dir/build.make:76: CMakeFiles/move_bt_node.dir/src/bt_nodes/Move.cpp.o] Error 1\n'}
+[29.090253] (bt_plansys_turtlebot) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:147: CMakeFiles/move_bt_node.dir/all] Error 2\n'}
+[29.090322] (bt_plansys_turtlebot) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/lower_fork_bt_node.dir/build.make:76: CMakeFiles/lower_fork_bt_node.dir/src/bt_nodes/LowerFork.cpp.o] Error 1\n'}
+[29.090389] (bt_plansys_turtlebot) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/lift_fork_bt_node.dir/build.make:76: CMakeFiles/lift_fork_bt_node.dir/src/bt_nodes/LiftFork.cpp.o] Error 1\n'}
+[29.090462] (bt_plansys_turtlebot) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:251: CMakeFiles/lower_fork_bt_node.dir/all] Error 2\n'}
+[29.090529] (bt_plansys_turtlebot) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:225: CMakeFiles/lift_fork_bt_node.dir/all] Error 2\n'}
+[29.090950] (bt_plansys_turtlebot) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot/src/bt_nodes/Recharge.cpp:1\x1b[m\x1b[K:\n'}
+[29.091032] (bt_plansys_turtlebot) StderrLine: {'line': b'\x1b[01m\x1b[K/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot/include/bt_plansys_turtlebot/bt_nodes/Recharge.hpp:4:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kbehaviortree_cpp/bt_factory.h: No such file or directory\n'}
+[29.091101] (bt_plansys_turtlebot) StderrLine: {'line': b'    4 | #include \x1b[01;31m\x1b[K"behaviortree_cpp/bt_factory.h"\x1b[m\x1b[K\n'}
+[29.091165] (bt_plansys_turtlebot) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[29.091226] (bt_plansys_turtlebot) StderrLine: {'line': b'compilation terminated.\n'}
+[29.091553] (bt_plansys_turtlebot) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/recharge_bt_node.dir/build.make:76: CMakeFiles/recharge_bt_node.dir/src/bt_nodes/Recharge.cpp.o] Error 1\n'}
+[29.091686] (bt_plansys_turtlebot) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:199: CMakeFiles/recharge_bt_node.dir/all] Error 2\n'}
+[29.092071] (bt_plansys_turtlebot) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot/src/bt_nodes/ApproachPallet.cpp:1\x1b[m\x1b[K:\n'}
+[29.092157] (bt_plansys_turtlebot) StderrLine: {'line': b'\x1b[01m\x1b[K/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot/include/bt_plansys_turtlebot/bt_nodes/ApproachPallet.hpp:4:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kbehaviortree_cpp/bt_factory.h: No such file or directory\n'}
+[29.092223] (bt_plansys_turtlebot) StderrLine: {'line': b'    4 | #include \x1b[01;31m\x1b[K"behaviortree_cpp/bt_factory.h"\x1b[m\x1b[K\n'}
+[29.092281] (bt_plansys_turtlebot) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[29.092335] (bt_plansys_turtlebot) StderrLine: {'line': b'compilation terminated.\n'}
+[29.092929] (bt_plansys_turtlebot) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/approach_pallet_bt_node.dir/build.make:76: CMakeFiles/approach_pallet_bt_node.dir/src/bt_nodes/ApproachPallet.cpp.o] Error 1\n'}
+[29.093072] (bt_plansys_turtlebot) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:173: CMakeFiles/approach_pallet_bt_node.dir/all] Error 2\n'}
+[29.093281] (bt_plansys_turtlebot) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[29.095655] (bt_plansys_turtlebot) CommandEnded: {'returncode': 2}
+[29.141837] (-) TimerEvent: {}
+[29.174125] (bt_plansys_turtlebot) JobEnded: {'identifier': 'bt_plansys_turtlebot', 'rc': 2}
+[29.184465] (-) EventReactorShutdown: {}

@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/examples/t10_observer.cpp" "examples/CMakeFiles/t10_observer.dir/t10_observer.cpp.o" "gcc" "examples/CMakeFiles/t10_observer.dir/t10_observer.cpp.o.d"
+  "/home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/examples/t10_observer.cpp" "examples/CMakeFiles/t10_observer.dir/t10_observer.cpp.o" "gcc" "examples/CMakeFiles/t10_observer.dir/t10_observer.cpp.o.d"
   )
 
 # Targets to which this target links.

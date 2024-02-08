@@ -1,0 +1,12 @@
+<root main_tree_to_execute = "MainTree">
+    <BehaviorTree ID="MainTree">
+        <Sequence name="root_sequence">
+            <LowerFork      name="lower_fork"/>
+            <ApproachPallet name="approach_pallet"/>
+            <LiftFork       name="lift_fork"/>
+            <!-- Navigate to third pddl argument-->
+            <Navigate       name="navigate" goal="${arg3}"/>
+            <LowerFork      name="lower_fork"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
