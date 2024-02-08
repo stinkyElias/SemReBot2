@@ -1,5 +1,5 @@
 CMakeFiles/behaviortree_cpp.dir/3rdparty/minitrace/minitrace.cpp.o: \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/3rdparty/minitrace/minitrace.cpp \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/3rdparty/minitrace/minitrace.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/stdlib.h \
  /usr/include/c++/11/cstdlib \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -197,4 +197,4 @@ CMakeFiles/behaviortree_cpp.dir/3rdparty/minitrace/minitrace.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/sigthread.h \
  /usr/include/x86_64-linux-gnu/bits/signal_ext.h \
  /usr/include/x86_64-linux-gnu/sys/time.h /usr/include/inttypes.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/3rdparty/minitrace/minitrace.h
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/3rdparty/minitrace/minitrace.h

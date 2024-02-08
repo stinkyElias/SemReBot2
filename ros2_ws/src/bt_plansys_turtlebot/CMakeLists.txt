@@ -39,13 +39,11 @@ set(dependencies
 )
 
 # use header files from include directory
-include_directories(
-  include
-)
+include_directories(include)
 
 # create shared library targets from bt nodes
-add_library(move_bt_node SHARED src/bt_nodes/Move.cpp)
-list(APPEND plugin_libs move_bt_node)
+add_library(navigate_bt_node SHARED src/bt_nodes/Navigate.cpp)
+list(APPEND plugin_libs navigate_bt_node)
 
 add_library(approach_pallet_bt_node SHARED src/bt_nodes/ApproachPallet.cpp)
 list(APPEND plugin_libs approach_pallet_bt_node)
@@ -65,6 +63,7 @@ foreach(bt_plugin ${plugin_libs})
 endforeach()
 
 add_executable(hello_world_node src/hello_world_node.cpp)
+ament_target_dependencies(hello_world_node ${dependencies})
 
 # copy install directories to 
 install(DIRECTORY bt_xml config launch pddl DESTINATION share/${PROJECT_NAME})

@@ -54,7 +54,7 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master
+CMAKE_SOURCE_DIR = /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/stinky/Documents/semantic-robot/ros2_ws/build/behaviortree_cpp

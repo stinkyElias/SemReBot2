@@ -1,8 +1,8 @@
 CMakeFiles/behaviortree_cpp.dir/src/actions/sleep_node.cpp.o: \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/src/actions/sleep_node.cpp \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/src/actions/sleep_node.cpp \
  /usr/include/stdc-predef.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/include/behaviortree_cpp/actions/sleep_node.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/include/behaviortree_cpp/action_node.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/include/behaviortree_cpp/actions/sleep_node.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/include/behaviortree_cpp/action_node.h \
  /usr/include/c++/11/atomic /usr/include/c++/11/bits/atomic_base.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -209,14 +209,14 @@ CMakeFiles/behaviortree_cpp.dir/src/actions/sleep_node.cpp.o: \
  /usr/include/c++/11/ext/concurrence.h \
  /usr/include/c++/11/bits/atomic_futex.h \
  /usr/include/c++/11/bits/std_function.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/include/behaviortree_cpp/leaf_node.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/include/behaviortree_cpp/tree_node.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/include/behaviortree_cpp/leaf_node.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/include/behaviortree_cpp/tree_node.h \
  /usr/include/c++/11/map /usr/include/c++/11/bits/stl_tree.h \
  /usr/include/c++/11/bits/node_handle.h \
  /usr/include/c++/11/bits/stl_map.h \
  /usr/include/c++/11/bits/stl_multimap.h \
  /usr/include/c++/11/bits/erase_if.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/include/behaviortree_cpp/utils/signal.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/include/behaviortree_cpp/utils/signal.h \
  /usr/include/c++/11/memory /usr/include/c++/11/bits/stl_uninitialized.h \
  /usr/include/c++/11/bits/stl_raw_storage_iter.h \
  /usr/include/c++/11/bits/align.h /usr/include/c++/11/bit \
@@ -235,32 +235,32 @@ CMakeFiles/behaviortree_cpp.dir/src/actions/sleep_node.cpp.o: \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/include/behaviortree_cpp/basic_types.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/include/behaviortree_cpp/basic_types.h \
  /usr/include/c++/11/iostream /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc /usr/include/c++/11/variant \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/include/behaviortree_cpp/utils/safe_any.hpp \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/include/behaviortree_cpp/utils/safe_any.hpp \
  /usr/include/c++/11/charconv /usr/include/c++/11/typeindex \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/include/behaviortree_cpp/contrib/any.hpp \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/include/behaviortree_cpp/contrib/expected.hpp \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/include/behaviortree_cpp/contrib/any.hpp \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/include/behaviortree_cpp/contrib/expected.hpp \
  /usr/include/c++/11/cassert /usr/include/assert.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/include/behaviortree_cpp/utils/demangle_util.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/include/behaviortree_cpp/utils/demangle_util.h \
  /usr/include/c++/11/cxxabi.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/cxxabi_tweaks.h \
  /usr/include/c++/11/cstddef \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/include/behaviortree_cpp/utils/convert_impl.hpp \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/include/behaviortree_cpp/utils/simple_string.hpp \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/include/behaviortree_cpp/utils/convert_impl.hpp \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/include/behaviortree_cpp/utils/simple_string.hpp \
  /usr/include/c++/11/cstring /usr/include/string.h /usr/include/strings.h \
  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/include/behaviortree_cpp/utils/strcat.hpp \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/include/behaviortree_cpp/exceptions.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/include/behaviortree_cpp/utils/strcat.hpp \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/include/behaviortree_cpp/blackboard.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/include/behaviortree_cpp/utils/strcat.hpp \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/include/behaviortree_cpp/exceptions.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/include/behaviortree_cpp/utils/strcat.hpp \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/include/behaviortree_cpp/blackboard.h \
  /usr/include/c++/11/sstream /usr/include/c++/11/bits/sstream.tcc \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/include/behaviortree_cpp/utils/locked_reference.hpp \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/include/behaviortree_cpp/utils/wakeup_signal.hpp \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/include/behaviortree_cpp/scripting/script_parser.hpp \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/include/behaviortree_cpp/utils/timer_queue.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/include/behaviortree_cpp/utils/locked_reference.hpp \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/include/behaviortree_cpp/utils/wakeup_signal.hpp \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/include/behaviortree_cpp/scripting/script_parser.hpp \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/include/behaviortree_cpp/utils/timer_queue.h \
  /usr/include/c++/11/queue /usr/include/c++/11/deque \
  /usr/include/c++/11/bits/stl_deque.h /usr/include/c++/11/bits/deque.tcc \
  /usr/include/c++/11/bits/stl_queue.h

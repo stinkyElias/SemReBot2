@@ -1,9 +1,9 @@
 sample_nodes/CMakeFiles/movebase_node_dyn.dir/movebase_node.cpp.o: \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/movebase_node.cpp \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/movebase_node.cpp \
  /usr/include/stdc-predef.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/movebase_node.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/json_export.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/utils/safe_any.hpp \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/movebase_node.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/json_export.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/utils/safe_any.hpp \
  /usr/include/c++/11/charconv /usr/include/c++/11/type_traits \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -138,12 +138,12 @@ sample_nodes/CMakeFiles/movebase_node_dyn.dir/movebase_node.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
  /usr/include/c++/11/bits/basic_string.tcc /usr/include/c++/11/typeindex \
  /usr/include/c++/11/typeinfo \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/contrib/any.hpp \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/contrib/any.hpp \
  /usr/include/c++/11/stdexcept /usr/include/c++/11/exception \
  /usr/include/c++/11/bits/exception_ptr.h \
  /usr/include/c++/11/bits/cxxabi_init_exception.h \
  /usr/include/c++/11/bits/nested_exception.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/contrib/expected.hpp \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/contrib/expected.hpp \
  /usr/include/c++/11/utility /usr/include/c++/11/bits/stl_relops.h \
  /usr/include/c++/11/cassert /usr/include/assert.h \
  /usr/include/c++/11/functional /usr/include/c++/11/tuple \
@@ -179,18 +179,18 @@ sample_nodes/CMakeFiles/movebase_node_dyn.dir/movebase_node.cpp.o: \
  /usr/include/c++/11/pstl/glue_memory_defs.h \
  /usr/include/c++/11/pstl/execution_defs.h \
  /usr/include/c++/11/system_error \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/utils/demangle_util.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/utils/demangle_util.h \
  /usr/include/c++/11/cxxabi.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/cxxabi_tweaks.h \
  /usr/include/c++/11/cstddef \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/utils/convert_impl.hpp \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/utils/simple_string.hpp \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/utils/convert_impl.hpp \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/utils/simple_string.hpp \
  /usr/include/c++/11/cstring /usr/include/string.h /usr/include/strings.h \
  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
  /usr/include/c++/11/limits \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/utils/strcat.hpp \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/blackboard.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/utils/strcat.hpp \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/blackboard.h \
  /usr/include/c++/11/iostream /usr/include/c++/11/ostream \
  /usr/include/c++/11/ios /usr/include/c++/11/bits/ios_base.h \
  /usr/include/c++/11/bits/locale_classes.h \
@@ -211,12 +211,12 @@ sample_nodes/CMakeFiles/movebase_node_dyn.dir/movebase_node.cpp.o: \
  /usr/include/c++/11/bits/std_mutex.h \
  /usr/include/c++/11/bits/unique_lock.h /usr/include/c++/11/sstream \
  /usr/include/c++/11/bits/sstream.tcc \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/basic_types.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/basic_types.h \
  /usr/include/c++/11/variant \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/exceptions.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/utils/strcat.hpp \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/utils/locked_reference.hpp \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/contrib/json.hpp \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/exceptions.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/utils/strcat.hpp \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/utils/locked_reference.hpp \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/contrib/json.hpp \
  /usr/include/c++/11/algorithm \
  /usr/include/c++/11/pstl/glue_algorithm_defs.h \
  /usr/include/c++/11/iterator /usr/include/c++/11/bits/stream_iterator.h \
@@ -267,56 +267,56 @@ sample_nodes/CMakeFiles/movebase_node_dyn.dir/movebase_node.cpp.o: \
  /usr/include/c++/11/bits/fs_dir.h /usr/include/c++/11/bits/fs_ops.h \
  /usr/include/c++/11/numeric /usr/include/c++/11/bits/stl_numeric.h \
  /usr/include/c++/11/pstl/glue_numeric_defs.h /usr/include/c++/11/any \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/behavior_tree.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/controls/parallel_node.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/behavior_tree.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/controls/parallel_node.h \
  /usr/include/c++/11/set /usr/include/c++/11/bits/stl_set.h \
  /usr/include/c++/11/bits/stl_multiset.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/control_node.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/tree_node.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/utils/signal.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/utils/wakeup_signal.hpp \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/control_node.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/tree_node.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/utils/signal.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/utils/wakeup_signal.hpp \
  /usr/include/c++/11/atomic /usr/include/c++/11/condition_variable \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/scripting/script_parser.hpp \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/controls/parallel_all_node.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/controls/reactive_sequence.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/controls/reactive_fallback.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/controls/fallback_node.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/controls/sequence_node.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/controls/sequence_with_memory_node.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/controls/switch_node.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/controls/if_then_else_node.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/controls/while_do_else_node.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/action_node.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/scripting/script_parser.hpp \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/controls/parallel_all_node.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/controls/reactive_sequence.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/controls/reactive_fallback.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/controls/fallback_node.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/controls/sequence_node.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/controls/sequence_with_memory_node.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/controls/switch_node.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/controls/if_then_else_node.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/controls/while_do_else_node.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/action_node.h \
  /usr/include/c++/11/thread /usr/include/c++/11/bits/std_thread.h \
  /usr/include/c++/11/bits/this_thread_sleep.h /usr/include/c++/11/future \
  /usr/include/c++/11/bits/atomic_futex.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/leaf_node.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/condition_node.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/decorators/inverter_node.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/decorator_node.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/decorators/retry_node.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/decorators/repeat_node.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/decorators/run_once_node.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/decorators/subtree_node.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/decorators/loop_node.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/leaf_node.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/condition_node.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/decorators/inverter_node.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/decorator_node.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/decorators/retry_node.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/decorators/repeat_node.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/decorators/run_once_node.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/decorators/subtree_node.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/decorators/loop_node.h \
  /usr/include/c++/11/deque /usr/include/c++/11/bits/stl_deque.h \
  /usr/include/c++/11/bits/deque.tcc \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/actions/always_success_node.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/actions/always_failure_node.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/actions/script_condition.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/actions/script_node.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/actions/set_blackboard_node.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/actions/test_node.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/utils/timer_queue.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/actions/always_success_node.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/actions/always_failure_node.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/actions/script_condition.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/actions/script_node.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/actions/set_blackboard_node.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/actions/test_node.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/utils/timer_queue.h \
  /usr/include/c++/11/queue /usr/include/c++/11/bits/stl_queue.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/actions/sleep_node.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/actions/unset_blackboard_node.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/decorators/force_success_node.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/decorators/force_failure_node.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/decorators/keep_running_until_failure_node.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/decorators/script_precondition.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/decorators/timeout_node.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/decorators/delay_node.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/bt_factory.h \
- /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/sample_nodes/../include/behaviortree_cpp/contrib/magic_enum.hpp \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/actions/sleep_node.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/actions/unset_blackboard_node.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/decorators/force_success_node.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/decorators/force_failure_node.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/decorators/keep_running_until_failure_node.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/decorators/script_precondition.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/decorators/timeout_node.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/decorators/delay_node.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/bt_factory.h \
+ /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/sample_nodes/../include/behaviortree_cpp/contrib/magic_enum.hpp \
  /usr/include/c++/11/optional

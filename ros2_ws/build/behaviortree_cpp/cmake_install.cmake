@@ -1,4 +1,4 @@
-# Install script for directory: /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master
+# Install script for directory: /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -91,7 +91,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/include/" FILES_MATCHING REGEX "/[^/]*\\.h[^/]*$")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/include/" FILES_MATCHING REGEX "/[^/]*\\.h[^/]*$")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -170,7 +170,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/behaviortree_cpp" TYPE FILE FILES "/home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/behaviortree_cpp" TYPE FILE FILES "/home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/package.xml")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

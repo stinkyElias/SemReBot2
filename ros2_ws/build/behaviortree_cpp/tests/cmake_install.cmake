@@ -1,4 +1,4 @@
-# Install script for directory: /home/stinky/Documents/semantic-robot/ros2_ws/src/BehaviorTree.CPP-master/tests
+# Install script for directory: /home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp/tests
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

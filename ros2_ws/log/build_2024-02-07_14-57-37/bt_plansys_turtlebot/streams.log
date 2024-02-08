@@ -1,0 +1,20 @@
+[0.084s] Invoking command in '/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot -- -j12 -l12
+[0.117s] [35m[1mConsolidate compiler generated dependencies of target lift_fork_bt_node[0m
+[0.117s] [35m[1mConsolidate compiler generated dependencies of target lower_fork_bt_node[0m
+[0.118s] [35m[1mConsolidate compiler generated dependencies of target move_bt_node[0m
+[0.118s] [35m[1mConsolidate compiler generated dependencies of target recharge_bt_node[0m
+[0.118s] [35m[1mConsolidate compiler generated dependencies of target approach_pallet_bt_node[0m
+[0.128s] [  8%] [32mBuilding CXX object CMakeFiles/hello_world_node.dir/src/hello_world_node.cpp.o[0m
+[0.132s] [ 25%] Built target recharge_bt_node
+[0.133s] [ 50%] Built target lift_fork_bt_node
+[0.133s] [ 58%] Built target lower_fork_bt_node
+[0.133s] [ 75%] Built target move_bt_node
+[0.135s] [ 91%] Built target approach_pallet_bt_node
+[0.136s] [01m[K/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot/src/hello_world_node.cpp:1:10:[m[K [01;31m[Kfatal error: [m[Krclcpp/rclcpp.hpp: No such file or directory
+[0.136s]     1 | #include [01;31m[K"rclcpp/rclcpp.hpp"[m[K
+[0.136s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[0.136s] compilation terminated.
+[0.136s] gmake[2]: *** [CMakeFiles/hello_world_node.dir/build.make:76: CMakeFiles/hello_world_node.dir/src/hello_world_node.cpp.o] Error 1
+[0.137s] gmake[1]: *** [CMakeFiles/Makefile2:277: CMakeFiles/hello_world_node.dir/all] Error 2
+[0.137s] gmake: *** [Makefile:146: all] Error 2
+[0.139s] Invoked command in '/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot -- -j12 -l12

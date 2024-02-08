@@ -1,7 +1,6 @@
-// hello world ros 2 node
-
 #include "rclcpp/rclcpp.hpp"
-#include "std_msgs/msg/string.hpp"
+#include "rclcpp_action/rclcpp_action.hpp"
+#include "plansys2_executor/ActionExecutorClient.hpp"
 
 #include <iostream>
 

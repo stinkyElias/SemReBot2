@@ -1,0 +1,82 @@
+[0.077s] Invoking command in '/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot -- -j12 -l12
+[0.097s] -- Found ament_cmake: 1.3.7 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.216s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.224s] -- Found ament_index_cpp: 1.4.0 (/opt/ros/humble/share/ament_index_cpp/cmake)
+[0.225s] -- Found rclcpp: 16.0.8 (/opt/ros/humble/share/rclcpp/cmake)
+[0.249s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.251s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.255s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.263s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.274s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.314s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.315s] -- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+[0.335s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[0.442s] -- Found rclcpp_action: 16.0.8 (/opt/ros/humble/share/rclcpp_action/cmake)
+[0.503s] -- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.532s] -- Found tf2_geometry_msgs: 0.25.5 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+[0.535s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[0.536s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[0.711s] -- Found nav2_msgs: 1.1.12 (/opt/ros/humble/share/nav2_msgs/cmake)
+[0.893s] -- Found plansys2_msgs: 2.0.9 (/opt/ros/humble/share/plansys2_msgs/cmake)
+[0.957s] -- Found plansys2_executor: 2.0.9 (/opt/ros/humble/share/plansys2_executor/cmake)
+[2.829s] -- Found plansys2_bt_actions: 2.0.9 (/opt/ros/humble/share/plansys2_bt_actions/cmake)
+[33.671s] -- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[33.720s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[33.721s] -- Configured cppcheck include dirs: /home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot/include
+[33.721s] -- Configured cppcheck exclude dirs and/or files: 
+[33.721s] -- Added test 'lint_cmake' to check CMake code style
+[33.723s] -- Added test 'uncrustify' to check C / C++ code style
+[33.723s] -- Configured uncrustify additional arguments: 
+[33.723s] -- Added test 'xmllint' to check XML markup files
+[33.724s] -- Configuring done
+[33.822s] -- Generating done
+[33.824s] -- Build files have been written to: /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot
+[33.850s] [35m[1mConsolidate compiler generated dependencies of target lower_fork_bt_node[0m
+[33.850s] [35m[1mConsolidate compiler generated dependencies of target lift_fork_bt_node[0m
+[33.850s] [35m[1mConsolidate compiler generated dependencies of target recharge_bt_node[0m
+[33.850s] [35m[1mConsolidate compiler generated dependencies of target move_bt_node[0m
+[33.850s] [35m[1mConsolidate compiler generated dependencies of target approach_pallet_bt_node[0m
+[33.858s] [  8%] [32mBuilding CXX object CMakeFiles/hello_world_node.dir/src/hello_world_node.cpp.o[0m
+[33.862s] [ 41%] [32mBuilding CXX object CMakeFiles/approach_pallet_bt_node.dir/src/bt_nodes/ApproachPallet.cpp.o[0m
+[33.862s] [ 50%] Built target move_bt_node
+[33.862s] [ 50%] Built target lift_fork_bt_node
+[33.864s] [ 66%] Built target lower_fork_bt_node
+[33.865s] [ 83%] Built target recharge_bt_node
+[34.676s] [ 91%] [32m[1mLinking CXX shared library libapproach_pallet_bt_node.so[0m
+[34.790s] [ 91%] Built target approach_pallet_bt_node
+[36.873s] [01m[K/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot/src/hello_world_node.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[36.873s] [01m[K/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot/src/hello_world_node.cpp:7:14:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargc[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[36.873s]     7 | int main([01;35m[Kint argc[m[K, char * argv[])
+[36.873s]       |          [01;35m[K~~~~^~~~[m[K
+[36.873s] [01m[K/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot/src/hello_world_node.cpp:7:27:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargv[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[36.873s]     7 | int main(int argc, [01;35m[Kchar * argv[][m[K)
+[36.873s]       |                    [01;35m[K~~~~~~~^~~~~~[m[K
+[37.220s] [100%] [32m[1mLinking CXX executable hello_world_node[0m
+[37.880s] [100%] Built target hello_world_node
+[37.890s] Invoked command in '/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot -- -j12 -l12
+[37.927s] Invoking command in '/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot
+[37.933s] -- Install configuration: ""
+[37.933s] -- Execute custom install script
+[37.934s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/lib/bt_plansys_turtlebot/hello_world_node
+[37.940s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/lib/libmove_bt_node.so
+[37.947s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/lib/libapproach_pallet_bt_node.so
+[37.953s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/lib/librecharge_bt_node.so
+[37.959s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/lib/liblift_fork_bt_node.so
+[37.966s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/lib/liblower_fork_bt_node.so
+[37.972s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/ament_index/resource_index/package_run_dependencies/bt_plansys_turtlebot
+[37.979s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/ament_index/resource_index/parent_prefix_path/bt_plansys_turtlebot
+[37.985s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/environment/ament_prefix_path.sh
+[37.992s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/environment/ament_prefix_path.dsv
+[37.998s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/environment/path.sh
+[38.005s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/environment/path.dsv
+[38.011s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/local_setup.bash
+[38.018s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/local_setup.sh
+[38.025s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/local_setup.zsh
+[38.031s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/local_setup.dsv
+[38.038s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/package.dsv
+[38.045s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/ament_index/resource_index/packages/bt_plansys_turtlebot
+[38.052s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/cmake/ament_cmake_export_dependencies-extras.cmake
+[38.058s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/cmake/bt_plansys_turtlebotConfig.cmake
+[38.065s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/cmake/bt_plansys_turtlebotConfig-version.cmake
+[38.072s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/package.xml
+[38.080s] Invoked command in '/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot
