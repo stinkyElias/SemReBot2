@@ -5,7 +5,7 @@
 /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles/recharge_bt_node.dir
 /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles/lift_fork_bt_node.dir
 /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles/lower_fork_bt_node.dir
-/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles/hello_world_node.dir
+/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles/nav2_action_server_node.dir
 /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles/test.dir
 /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles/edit_cache.dir
 /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles/rebuild_cache.dir

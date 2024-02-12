@@ -1,0 +1,25 @@
+[0.083s] Invoking command in '/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot -- -j12 -l12
+[0.120s] [35m[1mConsolidate compiler generated dependencies of target nav2_action_server_node[0m
+[0.132s] [ 33%] Built target approach_pallet_bt_node
+[0.132s] [ 33%] Built target lift_fork_bt_node
+[0.134s] [ 50%] Built target lower_fork_bt_node
+[0.134s] [ 66%] Built target recharge_bt_node
+[0.137s] [ 83%] Built target navigate_bt_node
+[0.144s] [ 91%] [32mBuilding CXX object CMakeFiles/nav2_action_server_node.dir/src/nav2_action_server_node.cpp.o[0m
+[1.946s] [01m[K/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot/src/nav2_action_server_node.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[1.946s] [01m[K/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot/src/nav2_action_server_node.cpp:18:14:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargc[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[1.946s]    18 | int main([01;35m[Kint argc[m[K, char * argv[])
+[1.946s]       |          [01;35m[K~~~~^~~~[m[K
+[1.946s] [01m[K/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot/src/nav2_action_server_node.cpp:18:27:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargv[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[1.946s]    18 | int main(int argc, [01;35m[Kchar * argv[][m[K)
+[1.946s]       |                    [01;35m[K~~~~~~~^~~~~~[m[K
+[2.638s] [100%] [32m[1mLinking CXX executable nav2_action_server_node[0m
+[2.761s] /usr/bin/ld: CMakeFiles/nav2_action_server_node.dir/src/nav2_action_server_node.cpp.o: in function `Nav2ActionServerNode::start_server()':
+[2.761s] nav2_action_server_node.cpp:(.text+0x6e): undefined reference to `Nav2ActionServerNode::handle_accepted(std::shared_ptr<rclcpp_action::ServerGoalHandle<nav2_msgs::action::NavigateToPose> >)'
+[2.761s] /usr/bin/ld: nav2_action_server_node.cpp:(.text+0xe1): undefined reference to `Nav2ActionServerNode::handle_cancel(std::shared_ptr<rclcpp_action::ServerGoalHandle<nav2_msgs::action::NavigateToPose> >)'
+[2.761s] /usr/bin/ld: nav2_action_server_node.cpp:(.text+0x14a): undefined reference to `Nav2ActionServerNode::handle_goal(std::array<unsigned char, 16ul> const&, std::shared_ptr<nav2_msgs::action::NavigateToPose_Goal_<std::allocator<void> > const>)'
+[2.769s] collect2: error: ld returned 1 exit status
+[2.771s] gmake[2]: *** [CMakeFiles/nav2_action_server_node.dir/build.make:329: nav2_action_server_node] Error 1
+[2.771s] gmake[1]: *** [CMakeFiles/Makefile2:277: CMakeFiles/nav2_action_server_node.dir/all] Error 2
+[2.771s] gmake: *** [Makefile:146: all] Error 2
+[2.774s] Invoked command in '/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot -- -j12 -l12

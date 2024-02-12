@@ -1,0 +1,7 @@
+[35m[1mConsolidate compiler generated dependencies of target nav2_action_server_node[0m
+[ 16%] Built target lower_fork_bt_node
+[ 33%] Built target approach_pallet_bt_node
+[ 50%] Built target recharge_bt_node
+[ 66%] Built target lift_fork_bt_node
+[ 83%] Built target navigate_bt_node
+[ 91%] [32mBuilding CXX object CMakeFiles/nav2_action_server_node.dir/src/nav2_action_server_node.cpp.o[0m

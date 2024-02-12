@@ -313,7 +313,7 @@ message(STATUS "Execute custom install script")
 # install(DIRECTORY "bt_xml" "config" "launch" "pddl" "DESTINATION" "share/bt_plansys_turtlebot")
 ament_cmake_symlink_install_directory("/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot" DIRECTORY "bt_xml" "config" "launch" "pddl" "DESTINATION" "share/bt_plansys_turtlebot")
 
-# install("TARGETS" "hello_world_node" "navigate_bt_node" "approach_pallet_bt_node" "recharge_bt_node" "lift_fork_bt_node" "lower_fork_bt_node" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "lib/bt_plansys_turtlebot")
+# install("TARGETS" "nav2_action_server_node" "navigate_bt_node" "approach_pallet_bt_node" "recharge_bt_node" "lift_fork_bt_node" "lower_fork_bt_node" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "lib/bt_plansys_turtlebot")
 include("/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install(FILES "/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/bt_plansys_turtlebot" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
