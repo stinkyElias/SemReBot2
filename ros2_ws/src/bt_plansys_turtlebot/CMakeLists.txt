@@ -62,14 +62,14 @@ foreach(bt_plugin ${plugin_libs})
   target_compile_definitions(${bt_plugin} PRIVATE BT_PLUGIN_EXPORT)
 endforeach()
 
-add_executable(hello_world_node src/hello_world_node.cpp)
-ament_target_dependencies(hello_world_node ${dependencies})
+add_executable(nav2_action_server_node src/nav2_action_server_node.cpp)
+ament_target_dependencies(nav2_action_server_node ${dependencies})
 
 # copy install directories to 
 install(DIRECTORY bt_xml config launch pddl DESTINATION share/${PROJECT_NAME})
 
 install(TARGETS
-  hello_world_node
+  nav2_action_server_node
   ${plugin_libs}
   ARCHIVE DESTINATION lib
   LIBRARY DESTINATION lib
