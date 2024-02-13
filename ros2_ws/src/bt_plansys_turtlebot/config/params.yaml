@@ -1,7 +1,8 @@
 navigate:
-  ros_parameters:
-    - navigate_bt_node
-    waypoints: ["charging_station", "unload_zone", "reol_1", "reol_2", "reol_3", reol_4]
+  ros__parameters:
+    plugins:
+      - navigate_bt_node
+    waypoints: ["charging_station", "unload_zone", "reol_1", "reol_2", "reol_3", "reol_4"]
     waypoint_coordinates:
       charging_station: [-2.0, -0.5, 0.0]
       unload_zone: [2.0, 0.5, 0.0]
@@ -11,13 +12,13 @@ navigate:
       reol_4: [-0.5, -2.0, 0.0]
 
 transport:
-  ros_parameters:
+  ros__parameters:
     plugins:
       - lower_fork_bt_node
       - approach_pallet_bt_node
       - lift_fork_bt_node
       - navigate_bt_node
-    waypoints: ["charging_station", "unload_zone", "reol_1", "reol_2", "reol_3", reol_4]
+    waypoints: ["charging_station", "unload_zone", "reol_1", "reol_2", "reol_3", "reol_4"]
     waypoint_coordinates:
       charging_station: [-2.0, -0.5, 0.0]
       unload_zone: [2.0, 0.5, 0.0]
@@ -27,6 +28,6 @@ transport:
       reol_4: [-0.5, -2.0, 0.0]
 
 recharge:
-  ros_parameters:
+  ros__parameters:
     plugins:
       - recharge_bt_node

@@ -17,7 +17,12 @@
 
     (is_reol_zone ?z - zone)
     (is_recharge_zone ?z - zone)
+    (is_unload_zone ?z - zone)
+
+    (pallet_not_moved ?p - pallet)
+
 )
+
 
 (:durative-action navigate
     :parameters (?r - robot ?zone_1 ?zone_2 - zone)
@@ -42,14 +47,21 @@
         (at start (robot_at ?r ?zone_1))
         (at start (pallet_at ?p ?zone_1))
         (at start (robot_available ?r))
+        (at start (pallet_not_moved ?p))
+        (at start (is_unload_zone ?zone_1))
+        (at start (is_reol_zone ?zone_2))
     )
     :effect (and 
         (at start (not (robot_at ?r ?zone_1)))
         (at end (robot_at ?r ?zone_2))
+
         (at start (not (pallet_at ?p ?zone_1)))
         (at end (pallet_at ?p ?zone_2))
+
         (at start (not (robot_available ?r)))
         (at end (robot_available ?r))
+        
+        (at end (not (pallet_not_moved ?p)))
     )
 )
 

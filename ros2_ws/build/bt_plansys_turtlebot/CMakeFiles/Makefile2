@@ -69,6 +69,7 @@ all: CMakeFiles/recharge_bt_node.dir/all
 all: CMakeFiles/lift_fork_bt_node.dir/all
 all: CMakeFiles/lower_fork_bt_node.dir/all
 all: CMakeFiles/nav2_action_server_node.dir/all
+all: CMakeFiles/task_controller_node.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -84,6 +85,7 @@ clean: CMakeFiles/recharge_bt_node.dir/clean
 clean: CMakeFiles/lift_fork_bt_node.dir/clean
 clean: CMakeFiles/lower_fork_bt_node.dir/clean
 clean: CMakeFiles/nav2_action_server_node.dir/clean
+clean: CMakeFiles/task_controller_node.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -293,6 +295,32 @@ nav2_action_server_node: CMakeFiles/nav2_action_server_node.dir/rule
 CMakeFiles/nav2_action_server_node.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/nav2_action_server_node.dir/build.make CMakeFiles/nav2_action_server_node.dir/clean
 .PHONY : CMakeFiles/nav2_action_server_node.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/task_controller_node.dir
+
+# All Build rule for target.
+CMakeFiles/task_controller_node.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_controller_node.dir/build.make CMakeFiles/task_controller_node.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_controller_node.dir/build.make CMakeFiles/task_controller_node.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles --progress-num=13,14 "Built target task_controller_node"
+.PHONY : CMakeFiles/task_controller_node.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/task_controller_node.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/task_controller_node.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles 0
+.PHONY : CMakeFiles/task_controller_node.dir/rule
+
+# Convenience name for target.
+task_controller_node: CMakeFiles/task_controller_node.dir/rule
+.PHONY : task_controller_node
+
+# clean rule for target.
+CMakeFiles/task_controller_node.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_controller_node.dir/build.make CMakeFiles/task_controller_node.dir/clean
+.PHONY : CMakeFiles/task_controller_node.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

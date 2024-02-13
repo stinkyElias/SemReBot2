@@ -1,3 +1,1 @@
-source;share/behaviortree_cpp/environment/ament_prefix_path.sh
-source;share/behaviortree_cpp/environment/library_path.sh
-source;share/behaviortree_cpp/environment/path.sh
+/home/stinky/Documents/semantic-robot/ros2_ws/build/behaviortree_cpp/ament_cmake_environment_hooks/local_setup.dsv

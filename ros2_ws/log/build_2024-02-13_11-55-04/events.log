@@ -1,0 +1,702 @@
+[0.000000] (-) TimerEvent: {}
+[0.000344] (behaviortree_cpp) JobQueued: {'identifier': 'behaviortree_cpp', 'dependencies': OrderedDict()}
+[0.000450] (bt_plansys_turtlebot) JobQueued: {'identifier': 'bt_plansys_turtlebot', 'dependencies': OrderedDict()}
+[0.000544] (behaviortree_cpp) JobStarted: {'identifier': 'behaviortree_cpp'}
+[0.082103] (bt_plansys_turtlebot) JobStarted: {'identifier': 'bt_plansys_turtlebot'}
+[0.099873] (-) TimerEvent: {}
+[0.163129] (behaviortree_cpp) JobProgress: {'identifier': 'behaviortree_cpp', 'progress': 'cmake'}
+[0.163662] (behaviortree_cpp) Command: {'cmd': ['/usr/bin/cmake', '/home/stinky/Documents/semantic-robot/ros2_ws/src/behaviortree_cpp', '-DCMAKE_INSTALL_PREFIX=/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp'], 'cwd': '/home/stinky/Documents/semantic-robot/ros2_ws/build/behaviortree_cpp', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'stinky'), ('SSH_CLIENT', '171.23.6.164 36408 22'), ('LC_TIME', 'nb_NO.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/lib:/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/lib:/home/stinky/Documents/plansys2_ws/install/plansys2_bt_example/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/stinky'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/stinky'), ('SSH_TTY', '/dev/pts/3'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'nb_NO.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('_CE_M', ''), ('COLCON_PREFIX_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install:/home/stinky/Documents/plansys2_ws/install:/home/stinky/Documents/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'stinky'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '244'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/stinky/.local/bin:/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/bin:/opt/ros/humble/bin:/home/stinky/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'nb_NO.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', 'localhost:10.0'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'nb_NO.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot:/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp:/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example_py:/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example:/home/stinky/Documents/plansys2_ws/install/plansys2_patrol_navigation_example:/home/stinky/Documents/plansys2_ws/install/plansys2_multidomain_example:/home/stinky/Documents/plansys2_ws/install/plansys2_cascade_example:/home/stinky/Documents/plansys2_ws/install/plansys2_bt_example:/home/stinky/Documents/ros2_ws/install/turtlebot3_simulations:/home/stinky/Documents/ros2_ws/install/turtlebot3_gazebo:/home/stinky/Documents/ros2_ws/install/turtlebot3_fake_node:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/stinky/miniconda3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'nb_NO.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'nb_NO.UTF-8'), ('LC_IDENTIFICATION', 'nb_NO.UTF-8'), ('PWD', '/home/stinky/Documents/semantic-robot/ros2_ws/build/behaviortree_cpp'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'en_US.UTF-8'), ('CONDA_EXE', '/home/stinky/miniconda3/bin/conda'), ('SSH_CONNECTION', '171.23.6.164 36408 10.0.0.36 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example_py/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'nb_NO.UTF-8'), ('LC_PAPER', 'nb_NO.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot:/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp:/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example_py:/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example:/home/stinky/Documents/plansys2_ws/install/plansys2_patrol_navigation_example:/home/stinky/Documents/plansys2_ws/install/plansys2_multidomain_example:/home/stinky/Documents/plansys2_ws/install/plansys2_cascade_example:/home/stinky/Documents/plansys2_ws/install/plansys2_bt_example:/home/stinky/Documents/ros2_ws/install/turtlebot3_simulations:/home/stinky/Documents/ros2_ws/install/turtlebot3_gazebo:/home/stinky/Documents/ros2_ws/install/turtlebot3_fake_node:/opt/ros/humble')]), 'shell': False}
+[0.165925] (bt_plansys_turtlebot) JobProgress: {'identifier': 'bt_plansys_turtlebot', 'progress': 'cmake'}
+[0.166516] (bt_plansys_turtlebot) Command: {'cmd': ['/usr/bin/cmake', '/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot', '-DCMAKE_INSTALL_PREFIX=/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot'], 'cwd': '/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'stinky'), ('SSH_CLIENT', '171.23.6.164 36408 22'), ('LC_TIME', 'nb_NO.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/lib:/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/lib:/home/stinky/Documents/plansys2_ws/install/plansys2_bt_example/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/stinky'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/stinky'), ('SSH_TTY', '/dev/pts/3'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'nb_NO.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('_CE_M', ''), ('COLCON_PREFIX_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install:/home/stinky/Documents/plansys2_ws/install:/home/stinky/Documents/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'stinky'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '244'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/stinky/.local/bin:/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/bin:/opt/ros/humble/bin:/home/stinky/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'nb_NO.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', 'localhost:10.0'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'nb_NO.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot:/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp:/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example_py:/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example:/home/stinky/Documents/plansys2_ws/install/plansys2_patrol_navigation_example:/home/stinky/Documents/plansys2_ws/install/plansys2_multidomain_example:/home/stinky/Documents/plansys2_ws/install/plansys2_cascade_example:/home/stinky/Documents/plansys2_ws/install/plansys2_bt_example:/home/stinky/Documents/ros2_ws/install/turtlebot3_simulations:/home/stinky/Documents/ros2_ws/install/turtlebot3_gazebo:/home/stinky/Documents/ros2_ws/install/turtlebot3_fake_node:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/stinky/miniconda3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'nb_NO.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'nb_NO.UTF-8'), ('LC_IDENTIFICATION', 'nb_NO.UTF-8'), ('PWD', '/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'en_US.UTF-8'), ('CONDA_EXE', '/home/stinky/miniconda3/bin/conda'), ('SSH_CONNECTION', '171.23.6.164 36408 10.0.0.36 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example_py/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'nb_NO.UTF-8'), ('LC_PAPER', 'nb_NO.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot:/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp:/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example_py:/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example:/home/stinky/Documents/plansys2_ws/install/plansys2_patrol_navigation_example:/home/stinky/Documents/plansys2_ws/install/plansys2_multidomain_example:/home/stinky/Documents/plansys2_ws/install/plansys2_cascade_example:/home/stinky/Documents/plansys2_ws/install/plansys2_bt_example:/home/stinky/Documents/ros2_ws/install/turtlebot3_simulations:/home/stinky/Documents/ros2_ws/install/turtlebot3_gazebo:/home/stinky/Documents/ros2_ws/install/turtlebot3_fake_node:/opt/ros/humble')]), 'shell': False}
+[0.176469] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.7 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.199942] (-) TimerEvent: {}
+[0.273195] (behaviortree_cpp) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.273409] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.278297] (behaviortree_cpp) StdoutLine: {'line': b'-- ------------------------------------------\n'}
+[0.278394] (behaviortree_cpp) StdoutLine: {'line': b'-- BehaviourTree is being built using AMENT.\n'}
+[0.278472] (behaviortree_cpp) StdoutLine: {'line': b'-- ------------------------------------------\n'}
+[0.278615] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found ament_index_cpp: 1.4.0 (/opt/ros/humble/share/ament_index_cpp/cmake)\n'}
+[0.279106] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found rclcpp: 16.0.8 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.279881] (behaviortree_cpp) StdoutLine: {'line': b'-- Found ament_index_cpp: 1.4.0 (/opt/ros/humble/share/ament_index_cpp/cmake)\n'}
+[0.282356] (behaviortree_cpp) StdoutLine: {'line': b'-- BTCPP_EXTRA_LIBRARIES: $<BUILD_INTERFACE:ament_index_cpp::ament_index_cpp>;$<BUILD_INTERFACE:/usr/lib/x86_64-linux-gnu/libzmq.so>;$<BUILD_INTERFACE:/usr/lib/x86_64-linux-gnu/libsqlite3.so>\n'}
+[0.282469] (behaviortree_cpp) StdoutLine: {'line': b'-- BTCPP_LIB_DESTINATION:   lib \n'}
+[0.282546] (behaviortree_cpp) StdoutLine: {'line': b'-- BTCPP_INCLUDE_DESTINATION: include \n'}
+[0.282618] (behaviortree_cpp) StdoutLine: {'line': b'-- BTCPP_UNIT_TESTS:   ON \n'}
+[0.283198] (behaviortree_cpp) StdoutLine: {'line': b'-- Found ament_cmake_gtest: 1.3.7 (/opt/ros/humble/share/ament_cmake_gtest/cmake)\n'}
+[0.283757] (behaviortree_cpp) StdoutLine: {'line': b"-- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built\n"}
+[0.300006] (-) TimerEvent: {}
+[0.301370] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.303151] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.307377] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.315412] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.328818] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.341449] (behaviortree_cpp) StdoutLine: {'line': b'-- Configuring done\n'}
+[0.370714] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.371941] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)\n'}
+[0.390296] (behaviortree_cpp) StdoutLine: {'line': b'-- Generating done\n'}
+[0.393127] (bt_plansys_turtlebot) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_cyclonedds_cpp' as default\n"}
+[0.395313] (behaviortree_cpp) StdoutLine: {'line': b'-- Build files have been written to: /home/stinky/Documents/semantic-robot/ros2_ws/build/behaviortree_cpp\n'}
+[0.398800] (behaviortree_cpp) CommandEnded: {'returncode': 0}
+[0.399277] (behaviortree_cpp) JobProgress: {'identifier': 'behaviortree_cpp', 'progress': 'build'}
+[0.399920] (behaviortree_cpp) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/stinky/Documents/semantic-robot/ros2_ws/build/behaviortree_cpp', '--', '-j12', '-l12'], 'cwd': '/home/stinky/Documents/semantic-robot/ros2_ws/build/behaviortree_cpp', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'stinky'), ('SSH_CLIENT', '171.23.6.164 36408 22'), ('LC_TIME', 'nb_NO.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/lib:/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/lib:/home/stinky/Documents/plansys2_ws/install/plansys2_bt_example/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/stinky'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/stinky'), ('SSH_TTY', '/dev/pts/3'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'nb_NO.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('_CE_M', ''), ('COLCON_PREFIX_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install:/home/stinky/Documents/plansys2_ws/install:/home/stinky/Documents/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'stinky'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '244'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/stinky/.local/bin:/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/bin:/opt/ros/humble/bin:/home/stinky/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'nb_NO.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', 'localhost:10.0'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'nb_NO.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot:/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp:/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example_py:/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example:/home/stinky/Documents/plansys2_ws/install/plansys2_patrol_navigation_example:/home/stinky/Documents/plansys2_ws/install/plansys2_multidomain_example:/home/stinky/Documents/plansys2_ws/install/plansys2_cascade_example:/home/stinky/Documents/plansys2_ws/install/plansys2_bt_example:/home/stinky/Documents/ros2_ws/install/turtlebot3_simulations:/home/stinky/Documents/ros2_ws/install/turtlebot3_gazebo:/home/stinky/Documents/ros2_ws/install/turtlebot3_fake_node:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/stinky/miniconda3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'nb_NO.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'nb_NO.UTF-8'), ('LC_IDENTIFICATION', 'nb_NO.UTF-8'), ('PWD', '/home/stinky/Documents/semantic-robot/ros2_ws/build/behaviortree_cpp'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'en_US.UTF-8'), ('CONDA_EXE', '/home/stinky/miniconda3/bin/conda'), ('SSH_CONNECTION', '171.23.6.164 36408 10.0.0.36 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example_py/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'nb_NO.UTF-8'), ('LC_PAPER', 'nb_NO.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot:/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp:/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example_py:/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example:/home/stinky/Documents/plansys2_ws/install/plansys2_patrol_navigation_example:/home/stinky/Documents/plansys2_ws/install/plansys2_multidomain_example:/home/stinky/Documents/plansys2_ws/install/plansys2_cascade_example:/home/stinky/Documents/plansys2_ws/install/plansys2_bt_example:/home/stinky/Documents/ros2_ws/install/turtlebot3_simulations:/home/stinky/Documents/ros2_ws/install/turtlebot3_gazebo:/home/stinky/Documents/ros2_ws/install/turtlebot3_fake_node:/opt/ros/humble')]), 'shell': False}
+[0.400842] (-) TimerEvent: {}
+[0.432382] (behaviortree_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target lexy_file\x1b[0m\n'}
+[0.435514] (behaviortree_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target gtest_main\x1b[0m\n'}
+[0.435694] (behaviortree_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target gtest\x1b[0m\n'}
+[0.442263] (behaviortree_cpp) StdoutLine: {'line': b'[  2%] Built target lexy_file\n'}
+[0.452848] (behaviortree_cpp) StdoutLine: {'line': b'[  4%] Built target gtest_main\n'}
+[0.454794] (behaviortree_cpp) StdoutLine: {'line': b'[  5%] Built target gtest\n'}
+[0.459426] (behaviortree_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target behaviortree_cpp\x1b[0m\n'}
+[0.500915] (-) TimerEvent: {}
+[0.518562] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found rclcpp_action: 16.0.8 (/opt/ros/humble/share/rclcpp_action/cmake)\n'}
+[0.534789] (behaviortree_cpp) StdoutLine: {'line': b'[ 37%] Built target behaviortree_cpp\n'}
+[0.547069] (behaviortree_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target bt4_log_cat\x1b[0m\n'}
+[0.547258] (behaviortree_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target dummy_nodes_dyn\x1b[0m\n'}
+[0.547408] (behaviortree_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target crossdoor_nodes_dyn\x1b[0m\n'}
+[0.547946] (behaviortree_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target bt_sample_nodes\x1b[0m\n'}
+[0.550351] (behaviortree_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target t13_plugin_action\x1b[0m\n'}
+[0.555949] (behaviortree_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target movebase_node_dyn\x1b[0m\n'}
+[0.560285] (behaviortree_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target bt4_plugin_manifest\x1b[0m\n'}
+[0.561362] (behaviortree_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target t01_first_tree_dynamic\x1b[0m\n'}
+[0.572802] (behaviortree_cpp) StdoutLine: {'line': b'[ 39%] Built target bt4_log_cat\n'}
+[0.581446] (behaviortree_cpp) StdoutLine: {'line': b'[ 42%] Built target bt_sample_nodes\n'}
+[0.582132] (behaviortree_cpp) StdoutLine: {'line': b'[ 43%] Built target dummy_nodes_dyn\n'}
+[0.582365] (behaviortree_cpp) StdoutLine: {'line': b'[ 44%] Built target movebase_node_dyn\n'}
+[0.583204] (behaviortree_cpp) StdoutLine: {'line': b'[ 46%] Built target t01_first_tree_dynamic\n'}
+[0.584403] (behaviortree_cpp) StdoutLine: {'line': b'[ 48%] Built target crossdoor_nodes_dyn\n'}
+[0.587897] (behaviortree_cpp) StdoutLine: {'line': b'[ 49%] Built target bt4_plugin_manifest\n'}
+[0.589211] (behaviortree_cpp) StdoutLine: {'line': b'[ 51%] Built target t13_plugin_action\n'}
+[0.595369] (behaviortree_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target t01_first_tree_static\x1b[0m\n'}
+[0.595749] (behaviortree_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target t02_basic_ports\x1b[0m\n'}
+[0.596693] (behaviortree_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target t03_generic_ports\x1b[0m\n'}
+[0.600984] (-) TimerEvent: {}
+[0.603188] (behaviortree_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target t04_reactive_sequence\x1b[0m\n'}
+[0.603967] (behaviortree_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target behaviortree_cpp_test\x1b[0m\n'}
+[0.604485] (behaviortree_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target t06_subtree_port_remapping\x1b[0m\n'}
+[0.609729] (behaviortree_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target t05_crossdoor\x1b[0m\n'}
+[0.612499] (behaviortree_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target t07_load_multiple_xml\x1b[0m\n'}
+[0.620486] (behaviortree_cpp) StdoutLine: {'line': b'[ 52%] Built target t01_first_tree_static\n'}
+[0.623144] (behaviortree_cpp) StdoutLine: {'line': b'[ 54%] Built target t02_basic_ports\n'}
+[0.624432] (behaviortree_cpp) StdoutLine: {'line': b'[ 55%] Built target t03_generic_ports\n'}
+[0.627319] (behaviortree_cpp) StdoutLine: {'line': b'[ 57%] Built target t06_subtree_port_remapping\n'}
+[0.628267] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[0.630120] (behaviortree_cpp) StdoutLine: {'line': b'[ 58%] Built target t05_crossdoor\n'}
+[0.633132] (behaviortree_cpp) StdoutLine: {'line': b'[ 60%] Built target t04_reactive_sequence\n'}
+[0.634723] (behaviortree_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target t08_additional_node_args\x1b[0m\n'}
+[0.636282] (behaviortree_cpp) StdoutLine: {'line': b'[ 62%] Built target t07_load_multiple_xml\n'}
+[0.640046] (behaviortree_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target t09_scripting\x1b[0m\n'}
+[0.641872] (behaviortree_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target t12_groot_howto\x1b[0m\n'}
+[0.642550] (behaviortree_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target t10_observer\x1b[0m\n'}
+[0.647585] (behaviortree_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target generate_log\x1b[0m\n'}
+[0.651743] (behaviortree_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target t11_replace_rules\x1b[0m\n'}
+[0.657832] (behaviortree_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target ex01_wrap_legacy\x1b[0m\n'}
+[0.663048] (behaviortree_cpp) StdoutLine: {'line': b'[ 63%] Built target t08_additional_node_args\n'}
+[0.666082] (behaviortree_cpp) StdoutLine: {'line': b'[ 65%] Built target t12_groot_howto\n'}
+[0.666240] (behaviortree_cpp) StdoutLine: {'line': b'[ 66%] Built target t09_scripting\n'}
+[0.673007] (behaviortree_cpp) StdoutLine: {'line': b'[ 67%] Built target t10_observer\n'}
+[0.673540] (behaviortree_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target ex04_waypoints\x1b[0m\n'}
+[0.674032] (behaviortree_cpp) StdoutLine: {'line': b'[ 69%] Built target t11_replace_rules\n'}
+[0.675397] (behaviortree_cpp) StdoutLine: {'line': b'[ 71%] Built target generate_log\n'}
+[0.678173] (behaviortree_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target ex02_runtime_ports\x1b[0m\n'}
+[0.682283] (behaviortree_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target ex05_subtree_model\x1b[0m\n'}
+[0.683678] (behaviortree_cpp) StdoutLine: {'line': b'[ 73%] Built target ex01_wrap_legacy\n'}
+[0.687030] (behaviortree_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target ex06_access_by_ptr\x1b[0m\n'}
+[0.688806] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found tf2_geometry_msgs: 0.25.5 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)\n'}
+[0.692471] (behaviortree_cpp) StdoutLine: {'line': b'[ 92%] Built target behaviortree_cpp_test\n'}
+[0.693083] (behaviortree_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target t13_plugin_executor\x1b[0m\n'}
+[0.693230] (behaviortree_cpp) StdoutLine: {'line': b'[ 93%] Built target ex04_waypoints\n'}
+[0.694498] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)\n'}
+[0.695889] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[0.697326] (behaviortree_cpp) StdoutLine: {'line': b'[ 95%] Built target ex02_runtime_ports\n'}
+[0.700863] (behaviortree_cpp) StdoutLine: {'line': b'[ 97%] Built target ex05_subtree_model\n'}
+[0.701047] (-) TimerEvent: {}
+[0.703708] (behaviortree_cpp) StdoutLine: {'line': b'[ 98%] Built target ex06_access_by_ptr\n'}
+[0.709616] (behaviortree_cpp) StdoutLine: {'line': b'[100%] Built target t13_plugin_executor\n'}
+[0.719977] (behaviortree_cpp) CommandEnded: {'returncode': 0}
+[0.801132] (-) TimerEvent: {}
+[0.853021] (behaviortree_cpp) JobProgress: {'identifier': 'behaviortree_cpp', 'progress': 'install'}
+[0.860869] (behaviortree_cpp) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/stinky/Documents/semantic-robot/ros2_ws/build/behaviortree_cpp'], 'cwd': '/home/stinky/Documents/semantic-robot/ros2_ws/build/behaviortree_cpp', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'stinky'), ('SSH_CLIENT', '171.23.6.164 36408 22'), ('LC_TIME', 'nb_NO.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/lib:/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/lib:/home/stinky/Documents/plansys2_ws/install/plansys2_bt_example/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/stinky'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/stinky'), ('SSH_TTY', '/dev/pts/3'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'nb_NO.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('_CE_M', ''), ('COLCON_PREFIX_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install:/home/stinky/Documents/plansys2_ws/install:/home/stinky/Documents/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'stinky'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '244'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/stinky/.local/bin:/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/bin:/opt/ros/humble/bin:/home/stinky/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'nb_NO.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', 'localhost:10.0'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'nb_NO.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot:/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp:/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example_py:/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example:/home/stinky/Documents/plansys2_ws/install/plansys2_patrol_navigation_example:/home/stinky/Documents/plansys2_ws/install/plansys2_multidomain_example:/home/stinky/Documents/plansys2_ws/install/plansys2_cascade_example:/home/stinky/Documents/plansys2_ws/install/plansys2_bt_example:/home/stinky/Documents/ros2_ws/install/turtlebot3_simulations:/home/stinky/Documents/ros2_ws/install/turtlebot3_gazebo:/home/stinky/Documents/ros2_ws/install/turtlebot3_fake_node:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/stinky/miniconda3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'nb_NO.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'nb_NO.UTF-8'), ('LC_IDENTIFICATION', 'nb_NO.UTF-8'), ('PWD', '/home/stinky/Documents/semantic-robot/ros2_ws/build/behaviortree_cpp'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'en_US.UTF-8'), ('CONDA_EXE', '/home/stinky/miniconda3/bin/conda'), ('SSH_CONNECTION', '171.23.6.164 36408 10.0.0.36 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example_py/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'nb_NO.UTF-8'), ('LC_PAPER', 'nb_NO.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot:/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp:/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example_py:/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example:/home/stinky/Documents/plansys2_ws/install/plansys2_patrol_navigation_example:/home/stinky/Documents/plansys2_ws/install/plansys2_multidomain_example:/home/stinky/Documents/plansys2_ws/install/plansys2_cascade_example:/home/stinky/Documents/plansys2_ws/install/plansys2_bt_example:/home/stinky/Documents/ros2_ws/install/turtlebot3_simulations:/home/stinky/Documents/ros2_ws/install/turtlebot3_gazebo:/home/stinky/Documents/ros2_ws/install/turtlebot3_fake_node:/opt/ros/humble')]), 'shell': False}
+[0.867043] (behaviortree_cpp) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[0.867439] (behaviortree_cpp) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[0.867685] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/bin/bt4_log_cat\n'}
+[0.867877] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/bin/bt4_plugin_manifest\n'}
+[0.868021] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/environment/library_path.sh\n'}
+[0.868152] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/environment/library_path.dsv\n'}
+[0.868295] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/ament_index/resource_index/package_run_dependencies/behaviortree_cpp\n'}
+[0.868435] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/ament_index/resource_index/parent_prefix_path/behaviortree_cpp\n'}
+[0.868562] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/environment/ament_prefix_path.sh\n'}
+[0.868682] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/environment/ament_prefix_path.dsv\n'}
+[0.868807] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/environment/path.sh\n'}
+[0.868931] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/environment/path.dsv\n'}
+[0.869050] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/local_setup.bash\n'}
+[0.869167] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/local_setup.sh\n'}
+[0.869284] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/local_setup.zsh\n'}
+[0.869400] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/local_setup.dsv\n'}
+[0.869489] (behaviortree_cpp) StdoutLine: {'line': b'-- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/package.dsv\n'}
+[0.877003] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/ament_index/resource_index/packages/behaviortree_cpp\n'}
+[0.877141] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[0.877271] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[0.877398] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[0.877529] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/cmake/behaviortree_cppConfig.cmake\n'}
+[0.877624] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/cmake/behaviortree_cppConfig-version.cmake\n'}
+[0.877743] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/share/behaviortree_cpp/package.xml\n'}
+[0.878388] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/lib/libbehaviortree_cpp.so\n'}
+[0.878558] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include\n'}
+[0.878679] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp\n'}
+[0.878806] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/json_export.h\n'}
+[0.879096] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/utils\n'}
+[0.879229] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/utils/wakeup_signal.hpp\n'}
+[0.879346] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/utils/strcat.hpp\n'}
+[0.879480] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/utils/safe_any.hpp\n'}
+[0.879621] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/utils/shared_library.h\n'}
+[0.879758] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/utils/signal.h\n'}
+[0.879878] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/utils/convert_impl.hpp\n'}
+[0.880007] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/utils/timer_queue.h\n'}
+[0.880125] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/utils/platform.hpp\n'}
+[0.880254] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/utils/demangle_util.h\n'}
+[0.880379] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/utils/locked_reference.hpp\n'}
+[0.880516] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/utils/simple_string.hpp\n'}
+[0.880641] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/controls\n'}
+[0.880754] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/controls/reactive_sequence.h\n'}
+[0.880830] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/controls/parallel_node.h\n'}
+[0.880912] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/controls/fallback_node.h\n'}
+[0.880987] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/controls/reactive_fallback.h\n'}
+[0.881060] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/controls/sequence_with_memory_node.h\n'}
+[0.881133] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/controls/manual_node.h\n'}
+[0.881204] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/controls/switch_node.h\n'}
+[0.881278] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/controls/sequence_node.h\n'}
+[0.881351] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/controls/parallel_all_node.h\n'}
+[0.881423] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/controls/if_then_else_node.h\n'}
+[0.881495] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/controls/while_do_else_node.h\n'}
+[0.881568] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/action_node.h\n'}
+[0.881640] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/decorators\n'}
+[0.881732] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/decorators/force_failure_node.h\n'}
+[0.881866] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/decorators/keep_running_until_failure_node.h\n'}
+[0.882161] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/decorators/subtree_node.h\n'}
+[0.882563] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/decorators/force_success_node.h\n'}
+[0.882735] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/decorators/timeout_node.h\n'}
+[0.882929] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/decorators/script_precondition.h\n'}
+[0.883092] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/decorators/delay_node.h\n'}
+[0.883263] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/decorators/repeat_node.h\n'}
+[0.883400] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/decorators/inverter_node.h\n'}
+[0.883588] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/decorators/run_once_node.h\n'}
+[0.883866] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/decorators/retry_node.h\n'}
+[0.884022] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/decorators/loop_node.h\n'}
+[0.884204] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/decorators/consume_queue.h\n'}
+[0.884342] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/behavior_tree.h\n'}
+[0.884502] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/scripting\n'}
+[0.884639] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/scripting/script_parser.hpp\n'}
+[0.884798] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/scripting/any_types.hpp\n'}
+[0.884974] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/scripting/operators.hpp\n'}
+[0.885156] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/decorator_node.h\n'}
+[0.885339] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/condition_node.h\n'}
+[0.885489] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/actions\n'}
+[0.885638] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/actions/set_blackboard_node.h\n'}
+[0.885784] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/actions/sleep_node.h\n'}
+[0.885961] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/actions/always_success_node.h\n'}
+[0.886136] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/actions/script_condition.h\n'}
+[0.886286] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/actions/script_node.h\n'}
+[0.886380] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/actions/test_node.h\n'}
+[0.886525] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/actions/always_failure_node.h\n'}
+[0.886685] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/actions/unset_blackboard_node.h\n'}
+[0.886837] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/actions/pop_from_queue.hpp\n'}
+[0.886991] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/leaf_node.h\n'}
+[0.887144] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/loggers\n'}
+[0.887350] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/loggers/groot2_publisher.h\n'}
+[0.887548] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/loggers/abstract_logger.h\n'}
+[0.887768] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/loggers/groot2_protocol.h\n'}
+[0.887934] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/loggers/bt_minitrace_logger.h\n'}
+[0.888123] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/loggers/bt_file_logger.h\n'}
+[0.888218] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/loggers/bt_file_logger_v2.h\n'}
+[0.888379] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/loggers/bt_sqlite_logger.h\n'}
+[0.888543] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/loggers/bt_cout_logger.h\n'}
+[0.888700] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/loggers/bt_observer.h\n'}
+[0.888861] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/contrib\n'}
+[0.889020] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/contrib/any.hpp\n'}
+[0.889163] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/contrib/expected.hpp\n'}
+[0.889365] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/contrib/json.hpp\n'}
+[0.889537] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/contrib/magic_enum.hpp\n'}
+[0.889694] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/tree_node.h\n'}
+[0.889867] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/basic_types.h\n'}
+[0.889962] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/bt_factory.h\n'}
+[0.890127] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/exceptions.h\n'}
+[0.890310] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/blackboard.h\n'}
+[0.890467] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/bt_parser.h\n'}
+[0.890562] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/control_node.h\n'}
+[0.890718] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/xml_parsing.h\n'}
+[0.890881] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/flatbuffers\n'}
+[0.891108] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/flatbuffers/flatbuffers.h\n'}
+[0.891261] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/flatbuffers/bt_flatbuffer_helper.h\n'}
+[0.891356] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/flatbuffers/stl_emulation.h\n'}
+[0.891521] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/flatbuffers/BT_logger_generated.h\n'}
+[0.891667] (behaviortree_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/include/behaviortree_cpp/flatbuffers/base.h\n'}
+[0.891830] (behaviortree_cpp) CommandEnded: {'returncode': 0}
+[0.892152] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found nav2_msgs: 1.1.12 (/opt/ros/humble/share/nav2_msgs/cmake)\n'}
+[0.901204] (-) TimerEvent: {}
+[1.001429] (-) TimerEvent: {}
+[1.101618] (-) TimerEvent: {}
+[1.152238] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found plansys2_msgs: 2.0.9 (/opt/ros/humble/share/plansys2_msgs/cmake)\n'}
+[1.201739] (-) TimerEvent: {}
+[1.221318] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found plansys2_executor: 2.0.9 (/opt/ros/humble/share/plansys2_executor/cmake)\n'}
+[1.301817] (-) TimerEvent: {}
+[1.328741] (behaviortree_cpp) JobEnded: {'identifier': 'behaviortree_cpp', 'rc': 0}
+[1.401885] (-) TimerEvent: {}
+[1.502022] (-) TimerEvent: {}
+[1.602156] (-) TimerEvent: {}
+[1.702301] (-) TimerEvent: {}
+[1.802434] (-) TimerEvent: {}
+[1.902574] (-) TimerEvent: {}
+[2.002709] (-) TimerEvent: {}
+[2.102864] (-) TimerEvent: {}
+[2.203051] (-) TimerEvent: {}
+[2.303210] (-) TimerEvent: {}
+[2.403360] (-) TimerEvent: {}
+[2.503506] (-) TimerEvent: {}
+[2.603658] (-) TimerEvent: {}
+[2.703802] (-) TimerEvent: {}
+[2.803947] (-) TimerEvent: {}
+[2.904086] (-) TimerEvent: {}
+[3.004225] (-) TimerEvent: {}
+[3.104363] (-) TimerEvent: {}
+[3.155555] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found plansys2_bt_actions: 2.0.9 (/opt/ros/humble/share/plansys2_bt_actions/cmake)\n'}
+[3.204430] (-) TimerEvent: {}
+[3.304570] (-) TimerEvent: {}
+[3.404723] (-) TimerEvent: {}
+[3.504886] (-) TimerEvent: {}
+[3.605045] (-) TimerEvent: {}
+[3.705204] (-) TimerEvent: {}
+[3.805366] (-) TimerEvent: {}
+[3.905526] (-) TimerEvent: {}
+[4.005692] (-) TimerEvent: {}
+[4.105852] (-) TimerEvent: {}
+[4.206010] (-) TimerEvent: {}
+[4.306171] (-) TimerEvent: {}
+[4.406330] (-) TimerEvent: {}
+[4.506490] (-) TimerEvent: {}
+[4.606650] (-) TimerEvent: {}
+[4.706809] (-) TimerEvent: {}
+[4.806969] (-) TimerEvent: {}
+[4.907128] (-) TimerEvent: {}
+[5.007288] (-) TimerEvent: {}
+[5.107437] (-) TimerEvent: {}
+[5.207596] (-) TimerEvent: {}
+[5.307765] (-) TimerEvent: {}
+[5.407924] (-) TimerEvent: {}
+[5.508084] (-) TimerEvent: {}
+[5.608247] (-) TimerEvent: {}
+[5.708399] (-) TimerEvent: {}
+[5.808567] (-) TimerEvent: {}
+[5.908724] (-) TimerEvent: {}
+[6.008878] (-) TimerEvent: {}
+[6.109035] (-) TimerEvent: {}
+[6.209190] (-) TimerEvent: {}
+[6.309349] (-) TimerEvent: {}
+[6.409502] (-) TimerEvent: {}
+[6.509657] (-) TimerEvent: {}
+[6.609811] (-) TimerEvent: {}
+[6.709969] (-) TimerEvent: {}
+[6.810125] (-) TimerEvent: {}
+[6.910287] (-) TimerEvent: {}
+[7.010442] (-) TimerEvent: {}
+[7.110597] (-) TimerEvent: {}
+[7.210755] (-) TimerEvent: {}
+[7.310913] (-) TimerEvent: {}
+[7.411074] (-) TimerEvent: {}
+[7.511233] (-) TimerEvent: {}
+[7.611403] (-) TimerEvent: {}
+[7.711561] (-) TimerEvent: {}
+[7.811723] (-) TimerEvent: {}
+[7.911889] (-) TimerEvent: {}
+[8.012048] (-) TimerEvent: {}
+[8.112215] (-) TimerEvent: {}
+[8.212375] (-) TimerEvent: {}
+[8.312543] (-) TimerEvent: {}
+[8.412702] (-) TimerEvent: {}
+[8.512861] (-) TimerEvent: {}
+[8.613021] (-) TimerEvent: {}
+[8.713185] (-) TimerEvent: {}
+[8.813345] (-) TimerEvent: {}
+[8.913506] (-) TimerEvent: {}
+[9.013667] (-) TimerEvent: {}
+[9.113827] (-) TimerEvent: {}
+[9.213988] (-) TimerEvent: {}
+[9.314148] (-) TimerEvent: {}
+[9.414308] (-) TimerEvent: {}
+[9.514468] (-) TimerEvent: {}
+[9.614626] (-) TimerEvent: {}
+[9.714787] (-) TimerEvent: {}
+[9.814947] (-) TimerEvent: {}
+[9.915106] (-) TimerEvent: {}
+[10.015266] (-) TimerEvent: {}
+[10.115425] (-) TimerEvent: {}
+[10.215586] (-) TimerEvent: {}
+[10.315756] (-) TimerEvent: {}
+[10.415915] (-) TimerEvent: {}
+[10.516074] (-) TimerEvent: {}
+[10.616237] (-) TimerEvent: {}
+[10.716396] (-) TimerEvent: {}
+[10.816559] (-) TimerEvent: {}
+[10.916720] (-) TimerEvent: {}
+[11.016883] (-) TimerEvent: {}
+[11.117042] (-) TimerEvent: {}
+[11.217201] (-) TimerEvent: {}
+[11.317361] (-) TimerEvent: {}
+[11.417526] (-) TimerEvent: {}
+[11.517686] (-) TimerEvent: {}
+[11.617851] (-) TimerEvent: {}
+[11.718011] (-) TimerEvent: {}
+[11.818173] (-) TimerEvent: {}
+[11.918333] (-) TimerEvent: {}
+[12.018493] (-) TimerEvent: {}
+[12.118653] (-) TimerEvent: {}
+[12.218813] (-) TimerEvent: {}
+[12.318973] (-) TimerEvent: {}
+[12.419132] (-) TimerEvent: {}
+[12.519292] (-) TimerEvent: {}
+[12.619452] (-) TimerEvent: {}
+[12.719615] (-) TimerEvent: {}
+[12.819790] (-) TimerEvent: {}
+[12.919949] (-) TimerEvent: {}
+[13.020108] (-) TimerEvent: {}
+[13.120266] (-) TimerEvent: {}
+[13.220426] (-) TimerEvent: {}
+[13.320589] (-) TimerEvent: {}
+[13.420749] (-) TimerEvent: {}
+[13.520908] (-) TimerEvent: {}
+[13.621068] (-) TimerEvent: {}
+[13.721228] (-) TimerEvent: {}
+[13.821387] (-) TimerEvent: {}
+[13.921550] (-) TimerEvent: {}
+[14.021710] (-) TimerEvent: {}
+[14.121869] (-) TimerEvent: {}
+[14.222030] (-) TimerEvent: {}
+[14.322188] (-) TimerEvent: {}
+[14.422371] (-) TimerEvent: {}
+[14.522525] (-) TimerEvent: {}
+[14.622673] (-) TimerEvent: {}
+[14.722830] (-) TimerEvent: {}
+[14.822985] (-) TimerEvent: {}
+[14.923142] (-) TimerEvent: {}
+[15.023298] (-) TimerEvent: {}
+[15.123454] (-) TimerEvent: {}
+[15.223615] (-) TimerEvent: {}
+[15.323789] (-) TimerEvent: {}
+[15.423947] (-) TimerEvent: {}
+[15.524107] (-) TimerEvent: {}
+[15.624265] (-) TimerEvent: {}
+[15.724423] (-) TimerEvent: {}
+[15.824584] (-) TimerEvent: {}
+[15.924747] (-) TimerEvent: {}
+[16.024905] (-) TimerEvent: {}
+[16.125066] (-) TimerEvent: {}
+[16.225227] (-) TimerEvent: {}
+[16.325387] (-) TimerEvent: {}
+[16.425548] (-) TimerEvent: {}
+[16.525709] (-) TimerEvent: {}
+[16.625870] (-) TimerEvent: {}
+[16.726034] (-) TimerEvent: {}
+[16.826195] (-) TimerEvent: {}
+[16.926356] (-) TimerEvent: {}
+[17.026516] (-) TimerEvent: {}
+[17.126675] (-) TimerEvent: {}
+[17.226829] (-) TimerEvent: {}
+[17.326984] (-) TimerEvent: {}
+[17.427139] (-) TimerEvent: {}
+[17.527299] (-) TimerEvent: {}
+[17.627459] (-) TimerEvent: {}
+[17.727619] (-) TimerEvent: {}
+[17.827790] (-) TimerEvent: {}
+[17.927953] (-) TimerEvent: {}
+[18.028112] (-) TimerEvent: {}
+[18.128279] (-) TimerEvent: {}
+[18.228440] (-) TimerEvent: {}
+[18.328617] (-) TimerEvent: {}
+[18.428781] (-) TimerEvent: {}
+[18.528937] (-) TimerEvent: {}
+[18.629091] (-) TimerEvent: {}
+[18.729247] (-) TimerEvent: {}
+[18.829402] (-) TimerEvent: {}
+[18.929559] (-) TimerEvent: {}
+[19.029714] (-) TimerEvent: {}
+[19.129870] (-) TimerEvent: {}
+[19.230026] (-) TimerEvent: {}
+[19.330181] (-) TimerEvent: {}
+[19.430336] (-) TimerEvent: {}
+[19.530496] (-) TimerEvent: {}
+[19.630655] (-) TimerEvent: {}
+[19.730814] (-) TimerEvent: {}
+[19.830975] (-) TimerEvent: {}
+[19.931135] (-) TimerEvent: {}
+[20.031297] (-) TimerEvent: {}
+[20.131457] (-) TimerEvent: {}
+[20.231619] (-) TimerEvent: {}
+[20.331788] (-) TimerEvent: {}
+[20.431949] (-) TimerEvent: {}
+[20.532109] (-) TimerEvent: {}
+[20.632268] (-) TimerEvent: {}
+[20.732430] (-) TimerEvent: {}
+[20.832590] (-) TimerEvent: {}
+[20.932762] (-) TimerEvent: {}
+[21.032921] (-) TimerEvent: {}
+[21.133082] (-) TimerEvent: {}
+[21.233242] (-) TimerEvent: {}
+[21.333402] (-) TimerEvent: {}
+[21.433561] (-) TimerEvent: {}
+[21.533722] (-) TimerEvent: {}
+[21.633882] (-) TimerEvent: {}
+[21.734044] (-) TimerEvent: {}
+[21.834205] (-) TimerEvent: {}
+[21.934364] (-) TimerEvent: {}
+[22.034524] (-) TimerEvent: {}
+[22.134684] (-) TimerEvent: {}
+[22.234848] (-) TimerEvent: {}
+[22.335008] (-) TimerEvent: {}
+[22.435157] (-) TimerEvent: {}
+[22.535347] (-) TimerEvent: {}
+[22.635500] (-) TimerEvent: {}
+[22.735658] (-) TimerEvent: {}
+[22.835828] (-) TimerEvent: {}
+[22.935998] (-) TimerEvent: {}
+[23.036168] (-) TimerEvent: {}
+[23.136338] (-) TimerEvent: {}
+[23.236509] (-) TimerEvent: {}
+[23.336680] (-) TimerEvent: {}
+[23.436850] (-) TimerEvent: {}
+[23.537007] (-) TimerEvent: {}
+[23.637178] (-) TimerEvent: {}
+[23.737348] (-) TimerEvent: {}
+[23.837518] (-) TimerEvent: {}
+[23.937689] (-) TimerEvent: {}
+[24.037859] (-) TimerEvent: {}
+[24.138030] (-) TimerEvent: {}
+[24.238206] (-) TimerEvent: {}
+[24.338376] (-) TimerEvent: {}
+[24.438546] (-) TimerEvent: {}
+[24.538715] (-) TimerEvent: {}
+[24.638887] (-) TimerEvent: {}
+[24.739062] (-) TimerEvent: {}
+[24.839232] (-) TimerEvent: {}
+[24.939402] (-) TimerEvent: {}
+[25.039572] (-) TimerEvent: {}
+[25.139753] (-) TimerEvent: {}
+[25.239923] (-) TimerEvent: {}
+[25.340093] (-) TimerEvent: {}
+[25.440263] (-) TimerEvent: {}
+[25.540434] (-) TimerEvent: {}
+[25.640608] (-) TimerEvent: {}
+[25.740779] (-) TimerEvent: {}
+[25.840950] (-) TimerEvent: {}
+[25.941124] (-) TimerEvent: {}
+[26.041294] (-) TimerEvent: {}
+[26.141465] (-) TimerEvent: {}
+[26.241637] (-) TimerEvent: {}
+[26.341810] (-) TimerEvent: {}
+[26.441983] (-) TimerEvent: {}
+[26.542155] (-) TimerEvent: {}
+[26.642324] (-) TimerEvent: {}
+[26.742497] (-) TimerEvent: {}
+[26.842669] (-) TimerEvent: {}
+[26.942843] (-) TimerEvent: {}
+[27.043013] (-) TimerEvent: {}
+[27.143184] (-) TimerEvent: {}
+[27.243354] (-) TimerEvent: {}
+[27.343523] (-) TimerEvent: {}
+[27.443697] (-) TimerEvent: {}
+[27.543872] (-) TimerEvent: {}
+[27.644046] (-) TimerEvent: {}
+[27.744215] (-) TimerEvent: {}
+[27.844387] (-) TimerEvent: {}
+[27.944560] (-) TimerEvent: {}
+[28.044730] (-) TimerEvent: {}
+[28.144901] (-) TimerEvent: {}
+[28.245073] (-) TimerEvent: {}
+[28.345243] (-) TimerEvent: {}
+[28.445413] (-) TimerEvent: {}
+[28.545589] (-) TimerEvent: {}
+[28.645752] (-) TimerEvent: {}
+[28.745915] (-) TimerEvent: {}
+[28.846084] (-) TimerEvent: {}
+[28.946245] (-) TimerEvent: {}
+[29.046405] (-) TimerEvent: {}
+[29.146567] (-) TimerEvent: {}
+[29.246728] (-) TimerEvent: {}
+[29.346895] (-) TimerEvent: {}
+[29.447060] (-) TimerEvent: {}
+[29.547236] (-) TimerEvent: {}
+[29.647398] (-) TimerEvent: {}
+[29.747577] (-) TimerEvent: {}
+[29.847763] (-) TimerEvent: {}
+[29.947935] (-) TimerEvent: {}
+[30.048105] (-) TimerEvent: {}
+[30.148274] (-) TimerEvent: {}
+[30.248445] (-) TimerEvent: {}
+[30.348617] (-) TimerEvent: {}
+[30.448788] (-) TimerEvent: {}
+[30.548958] (-) TimerEvent: {}
+[30.649127] (-) TimerEvent: {}
+[30.749298] (-) TimerEvent: {}
+[30.849473] (-) TimerEvent: {}
+[30.949643] (-) TimerEvent: {}
+[31.049814] (-) TimerEvent: {}
+[31.149985] (-) TimerEvent: {}
+[31.250156] (-) TimerEvent: {}
+[31.350327] (-) TimerEvent: {}
+[31.450497] (-) TimerEvent: {}
+[31.550664] (-) TimerEvent: {}
+[31.650836] (-) TimerEvent: {}
+[31.751007] (-) TimerEvent: {}
+[31.851180] (-) TimerEvent: {}
+[31.951352] (-) TimerEvent: {}
+[32.051524] (-) TimerEvent: {}
+[32.151679] (-) TimerEvent: {}
+[32.251850] (-) TimerEvent: {}
+[32.352020] (-) TimerEvent: {}
+[32.452189] (-) TimerEvent: {}
+[32.552349] (-) TimerEvent: {}
+[32.652519] (-) TimerEvent: {}
+[32.752691] (-) TimerEvent: {}
+[32.852863] (-) TimerEvent: {}
+[32.953037] (-) TimerEvent: {}
+[33.053215] (-) TimerEvent: {}
+[33.153386] (-) TimerEvent: {}
+[33.253557] (-) TimerEvent: {}
+[33.353732] (-) TimerEvent: {}
+[33.453903] (-) TimerEvent: {}
+[33.554074] (-) TimerEvent: {}
+[33.654249] (-) TimerEvent: {}
+[33.754418] (-) TimerEvent: {}
+[33.854577] (-) TimerEvent: {}
+[33.954737] (-) TimerEvent: {}
+[34.054898] (-) TimerEvent: {}
+[34.155071] (-) TimerEvent: {}
+[34.255238] (-) TimerEvent: {}
+[34.355399] (-) TimerEvent: {}
+[34.455558] (-) TimerEvent: {}
+[34.555708] (-) TimerEvent: {}
+[34.655870] (-) TimerEvent: {}
+[34.756031] (-) TimerEvent: {}
+[34.856207] (-) TimerEvent: {}
+[34.956380] (-) TimerEvent: {}
+[35.056553] (-) TimerEvent: {}
+[35.156725] (-) TimerEvent: {}
+[35.256898] (-) TimerEvent: {}
+[35.357069] (-) TimerEvent: {}
+[35.457242] (-) TimerEvent: {}
+[35.557413] (-) TimerEvent: {}
+[35.657583] (-) TimerEvent: {}
+[35.757754] (-) TimerEvent: {}
+[35.857926] (-) TimerEvent: {}
+[35.958096] (-) TimerEvent: {}
+[36.058266] (-) TimerEvent: {}
+[36.158435] (-) TimerEvent: {}
+[36.258605] (-) TimerEvent: {}
+[36.358778] (-) TimerEvent: {}
+[36.458947] (-) TimerEvent: {}
+[36.559118] (-) TimerEvent: {}
+[36.659288] (-) TimerEvent: {}
+[36.759461] (-) TimerEvent: {}
+[36.859639] (-) TimerEvent: {}
+[36.959821] (-) TimerEvent: {}
+[37.059995] (-) TimerEvent: {}
+[37.160168] (-) TimerEvent: {}
+[37.260337] (-) TimerEvent: {}
+[37.360507] (-) TimerEvent: {}
+[37.460677] (-) TimerEvent: {}
+[37.560849] (-) TimerEvent: {}
+[37.661019] (-) TimerEvent: {}
+[37.761189] (-) TimerEvent: {}
+[37.861358] (-) TimerEvent: {}
+[37.961529] (-) TimerEvent: {}
+[38.061700] (-) TimerEvent: {}
+[38.161877] (-) TimerEvent: {}
+[38.262049] (-) TimerEvent: {}
+[38.362224] (-) TimerEvent: {}
+[38.462395] (-) TimerEvent: {}
+[38.562566] (-) TimerEvent: {}
+[38.662735] (-) TimerEvent: {}
+[38.762910] (-) TimerEvent: {}
+[38.863083] (-) TimerEvent: {}
+[38.963259] (-) TimerEvent: {}
+[39.063429] (-) TimerEvent: {}
+[39.163600] (-) TimerEvent: {}
+[39.263791] (-) TimerEvent: {}
+[39.363961] (-) TimerEvent: {}
+[39.464132] (-) TimerEvent: {}
+[39.564304] (-) TimerEvent: {}
+[39.664477] (-) TimerEvent: {}
+[39.764656] (-) TimerEvent: {}
+[39.864828] (-) TimerEvent: {}
+[39.964999] (-) TimerEvent: {}
+[40.065171] (-) TimerEvent: {}
+[40.066331] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[40.118412] (bt_plansys_turtlebot) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[40.119262] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot/include\n'}
+[40.119364] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[40.119683] (bt_plansys_turtlebot) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[40.120252] (bt_plansys_turtlebot) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[40.120619] (bt_plansys_turtlebot) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[40.122352] (bt_plansys_turtlebot) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[40.122450] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[40.122727] (bt_plansys_turtlebot) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[40.123682] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Configuring done\n'}
+[40.165245] (-) TimerEvent: {}
+[40.240492] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Generating done\n'}
+[40.243030] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Build files have been written to: /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot\n'}
+[40.250415] (bt_plansys_turtlebot) CommandEnded: {'returncode': 0}
+[40.250879] (bt_plansys_turtlebot) JobProgress: {'identifier': 'bt_plansys_turtlebot', 'progress': 'build'}
+[40.251272] (bt_plansys_turtlebot) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot', '--', '-j12', '-l12'], 'cwd': '/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'stinky'), ('SSH_CLIENT', '171.23.6.164 36408 22'), ('LC_TIME', 'nb_NO.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/lib:/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/lib:/home/stinky/Documents/plansys2_ws/install/plansys2_bt_example/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/stinky'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/stinky'), ('SSH_TTY', '/dev/pts/3'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'nb_NO.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('_CE_M', ''), ('COLCON_PREFIX_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install:/home/stinky/Documents/plansys2_ws/install:/home/stinky/Documents/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'stinky'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '244'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/stinky/.local/bin:/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/bin:/opt/ros/humble/bin:/home/stinky/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'nb_NO.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', 'localhost:10.0'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'nb_NO.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot:/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp:/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example_py:/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example:/home/stinky/Documents/plansys2_ws/install/plansys2_patrol_navigation_example:/home/stinky/Documents/plansys2_ws/install/plansys2_multidomain_example:/home/stinky/Documents/plansys2_ws/install/plansys2_cascade_example:/home/stinky/Documents/plansys2_ws/install/plansys2_bt_example:/home/stinky/Documents/ros2_ws/install/turtlebot3_simulations:/home/stinky/Documents/ros2_ws/install/turtlebot3_gazebo:/home/stinky/Documents/ros2_ws/install/turtlebot3_fake_node:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/stinky/miniconda3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'nb_NO.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'nb_NO.UTF-8'), ('LC_IDENTIFICATION', 'nb_NO.UTF-8'), ('PWD', '/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'en_US.UTF-8'), ('CONDA_EXE', '/home/stinky/miniconda3/bin/conda'), ('SSH_CONNECTION', '171.23.6.164 36408 10.0.0.36 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example_py/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'nb_NO.UTF-8'), ('LC_PAPER', 'nb_NO.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot:/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp:/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example_py:/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example:/home/stinky/Documents/plansys2_ws/install/plansys2_patrol_navigation_example:/home/stinky/Documents/plansys2_ws/install/plansys2_multidomain_example:/home/stinky/Documents/plansys2_ws/install/plansys2_cascade_example:/home/stinky/Documents/plansys2_ws/install/plansys2_bt_example:/home/stinky/Documents/ros2_ws/install/turtlebot3_simulations:/home/stinky/Documents/ros2_ws/install/turtlebot3_gazebo:/home/stinky/Documents/ros2_ws/install/turtlebot3_fake_node:/opt/ros/humble')]), 'shell': False}
+[40.265313] (-) TimerEvent: {}
+[40.288828] (bt_plansys_turtlebot) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target approach_pallet_bt_node\x1b[0m\n'}
+[40.289674] (bt_plansys_turtlebot) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target lift_fork_bt_node\x1b[0m\n'}
+[40.294876] (bt_plansys_turtlebot) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target lower_fork_bt_node\x1b[0m\n'}
+[40.295000] (bt_plansys_turtlebot) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target recharge_bt_node\x1b[0m\n'}
+[40.295090] (bt_plansys_turtlebot) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target navigate_bt_node\x1b[0m\n'}
+[40.295177] (bt_plansys_turtlebot) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target task_controller_node\x1b[0m\n'}
+[40.295259] (bt_plansys_turtlebot) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target nav2_action_server_node\x1b[0m\n'}
+[40.307539] (bt_plansys_turtlebot) StdoutLine: {'line': b'[ 28%] Built target lift_fork_bt_node\n'}
+[40.307694] (bt_plansys_turtlebot) StdoutLine: {'line': b'[ 28%] Built target approach_pallet_bt_node\n'}
+[40.308451] (bt_plansys_turtlebot) StdoutLine: {'line': b'[ 42%] Built target lower_fork_bt_node\n'}
+[40.314579] (bt_plansys_turtlebot) StdoutLine: {'line': b'[ 57%] Built target recharge_bt_node\n'}
+[40.316829] (bt_plansys_turtlebot) StdoutLine: {'line': b'[ 71%] Built target navigate_bt_node\n'}
+[40.319579] (bt_plansys_turtlebot) StdoutLine: {'line': b'[ 85%] Built target nav2_action_server_node\n'}
+[40.320169] (bt_plansys_turtlebot) StdoutLine: {'line': b'[100%] Built target task_controller_node\n'}
+[40.329691] (bt_plansys_turtlebot) CommandEnded: {'returncode': 0}
+[40.365383] (-) TimerEvent: {}
+[40.367635] (bt_plansys_turtlebot) JobProgress: {'identifier': 'bt_plansys_turtlebot', 'progress': 'install'}
+[40.368180] (bt_plansys_turtlebot) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot'], 'cwd': '/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'stinky'), ('SSH_CLIENT', '171.23.6.164 36408 22'), ('LC_TIME', 'nb_NO.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/lib:/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/lib:/home/stinky/Documents/plansys2_ws/install/plansys2_bt_example/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/stinky'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/stinky'), ('SSH_TTY', '/dev/pts/3'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'nb_NO.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('_CE_M', ''), ('COLCON_PREFIX_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install:/home/stinky/Documents/plansys2_ws/install:/home/stinky/Documents/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'stinky'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '244'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/stinky/.local/bin:/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp/bin:/opt/ros/humble/bin:/home/stinky/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'nb_NO.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', 'localhost:10.0'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'nb_NO.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot:/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp:/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example_py:/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example:/home/stinky/Documents/plansys2_ws/install/plansys2_patrol_navigation_example:/home/stinky/Documents/plansys2_ws/install/plansys2_multidomain_example:/home/stinky/Documents/plansys2_ws/install/plansys2_cascade_example:/home/stinky/Documents/plansys2_ws/install/plansys2_bt_example:/home/stinky/Documents/ros2_ws/install/turtlebot3_simulations:/home/stinky/Documents/ros2_ws/install/turtlebot3_gazebo:/home/stinky/Documents/ros2_ws/install/turtlebot3_fake_node:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/stinky/miniconda3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'nb_NO.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'nb_NO.UTF-8'), ('LC_IDENTIFICATION', 'nb_NO.UTF-8'), ('PWD', '/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'en_US.UTF-8'), ('CONDA_EXE', '/home/stinky/miniconda3/bin/conda'), ('SSH_CONNECTION', '171.23.6.164 36408 10.0.0.36 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example_py/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'nb_NO.UTF-8'), ('LC_PAPER', 'nb_NO.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot:/home/stinky/Documents/semantic-robot/ros2_ws/install/behaviortree_cpp:/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example_py:/home/stinky/Documents/plansys2_ws/install/plansys2_simple_example:/home/stinky/Documents/plansys2_ws/install/plansys2_patrol_navigation_example:/home/stinky/Documents/plansys2_ws/install/plansys2_multidomain_example:/home/stinky/Documents/plansys2_ws/install/plansys2_cascade_example:/home/stinky/Documents/plansys2_ws/install/plansys2_bt_example:/home/stinky/Documents/ros2_ws/install/turtlebot3_simulations:/home/stinky/Documents/ros2_ws/install/turtlebot3_gazebo:/home/stinky/Documents/ros2_ws/install/turtlebot3_fake_node:/opt/ros/humble')]), 'shell': False}
+[40.374398] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[40.374787] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[40.375102] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/bt_xml/navigate.xml\n'}
+[40.375206] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/bt_xml/recharge.xml\n'}
+[40.375302] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/bt_xml/transport_advanced.xml\n'}
+[40.375395] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/bt_xml/transport_simple.xml\n'}
+[40.375575] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/config/params.yaml\n'}
+[40.375754] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/launch/bt_plansys_turtlebot.launch.py\n'}
+[40.375921] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/pddl/domain.pddl\n'}
+[40.376140] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/lib/bt_plansys_turtlebot/nav2_action_server_node\n'}
+[40.376270] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/lib/bt_plansys_turtlebot/task_controller_node\n'}
+[40.376378] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/lib/libnavigate_bt_node.so\n'}
+[40.376489] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/lib/libapproach_pallet_bt_node.so\n'}
+[40.376597] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/lib/librecharge_bt_node.so\n'}
+[40.376704] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/lib/liblift_fork_bt_node.so\n'}
+[40.376811] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/lib/liblower_fork_bt_node.so\n'}
+[40.376967] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/ament_index/resource_index/package_run_dependencies/bt_plansys_turtlebot\n'}
+[40.377107] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/ament_index/resource_index/parent_prefix_path/bt_plansys_turtlebot\n'}
+[40.377235] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/environment/ament_prefix_path.sh\n'}
+[40.377360] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/environment/ament_prefix_path.dsv\n'}
+[40.377483] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/environment/path.sh\n'}
+[40.377603] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/environment/path.dsv\n'}
+[40.377723] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/local_setup.bash\n'}
+[40.377841] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/local_setup.sh\n'}
+[40.377960] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/local_setup.zsh\n'}
+[40.378080] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/local_setup.dsv\n'}
+[40.378157] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/package.dsv\n'}
+[40.385358] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/ament_index/resource_index/packages/bt_plansys_turtlebot\n'}
+[40.385510] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[40.385671] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/cmake/bt_plansys_turtlebotConfig.cmake\n'}
+[40.385794] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/cmake/bt_plansys_turtlebotConfig-version.cmake\n'}
+[40.385927] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/package.xml\n'}
+[40.387193] (bt_plansys_turtlebot) CommandEnded: {'returncode': 0}
+[40.465463] (-) TimerEvent: {}
+[40.557368] (bt_plansys_turtlebot) JobEnded: {'identifier': 'bt_plansys_turtlebot', 'rc': 0}
+[40.557915] (-) EventReactorShutdown: {}
