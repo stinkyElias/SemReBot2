@@ -275,6 +275,19 @@ nav2_action_server_node/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/nav2_action_server_node.dir/build.make CMakeFiles/nav2_action_server_node.dir/build
 .PHONY : nav2_action_server_node/fast
 
+#=============================================================================
+# Target rules for targets named task_controller_node
+
+# Build rule for target.
+task_controller_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 task_controller_node
+.PHONY : task_controller_node
+
+# fast build rule for target.
+task_controller_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_controller_node.dir/build.make CMakeFiles/task_controller_node.dir/build
+.PHONY : task_controller_node/fast
+
 src/bt_nodes/ApproachPallet.o: src/bt_nodes/ApproachPallet.cpp.o
 .PHONY : src/bt_nodes/ApproachPallet.o
 
@@ -419,6 +432,30 @@ src/nav2_action_server_node.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/nav2_action_server_node.dir/build.make CMakeFiles/nav2_action_server_node.dir/src/nav2_action_server_node.cpp.s
 .PHONY : src/nav2_action_server_node.cpp.s
 
+src/task_controller_node.o: src/task_controller_node.cpp.o
+.PHONY : src/task_controller_node.o
+
+# target to build an object file
+src/task_controller_node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_controller_node.dir/build.make CMakeFiles/task_controller_node.dir/src/task_controller_node.cpp.o
+.PHONY : src/task_controller_node.cpp.o
+
+src/task_controller_node.i: src/task_controller_node.cpp.i
+.PHONY : src/task_controller_node.i
+
+# target to preprocess a source file
+src/task_controller_node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_controller_node.dir/build.make CMakeFiles/task_controller_node.dir/src/task_controller_node.cpp.i
+.PHONY : src/task_controller_node.cpp.i
+
+src/task_controller_node.s: src/task_controller_node.cpp.s
+.PHONY : src/task_controller_node.s
+
+# target to generate assembly for a file
+src/task_controller_node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_controller_node.dir/build.make CMakeFiles/task_controller_node.dir/src/task_controller_node.cpp.s
+.PHONY : src/task_controller_node.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -440,6 +477,7 @@ help:
 	@echo "... nav2_action_server_node"
 	@echo "... navigate_bt_node"
 	@echo "... recharge_bt_node"
+	@echo "... task_controller_node"
 	@echo "... src/bt_nodes/ApproachPallet.o"
 	@echo "... src/bt_nodes/ApproachPallet.i"
 	@echo "... src/bt_nodes/ApproachPallet.s"
@@ -458,6 +496,9 @@ help:
 	@echo "... src/nav2_action_server_node.o"
 	@echo "... src/nav2_action_server_node.i"
 	@echo "... src/nav2_action_server_node.s"
+	@echo "... src/task_controller_node.o"
+	@echo "... src/task_controller_node.i"
+	@echo "... src/task_controller_node.s"
 .PHONY : help
 
 

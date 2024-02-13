@@ -65,11 +65,15 @@ endforeach()
 add_executable(nav2_action_server_node src/nav2_action_server_node.cpp)
 ament_target_dependencies(nav2_action_server_node ${dependencies})
 
-# copy install directories to 
+add_executable(task_controller_node src/task_controller_node.cpp)
+ament_target_dependencies(task_controller_node ${dependencies})
+
+# Install helper directories to share/bt_plansys_turtlebot directory 
 install(DIRECTORY bt_xml config launch pddl DESTINATION share/${PROJECT_NAME})
 
 install(TARGETS
   nav2_action_server_node
+  task_controller_node
   ${plugin_libs}
   ARCHIVE DESTINATION lib
   LIBRARY DESTINATION lib
