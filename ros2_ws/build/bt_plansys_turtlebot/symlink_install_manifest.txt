@@ -5,7 +5,6 @@
 /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/config/params.yaml
 /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/launch/bt_plansys_turtlebot.launch.py
 /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/pddl/domain.pddl
-/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/lib/bt_plansys_turtlebot/nav2_action_server_node
 /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/lib/bt_plansys_turtlebot/task_controller_node
 /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/lib/libnavigate_bt_node.so
 /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/lib/libapproach_pallet_bt_node.so

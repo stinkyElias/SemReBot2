@@ -1,0 +1,487 @@
+[0.000000] (-) TimerEvent: {}
+[0.000199] (bt_plansys_turtlebot) JobQueued: {'identifier': 'bt_plansys_turtlebot', 'dependencies': OrderedDict()}
+[0.000234] (bt_plansys_turtlebot) JobStarted: {'identifier': 'bt_plansys_turtlebot'}
+[0.083999] (-) TimerEvent: {}
+[0.103762] (bt_plansys_turtlebot) JobProgress: {'identifier': 'bt_plansys_turtlebot', 'progress': 'cmake'}
+[0.104403] (bt_plansys_turtlebot) Command: {'cmd': ['/usr/bin/cmake', '/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot', '-DCMAKE_INSTALL_PREFIX=/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot'], 'cwd': '/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'stinky'), ('LC_TIME', 'nb_NO.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/stinky'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/stinky/Documents/semantic-robot'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/home/stinky/.config/autostart/guake.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'nb_NO.UTF-8'), ('MANAGERPID', '2206'), ('SYSTEMD_EXEC_PID', '2399'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '2686'), ('_colcon_cd_root', '/opt/ros/humble/'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'stinky'), ('DESKTOP_AUTOSTART_ID', '1024cb8577f92496f8170800396136103400000023990016'), ('JOURNAL_STREAM', '8:37907'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'stinky'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/stinky/miniconda3/condabin:/opt/ros/humble/bin:/home/stinky/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/stinky:@/tmp/.ICE-unix/2399,unix/stinky:/tmp/.ICE-unix/2399'), ('INVOCATION_ID', 'ccb0d851d033421eb9ef333e29addf0c'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'nb_NO.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'nb_NO.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.TZZTI2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '5'), ('AMENT_PREFIX_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/stinky/miniconda3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'nb_NO.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'nb_NO.UTF-8'), ('LC_IDENTIFICATION', 'nb_NO.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('GUAKE_TAB_UUID', '0af1b0d7-0d5d-4330-b2b7-9558527bc0e8'), ('PWD', '/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot'), ('TURTLEBOT3_MODEL', 'waffle'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/stinky/miniconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'nb_NO.UTF-8'), ('LC_PAPER', 'nb_NO.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot:/opt/ros/humble')]), 'shell': False}
+[0.118431] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.7 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.184108] (-) TimerEvent: {}
+[0.237286] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.248723] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found ament_index_cpp: 1.4.0 (/opt/ros/humble/share/ament_index_cpp/cmake)\n'}
+[0.250552] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found rclcpp: 16.0.8 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.284219] (-) TimerEvent: {}
+[0.284664] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.288280] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.294123] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.305228] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.318585] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.365621] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.367058] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)\n'}
+[0.384299] (-) TimerEvent: {}
+[0.392088] (bt_plansys_turtlebot) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_cyclonedds_cpp' as default\n"}
+[0.484419] (-) TimerEvent: {}
+[0.535588] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found rclcpp_action: 16.0.8 (/opt/ros/humble/share/rclcpp_action/cmake)\n'}
+[0.584541] (-) TimerEvent: {}
+[0.601982] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[0.634716] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found tf2_geometry_msgs: 0.25.5 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)\n'}
+[0.639333] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)\n'}
+[0.640528] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[0.684668] (-) TimerEvent: {}
+[0.784954] (-) TimerEvent: {}
+[0.827634] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found nav2_msgs: 1.1.12 (/opt/ros/humble/share/nav2_msgs/cmake)\n'}
+[0.885057] (-) TimerEvent: {}
+[0.985378] (-) TimerEvent: {}
+[1.018290] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found plansys2_msgs: 2.0.9 (/opt/ros/humble/share/plansys2_msgs/cmake)\n'}
+[1.085472] (-) TimerEvent: {}
+[1.086411] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found plansys2_executor: 2.0.9 (/opt/ros/humble/share/plansys2_executor/cmake)\n'}
+[1.185577] (-) TimerEvent: {}
+[1.285873] (-) TimerEvent: {}
+[1.386173] (-) TimerEvent: {}
+[1.486493] (-) TimerEvent: {}
+[1.586785] (-) TimerEvent: {}
+[1.687106] (-) TimerEvent: {}
+[1.787397] (-) TimerEvent: {}
+[1.887724] (-) TimerEvent: {}
+[1.988046] (-) TimerEvent: {}
+[2.088368] (-) TimerEvent: {}
+[2.188687] (-) TimerEvent: {}
+[2.289005] (-) TimerEvent: {}
+[2.389404] (-) TimerEvent: {}
+[2.489793] (-) TimerEvent: {}
+[2.590176] (-) TimerEvent: {}
+[2.690476] (-) TimerEvent: {}
+[2.790787] (-) TimerEvent: {}
+[2.891092] (-) TimerEvent: {}
+[2.991397] (-) TimerEvent: {}
+[3.017288] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found plansys2_bt_actions: 2.0.9 (/opt/ros/humble/share/plansys2_bt_actions/cmake)\n'}
+[3.091492] (-) TimerEvent: {}
+[3.191823] (-) TimerEvent: {}
+[3.292090] (-) TimerEvent: {}
+[3.392540] (-) TimerEvent: {}
+[3.492926] (-) TimerEvent: {}
+[3.593310] (-) TimerEvent: {}
+[3.693692] (-) TimerEvent: {}
+[3.794096] (-) TimerEvent: {}
+[3.894473] (-) TimerEvent: {}
+[3.994765] (-) TimerEvent: {}
+[4.095054] (-) TimerEvent: {}
+[4.195333] (-) TimerEvent: {}
+[4.295684] (-) TimerEvent: {}
+[4.396043] (-) TimerEvent: {}
+[4.496402] (-) TimerEvent: {}
+[4.596688] (-) TimerEvent: {}
+[4.697046] (-) TimerEvent: {}
+[4.797397] (-) TimerEvent: {}
+[4.897756] (-) TimerEvent: {}
+[4.998111] (-) TimerEvent: {}
+[5.098454] (-) TimerEvent: {}
+[5.198698] (-) TimerEvent: {}
+[5.298981] (-) TimerEvent: {}
+[5.399269] (-) TimerEvent: {}
+[5.499620] (-) TimerEvent: {}
+[5.599980] (-) TimerEvent: {}
+[5.700333] (-) TimerEvent: {}
+[5.800613] (-) TimerEvent: {}
+[5.900967] (-) TimerEvent: {}
+[6.001328] (-) TimerEvent: {}
+[6.101688] (-) TimerEvent: {}
+[6.202046] (-) TimerEvent: {}
+[6.302416] (-) TimerEvent: {}
+[6.402774] (-) TimerEvent: {}
+[6.503125] (-) TimerEvent: {}
+[6.603409] (-) TimerEvent: {}
+[6.703715] (-) TimerEvent: {}
+[6.804079] (-) TimerEvent: {}
+[6.904447] (-) TimerEvent: {}
+[7.004811] (-) TimerEvent: {}
+[7.105093] (-) TimerEvent: {}
+[7.205358] (-) TimerEvent: {}
+[7.305719] (-) TimerEvent: {}
+[7.406075] (-) TimerEvent: {}
+[7.506433] (-) TimerEvent: {}
+[7.606735] (-) TimerEvent: {}
+[7.707026] (-) TimerEvent: {}
+[7.807322] (-) TimerEvent: {}
+[7.907683] (-) TimerEvent: {}
+[8.008046] (-) TimerEvent: {}
+[8.108409] (-) TimerEvent: {}
+[8.208770] (-) TimerEvent: {}
+[8.309128] (-) TimerEvent: {}
+[8.409484] (-) TimerEvent: {}
+[8.509868] (-) TimerEvent: {}
+[8.610319] (-) TimerEvent: {}
+[8.710591] (-) TimerEvent: {}
+[8.810883] (-) TimerEvent: {}
+[8.911278] (-) TimerEvent: {}
+[9.011567] (-) TimerEvent: {}
+[9.111925] (-) TimerEvent: {}
+[9.212203] (-) TimerEvent: {}
+[9.312616] (-) TimerEvent: {}
+[9.412965] (-) TimerEvent: {}
+[9.513350] (-) TimerEvent: {}
+[9.613617] (-) TimerEvent: {}
+[9.713976] (-) TimerEvent: {}
+[9.814339] (-) TimerEvent: {}
+[9.914601] (-) TimerEvent: {}
+[10.014955] (-) TimerEvent: {}
+[10.115243] (-) TimerEvent: {}
+[10.215600] (-) TimerEvent: {}
+[10.315949] (-) TimerEvent: {}
+[10.416311] (-) TimerEvent: {}
+[10.516668] (-) TimerEvent: {}
+[10.617034] (-) TimerEvent: {}
+[10.717399] (-) TimerEvent: {}
+[10.817759] (-) TimerEvent: {}
+[10.918114] (-) TimerEvent: {}
+[11.018462] (-) TimerEvent: {}
+[11.118819] (-) TimerEvent: {}
+[11.219108] (-) TimerEvent: {}
+[11.319437] (-) TimerEvent: {}
+[11.419748] (-) TimerEvent: {}
+[11.520125] (-) TimerEvent: {}
+[11.620509] (-) TimerEvent: {}
+[11.720893] (-) TimerEvent: {}
+[11.821272] (-) TimerEvent: {}
+[11.921666] (-) TimerEvent: {}
+[12.022038] (-) TimerEvent: {}
+[12.122422] (-) TimerEvent: {}
+[12.222708] (-) TimerEvent: {}
+[12.323031] (-) TimerEvent: {}
+[12.423343] (-) TimerEvent: {}
+[12.523725] (-) TimerEvent: {}
+[12.624106] (-) TimerEvent: {}
+[12.724485] (-) TimerEvent: {}
+[12.824859] (-) TimerEvent: {}
+[12.925258] (-) TimerEvent: {}
+[13.025641] (-) TimerEvent: {}
+[13.125903] (-) TimerEvent: {}
+[13.226257] (-) TimerEvent: {}
+[13.326535] (-) TimerEvent: {}
+[13.426836] (-) TimerEvent: {}
+[13.527105] (-) TimerEvent: {}
+[13.627490] (-) TimerEvent: {}
+[13.727865] (-) TimerEvent: {}
+[13.828174] (-) TimerEvent: {}
+[13.928776] (-) TimerEvent: {}
+[14.029148] (-) TimerEvent: {}
+[14.129542] (-) TimerEvent: {}
+[14.229917] (-) TimerEvent: {}
+[14.330292] (-) TimerEvent: {}
+[14.430584] (-) TimerEvent: {}
+[14.530874] (-) TimerEvent: {}
+[14.631243] (-) TimerEvent: {}
+[14.731619] (-) TimerEvent: {}
+[14.831991] (-) TimerEvent: {}
+[14.932367] (-) TimerEvent: {}
+[15.032736] (-) TimerEvent: {}
+[15.133122] (-) TimerEvent: {}
+[15.233500] (-) TimerEvent: {}
+[15.333891] (-) TimerEvent: {}
+[15.434278] (-) TimerEvent: {}
+[15.534572] (-) TimerEvent: {}
+[15.634883] (-) TimerEvent: {}
+[15.735262] (-) TimerEvent: {}
+[15.835587] (-) TimerEvent: {}
+[15.935906] (-) TimerEvent: {}
+[16.036215] (-) TimerEvent: {}
+[16.136544] (-) TimerEvent: {}
+[16.236835] (-) TimerEvent: {}
+[16.337127] (-) TimerEvent: {}
+[16.437416] (-) TimerEvent: {}
+[16.537696] (-) TimerEvent: {}
+[16.637993] (-) TimerEvent: {}
+[16.738278] (-) TimerEvent: {}
+[16.838565] (-) TimerEvent: {}
+[16.938868] (-) TimerEvent: {}
+[17.039175] (-) TimerEvent: {}
+[17.139481] (-) TimerEvent: {}
+[17.239788] (-) TimerEvent: {}
+[17.340104] (-) TimerEvent: {}
+[17.440425] (-) TimerEvent: {}
+[17.540746] (-) TimerEvent: {}
+[17.641124] (-) TimerEvent: {}
+[17.741435] (-) TimerEvent: {}
+[17.841820] (-) TimerEvent: {}
+[17.942206] (-) TimerEvent: {}
+[18.042520] (-) TimerEvent: {}
+[18.142848] (-) TimerEvent: {}
+[18.243186] (-) TimerEvent: {}
+[18.343510] (-) TimerEvent: {}
+[18.443834] (-) TimerEvent: {}
+[18.544178] (-) TimerEvent: {}
+[18.644510] (-) TimerEvent: {}
+[18.744821] (-) TimerEvent: {}
+[18.845137] (-) TimerEvent: {}
+[18.945478] (-) TimerEvent: {}
+[19.045854] (-) TimerEvent: {}
+[19.146237] (-) TimerEvent: {}
+[19.246538] (-) TimerEvent: {}
+[19.346835] (-) TimerEvent: {}
+[19.447152] (-) TimerEvent: {}
+[19.547470] (-) TimerEvent: {}
+[19.647785] (-) TimerEvent: {}
+[19.748110] (-) TimerEvent: {}
+[19.848419] (-) TimerEvent: {}
+[19.948724] (-) TimerEvent: {}
+[20.049022] (-) TimerEvent: {}
+[20.149379] (-) TimerEvent: {}
+[20.249773] (-) TimerEvent: {}
+[20.350147] (-) TimerEvent: {}
+[20.450466] (-) TimerEvent: {}
+[20.550772] (-) TimerEvent: {}
+[20.651087] (-) TimerEvent: {}
+[20.751398] (-) TimerEvent: {}
+[20.851783] (-) TimerEvent: {}
+[20.952161] (-) TimerEvent: {}
+[21.052530] (-) TimerEvent: {}
+[21.152902] (-) TimerEvent: {}
+[21.253206] (-) TimerEvent: {}
+[21.353639] (-) TimerEvent: {}
+[21.454101] (-) TimerEvent: {}
+[21.554462] (-) TimerEvent: {}
+[21.654921] (-) TimerEvent: {}
+[21.755253] (-) TimerEvent: {}
+[21.855586] (-) TimerEvent: {}
+[21.955896] (-) TimerEvent: {}
+[22.056230] (-) TimerEvent: {}
+[22.156550] (-) TimerEvent: {}
+[22.256865] (-) TimerEvent: {}
+[22.357183] (-) TimerEvent: {}
+[22.457505] (-) TimerEvent: {}
+[22.557888] (-) TimerEvent: {}
+[22.658209] (-) TimerEvent: {}
+[22.758493] (-) TimerEvent: {}
+[22.858787] (-) TimerEvent: {}
+[22.959056] (-) TimerEvent: {}
+[23.059347] (-) TimerEvent: {}
+[23.159642] (-) TimerEvent: {}
+[23.260017] (-) TimerEvent: {}
+[23.360381] (-) TimerEvent: {}
+[23.460741] (-) TimerEvent: {}
+[23.561089] (-) TimerEvent: {}
+[23.661449] (-) TimerEvent: {}
+[23.761807] (-) TimerEvent: {}
+[23.862162] (-) TimerEvent: {}
+[23.962467] (-) TimerEvent: {}
+[24.062762] (-) TimerEvent: {}
+[24.163049] (-) TimerEvent: {}
+[24.263331] (-) TimerEvent: {}
+[24.363687] (-) TimerEvent: {}
+[24.463978] (-) TimerEvent: {}
+[24.564334] (-) TimerEvent: {}
+[24.664692] (-) TimerEvent: {}
+[24.765015] (-) TimerEvent: {}
+[24.865344] (-) TimerEvent: {}
+[24.965656] (-) TimerEvent: {}
+[25.065965] (-) TimerEvent: {}
+[25.166300] (-) TimerEvent: {}
+[25.266620] (-) TimerEvent: {}
+[25.367021] (-) TimerEvent: {}
+[25.467336] (-) TimerEvent: {}
+[25.567718] (-) TimerEvent: {}
+[25.668021] (-) TimerEvent: {}
+[25.768358] (-) TimerEvent: {}
+[25.868684] (-) TimerEvent: {}
+[25.969018] (-) TimerEvent: {}
+[26.069337] (-) TimerEvent: {}
+[26.169734] (-) TimerEvent: {}
+[26.270117] (-) TimerEvent: {}
+[26.370466] (-) TimerEvent: {}
+[26.470750] (-) TimerEvent: {}
+[26.571037] (-) TimerEvent: {}
+[26.671324] (-) TimerEvent: {}
+[26.771606] (-) TimerEvent: {}
+[26.871960] (-) TimerEvent: {}
+[26.972328] (-) TimerEvent: {}
+[27.072684] (-) TimerEvent: {}
+[27.173034] (-) TimerEvent: {}
+[27.273352] (-) TimerEvent: {}
+[27.373732] (-) TimerEvent: {}
+[27.474109] (-) TimerEvent: {}
+[27.574464] (-) TimerEvent: {}
+[27.674759] (-) TimerEvent: {}
+[27.775118] (-) TimerEvent: {}
+[27.875407] (-) TimerEvent: {}
+[27.975677] (-) TimerEvent: {}
+[28.075979] (-) TimerEvent: {}
+[28.176334] (-) TimerEvent: {}
+[28.276687] (-) TimerEvent: {}
+[28.377032] (-) TimerEvent: {}
+[28.477393] (-) TimerEvent: {}
+[28.577752] (-) TimerEvent: {}
+[28.678035] (-) TimerEvent: {}
+[28.778445] (-) TimerEvent: {}
+[28.878712] (-) TimerEvent: {}
+[28.978999] (-) TimerEvent: {}
+[29.079339] (-) TimerEvent: {}
+[29.179652] (-) TimerEvent: {}
+[29.279955] (-) TimerEvent: {}
+[29.380334] (-) TimerEvent: {}
+[29.480637] (-) TimerEvent: {}
+[29.581185] (-) TimerEvent: {}
+[29.681494] (-) TimerEvent: {}
+[29.781826] (-) TimerEvent: {}
+[29.882149] (-) TimerEvent: {}
+[29.982479] (-) TimerEvent: {}
+[30.082801] (-) TimerEvent: {}
+[30.183112] (-) TimerEvent: {}
+[30.283481] (-) TimerEvent: {}
+[30.383854] (-) TimerEvent: {}
+[30.484243] (-) TimerEvent: {}
+[30.584624] (-) TimerEvent: {}
+[30.685001] (-) TimerEvent: {}
+[30.785314] (-) TimerEvent: {}
+[30.885612] (-) TimerEvent: {}
+[30.985995] (-) TimerEvent: {}
+[31.086368] (-) TimerEvent: {}
+[31.186658] (-) TimerEvent: {}
+[31.286967] (-) TimerEvent: {}
+[31.387273] (-) TimerEvent: {}
+[31.487662] (-) TimerEvent: {}
+[31.588030] (-) TimerEvent: {}
+[31.688345] (-) TimerEvent: {}
+[31.788712] (-) TimerEvent: {}
+[31.889099] (-) TimerEvent: {}
+[31.989485] (-) TimerEvent: {}
+[32.089778] (-) TimerEvent: {}
+[32.190160] (-) TimerEvent: {}
+[32.290469] (-) TimerEvent: {}
+[32.390862] (-) TimerEvent: {}
+[32.491258] (-) TimerEvent: {}
+[32.591609] (-) TimerEvent: {}
+[32.692009] (-) TimerEvent: {}
+[32.792324] (-) TimerEvent: {}
+[32.892702] (-) TimerEvent: {}
+[32.993089] (-) TimerEvent: {}
+[33.093464] (-) TimerEvent: {}
+[33.193740] (-) TimerEvent: {}
+[33.294102] (-) TimerEvent: {}
+[33.394462] (-) TimerEvent: {}
+[33.494778] (-) TimerEvent: {}
+[33.595092] (-) TimerEvent: {}
+[33.695402] (-) TimerEvent: {}
+[33.795779] (-) TimerEvent: {}
+[33.896157] (-) TimerEvent: {}
+[33.914271] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[33.970513] (bt_plansys_turtlebot) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[33.971269] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot/include\n'}
+[33.971376] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[33.971660] (bt_plansys_turtlebot) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[33.972229] (bt_plansys_turtlebot) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[33.972589] (bt_plansys_turtlebot) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[33.973633] (bt_plansys_turtlebot) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[33.973723] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[33.974066] (bt_plansys_turtlebot) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[33.975026] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Configuring done\n'}
+[33.996261] (-) TimerEvent: {}
+[34.043695] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Generating done\n'}
+[34.045343] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Build files have been written to: /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot\n'}
+[34.052264] (bt_plansys_turtlebot) CommandEnded: {'returncode': 0}
+[34.053378] (bt_plansys_turtlebot) JobProgress: {'identifier': 'bt_plansys_turtlebot', 'progress': 'build'}
+[34.053642] (bt_plansys_turtlebot) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot', '--', '-j4', '-l4'], 'cwd': '/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'stinky'), ('LC_TIME', 'nb_NO.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/stinky'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/stinky/Documents/semantic-robot'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/home/stinky/.config/autostart/guake.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'nb_NO.UTF-8'), ('MANAGERPID', '2206'), ('SYSTEMD_EXEC_PID', '2399'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '2686'), ('_colcon_cd_root', '/opt/ros/humble/'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'stinky'), ('DESKTOP_AUTOSTART_ID', '1024cb8577f92496f8170800396136103400000023990016'), ('JOURNAL_STREAM', '8:37907'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'stinky'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/stinky/miniconda3/condabin:/opt/ros/humble/bin:/home/stinky/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/stinky:@/tmp/.ICE-unix/2399,unix/stinky:/tmp/.ICE-unix/2399'), ('INVOCATION_ID', 'ccb0d851d033421eb9ef333e29addf0c'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'nb_NO.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'nb_NO.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.TZZTI2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '5'), ('AMENT_PREFIX_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/stinky/miniconda3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'nb_NO.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'nb_NO.UTF-8'), ('LC_IDENTIFICATION', 'nb_NO.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('GUAKE_TAB_UUID', '0af1b0d7-0d5d-4330-b2b7-9558527bc0e8'), ('PWD', '/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot'), ('TURTLEBOT3_MODEL', 'waffle'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/stinky/miniconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'nb_NO.UTF-8'), ('LC_PAPER', 'nb_NO.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot:/opt/ros/humble')]), 'shell': False}
+[34.084979] (bt_plansys_turtlebot) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target approach_pallet_bt_node\x1b[0m\n'}
+[34.085181] (bt_plansys_turtlebot) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target lift_fork_bt_node\x1b[0m\n'}
+[34.085842] (bt_plansys_turtlebot) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target navigate_bt_node\x1b[0m\n'}
+[34.088563] (bt_plansys_turtlebot) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target recharge_bt_node\x1b[0m\n'}
+[34.096367] (-) TimerEvent: {}
+[34.102004] (bt_plansys_turtlebot) StdoutLine: {'line': b'[ 16%] Built target approach_pallet_bt_node\n'}
+[34.106423] (bt_plansys_turtlebot) StdoutLine: {'line': b'[ 33%] Built target lift_fork_bt_node\n'}
+[34.109130] (bt_plansys_turtlebot) StdoutLine: {'line': b'[ 50%] Built target recharge_bt_node\n'}
+[34.111081] (bt_plansys_turtlebot) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding CXX object CMakeFiles/navigate_bt_node.dir/src/bt_nodes/Navigate.cpp.o\x1b[0m\n'}
+[34.118552] (bt_plansys_turtlebot) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target lower_fork_bt_node\x1b[0m\n'}
+[34.119502] (bt_plansys_turtlebot) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target task_controller_node\x1b[0m\n'}
+[34.133105] (bt_plansys_turtlebot) StdoutLine: {'line': b'[ 75%] Built target lower_fork_bt_node\n'}
+[34.139648] (bt_plansys_turtlebot) StdoutLine: {'line': b'[ 91%] Built target task_controller_node\n'}
+[34.196482] (-) TimerEvent: {}
+[34.296913] (-) TimerEvent: {}
+[34.397333] (-) TimerEvent: {}
+[34.497687] (-) TimerEvent: {}
+[34.598009] (-) TimerEvent: {}
+[34.698359] (-) TimerEvent: {}
+[34.798712] (-) TimerEvent: {}
+[34.899072] (-) TimerEvent: {}
+[34.999431] (-) TimerEvent: {}
+[35.099854] (-) TimerEvent: {}
+[35.200169] (-) TimerEvent: {}
+[35.300503] (-) TimerEvent: {}
+[35.400820] (-) TimerEvent: {}
+[35.501161] (-) TimerEvent: {}
+[35.601444] (-) TimerEvent: {}
+[35.701701] (-) TimerEvent: {}
+[35.801949] (-) TimerEvent: {}
+[35.902279] (-) TimerEvent: {}
+[36.002558] (-) TimerEvent: {}
+[36.102832] (-) TimerEvent: {}
+[36.203113] (-) TimerEvent: {}
+[36.303410] (-) TimerEvent: {}
+[36.403688] (-) TimerEvent: {}
+[36.503982] (-) TimerEvent: {}
+[36.604263] (-) TimerEvent: {}
+[36.704603] (-) TimerEvent: {}
+[36.731961] (bt_plansys_turtlebot) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot/include/bt_plansys_turtlebot/bt_nodes/Navigate.hpp:9\x1b[m\x1b[K,\n'}
+[36.732201] (bt_plansys_turtlebot) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot/src/bt_nodes/Navigate.cpp:4\x1b[m\x1b[K:\n'}
+[36.732277] (bt_plansys_turtlebot) StderrLine: {'line': b'/opt/ros/humble/include/plansys2_bt_actions/BTActionNode.hpp: In instantiation of \xe2\x80\x98\x1b[01m\x1b[Kvoid plansys2::BtActionNode<ActionT, NodeT>::on_feedback(std::shared_ptr<const typename ActionT::Feedback>) [with ActionT = nav2_msgs::action::NavigateToPose; NodeT = rclcpp_lifecycle::LifecycleNode; typename ActionT::Feedback = nav2_msgs::action::NavigateToPose_Feedback_<std::allocator<void> >]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[36.732336] (bt_plansys_turtlebot) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/plansys2_bt_actions/BTActionNode.hpp:120:16:\x1b[m\x1b[K   required from here\n'}
+[36.732383] (bt_plansys_turtlebot) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/plansys2_bt_actions/BTActionNode.hpp:121:61:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kfeedback\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[36.732422] (bt_plansys_turtlebot) StderrLine: {'line': b'  121 |     \x1b[01;35m\x1b[Kconst std::shared_ptr<const typename ActionT::Feedback> feedback\x1b[m\x1b[K)\n'}
+[36.732459] (bt_plansys_turtlebot) StderrLine: {'line': b'      |     \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~\x1b[m\x1b[K\n'}
+[36.804720] (-) TimerEvent: {}
+[36.904973] (-) TimerEvent: {}
+[37.005308] (-) TimerEvent: {}
+[37.105616] (-) TimerEvent: {}
+[37.205990] (-) TimerEvent: {}
+[37.306357] (-) TimerEvent: {}
+[37.406665] (-) TimerEvent: {}
+[37.506992] (-) TimerEvent: {}
+[37.607333] (-) TimerEvent: {}
+[37.707667] (-) TimerEvent: {}
+[37.807979] (-) TimerEvent: {}
+[37.908350] (-) TimerEvent: {}
+[38.008718] (-) TimerEvent: {}
+[38.109010] (-) TimerEvent: {}
+[38.209397] (-) TimerEvent: {}
+[38.284373] (bt_plansys_turtlebot) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library libnavigate_bt_node.so\x1b[0m\n'}
+[38.309506] (-) TimerEvent: {}
+[38.409828] (-) TimerEvent: {}
+[38.510208] (-) TimerEvent: {}
+[38.573370] (bt_plansys_turtlebot) StdoutLine: {'line': b'[100%] Built target navigate_bt_node\n'}
+[38.586432] (bt_plansys_turtlebot) CommandEnded: {'returncode': 0}
+[38.610287] (-) TimerEvent: {}
+[38.615599] (bt_plansys_turtlebot) JobProgress: {'identifier': 'bt_plansys_turtlebot', 'progress': 'install'}
+[38.622433] (bt_plansys_turtlebot) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot'], 'cwd': '/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'stinky'), ('LC_TIME', 'nb_NO.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/stinky'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/stinky/Documents/semantic-robot'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/home/stinky/.config/autostart/guake.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'nb_NO.UTF-8'), ('MANAGERPID', '2206'), ('SYSTEMD_EXEC_PID', '2399'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '2686'), ('_colcon_cd_root', '/opt/ros/humble/'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'stinky'), ('DESKTOP_AUTOSTART_ID', '1024cb8577f92496f8170800396136103400000023990016'), ('JOURNAL_STREAM', '8:37907'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'stinky'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/stinky/miniconda3/condabin:/opt/ros/humble/bin:/home/stinky/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/stinky:@/tmp/.ICE-unix/2399,unix/stinky:/tmp/.ICE-unix/2399'), ('INVOCATION_ID', 'ccb0d851d033421eb9ef333e29addf0c'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'nb_NO.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'nb_NO.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.TZZTI2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '5'), ('AMENT_PREFIX_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/stinky/miniconda3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'nb_NO.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'nb_NO.UTF-8'), ('LC_IDENTIFICATION', 'nb_NO.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('GUAKE_TAB_UUID', '0af1b0d7-0d5d-4330-b2b7-9558527bc0e8'), ('PWD', '/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot'), ('TURTLEBOT3_MODEL', 'waffle'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/stinky/miniconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'nb_NO.UTF-8'), ('LC_PAPER', 'nb_NO.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot:/opt/ros/humble')]), 'shell': False}
+[38.630644] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[38.630977] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[38.631381] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/bt_xml/navigate.xml\n'}
+[38.631533] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/bt_xml/recharge.xml\n'}
+[38.631637] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/bt_xml/transport_advanced.xml\n'}
+[38.631746] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/bt_xml/transport_simple.xml\n'}
+[38.631917] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/config/params.yaml\n'}
+[38.632095] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/launch/bt_plansys_turtlebot.launch.py\n'}
+[38.632264] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/pddl/domain.pddl\n'}
+[38.632492] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/lib/bt_plansys_turtlebot/task_controller_node\n'}
+[38.632621] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/lib/libnavigate_bt_node.so\n'}
+[38.632768] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/lib/libapproach_pallet_bt_node.so\n'}
+[38.632896] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/lib/librecharge_bt_node.so\n'}
+[38.633022] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/lib/liblift_fork_bt_node.so\n'}
+[38.633149] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/lib/liblower_fork_bt_node.so\n'}
+[38.633322] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/ament_index/resource_index/package_run_dependencies/bt_plansys_turtlebot\n'}
+[38.633471] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/ament_index/resource_index/parent_prefix_path/bt_plansys_turtlebot\n'}
+[38.633703] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/environment/ament_prefix_path.sh\n'}
+[38.633815] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/environment/ament_prefix_path.dsv\n'}
+[38.633946] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/environment/path.sh\n'}
+[38.634097] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/environment/path.dsv\n'}
+[38.634246] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/local_setup.bash\n'}
+[38.634409] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/local_setup.sh\n'}
+[38.634554] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/local_setup.zsh\n'}
+[38.634701] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/local_setup.dsv\n'}
+[38.634811] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/package.dsv\n'}
+[38.644209] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/ament_index/resource_index/packages/bt_plansys_turtlebot\n'}
+[38.644473] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[38.644573] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/cmake/bt_plansys_turtlebotConfig.cmake\n'}
+[38.644665] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/cmake/bt_plansys_turtlebotConfig-version.cmake\n'}
+[38.644764] (bt_plansys_turtlebot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/share/bt_plansys_turtlebot/package.xml\n'}
+[38.646198] (bt_plansys_turtlebot) CommandEnded: {'returncode': 0}
+[38.710448] (-) TimerEvent: {}
+[38.811345] (-) TimerEvent: {}
+[38.848309] (bt_plansys_turtlebot) JobEnded: {'identifier': 'bt_plansys_turtlebot', 'rc': 0}
+[38.848909] (-) EventReactorShutdown: {}
