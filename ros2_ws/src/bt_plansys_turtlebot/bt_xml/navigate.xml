@@ -1,6 +1,6 @@
 <root main_tree_to_execute = "MainTree">
     <BehaviorTree ID="MainTree">
         <!-- Goal is third argument from PDDL-->
-        <Move name="navigate" goal="${arg2}"/>
+        <Navigate name="navigate" goal="${arg2}"/>
     </BehaviorTree>
 </root>

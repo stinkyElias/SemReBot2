@@ -1,1 +1,0 @@
-Invoking command in '/home/stinky/Documents/semantic-robot/ros2_ws/build/behaviortree_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/stinky/Documents/semantic-robot/ros2_ws/build/behaviortree_cpp -- -j12 -l12

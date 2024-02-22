@@ -16,7 +16,7 @@
     (pallet_at ?p - pallet ?z - zone)
 
     (is_reol_zone ?z - zone)
-    (is_recharge_zone ?z - zone)
+    (is_charging_zone ?z - zone)
     (is_unload_zone ?z - zone)
 
     (pallet_not_moved ?p - pallet)
@@ -69,7 +69,7 @@
     :parameters (?r - robot ?z - zone)
     :duration (= ?duration 5)
     :condition (and 
-        (at start (is_recharge_zone ?z))
+        (at start (is_charging_zone ?z))
         (over all (robot_at ?r ?z))
         (at start (robot_available ?r))
     )

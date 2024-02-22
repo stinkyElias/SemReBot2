@@ -30,7 +30,7 @@ void TaskControllerNode::initial_knowledge(){
     // add instances
     problem_expert_->addInstance(plansys2::Instance{"turtle", "robot"});
 
-    problem_expert_->addInstance(plansys2::Instance{"recharge_station", "zone"});
+    problem_expert_->addInstance(plansys2::Instance{"charging_station", "zone"});
     problem_expert_->addInstance(plansys2::Instance{"unload_zone", "zone"});
     problem_expert_->addInstance(plansys2::Instance{"reol_1", "zone"});
     problem_expert_->addInstance(plansys2::Instance{"reol_2", "zone"});
@@ -43,7 +43,7 @@ void TaskControllerNode::initial_knowledge(){
     problem_expert_->addInstance(plansys2::Instance{"pallet_4", "pallet"});
 
     // add predicates
-    problem_expert_->addPredicate(plansys2::Predicate("(is_recharge_zone recharge_station)"));
+    problem_expert_->addPredicate(plansys2::Predicate("(is_charging_zone charging_station)"));
     problem_expert_->addPredicate(plansys2::Predicate("(is_unload_zone unload_zone)"));
 
     problem_expert_->addPredicate(plansys2::Predicate("(is_reol_zone reol_1)"));
@@ -56,7 +56,7 @@ void TaskControllerNode::initial_knowledge(){
     problem_expert_->addPredicate(plansys2::Predicate("(pallet_at pallet_3 unload_zone)"));
     problem_expert_->addPredicate(plansys2::Predicate("(pallet_at pallet_4 unload_zone)"));
 
-    problem_expert_->addPredicate(plansys2::Predicate("(robot_at turtle recharge_station)"));
+    problem_expert_->addPredicate(plansys2::Predicate("(robot_at turtle charging_station)"));
     problem_expert_->addPredicate(plansys2::Predicate("(battery_full turtle)"));
     problem_expert_->addPredicate(plansys2::Predicate("(robot_available turtle)"));
 
