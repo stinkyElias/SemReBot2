@@ -19,8 +19,7 @@ def generate_launch_description():
 
     plansys2_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(os.path.join(
-            get_package_share_directory('plansys2_bringup'),
-            'launch',
+            '/root/plansys2_ws/src/plansys2/plansys2_bringup/launch',
             'plansys2_bringup_launch_monolithic.py')),
         launch_arguments={
             'model_file': os.path.join(this_directory, 'pddl', 'domain.pddl'),
@@ -40,37 +39,9 @@ def generate_launch_description():
             os.path.join(this_directory, 'config', 'params.yaml'),
             {
                 'action_name': 'navigate',
+                'publisher_port': 1668,
+                'server_port': 1669,
                 'bt_xml_file': os.path.join(this_directory, 'bt_xml', 'navigate.xml')
-            }
-        ]
-    )
-
-    transport_cmd = Node(
-        package='plansys2_bt_actions',
-        executable='bt_action_node',
-        name='transport',
-        namespace=namespace,
-        output='screen',
-        parameters=[
-            os.path.join(this_directory, 'config', 'params.yaml'),
-            {
-                'action_name': 'transport',
-                'bt_xml_file': os.path.join(this_directory, 'bt_xml', 'transport_simple.xml')
-            }
-        ]
-    )
-
-    recharge_cmd = Node(
-        package='plansys2_bt_actions',
-        executable='bt_action_node',
-        name='recharge',
-        namespace=namespace,
-        output='screen',
-        parameters=[
-            os.path.join(this_directory, 'config', 'params.yaml'),
-            {
-                'action_name': 'recharge',
-                'bt_xml_file': os.path.join(this_directory, 'bt_xml', 'recharge.xml')
             }
         ]
     )
@@ -80,7 +51,5 @@ def generate_launch_description():
     ld.add_action(declare_namespace_cmd)
     ld.add_action(plansys2_cmd)
     ld.add_action(navigate_cmd)
-    ld.add_action(transport_cmd)
-    ld.add_action(recharge_cmd)
 
     return ld

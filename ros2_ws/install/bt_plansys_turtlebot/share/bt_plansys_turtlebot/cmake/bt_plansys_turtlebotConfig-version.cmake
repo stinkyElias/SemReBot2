@@ -1,1 +1,1 @@
-/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_core/bt_plansys_turtlebotConfig-version.cmake
+/home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_core/bt_plansys_turtlebotConfig-version.cmake

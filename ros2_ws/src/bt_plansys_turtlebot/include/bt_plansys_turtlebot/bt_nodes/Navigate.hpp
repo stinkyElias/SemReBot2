@@ -8,8 +8,8 @@
 #include "nav2_msgs/action/navigate_to_pose.hpp"
 #include "plansys2_bt_actions/BTActionNode.hpp"
 
-#include "behaviortree_cpp_v3/behavior_tree.h"
-#include "behaviortree_cpp_v3/bt_factory.h"
+#include "behaviortree_cpp/behavior_tree.h"
+#include "behaviortree_cpp/bt_factory.h"
 
 class Navigate: public plansys2::BtActionNode<nav2_msgs::action::NavigateToPose>{
     public:
@@ -17,7 +17,7 @@ class Navigate: public plansys2::BtActionNode<nav2_msgs::action::NavigateToPose>
         // in the tree and the configuration of the node on how to execute it.
         explicit Navigate(const std::string &xml_tag,
                       const std::string &action_name,
-                      const BT::NodeConfiguration &config);
+                      const BT::NodeConfiguration &configuration);
         
         // What the node does when ticked
         BT::NodeStatus on_tick() override;
