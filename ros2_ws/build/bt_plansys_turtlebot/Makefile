@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot
+CMAKE_SOURCE_DIR = /home/ros/semantic_ws/ros2_ws/src/bt_plansys_turtlebot
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot
+CMAKE_BINARY_DIR = /home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,9 +142,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles /home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -210,143 +210,6 @@ navigate_bt_node/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/navigate_bt_node.dir/build.make CMakeFiles/navigate_bt_node.dir/build
 .PHONY : navigate_bt_node/fast
 
-#=============================================================================
-# Target rules for targets named approach_pallet_bt_node
-
-# Build rule for target.
-approach_pallet_bt_node: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 approach_pallet_bt_node
-.PHONY : approach_pallet_bt_node
-
-# fast build rule for target.
-approach_pallet_bt_node/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/approach_pallet_bt_node.dir/build.make CMakeFiles/approach_pallet_bt_node.dir/build
-.PHONY : approach_pallet_bt_node/fast
-
-#=============================================================================
-# Target rules for targets named recharge_bt_node
-
-# Build rule for target.
-recharge_bt_node: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 recharge_bt_node
-.PHONY : recharge_bt_node
-
-# fast build rule for target.
-recharge_bt_node/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/recharge_bt_node.dir/build.make CMakeFiles/recharge_bt_node.dir/build
-.PHONY : recharge_bt_node/fast
-
-#=============================================================================
-# Target rules for targets named lift_fork_bt_node
-
-# Build rule for target.
-lift_fork_bt_node: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lift_fork_bt_node
-.PHONY : lift_fork_bt_node
-
-# fast build rule for target.
-lift_fork_bt_node/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lift_fork_bt_node.dir/build.make CMakeFiles/lift_fork_bt_node.dir/build
-.PHONY : lift_fork_bt_node/fast
-
-#=============================================================================
-# Target rules for targets named lower_fork_bt_node
-
-# Build rule for target.
-lower_fork_bt_node: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lower_fork_bt_node
-.PHONY : lower_fork_bt_node
-
-# fast build rule for target.
-lower_fork_bt_node/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lower_fork_bt_node.dir/build.make CMakeFiles/lower_fork_bt_node.dir/build
-.PHONY : lower_fork_bt_node/fast
-
-#=============================================================================
-# Target rules for targets named task_controller_node
-
-# Build rule for target.
-task_controller_node: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 task_controller_node
-.PHONY : task_controller_node
-
-# fast build rule for target.
-task_controller_node/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_controller_node.dir/build.make CMakeFiles/task_controller_node.dir/build
-.PHONY : task_controller_node/fast
-
-src/bt_nodes/ApproachPallet.o: src/bt_nodes/ApproachPallet.cpp.o
-.PHONY : src/bt_nodes/ApproachPallet.o
-
-# target to build an object file
-src/bt_nodes/ApproachPallet.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/approach_pallet_bt_node.dir/build.make CMakeFiles/approach_pallet_bt_node.dir/src/bt_nodes/ApproachPallet.cpp.o
-.PHONY : src/bt_nodes/ApproachPallet.cpp.o
-
-src/bt_nodes/ApproachPallet.i: src/bt_nodes/ApproachPallet.cpp.i
-.PHONY : src/bt_nodes/ApproachPallet.i
-
-# target to preprocess a source file
-src/bt_nodes/ApproachPallet.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/approach_pallet_bt_node.dir/build.make CMakeFiles/approach_pallet_bt_node.dir/src/bt_nodes/ApproachPallet.cpp.i
-.PHONY : src/bt_nodes/ApproachPallet.cpp.i
-
-src/bt_nodes/ApproachPallet.s: src/bt_nodes/ApproachPallet.cpp.s
-.PHONY : src/bt_nodes/ApproachPallet.s
-
-# target to generate assembly for a file
-src/bt_nodes/ApproachPallet.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/approach_pallet_bt_node.dir/build.make CMakeFiles/approach_pallet_bt_node.dir/src/bt_nodes/ApproachPallet.cpp.s
-.PHONY : src/bt_nodes/ApproachPallet.cpp.s
-
-src/bt_nodes/LiftFork.o: src/bt_nodes/LiftFork.cpp.o
-.PHONY : src/bt_nodes/LiftFork.o
-
-# target to build an object file
-src/bt_nodes/LiftFork.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lift_fork_bt_node.dir/build.make CMakeFiles/lift_fork_bt_node.dir/src/bt_nodes/LiftFork.cpp.o
-.PHONY : src/bt_nodes/LiftFork.cpp.o
-
-src/bt_nodes/LiftFork.i: src/bt_nodes/LiftFork.cpp.i
-.PHONY : src/bt_nodes/LiftFork.i
-
-# target to preprocess a source file
-src/bt_nodes/LiftFork.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lift_fork_bt_node.dir/build.make CMakeFiles/lift_fork_bt_node.dir/src/bt_nodes/LiftFork.cpp.i
-.PHONY : src/bt_nodes/LiftFork.cpp.i
-
-src/bt_nodes/LiftFork.s: src/bt_nodes/LiftFork.cpp.s
-.PHONY : src/bt_nodes/LiftFork.s
-
-# target to generate assembly for a file
-src/bt_nodes/LiftFork.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lift_fork_bt_node.dir/build.make CMakeFiles/lift_fork_bt_node.dir/src/bt_nodes/LiftFork.cpp.s
-.PHONY : src/bt_nodes/LiftFork.cpp.s
-
-src/bt_nodes/LowerFork.o: src/bt_nodes/LowerFork.cpp.o
-.PHONY : src/bt_nodes/LowerFork.o
-
-# target to build an object file
-src/bt_nodes/LowerFork.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lower_fork_bt_node.dir/build.make CMakeFiles/lower_fork_bt_node.dir/src/bt_nodes/LowerFork.cpp.o
-.PHONY : src/bt_nodes/LowerFork.cpp.o
-
-src/bt_nodes/LowerFork.i: src/bt_nodes/LowerFork.cpp.i
-.PHONY : src/bt_nodes/LowerFork.i
-
-# target to preprocess a source file
-src/bt_nodes/LowerFork.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lower_fork_bt_node.dir/build.make CMakeFiles/lower_fork_bt_node.dir/src/bt_nodes/LowerFork.cpp.i
-.PHONY : src/bt_nodes/LowerFork.cpp.i
-
-src/bt_nodes/LowerFork.s: src/bt_nodes/LowerFork.cpp.s
-.PHONY : src/bt_nodes/LowerFork.s
-
-# target to generate assembly for a file
-src/bt_nodes/LowerFork.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lower_fork_bt_node.dir/build.make CMakeFiles/lower_fork_bt_node.dir/src/bt_nodes/LowerFork.cpp.s
-.PHONY : src/bt_nodes/LowerFork.cpp.s
-
 src/bt_nodes/Navigate.o: src/bt_nodes/Navigate.cpp.o
 .PHONY : src/bt_nodes/Navigate.o
 
@@ -371,54 +234,6 @@ src/bt_nodes/Navigate.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/navigate_bt_node.dir/build.make CMakeFiles/navigate_bt_node.dir/src/bt_nodes/Navigate.cpp.s
 .PHONY : src/bt_nodes/Navigate.cpp.s
 
-src/bt_nodes/Recharge.o: src/bt_nodes/Recharge.cpp.o
-.PHONY : src/bt_nodes/Recharge.o
-
-# target to build an object file
-src/bt_nodes/Recharge.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/recharge_bt_node.dir/build.make CMakeFiles/recharge_bt_node.dir/src/bt_nodes/Recharge.cpp.o
-.PHONY : src/bt_nodes/Recharge.cpp.o
-
-src/bt_nodes/Recharge.i: src/bt_nodes/Recharge.cpp.i
-.PHONY : src/bt_nodes/Recharge.i
-
-# target to preprocess a source file
-src/bt_nodes/Recharge.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/recharge_bt_node.dir/build.make CMakeFiles/recharge_bt_node.dir/src/bt_nodes/Recharge.cpp.i
-.PHONY : src/bt_nodes/Recharge.cpp.i
-
-src/bt_nodes/Recharge.s: src/bt_nodes/Recharge.cpp.s
-.PHONY : src/bt_nodes/Recharge.s
-
-# target to generate assembly for a file
-src/bt_nodes/Recharge.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/recharge_bt_node.dir/build.make CMakeFiles/recharge_bt_node.dir/src/bt_nodes/Recharge.cpp.s
-.PHONY : src/bt_nodes/Recharge.cpp.s
-
-src/task_controller_node.o: src/task_controller_node.cpp.o
-.PHONY : src/task_controller_node.o
-
-# target to build an object file
-src/task_controller_node.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_controller_node.dir/build.make CMakeFiles/task_controller_node.dir/src/task_controller_node.cpp.o
-.PHONY : src/task_controller_node.cpp.o
-
-src/task_controller_node.i: src/task_controller_node.cpp.i
-.PHONY : src/task_controller_node.i
-
-# target to preprocess a source file
-src/task_controller_node.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_controller_node.dir/build.make CMakeFiles/task_controller_node.dir/src/task_controller_node.cpp.i
-.PHONY : src/task_controller_node.cpp.i
-
-src/task_controller_node.s: src/task_controller_node.cpp.s
-.PHONY : src/task_controller_node.s
-
-# target to generate assembly for a file
-src/task_controller_node.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_controller_node.dir/build.make CMakeFiles/task_controller_node.dir/src/task_controller_node.cpp.s
-.PHONY : src/task_controller_node.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -434,30 +249,10 @@ help:
 	@echo "... test"
 	@echo "... bt_plansys_turtlebot_uninstall"
 	@echo "... uninstall"
-	@echo "... approach_pallet_bt_node"
-	@echo "... lift_fork_bt_node"
-	@echo "... lower_fork_bt_node"
 	@echo "... navigate_bt_node"
-	@echo "... recharge_bt_node"
-	@echo "... task_controller_node"
-	@echo "... src/bt_nodes/ApproachPallet.o"
-	@echo "... src/bt_nodes/ApproachPallet.i"
-	@echo "... src/bt_nodes/ApproachPallet.s"
-	@echo "... src/bt_nodes/LiftFork.o"
-	@echo "... src/bt_nodes/LiftFork.i"
-	@echo "... src/bt_nodes/LiftFork.s"
-	@echo "... src/bt_nodes/LowerFork.o"
-	@echo "... src/bt_nodes/LowerFork.i"
-	@echo "... src/bt_nodes/LowerFork.s"
 	@echo "... src/bt_nodes/Navigate.o"
 	@echo "... src/bt_nodes/Navigate.i"
 	@echo "... src/bt_nodes/Navigate.s"
-	@echo "... src/bt_nodes/Recharge.o"
-	@echo "... src/bt_nodes/Recharge.i"
-	@echo "... src/bt_nodes/Recharge.s"
-	@echo "... src/task_controller_node.o"
-	@echo "... src/task_controller_node.i"
-	@echo "... src/task_controller_node.s"
 .PHONY : help
 
 

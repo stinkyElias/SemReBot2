@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot
+CMAKE_SOURCE_DIR = /home/ros/semantic_ws/ros2_ws/src/bt_plansys_turtlebot
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot
+CMAKE_BINARY_DIR = /home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot
 
 # Utility rule file for uninstall.
 
@@ -78,6 +78,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot /home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ros/semantic_ws/ros2_ws/src/bt_plansys_turtlebot /home/ros/semantic_ws/ros2_ws/src/bt_plansys_turtlebot /home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot /home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot /home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uninstall.dir/depend
 

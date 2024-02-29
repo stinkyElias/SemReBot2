@@ -54,21 +54,16 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot
+CMAKE_SOURCE_DIR = /home/ros/semantic_ws/ros2_ws/src/bt_plansys_turtlebot
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot
+CMAKE_BINARY_DIR = /home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
 all: CMakeFiles/navigate_bt_node.dir/all
-all: CMakeFiles/approach_pallet_bt_node.dir/all
-all: CMakeFiles/recharge_bt_node.dir/all
-all: CMakeFiles/lift_fork_bt_node.dir/all
-all: CMakeFiles/lower_fork_bt_node.dir/all
-all: CMakeFiles/task_controller_node.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -79,11 +74,6 @@ preinstall:
 clean: CMakeFiles/uninstall.dir/clean
 clean: CMakeFiles/bt_plansys_turtlebot_uninstall.dir/clean
 clean: CMakeFiles/navigate_bt_node.dir/clean
-clean: CMakeFiles/approach_pallet_bt_node.dir/clean
-clean: CMakeFiles/recharge_bt_node.dir/clean
-clean: CMakeFiles/lift_fork_bt_node.dir/clean
-clean: CMakeFiles/lower_fork_bt_node.dir/clean
-clean: CMakeFiles/task_controller_node.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -93,14 +83,14 @@ clean: CMakeFiles/task_controller_node.dir/clean
 CMakeFiles/uninstall.dir/all: CMakeFiles/bt_plansys_turtlebot_uninstall.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/uninstall.dir/build.make CMakeFiles/uninstall.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/uninstall.dir/build.make CMakeFiles/uninstall.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles --progress-num= "Built target uninstall"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles --progress-num= "Built target uninstall"
 .PHONY : CMakeFiles/uninstall.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/uninstall.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/uninstall.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles 0
 .PHONY : CMakeFiles/uninstall.dir/rule
 
 # Convenience name for target.
@@ -119,14 +109,14 @@ CMakeFiles/uninstall.dir/clean:
 CMakeFiles/bt_plansys_turtlebot_uninstall.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bt_plansys_turtlebot_uninstall.dir/build.make CMakeFiles/bt_plansys_turtlebot_uninstall.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bt_plansys_turtlebot_uninstall.dir/build.make CMakeFiles/bt_plansys_turtlebot_uninstall.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles --progress-num= "Built target bt_plansys_turtlebot_uninstall"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles --progress-num= "Built target bt_plansys_turtlebot_uninstall"
 .PHONY : CMakeFiles/bt_plansys_turtlebot_uninstall.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/bt_plansys_turtlebot_uninstall.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/bt_plansys_turtlebot_uninstall.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles 0
 .PHONY : CMakeFiles/bt_plansys_turtlebot_uninstall.dir/rule
 
 # Convenience name for target.
@@ -145,14 +135,14 @@ CMakeFiles/bt_plansys_turtlebot_uninstall.dir/clean:
 CMakeFiles/navigate_bt_node.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/navigate_bt_node.dir/build.make CMakeFiles/navigate_bt_node.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/navigate_bt_node.dir/build.make CMakeFiles/navigate_bt_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles --progress-num=7,8 "Built target navigate_bt_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles --progress-num=1,2 "Built target navigate_bt_node"
 .PHONY : CMakeFiles/navigate_bt_node.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/navigate_bt_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/navigate_bt_node.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles 0
 .PHONY : CMakeFiles/navigate_bt_node.dir/rule
 
 # Convenience name for target.
@@ -163,136 +153,6 @@ navigate_bt_node: CMakeFiles/navigate_bt_node.dir/rule
 CMakeFiles/navigate_bt_node.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/navigate_bt_node.dir/build.make CMakeFiles/navigate_bt_node.dir/clean
 .PHONY : CMakeFiles/navigate_bt_node.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/approach_pallet_bt_node.dir
-
-# All Build rule for target.
-CMakeFiles/approach_pallet_bt_node.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/approach_pallet_bt_node.dir/build.make CMakeFiles/approach_pallet_bt_node.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/approach_pallet_bt_node.dir/build.make CMakeFiles/approach_pallet_bt_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles --progress-num=1,2 "Built target approach_pallet_bt_node"
-.PHONY : CMakeFiles/approach_pallet_bt_node.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/approach_pallet_bt_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/approach_pallet_bt_node.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles 0
-.PHONY : CMakeFiles/approach_pallet_bt_node.dir/rule
-
-# Convenience name for target.
-approach_pallet_bt_node: CMakeFiles/approach_pallet_bt_node.dir/rule
-.PHONY : approach_pallet_bt_node
-
-# clean rule for target.
-CMakeFiles/approach_pallet_bt_node.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/approach_pallet_bt_node.dir/build.make CMakeFiles/approach_pallet_bt_node.dir/clean
-.PHONY : CMakeFiles/approach_pallet_bt_node.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/recharge_bt_node.dir
-
-# All Build rule for target.
-CMakeFiles/recharge_bt_node.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/recharge_bt_node.dir/build.make CMakeFiles/recharge_bt_node.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/recharge_bt_node.dir/build.make CMakeFiles/recharge_bt_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles --progress-num=9,10 "Built target recharge_bt_node"
-.PHONY : CMakeFiles/recharge_bt_node.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/recharge_bt_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/recharge_bt_node.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles 0
-.PHONY : CMakeFiles/recharge_bt_node.dir/rule
-
-# Convenience name for target.
-recharge_bt_node: CMakeFiles/recharge_bt_node.dir/rule
-.PHONY : recharge_bt_node
-
-# clean rule for target.
-CMakeFiles/recharge_bt_node.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/recharge_bt_node.dir/build.make CMakeFiles/recharge_bt_node.dir/clean
-.PHONY : CMakeFiles/recharge_bt_node.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/lift_fork_bt_node.dir
-
-# All Build rule for target.
-CMakeFiles/lift_fork_bt_node.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lift_fork_bt_node.dir/build.make CMakeFiles/lift_fork_bt_node.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lift_fork_bt_node.dir/build.make CMakeFiles/lift_fork_bt_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles --progress-num=3,4 "Built target lift_fork_bt_node"
-.PHONY : CMakeFiles/lift_fork_bt_node.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/lift_fork_bt_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/lift_fork_bt_node.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles 0
-.PHONY : CMakeFiles/lift_fork_bt_node.dir/rule
-
-# Convenience name for target.
-lift_fork_bt_node: CMakeFiles/lift_fork_bt_node.dir/rule
-.PHONY : lift_fork_bt_node
-
-# clean rule for target.
-CMakeFiles/lift_fork_bt_node.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lift_fork_bt_node.dir/build.make CMakeFiles/lift_fork_bt_node.dir/clean
-.PHONY : CMakeFiles/lift_fork_bt_node.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/lower_fork_bt_node.dir
-
-# All Build rule for target.
-CMakeFiles/lower_fork_bt_node.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lower_fork_bt_node.dir/build.make CMakeFiles/lower_fork_bt_node.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lower_fork_bt_node.dir/build.make CMakeFiles/lower_fork_bt_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles --progress-num=5,6 "Built target lower_fork_bt_node"
-.PHONY : CMakeFiles/lower_fork_bt_node.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/lower_fork_bt_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/lower_fork_bt_node.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles 0
-.PHONY : CMakeFiles/lower_fork_bt_node.dir/rule
-
-# Convenience name for target.
-lower_fork_bt_node: CMakeFiles/lower_fork_bt_node.dir/rule
-.PHONY : lower_fork_bt_node
-
-# clean rule for target.
-CMakeFiles/lower_fork_bt_node.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lower_fork_bt_node.dir/build.make CMakeFiles/lower_fork_bt_node.dir/clean
-.PHONY : CMakeFiles/lower_fork_bt_node.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/task_controller_node.dir
-
-# All Build rule for target.
-CMakeFiles/task_controller_node.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_controller_node.dir/build.make CMakeFiles/task_controller_node.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_controller_node.dir/build.make CMakeFiles/task_controller_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles --progress-num=11,12 "Built target task_controller_node"
-.PHONY : CMakeFiles/task_controller_node.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/task_controller_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/task_controller_node.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles 0
-.PHONY : CMakeFiles/task_controller_node.dir/rule
-
-# Convenience name for target.
-task_controller_node: CMakeFiles/task_controller_node.dir/rule
-.PHONY : task_controller_node
-
-# clean rule for target.
-CMakeFiles/task_controller_node.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_controller_node.dir/build.make CMakeFiles/task_controller_node.dir/clean
-.PHONY : CMakeFiles/task_controller_node.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

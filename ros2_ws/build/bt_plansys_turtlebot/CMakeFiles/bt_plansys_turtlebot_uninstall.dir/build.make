@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot
+CMAKE_SOURCE_DIR = /home/ros/semantic_ws/ros2_ws/src/bt_plansys_turtlebot
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot
+CMAKE_BINARY_DIR = /home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot
 
 # Utility rule file for bt_plansys_turtlebot_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/bt_plansys_turtlebot_uninstall.dir/compiler_depend.make
 include CMakeFiles/bt_plansys_turtlebot_uninstall.dir/progress.make
 
 CMakeFiles/bt_plansys_turtlebot_uninstall:
-	/usr/bin/cmake -P /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 bt_plansys_turtlebot_uninstall: CMakeFiles/bt_plansys_turtlebot_uninstall
 bt_plansys_turtlebot_uninstall: CMakeFiles/bt_plansys_turtlebot_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/bt_plansys_turtlebot_uninstall.dir/clean:
 .PHONY : CMakeFiles/bt_plansys_turtlebot_uninstall.dir/clean
 
 CMakeFiles/bt_plansys_turtlebot_uninstall.dir/depend:
-	cd /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot /home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot /home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles/bt_plansys_turtlebot_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ros/semantic_ws/ros2_ws/src/bt_plansys_turtlebot /home/ros/semantic_ws/ros2_ws/src/bt_plansys_turtlebot /home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot /home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot /home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot/CMakeFiles/bt_plansys_turtlebot_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/bt_plansys_turtlebot_uninstall.dir/depend
 

@@ -1,6 +1,7 @@
-<root main_tree_to_execute = "MainTree">
+<root BTCPP_fomrat="4" main_tree_to_execute = "MainTree">
     <BehaviorTree ID="MainTree">
-        <!-- Goal is third argument from PDDL-->
-        <Navigate name="navigate" goal="${arg2}"/>
+        <Sequence name="root_sequence">
+            <Navigate name="navigate" goal="{arg2}"/>
+        </Sequence>
     </BehaviorTree>
 </root>

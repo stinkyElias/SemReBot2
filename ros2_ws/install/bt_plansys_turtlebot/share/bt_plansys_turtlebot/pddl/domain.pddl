@@ -1,1 +1,1 @@
-/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot/pddl/domain.pddl
+/home/ros/semantic_ws/ros2_ws/src/bt_plansys_turtlebot/pddl/domain.pddl

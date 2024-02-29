@@ -23,7 +23,7 @@ function(ament_cmake_symlink_install_directory cmake_current_source_dir)
 
   # make destination absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/ros/semantic_ws/ros2_ws/install/bt_plansys_turtlebot/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -123,7 +123,7 @@ function(ament_cmake_symlink_install_files cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/ros/semantic_ws/ros2_ws/install/bt_plansys_turtlebot/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -181,7 +181,7 @@ function(ament_cmake_symlink_install_programs cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/ros/semantic_ws/ros2_ws/install/bt_plansys_turtlebot/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -251,7 +251,7 @@ function(ament_cmake_symlink_install_targets)
 
     # make destination an absolute path and ensure that it exists
     if(NOT IS_ABSOLUTE "${destination}")
-      set(destination "/home/stinky/Documents/semantic-robot/ros2_ws/install/bt_plansys_turtlebot/${destination}")
+      set(destination "/home/ros/semantic_ws/ros2_ws/install/bt_plansys_turtlebot/${destination}")
     endif()
     if(NOT EXISTS "${destination}")
       file(MAKE_DIRECTORY "${destination}")
@@ -311,52 +311,52 @@ message(STATUS "Execute custom install script")
 # begin of custom install code
 
 # install(DIRECTORY "bt_xml" "config" "launch" "pddl" "DESTINATION" "share/bt_plansys_turtlebot")
-ament_cmake_symlink_install_directory("/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot" DIRECTORY "bt_xml" "config" "launch" "pddl" "DESTINATION" "share/bt_plansys_turtlebot")
+ament_cmake_symlink_install_directory("/home/ros/semantic_ws/ros2_ws/src/bt_plansys_turtlebot" DIRECTORY "bt_xml" "config" "launch" "pddl" "DESTINATION" "share/bt_plansys_turtlebot")
 
-# install("TARGETS" "task_controller_node" "navigate_bt_node" "approach_pallet_bt_node" "recharge_bt_node" "lift_fork_bt_node" "lower_fork_bt_node" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "lib/bt_plansys_turtlebot")
-include("/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+# install("TARGETS" "navigate_bt_node" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "lib/bt_plansys_turtlebot")
+include("/home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
-# install(FILES "/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/bt_plansys_turtlebot" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
-ament_cmake_symlink_install_files("/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot" FILES "/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/bt_plansys_turtlebot" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+# install(FILES "/home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/bt_plansys_turtlebot" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+ament_cmake_symlink_install_files("/home/ros/semantic_ws/ros2_ws/src/bt_plansys_turtlebot" FILES "/home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/bt_plansys_turtlebot" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 
-# install(FILES "/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/bt_plansys_turtlebot" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
-ament_cmake_symlink_install_files("/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot" FILES "/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/bt_plansys_turtlebot" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+# install(FILES "/home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/bt_plansys_turtlebot" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+ament_cmake_symlink_install_files("/home/ros/semantic_ws/ros2_ws/src/bt_plansys_turtlebot" FILES "/home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/bt_plansys_turtlebot" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
 
-# install(FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/bt_plansys_turtlebot/environment")
-ament_cmake_symlink_install_files("/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/bt_plansys_turtlebot/environment")
+# install(FILES "/opt/ros/rolling/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/bt_plansys_turtlebot/environment")
+ament_cmake_symlink_install_files("/home/ros/semantic_ws/ros2_ws/src/bt_plansys_turtlebot" FILES "/opt/ros/rolling/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/bt_plansys_turtlebot/environment")
 
-# install(FILES "/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/bt_plansys_turtlebot/environment")
-ament_cmake_symlink_install_files("/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot" FILES "/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/bt_plansys_turtlebot/environment")
+# install(FILES "/home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/bt_plansys_turtlebot/environment")
+ament_cmake_symlink_install_files("/home/ros/semantic_ws/ros2_ws/src/bt_plansys_turtlebot" FILES "/home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/bt_plansys_turtlebot/environment")
 
-# install(FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/bt_plansys_turtlebot/environment")
-ament_cmake_symlink_install_files("/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/bt_plansys_turtlebot/environment")
+# install(FILES "/opt/ros/rolling/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/bt_plansys_turtlebot/environment")
+ament_cmake_symlink_install_files("/home/ros/semantic_ws/ros2_ws/src/bt_plansys_turtlebot" FILES "/opt/ros/rolling/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/bt_plansys_turtlebot/environment")
 
-# install(FILES "/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/bt_plansys_turtlebot/environment")
-ament_cmake_symlink_install_files("/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot" FILES "/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/bt_plansys_turtlebot/environment")
+# install(FILES "/home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/bt_plansys_turtlebot/environment")
+ament_cmake_symlink_install_files("/home/ros/semantic_ws/ros2_ws/src/bt_plansys_turtlebot" FILES "/home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/bt_plansys_turtlebot/environment")
 
-# install(FILES "/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/bt_plansys_turtlebot")
-ament_cmake_symlink_install_files("/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot" FILES "/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/bt_plansys_turtlebot")
+# install(FILES "/home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/bt_plansys_turtlebot")
+ament_cmake_symlink_install_files("/home/ros/semantic_ws/ros2_ws/src/bt_plansys_turtlebot" FILES "/home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/bt_plansys_turtlebot")
 
-# install(FILES "/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/bt_plansys_turtlebot")
-ament_cmake_symlink_install_files("/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot" FILES "/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/bt_plansys_turtlebot")
+# install(FILES "/home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/bt_plansys_turtlebot")
+ament_cmake_symlink_install_files("/home/ros/semantic_ws/ros2_ws/src/bt_plansys_turtlebot" FILES "/home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/bt_plansys_turtlebot")
 
-# install(FILES "/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/bt_plansys_turtlebot")
-ament_cmake_symlink_install_files("/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot" FILES "/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/bt_plansys_turtlebot")
+# install(FILES "/home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/bt_plansys_turtlebot")
+ament_cmake_symlink_install_files("/home/ros/semantic_ws/ros2_ws/src/bt_plansys_turtlebot" FILES "/home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/bt_plansys_turtlebot")
 
-# install(FILES "/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/bt_plansys_turtlebot")
-ament_cmake_symlink_install_files("/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot" FILES "/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/bt_plansys_turtlebot")
+# install(FILES "/home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/bt_plansys_turtlebot")
+ament_cmake_symlink_install_files("/home/ros/semantic_ws/ros2_ws/src/bt_plansys_turtlebot" FILES "/home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/bt_plansys_turtlebot")
 
-# install(FILES "/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/bt_plansys_turtlebot")
-ament_cmake_symlink_install_files("/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot" FILES "/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/bt_plansys_turtlebot")
+# install(FILES "/home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/bt_plansys_turtlebot")
+ament_cmake_symlink_install_files("/home/ros/semantic_ws/ros2_ws/src/bt_plansys_turtlebot" FILES "/home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/bt_plansys_turtlebot")
 
-# install(FILES "/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_index/share/ament_index/resource_index/packages/bt_plansys_turtlebot" "DESTINATION" "share/ament_index/resource_index/packages")
-ament_cmake_symlink_install_files("/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot" FILES "/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_index/share/ament_index/resource_index/packages/bt_plansys_turtlebot" "DESTINATION" "share/ament_index/resource_index/packages")
+# install(FILES "/home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_index/share/ament_index/resource_index/packages/bt_plansys_turtlebot" "DESTINATION" "share/ament_index/resource_index/packages")
+ament_cmake_symlink_install_files("/home/ros/semantic_ws/ros2_ws/src/bt_plansys_turtlebot" FILES "/home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_index/share/ament_index/resource_index/packages/bt_plansys_turtlebot" "DESTINATION" "share/ament_index/resource_index/packages")
 
-# install(FILES "/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake" "DESTINATION" "share/bt_plansys_turtlebot/cmake")
-ament_cmake_symlink_install_files("/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot" FILES "/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake" "DESTINATION" "share/bt_plansys_turtlebot/cmake")
+# install(FILES "/home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake" "DESTINATION" "share/bt_plansys_turtlebot/cmake")
+ament_cmake_symlink_install_files("/home/ros/semantic_ws/ros2_ws/src/bt_plansys_turtlebot" FILES "/home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake" "DESTINATION" "share/bt_plansys_turtlebot/cmake")
 
-# install(FILES "/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_core/bt_plansys_turtlebotConfig.cmake" "/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_core/bt_plansys_turtlebotConfig-version.cmake" "DESTINATION" "share/bt_plansys_turtlebot/cmake")
-ament_cmake_symlink_install_files("/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot" FILES "/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_core/bt_plansys_turtlebotConfig.cmake" "/home/stinky/Documents/semantic-robot/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_core/bt_plansys_turtlebotConfig-version.cmake" "DESTINATION" "share/bt_plansys_turtlebot/cmake")
+# install(FILES "/home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_core/bt_plansys_turtlebotConfig.cmake" "/home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_core/bt_plansys_turtlebotConfig-version.cmake" "DESTINATION" "share/bt_plansys_turtlebot/cmake")
+ament_cmake_symlink_install_files("/home/ros/semantic_ws/ros2_ws/src/bt_plansys_turtlebot" FILES "/home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_core/bt_plansys_turtlebotConfig.cmake" "/home/ros/semantic_ws/ros2_ws/build/bt_plansys_turtlebot/ament_cmake_core/bt_plansys_turtlebotConfig-version.cmake" "DESTINATION" "share/bt_plansys_turtlebot/cmake")
 
-# install(FILES "/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot/package.xml" "DESTINATION" "share/bt_plansys_turtlebot")
-ament_cmake_symlink_install_files("/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot" FILES "/home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot/package.xml" "DESTINATION" "share/bt_plansys_turtlebot")
+# install(FILES "/home/ros/semantic_ws/ros2_ws/src/bt_plansys_turtlebot/package.xml" "DESTINATION" "share/bt_plansys_turtlebot")
+ament_cmake_symlink_install_files("/home/ros/semantic_ws/ros2_ws/src/bt_plansys_turtlebot" FILES "/home/ros/semantic_ws/ros2_ws/src/bt_plansys_turtlebot/package.xml" "DESTINATION" "share/bt_plansys_turtlebot")

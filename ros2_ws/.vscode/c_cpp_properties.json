@@ -6,11 +6,17 @@
           "limitSymbolsToIncludedHeaders": false
         },
         "includePath": [
-          "/opt/ros/humble/include/**",
+          // "/opt/ros/humble/include/**",
+          "/opt/ros/rolling/include/**",
           "/usr/include/**",
-          "~/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot/include/**"
+          // "~/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot/include/**",
+          
+          // for docker:
+          "/home/ros/semantic_ws/ros2_ws/src/bt_plansys_turtlebot/include/**",
+          "/root/plansys2_ws/install/**"
         ],
-        "name": "ROS",
+        "name": "Rolling",
+        // "name": "Humble",
         "intelliSenseMode": "gcc-x64",
         "compilerPath": "/usr/bin/gcc",
         "cStandard": "gnu11",
