@@ -65,8 +65,11 @@ foreach(bt_plugin ${plugin_libs})
 endforeach()
 
 ############### ADD LATER ################
-# add_executable(nav2_action_server_node src/nav2_action_server_node.cpp)
-# ament_target_dependencies(nav2_action_server_node ${dependencies})
+add_executable(nav2_sim_node src/nav2_sim_node.cpp)
+ament_target_dependencies(nav2_sim_node ${dependencies})
+
+add_executable(navigate_node src/navigate_node.cpp)
+ament_target_dependencies(navigate_node ${dependencies})
 
 # add_executable(task_controller_node src/task_controller_node.cpp)
 # ament_target_dependencies(task_controller_node ${dependencies})
@@ -76,7 +79,8 @@ endforeach()
 install(DIRECTORY bt_xml config launch pddl DESTINATION share/${PROJECT_NAME})
 
 install(TARGETS
-  # nav2_action_server_node
+  nav2_sim_node
+  navigate_node
   # task_controller_node
   ${plugin_libs}
   ARCHIVE DESTINATION lib

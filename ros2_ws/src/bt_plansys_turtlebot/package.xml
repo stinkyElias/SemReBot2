@@ -2,7 +2,7 @@
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
   <name>bt_plansys_turtlebot</name>
-  <version>0.0.1</version>
+  <version>0.0.2</version>
   <description>First test package to incorporate PlanSys2 with BT and Turtlebot3. Adapted from PlanSys2 BT example package.</description>
   <maintainer email="elias.kalland@outlook.com">Elias Helle Kalland</maintainer>
   <license>Apache-2.0</license>

@@ -7,11 +7,12 @@
         },
         "includePath": [
           // "/opt/ros/humble/include/**",
-          "/opt/ros/rolling/include/**",
-          "/usr/include/**",
+          // "/usr/include/**",
           // "~/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot/include/**",
           
           // for docker:
+          "/opt/ros/rolling/include/**",
+          "/usr/include/**",
           "/home/ros/semantic_ws/ros2_ws/src/bt_plansys_turtlebot/include/**",
           "/root/plansys2_ws/install/**"
         ],

@@ -1,7 +1,7 @@
 navigate:
   ros__parameters:
     plugins:
-      - plansys2_navigate_bt_node
+      - navigate_bt_node
     waypoints: ["charging_station", "unload_zone", "reol_1", "reol_2", "reol_3", "reol_4"]
     waypoint_coordinates:
       charging_station: [-2.0, -0.5, 0.0]

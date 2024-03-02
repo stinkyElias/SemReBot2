@@ -1,5 +1,0 @@
-plansys2_msgs/Tree tree
----
-bool success
-bool satisfied
-string error_info
