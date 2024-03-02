@@ -1,2 +1,0 @@
-# PlanSys2 tests
-

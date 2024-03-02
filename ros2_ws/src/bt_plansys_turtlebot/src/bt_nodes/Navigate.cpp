@@ -5,8 +5,10 @@
 #include "rclcpp_lifecycle/lifecycle_node.hpp"
 #include "tf2_geometry_msgs/tf2_geometry_msgs.hpp"
 
-Navigate::Navigate(const std::string &xml_tag,
-                   const std::string &action_name,
+namespace std{
+
+Navigate::Navigate(const string &xml_tag,
+                   const string &action_name,
                    const BT::NodeConfiguration &configuration):
 
     // passing tag, action and config to BtActionNode using Nav2
@@ -22,24 +24,24 @@ Navigate::Navigate(const std::string &xml_tag,
     }
 
     try{
-        ros_node->declare_parameter<std::vector<std::string>>("waypoints");
+        ros_node->declare_parameter<vector<string>>("waypoints");
     } catch (const rclcpp::exceptions::ParameterAlreadyDeclaredException &e){
         // pass
     }
 
     // set waypoint parameters
     if(ros_node->has_parameter("waypoints")){
-        std::vector<std::string> waypoint_names;
+        vector<string> waypoint_names;
         ros_node->get_parameter_or("waypoints", waypoint_names, {});
 
         for(auto &waypoint: waypoint_names){
             try{
-                ros_node->declare_parameter<std::vector<double>>("waypoint_coordinates." + waypoint);
+                ros_node->declare_parameter<vector<double>>("waypoint_coordinates." + waypoint);
             }catch (const rclcpp::exceptions::ParameterAlreadyDeclaredException &e){
                 // pass
             }
 
-            std::vector<double> coordinates;
+            vector<double> coordinates;
             if(ros_node->get_parameter_or("waypoint_coordinates." + waypoint, coordinates, {})){
                 geometry_msgs::msg::Pose2D pose;
 
@@ -51,7 +53,7 @@ Navigate::Navigate(const std::string &xml_tag,
 
             }else{
                 // RCLCPP_ERROR(ros_node->get_logger(), ("No coordinate exist for waypoint " + waypoint).c_str());
-                std::cerr << "No coordinates exist for waypoint " << waypoint << std::endl;
+                cerr << "No coordinates exist for waypoint " << waypoint << endl;
             }
         }
     }
@@ -66,8 +68,8 @@ BT::NodeStatus Navigate::on_tick(){
         }
 
         // get coordinates of the goal from blackboard and store in end_pose
-        std::string end_pose;
-        BT::TreeNode::getInput<std::string>("goal", end_pose);
+        string end_pose;
+        BT::TreeNode::getInput<string>("goal", end_pose);
 
         // get coordinates of the goal from waypoints_ and store in pose
         geometry_msgs::msg::Pose2D pose;
@@ -75,7 +77,7 @@ BT::NodeStatus Navigate::on_tick(){
             pose = this->waypoints_[end_pose];
         }else{
             // RCLCPP_ERROR(ros_node->get_logger(), ("No coordiante for waypoint" + end_pose).c_str());
-            std::cerr << "No coordinate exist for waypoint " << end_pose << std::endl;
+            cerr << "No coordinate exist for waypoint " << end_pose << endl;
         }
 
         // set goal pose (2D pose)
@@ -103,11 +105,13 @@ BT::NodeStatus Navigate::on_success(){
 
 // register Move node to BT factory
 BT_REGISTER_NODES(factory){
-    BT::NodeBuilder builder = [](const std::string &name,
+    BT::NodeBuilder builder = [](const string &name,
                                  const BT::NodeConfiguration &configuration)
         {
-            return std::make_unique<Navigate>(name, "navigate_to_pose", configuration);
+            return make_unique<Navigate>(name, "navigate_to_pose", configuration);
         };
     
     factory.registerBuilder<Navigate>("Navigate", builder);
 }
+
+} // end namespace std
