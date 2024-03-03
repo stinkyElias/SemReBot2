@@ -49,8 +49,8 @@ list(APPEND plugin_libs navigate_bt_node)
 # add_library(approach_pallet_bt_node SHARED src/bt_nodes/ApproachPallet.cpp)
 # list(APPEND plugin_libs approach_pallet_bt_node)
 
-# add_library(recharge_bt_node SHARED src/bt_nodes/Recharge.cpp)
-# list(APPEND plugin_libs recharge_bt_node)
+add_library(recharge_bt_node SHARED src/bt_nodes/Recharge.cpp)
+list(APPEND plugin_libs recharge_bt_node)
 
 # add_library(lift_fork_bt_node SHARED src/bt_nodes/LiftFork.cpp)
 # list(APPEND plugin_libs lift_fork_bt_node)

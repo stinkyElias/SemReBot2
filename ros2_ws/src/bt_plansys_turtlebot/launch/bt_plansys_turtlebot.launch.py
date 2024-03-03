@@ -45,11 +45,45 @@ def generate_launch_description():
             }
         ]
     )
+    
+    recharge_cmd = Node(
+        package='plansys2_bt_actions',
+        executable='bt_action_node',
+        name='recharge',
+        namespace=namespace,
+        output='screen',
+        parameters=[
+            os.path.join(this_directory, 'config', 'params.yaml'),
+            {
+                'action_name': 'recharge',
+                'bt_xml_file': os.path.join(this_directory, 'bt_xml', 'recharge.xml')
+            }
+        ]
+    )
+    
+    transport_cmd = Node(
+        package='plansys2_bt_actions',
+        executable='bt_action_node',
+        name='transport',
+        namespace=namespace,
+        output='screen',
+        parameters=[
+            os.path.join(this_directory, 'config', 'params.yaml'),
+            {
+                'action_name': 'transport',
+                'publisher_port': 1670,
+                'server_port': 1671,
+                'bt_xml_file': os.path.join(this_directory, 'bt_xml', 'transport.xml')
+            }
+        ]
+    
+    )
 
     ld = LaunchDescription()
 
     ld.add_action(declare_namespace_cmd)
     ld.add_action(plansys2_cmd)
     ld.add_action(navigate_cmd)
+    ld.add_action(recharge_cmd)
 
     return ld

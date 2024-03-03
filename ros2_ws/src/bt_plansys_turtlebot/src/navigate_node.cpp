@@ -38,7 +38,7 @@ bool NavigateNode::init(){
 }
 
 void NavigateNode::init_knowledge(){
-    std::string robot_name = "r2d2";
+    const std::string robot_name = "TARS";
     std::string zones[6] = {"charging_station", "unload_zone", "reol_1", "reol_2", "reol_3", "reol_4"};
     
     // add the robot and warehouse zones to the PDDL problem
@@ -53,8 +53,25 @@ void NavigateNode::init_knowledge(){
     problem_expert_->addPredicate(plansys2::Predicate("(robot_available " + robot_name + ")"));
     problem_expert_->addPredicate(plansys2::Predicate("(battery_full " + robot_name + ")"));
 
+    // set the different zones
+    problem_expert_->addPredicate(plansys2::Predicate("(is_charging_zone " + zones[0] + ")"));
+    problem_expert_->addPredicate(plansys2::Predicate("(is_unload_zone " + zones[1] + ")"));
+
+    for(int i = 2; i < 6; i++){
+        problem_expert_->addPredicate(plansys2::Predicate("(is_reol_zone " + zones[i] + ")"));
+    }
+
+    // add pallet and set location
+    problem_expert_->addInstance(plansys2::Instance{"pallet_1", "pallet"});
+    problem_expert_->addPredicate(plansys2::Predicate("(is_pallet pallet_1)"));
+    problem_expert_->addPredicate(plansys2::Predicate("(pallet_at pallet_1 " + zones[1] + ")"));
+    problem_expert_->addPredicate(plansys2::Predicate("(pallet_not_moved pallet_1)"));
+
     // set the robot's goal
-    problem_expert_->setGoal(plansys2::Goal("(and(robot_at " + robot_name + " " + zones[1] + "))"));
+    problem_expert_->setGoal(plansys2::Goal(
+        // "(and(pallet_at "+ zones[2] +") (battery_full "+ robot_name +"))"
+        "(pallet_at pallet_1 " + zones[2] + ")"
+    ));
     
 }
 
