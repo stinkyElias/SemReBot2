@@ -1,5 +1,5 @@
-#ifndef NAVIGATE_NODE_HPP
-#define NAVIGATE_NODE_HPP
+#ifndef TASK_CONTROLLER_NODE_HPP
+#define TASK_CONTROLLER_NODE_HPP
 
 #include <memory>
 
@@ -9,9 +9,9 @@
 #include "plansys2_planner/PlannerClient.hpp"
 #include "plansys2_problem_expert/ProblemExpertClient.hpp"
 
-class NavigateNode: public rclcpp::Node{
+class TaskControllerNode: public rclcpp::Node{
     public:
-        NavigateNode();//: rclcpp::Node("navigate_node"){}
+        TaskControllerNode();
     
         bool init();
         void init_knowledge();
@@ -24,4 +24,4 @@ class NavigateNode: public rclcpp::Node{
         std::shared_ptr<plansys2::ExecutorClient> executor_client_;
 };
 
-#endif // NAVIGATE_NODE_HPP
+#endif // TASK_CONTROLLER_NODE_HPP

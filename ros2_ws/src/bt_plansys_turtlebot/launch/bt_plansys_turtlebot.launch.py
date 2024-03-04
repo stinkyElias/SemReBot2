@@ -19,7 +19,8 @@ def generate_launch_description():
 
     plansys2_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(os.path.join(
-            '/root/ros2_ws/src/plansys2/plansys2_bringup/launch',
+            # '/root/ros2_ws/src/plansys2/plansys2_bringup/launch',
+            '/ros2_ws/src/plansys2/plansys2_bringup/launch',
             'plansys2_bringup_launch_monolithic.py')),
         launch_arguments={
             'model_file': os.path.join(this_directory, 'pddl', 'domain.pddl'),
