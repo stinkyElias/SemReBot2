@@ -1,8 +1,9 @@
-#include "bt_plansys_turtlebot/navigate_node.hpp"
 #include "rclcpp_action/rclcpp_action.hpp"
 #include "plansys2_msgs/msg/action_execution_info.hpp"
 #include "plansys2_msgs/msg/plan.hpp"
 #include "plansys2_pddl_parser/Utils.h"
+
+#include "bt_plansys_turtlebot/navigate_node.hpp"
 
 NavigateNode::NavigateNode(): rclcpp::Node("navigate_node"){}
 
@@ -28,6 +29,13 @@ bool NavigateNode::init(){
         return false;
     }
 
+    std::cout << "------ Plan ------" << std::endl;
+    for(const auto &plan_item: plan.value().items){
+        std::cout << plan_item.time << ":\t" << plan_item.action << "\t[" <<
+            plan_item.duration << "]" << std::endl;
+    }
+    std::cout << "------------------" << std::endl;
+
     if(!executor_client_->start_plan_execution(plan.value())){
         RCLCPP_ERROR(this->get_logger(), "Error starting a new plan (first)");
 
@@ -38,9 +46,9 @@ bool NavigateNode::init(){
 }
 
 void NavigateNode::init_knowledge(){
-    const std::string robot_name = "TARS";
-    std::string zones[6] = {"charging_station", "unload_zone", "reol_1", "reol_2", "reol_3", "reol_4"};
-    
+    const std::string robot_name = "tars";
+    const std::string zones[6] = {"charging_station", "unload_zone", "reol_1", "reol_2", "reol_3", "reol_4"};
+
     // add the robot and warehouse zones to the PDDL problem
     problem_expert_->addInstance(plansys2::Instance{robot_name, "robot"});
 
@@ -48,13 +56,12 @@ void NavigateNode::init_knowledge(){
         problem_expert_->addInstance(plansys2::Instance{zone, "zone"});
     }
 
-    // set the robot's initial position, battery capacity and availability
+    // set the robot's initial position and availability
     problem_expert_->addPredicate(plansys2::Predicate("(robot_at " + robot_name + " " + zones[0] + ")"));
     problem_expert_->addPredicate(plansys2::Predicate("(robot_available " + robot_name + ")"));
-    problem_expert_->addPredicate(plansys2::Predicate("(battery_full " + robot_name + ")"));
 
-    // set the different zones
-    problem_expert_->addPredicate(plansys2::Predicate("(is_charging_zone " + zones[0] + ")"));
+    // // set the different zones
+    // problem_expert_->addPredicate(plansys2::Predicate("(is_charging_zone " + zones[0] + ")"));
     problem_expert_->addPredicate(plansys2::Predicate("(is_unload_zone " + zones[1] + ")"));
 
     for(int i = 2; i < 6; i++){
@@ -63,16 +70,14 @@ void NavigateNode::init_knowledge(){
 
     // add pallet and set location
     problem_expert_->addInstance(plansys2::Instance{"pallet_1", "pallet"});
-    problem_expert_->addPredicate(plansys2::Predicate("(is_pallet pallet_1)"));
+    // problem_expert_->addPredicate(plansys2::Predicate("(is_pallet pallet_1)"));
     problem_expert_->addPredicate(plansys2::Predicate("(pallet_at pallet_1 " + zones[1] + ")"));
     problem_expert_->addPredicate(plansys2::Predicate("(pallet_not_moved pallet_1)"));
 
     // set the robot's goal
     problem_expert_->setGoal(plansys2::Goal(
-        // "(and(pallet_at "+ zones[2] +") (battery_full "+ robot_name +"))"
-        "(pallet_at pallet_1 " + zones[2] + ")"
+        "(and(pallet_at pallet_1 " + zones[2] + ") (robot_at " + robot_name + " " + zones[4] + "))"
     ));
-    
 }
 
 void NavigateNode::step(){

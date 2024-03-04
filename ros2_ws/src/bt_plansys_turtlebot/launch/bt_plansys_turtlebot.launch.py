@@ -19,7 +19,7 @@ def generate_launch_description():
 
     plansys2_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(os.path.join(
-            '/ros2_ws/src/plansys2/plansys2_bringup/launch',
+            '/root/ros2_ws/src/plansys2/plansys2_bringup/launch',
             'plansys2_bringup_launch_monolithic.py')),
         launch_arguments={
             'model_file': os.path.join(this_directory, 'pddl', 'domain.pddl'),
@@ -76,7 +76,6 @@ def generate_launch_description():
                 'bt_xml_file': os.path.join(this_directory, 'bt_xml', 'transport.xml')
             }
         ]
-    
     )
 
     ld = LaunchDescription()
@@ -85,5 +84,6 @@ def generate_launch_description():
     ld.add_action(plansys2_cmd)
     ld.add_action(navigate_cmd)
     ld.add_action(recharge_cmd)
+    ld.add_action(transport_cmd)
 
     return ld
