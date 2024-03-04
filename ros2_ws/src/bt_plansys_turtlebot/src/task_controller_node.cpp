@@ -3,11 +3,11 @@
 #include "plansys2_msgs/msg/plan.hpp"
 #include "plansys2_pddl_parser/Utils.h"
 
-#include "bt_plansys_turtlebot/navigate_node.hpp"
+#include "bt_plansys_turtlebot/task_controller_node.hpp"
 
-NavigateNode::NavigateNode(): rclcpp::Node("navigate_node"){}
+TaskControllerNode::TaskControllerNode(): rclcpp::Node("navigate_node"){}
 
-bool NavigateNode::init(){
+bool TaskControllerNode::init(){
     domain_expert_ = std::make_shared<plansys2::DomainExpertClient>();
     problem_expert_ = std::make_shared<plansys2::ProblemExpertClient>();
     planner_client_ = std::make_shared<plansys2::PlannerClient>();
@@ -29,12 +29,13 @@ bool NavigateNode::init(){
         return false;
     }
 
-    std::cout << "------ Plan ------" << std::endl;
+    // print the plan to console
+    std::cout << "---------------- Plan ----------------" << std::endl;
     for(const auto &plan_item: plan.value().items){
         std::cout << plan_item.time << ":\t" << plan_item.action << "\t[" <<
             plan_item.duration << "]" << std::endl;
     }
-    std::cout << "------------------" << std::endl;
+    std::cout << "--------------------------------------" << std::endl;
 
     if(!executor_client_->start_plan_execution(plan.value())){
         RCLCPP_ERROR(this->get_logger(), "Error starting a new plan (first)");
@@ -45,9 +46,10 @@ bool NavigateNode::init(){
     return true;
 }
 
-void NavigateNode::init_knowledge(){
+void TaskControllerNode::init_knowledge(){
     const std::string robot_name = "tars";
     const std::string zones[6] = {"charging_station", "unload_zone", "reol_1", "reol_2", "reol_3", "reol_4"};
+    const std::string pallets[4] = {"pallet_1", "pallet_2", "pallet_3", "pallet_4"};
 
     // add the robot and warehouse zones to the PDDL problem
     problem_expert_->addInstance(plansys2::Instance{robot_name, "robot"});
@@ -68,19 +70,23 @@ void NavigateNode::init_knowledge(){
         problem_expert_->addPredicate(plansys2::Predicate("(is_reol_zone " + zones[i] + ")"));
     }
 
-    // add pallet and set location
-    problem_expert_->addInstance(plansys2::Instance{"pallet_1", "pallet"});
-    // problem_expert_->addPredicate(plansys2::Predicate("(is_pallet pallet_1)"));
-    problem_expert_->addPredicate(plansys2::Predicate("(pallet_at pallet_1 " + zones[1] + ")"));
-    problem_expert_->addPredicate(plansys2::Predicate("(pallet_not_moved pallet_1)"));
+    // add pallets and set locations
+    for(const std::string &pallet: pallets){
+        problem_expert_->addInstance(plansys2::Instance{pallet, "pallet"});
+        problem_expert_->addPredicate(plansys2::Predicate("(pallet_at " + pallet + " " + zones[1] + ")"));
+        problem_expert_->addPredicate(plansys2::Predicate("(pallet_not_moved " + pallet + ")"));
+    }
 
     // set the robot's goal
     problem_expert_->setGoal(plansys2::Goal(
-        "(and(pallet_at pallet_1 " + zones[2] + ") (robot_at " + robot_name + " " + zones[4] + "))"
+        "(and(pallet_at " + pallets[0] + " " + zones[2] + ") " +
+            "(pallet_at " + pallets[1] + " " + zones[3] + ") " +
+            "(pallet_at " + pallets[2] + " " + zones[4] + ") " +
+            "(pallet_at " + pallets[3] + " " + zones[5] + "))"
     ));
 }
 
-void NavigateNode::step(){
+void TaskControllerNode::step(){
     if(!executor_client_->execute_and_check_plan()){
         auto result = executor_client_->getResult();
         if(result.value().success){
@@ -93,7 +99,7 @@ void NavigateNode::step(){
 
 int main(int argc, char **argv){
   rclcpp::init(argc, argv);
-  auto node = std::make_shared<NavigateNode>();
+  auto node = std::make_shared<TaskControllerNode>();
 
   if(!node->init()){
     return 0;

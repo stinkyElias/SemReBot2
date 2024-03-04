@@ -24,7 +24,7 @@
 
 (:durative-action navigate
     :parameters (?robot - robot ?from_zone - zone ?to_zone - zone)
-    :duration (= ?duration 5)
+    :duration (= ?duration 3)
     :condition (and 
         (at start (and
             (robot_at ?robot ?from_zone)
@@ -32,17 +32,20 @@
         ))
     )
     :effect (and 
-        (at start (not(robot_at ?robot ?from_zone)))
-        (at start (not(robot_available ?robot)))
-
-        (at end (robot_at ?robot ?to_zone))
-        (at end (robot_available ?robot))
+        (at start (and
+            (not(robot_at ?robot ?from_zone))
+            (not(robot_available ?robot))
+        ))
+        (at end (and 
+            (robot_at ?robot ?to_zone)
+            (robot_available ?robot)
+        ))
     )
 )
 
 (:durative-action transport
     :parameters (?robot - robot ?pallet - pallet ?from_zone - zone ?to_zone - zone)
-    :duration (= ?duration 10)
+    :duration (= ?duration 5)
     :condition (and 
         (at start (and
             (robot_at ?robot ?from_zone)
