@@ -1,28 +1,21 @@
 {
-    "configurations": [
+  "configurations": [
       {
-        "browse": {
-          "databaseFilename": "${default}",
-          "limitSymbolsToIncludedHeaders": false
-        },
-        "includePath": [
-          // "/opt/ros/humble/include/**",
-          // "/usr/include/**",
-          // "~/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot/include/**",
-          
-          // for docker:
-          "/opt/ros/rolling/include/**",
-          "/usr/include/**",
-          "/home/ros/semantic_ws/ros2_ws/src/bt_plansys_turtlebot/include/**",
-          "/root/plansys2_ws/install/**"
-        ],
-        "name": "Rolling",
-        // "name": "Humble",
-        "intelliSenseMode": "gcc-x64",
-        "compilerPath": "/usr/bin/gcc",
-        "cStandard": "gnu11",
-        "cppStandard": "c++14"
+          "browse": {
+              "databaseFilename": "${default}",
+              "limitSymbolsToIncludedHeaders": false
+          },
+          "includePath": [
+              "/opt/ros/rolling/include/**",
+              "/usr/include/**",
+              "/home/stinky/ros2_ws/install/**",
+              "/home/stinky/ros2_ws/src/bt_plansys_turtlebot/include/**"
+          ],
+          "name": "Rolling",
+          "intelliSenseMode": "gcc-x64",
+          "cStandard": "gnu11",
+          "cppStandard": "c++14"
       }
-    ],
-    "version": 4
-  }
+  ],
+  "version": 4
+}

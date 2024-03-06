@@ -1,0 +1,21 @@
+gmake[2]: *** wait: No child processes.  Stop.
+gmake[2]: *** wait: No child processes.  Stop.
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[2]: *** wait: No child processes.  Stop.
+gmake[2]: *** [CMakeFiles/nav_2d_msgs__rosidl_typesupport_fastrtps_c.dir/build.make:229: CMakeFiles/nav_2d_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav_2d_msgs/msg/detail/twist2_d__type_support_c.cpp.o] Interrupt
+gmake[1]: *** [CMakeFiles/Makefile2:291: CMakeFiles/nav_2d_msgs__rosidl_typesupport_fastrtps_cpp.dir/all] Error 2
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[2]: *** wait: No child processes.  Stop.
+gmake[1]: *** [CMakeFiles/Makefile2:239: CMakeFiles/nav_2d_msgs__rosidl_typesupport_fastrtps_c.dir/all] Interrupt
+gmake[1]: *** [CMakeFiles/Makefile2:369: CMakeFiles/nav_2d_msgs__rosidl_typesupport_introspection_cpp.dir/all] Error 2
+Traceback (most recent call last):
+  File "/opt/ros/humble/lib/rosidl_typesupport_introspection_c/rosidl_typesupport_introspection_c", line 6, in <module>
+    from rosidl_typesupport_introspection_c import generate_c
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_typesupport_introspection_c/__init__.py", line 15, in <module>
+    from rosidl_cmake import generate_files
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_cmake/__init__.py", line 23, in <module>
+    from rosidl_parser.definition import IdlLocator
+KeyboardInterrupt
+gmake[2]: *** [CMakeFiles/nav_2d_msgs__rosidl_typesupport_introspection_c.dir/build.make:148: rosidl_typesupport_introspection_c/nav_2d_msgs/msg/detail/path2_d__rosidl_typesupport_introspection_c.h] Interrupt
+gmake[1]: *** [CMakeFiles/Makefile2:316: CMakeFiles/nav_2d_msgs__rosidl_typesupport_introspection_c.dir/all] Interrupt
+gmake: *** [Makefile:146: all] Interrupt

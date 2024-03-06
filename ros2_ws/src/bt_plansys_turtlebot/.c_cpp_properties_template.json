@@ -8,8 +8,8 @@
             "includePath": [
                 "/opt/ros/rolling/include/**",
                 "/usr/include/**",
-                "/ros2_ws/install/**",
-                "/ros2_ws/src/bt_plansys_turtlebot/include/**"
+                "/home/stinky/ros2_ws/install/**",
+                "/home/stinky/ros2_ws/src/bt_plansys_turtlebot/include/**"
             ],
             "name": "Rolling",
             "intelliSenseMode": "gcc-x64",
