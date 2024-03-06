@@ -10,5 +10,6 @@ docker run -it \
     -v /home/stinky/Documents/semantic-robot/ros2_ws/src/bt_plansys_turtlebot:/home/stinky/ros2_ws/src/bt_plansys_turtlebot \
     -v /home/stinky/Documents/semantic-robot/ros2_ws/.vscode:/home/stinky/ros2_ws/.vscode \
     -v /home/stinky/.Xauthority:/home/stinky/.Xauthority:rw \
+    -v /home/stinky/Documents/semantic-robot/env.sh:/home/stinky/ros2_ws/env.sh \
     plansys:full \
     /bin/bash
