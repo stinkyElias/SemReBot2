@@ -1,0 +1,108 @@
+[0.217s] Invoking command in '/home/stinky/Documents/semantic-robot/ros2_ws/build/nav_2d_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/stinky/Documents/semantic-robot/ros2_ws/src/navigation2/nav2_dwb_controller/nav_2d_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/stinky/Documents/semantic-robot/ros2_ws/install/nav_2d_msgs
+[0.317s] -- The C compiler identification is GNU 11.4.0
+[0.403s] -- The CXX compiler identification is GNU 11.4.0
+[0.413s] -- Detecting C compiler ABI info
+[0.489s] -- Detecting C compiler ABI info - done
+[0.498s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.498s] -- Detecting C compile features
+[0.499s] -- Detecting C compile features - done
+[0.502s] -- Detecting CXX compiler ABI info
+[0.587s] -- Detecting CXX compiler ABI info - done
+[0.596s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.596s] -- Detecting CXX compile features
+[0.597s] -- Detecting CXX compile features - done
+[0.601s] -- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.785s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.862s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.944s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.952s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.964s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.983s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.012s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.166s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[1.535s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[2.031s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.219s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.245s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[2.247s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[2.277s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[2.278s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.278s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[2.278s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[2.303s] -- Found PythonExtra: .so  
+[2.381s] -- Configuring done
+[2.431s] -- Generating done
+[2.434s] -- Build files have been written to: /home/stinky/Documents/semantic-robot/ros2_ws/build/nav_2d_msgs
+[2.447s] Invoked command in '/home/stinky/Documents/semantic-robot/ros2_ws/build/nav_2d_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/stinky/Documents/semantic-robot/ros2_ws/src/navigation2/nav2_dwb_controller/nav_2d_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/stinky/Documents/semantic-robot/ros2_ws/install/nav_2d_msgs
+[2.447s] Invoking command in '/home/stinky/Documents/semantic-robot/ros2_ws/build/nav_2d_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/stinky/Documents/semantic-robot/ros2_ws/build/nav_2d_msgs -- -j4 -l4
+[2.544s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[2.578s] [  2%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[2.684s] [  2%] Built target ament_cmake_python_symlink_nav_2d_msgs
+[3.629s] running egg_info
+[3.630s] creating nav_2d_msgs.egg-info
+[3.630s] writing nav_2d_msgs.egg-info/PKG-INFO
+[3.630s] writing dependency_links to nav_2d_msgs.egg-info/dependency_links.txt
+[3.631s] writing top-level names to nav_2d_msgs.egg-info/top_level.txt
+[3.633s] writing manifest file 'nav_2d_msgs.egg-info/SOURCES.txt'
+[3.636s] reading manifest file 'nav_2d_msgs.egg-info/SOURCES.txt'
+[3.636s] writing manifest file 'nav_2d_msgs.egg-info/SOURCES.txt'
+[3.708s] [  2%] Built target ament_cmake_python_build_nav_2d_msgs_egg
+[3.715s] [  2%] Built target nav_2d_msgs__cpp
+[3.755s] [  4%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[3.760s] [  5%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[3.782s] [  7%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[4.437s] [  8%] [32mBuilding C object CMakeFiles/nav_2d_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav_2d_msgs/msg/detail/path2_d__functions.c.o[0m
+[4.649s] [  9%] [32mBuilding C object CMakeFiles/nav_2d_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav_2d_msgs/msg/detail/pose2_d32__functions.c.o[0m
+[4.860s] [ 11%] [32mBuilding C object CMakeFiles/nav_2d_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav_2d_msgs/msg/detail/pose2_d_stamped__functions.c.o[0m
+[4.906s] [ 12%] [32mBuilding CXX object CMakeFiles/nav_2d_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav_2d_msgs/msg/path2_d__type_support.cpp.o[0m
+[5.082s] [ 14%] [32mBuilding CXX object CMakeFiles/nav_2d_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav_2d_msgs/msg/detail/path2_d__type_support.cpp.o[0m
+[5.094s] [ 15%] [32mBuilding C object CMakeFiles/nav_2d_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav_2d_msgs/msg/detail/twist2_d__functions.c.o[0m
+[5.267s] [ 16%] [32mBuilding C object CMakeFiles/nav_2d_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav_2d_msgs/msg/detail/twist2_d32__functions.c.o[0m
+[5.389s] [ 18%] [32mBuilding C object CMakeFiles/nav_2d_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav_2d_msgs/msg/detail/twist2_d_stamped__functions.c.o[0m
+[5.402s] [ 19%] [32mBuilding CXX object CMakeFiles/nav_2d_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav_2d_msgs/msg/detail/dds_fastrtps/path2_d__type_support.cpp.o[0m
+[5.576s] [ 21%] [32m[1mLinking C shared library libnav_2d_msgs__rosidl_generator_c.so[0m
+[5.739s] [ 21%] Built target nav_2d_msgs__rosidl_generator_c
+[5.791s] [ 22%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[5.986s] [ 23%] [32mBuilding CXX object CMakeFiles/nav_2d_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav_2d_msgs/msg/pose2_d32__type_support.cpp.o[0m
+[6.135s] [ 25%] [32mBuilding CXX object CMakeFiles/nav_2d_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav_2d_msgs/msg/detail/pose2_d32__type_support.cpp.o[0m
+[6.487s] [ 26%] [32mBuilding CXX object CMakeFiles/nav_2d_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav_2d_msgs/msg/detail/dds_fastrtps/pose2_d32__type_support.cpp.o[0m
+[7.028s] [ 28%] [32mBuilding CXX object CMakeFiles/nav_2d_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav_2d_msgs/msg/pose2_d_stamped__type_support.cpp.o[0m
+[7.432s] [ 29%] [32mBuilding CXX object CMakeFiles/nav_2d_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav_2d_msgs/msg/detail/pose2_d_stamped__type_support.cpp.o[0m
+[7.490s] [ 30%] [32mBuilding CXX object CMakeFiles/nav_2d_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav_2d_msgs/msg/detail/dds_fastrtps/pose2_d_stamped__type_support.cpp.o[0m
+[7.776s] [ 32%] [32mBuilding CXX object CMakeFiles/nav_2d_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav_2d_msgs/msg/detail/path2_d__type_support_c.cpp.o[0m
+[8.150s] [ 33%] [32mBuilding CXX object CMakeFiles/nav_2d_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav_2d_msgs/msg/twist2_d__type_support.cpp.o[0m
+[8.163s] [ 35%] [32mBuilding CXX object CMakeFiles/nav_2d_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav_2d_msgs/msg/detail/twist2_d__type_support.cpp.o[0m
+[8.365s] [ 36%] [32mBuilding CXX object CMakeFiles/nav_2d_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav_2d_msgs/msg/detail/dds_fastrtps/twist2_d__type_support.cpp.o[0m
+[8.763s] [ 38%] [32mBuilding CXX object CMakeFiles/nav_2d_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav_2d_msgs/msg/detail/pose2_d32__type_support_c.cpp.o[0m
+[9.055s] [ 39%] [32mBuilding CXX object CMakeFiles/nav_2d_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav_2d_msgs/msg/twist2_d32__type_support.cpp.o[0m
+[9.311s] [ 40%] [32mBuilding CXX object CMakeFiles/nav_2d_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav_2d_msgs/msg/detail/dds_fastrtps/twist2_d32__type_support.cpp.o[0m
+[9.468s] [ 42%] [32mBuilding CXX object CMakeFiles/nav_2d_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav_2d_msgs/msg/detail/pose2_d_stamped__type_support_c.cpp.o[0m
+[9.640s] [ 43%] [32mBuilding CXX object CMakeFiles/nav_2d_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav_2d_msgs/msg/detail/twist2_d32__type_support.cpp.o[0m
+[9.809s] [ 45%] [32mBuilding CXX object CMakeFiles/nav_2d_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav_2d_msgs/msg/twist2_d_stamped__type_support.cpp.o[0m
+[10.132s] [ 46%] [32mBuilding CXX object CMakeFiles/nav_2d_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav_2d_msgs/msg/detail/dds_fastrtps/twist2_d_stamped__type_support.cpp.o[0m
+[10.519s] [ 47%] [32mBuilding CXX object CMakeFiles/nav_2d_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav_2d_msgs/msg/detail/twist2_d_stamped__type_support.cpp.o[0m
+[10.633s] [ 49%] [32m[1mLinking CXX shared library libnav_2d_msgs__rosidl_typesupport_cpp.so[0m
+[10.839s] [ 50%] [32mBuilding CXX object CMakeFiles/nav_2d_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav_2d_msgs/msg/detail/twist2_d__type_support_c.cpp.o[0m
+[10.840s] [ 50%] Built target nav_2d_msgs__rosidl_typesupport_cpp
+[10.898s] [ 52%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[10.988s] gmake[2]: *** wait: No child processes.  Stop.
+[10.989s] gmake[2]: *** wait: No child processes.  Stop.
+[10.989s] gmake[2]: *** Waiting for unfinished jobs....
+[10.989s] gmake[2]: *** wait: No child processes.  Stop.
+[10.989s] gmake[2]: *** [CMakeFiles/nav_2d_msgs__rosidl_typesupport_fastrtps_c.dir/build.make:229: CMakeFiles/nav_2d_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav_2d_msgs/msg/detail/twist2_d__type_support_c.cpp.o] Interrupt
+[10.989s] gmake[1]: *** [CMakeFiles/Makefile2:291: CMakeFiles/nav_2d_msgs__rosidl_typesupport_fastrtps_cpp.dir/all] Error 2
+[10.989s] gmake[2]: *** Waiting for unfinished jobs....
+[10.989s] gmake[2]: *** wait: No child processes.  Stop.
+[10.989s] gmake[1]: *** [CMakeFiles/Makefile2:239: CMakeFiles/nav_2d_msgs__rosidl_typesupport_fastrtps_c.dir/all] Interrupt
+[10.989s] gmake[1]: *** [CMakeFiles/Makefile2:369: CMakeFiles/nav_2d_msgs__rosidl_typesupport_introspection_cpp.dir/all] Error 2
+[10.997s] Traceback (most recent call last):
+[10.997s]   File "/opt/ros/humble/lib/rosidl_typesupport_introspection_c/rosidl_typesupport_introspection_c", line 6, in <module>
+[10.997s]     from rosidl_typesupport_introspection_c import generate_c
+[10.997s]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_typesupport_introspection_c/__init__.py", line 15, in <module>
+[10.997s]     from rosidl_cmake import generate_files
+[10.997s]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_cmake/__init__.py", line 23, in <module>
+[10.997s]     from rosidl_parser.definition import IdlLocator
+[10.997s] KeyboardInterrupt
+[11.004s] gmake[2]: *** [CMakeFiles/nav_2d_msgs__rosidl_typesupport_introspection_c.dir/build.make:148: rosidl_typesupport_introspection_c/nav_2d_msgs/msg/detail/path2_d__rosidl_typesupport_introspection_c.h] Interrupt
+[11.005s] gmake[1]: *** [CMakeFiles/Makefile2:316: CMakeFiles/nav_2d_msgs__rosidl_typesupport_introspection_c.dir/all] Interrupt
+[11.005s] gmake: *** [Makefile:146: all] Interrupt
