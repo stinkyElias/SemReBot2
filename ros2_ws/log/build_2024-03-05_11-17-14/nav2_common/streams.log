@@ -1,0 +1,62 @@
+[0.285s] Invoking command in '/home/stinky/Documents/semantic-robot/ros2_ws/build/nav2_common': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/stinky/Documents/semantic-robot/ros2_ws/src/navigation2/nav2_common -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_common
+[0.332s] -- Found ament_cmake_core: 1.3.8 (/opt/ros/humble/share/ament_cmake_core/cmake)
+[0.509s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.583s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.587s] -- Found ament_cmake_python: 1.3.8 (/opt/ros/humble/share/ament_cmake_python/cmake)
+[0.773s] -- Configuring done
+[0.777s] -- Generating done
+[0.778s] -- Build files have been written to: /home/stinky/Documents/semantic-robot/ros2_ws/build/nav2_common
+[0.781s] Invoked command in '/home/stinky/Documents/semantic-robot/ros2_ws/build/nav2_common' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/stinky/Documents/semantic-robot/ros2_ws/src/navigation2/nav2_common -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_common
+[0.782s] Invoking command in '/home/stinky/Documents/semantic-robot/ros2_ws/build/nav2_common': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/stinky/Documents/semantic-robot/ros2_ws/build/nav2_common -- -j4 -l4
+[0.841s] Built target ament_cmake_python_symlink_nav2_common
+[1.223s] running egg_info
+[1.223s] creating nav2_common.egg-info
+[1.223s] writing nav2_common.egg-info/PKG-INFO
+[1.224s] writing dependency_links to nav2_common.egg-info/dependency_links.txt
+[1.224s] writing top-level names to nav2_common.egg-info/top_level.txt
+[1.227s] writing manifest file 'nav2_common.egg-info/SOURCES.txt'
+[1.230s] reading manifest file 'nav2_common.egg-info/SOURCES.txt'
+[1.231s] writing manifest file 'nav2_common.egg-info/SOURCES.txt'
+[1.260s] Built target ament_cmake_python_build_nav2_common_egg
+[1.271s] Invoked command in '/home/stinky/Documents/semantic-robot/ros2_ws/build/nav2_common' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/stinky/Documents/semantic-robot/ros2_ws/build/nav2_common -- -j4 -l4
+[1.303s] Invoking command in '/home/stinky/Documents/semantic-robot/ros2_ws/build/nav2_common': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/stinky/Documents/semantic-robot/ros2_ws/build/nav2_common
+[1.311s] -- Install configuration: ""
+[1.312s] -- Execute custom install script
+[1.313s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_common/share/nav2_common/environment/pythonpath.sh
+[1.322s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_common/share/nav2_common/environment/pythonpath.dsv
+[1.331s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_common/local/lib/python3.10/dist-packages/nav2_common-1.2.0-py3.10.egg-info/PKG-INFO
+[1.342s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_common/local/lib/python3.10/dist-packages/nav2_common-1.2.0-py3.10.egg-info/SOURCES.txt
+[1.352s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_common/local/lib/python3.10/dist-packages/nav2_common-1.2.0-py3.10.egg-info/dependency_links.txt
+[1.362s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_common/local/lib/python3.10/dist-packages/nav2_common-1.2.0-py3.10.egg-info/top_level.txt
+[1.373s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_common/local/lib/python3.10/dist-packages/nav2_common/__init__.py
+[1.383s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_common/local/lib/python3.10/dist-packages/nav2_common/launch/__init__.py
+[1.395s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_common/local/lib/python3.10/dist-packages/nav2_common/launch/has_node_params.py
+[1.403s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_common/local/lib/python3.10/dist-packages/nav2_common/launch/parse_multirobot_pose.py
+[1.412s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_common/local/lib/python3.10/dist-packages/nav2_common/launch/replace_string.py
+[1.420s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_common/local/lib/python3.10/dist-packages/nav2_common/launch/rewritten_yaml.py
+[1.428s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_common/share/ament_index/resource_index/package_run_dependencies/nav2_common
+[1.438s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_common/share/ament_index/resource_index/parent_prefix_path/nav2_common
+[1.447s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_common/share/nav2_common/environment/ament_prefix_path.sh
+[1.458s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_common/share/nav2_common/environment/ament_prefix_path.dsv
+[1.467s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_common/share/nav2_common/environment/path.sh
+[1.477s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_common/share/nav2_common/environment/path.dsv
+[1.486s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_common/share/nav2_common/local_setup.bash
+[1.496s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_common/share/nav2_common/local_setup.sh
+[1.506s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_common/share/nav2_common/local_setup.zsh
+[1.516s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_common/share/nav2_common/local_setup.dsv
+[1.524s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_common/share/nav2_common/package.dsv
+[1.534s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_common/share/ament_index/resource_index/packages/nav2_common
+[1.544s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_common/share/nav2_common/cmake/nav2_common-extras.cmake
+[1.553s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_common/share/nav2_common/cmake/nav2_commonConfig.cmake
+[1.564s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_common/share/nav2_common/cmake/nav2_commonConfig-version.cmake
+[1.573s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_common/share/nav2_common/package.xml
+[1.583s] -- Symlinking: /home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_common/share/nav2_common/cmake/nav2_package.cmake
+[1.626s] Listing '/home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_common/local/lib/python3.10/dist-packages/nav2_common'...
+[1.627s] Compiling '/home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_common/local/lib/python3.10/dist-packages/nav2_common/__init__.py'...
+[1.627s] Listing '/home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_common/local/lib/python3.10/dist-packages/nav2_common/launch'...
+[1.627s] Compiling '/home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_common/local/lib/python3.10/dist-packages/nav2_common/launch/__init__.py'...
+[1.627s] Compiling '/home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_common/local/lib/python3.10/dist-packages/nav2_common/launch/has_node_params.py'...
+[1.627s] Compiling '/home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_common/local/lib/python3.10/dist-packages/nav2_common/launch/parse_multirobot_pose.py'...
+[1.627s] Compiling '/home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_common/local/lib/python3.10/dist-packages/nav2_common/launch/replace_string.py'...
+[1.627s] Compiling '/home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_common/local/lib/python3.10/dist-packages/nav2_common/launch/rewritten_yaml.py'...
+[1.641s] Invoked command in '/home/stinky/Documents/semantic-robot/ros2_ws/build/nav2_common' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/stinky/Documents/semantic-robot/ros2_ws/build/nav2_common

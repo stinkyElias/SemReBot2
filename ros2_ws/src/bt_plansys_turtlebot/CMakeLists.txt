@@ -45,35 +45,31 @@ include_directories(include)
 add_library(navigate_bt_node SHARED src/bt_nodes/Navigate.cpp)
 list(APPEND plugin_libs navigate_bt_node)
 
-############### ADD LATER ################
-# add_library(approach_pallet_bt_node SHARED src/bt_nodes/ApproachPallet.cpp)
-# list(APPEND plugin_libs approach_pallet_bt_node)
+add_library(approach_pallet_bt_node SHARED src/bt_nodes/ApproachPallet.cpp)
+list(APPEND plugin_libs approach_pallet_bt_node)
+
+add_library(leave_pallet_bt_node SHARED src/bt_nodes/LeavePallet.cpp)
+list(APPEND plugin_libs leave_pallet_bt_node)
+
+add_library(raise_fork_bt_node SHARED src/bt_nodes/RaiseFork.cpp)
+list(APPEND plugin_libs raise_fork_bt_node)
+
+add_library(lower_fork_bt_node SHARED src/bt_nodes/LowerFork.cpp)
+list(APPEND plugin_libs lower_fork_bt_node)
 
 add_library(recharge_bt_node SHARED src/bt_nodes/Recharge.cpp)
 list(APPEND plugin_libs recharge_bt_node)
-
-# add_library(lift_fork_bt_node SHARED src/bt_nodes/LiftFork.cpp)
-# list(APPEND plugin_libs lift_fork_bt_node)
-
-# add_library(lower_fork_bt_node SHARED src/bt_nodes/LowerFork.cpp)
-# list(APPEND plugin_libs lower_fork_bt_node)
-#########################################
 
 foreach(bt_plugin ${plugin_libs})
   ament_target_dependencies(${bt_plugin} ${dependencies})
   target_compile_definitions(${bt_plugin} PRIVATE BT_PLUGIN_EXPORT)
 endforeach()
 
-############### ADD LATER ################
 add_executable(nav2_sim_node src/nav2_sim_node.cpp)
 ament_target_dependencies(nav2_sim_node ${dependencies})
 
 add_executable(task_controller_node src/task_controller_node.cpp)
 ament_target_dependencies(task_controller_node ${dependencies})
-
-# add_executable(task_controller_node src/task_controller_node.cpp)
-# ament_target_dependencies(task_controller_node ${dependencies})
-#########################################
 
 # Install helper directories to share/bt_plansys_turtlebot directory 
 install(DIRECTORY bt_xml config launch pddl DESTINATION share/${PROJECT_NAME})
