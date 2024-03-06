@@ -13,5 +13,5 @@ docker run -it \
     -v /home/stinky/Documents/semantic-robot/env.sh:/home/stinky/ros2_ws/env.sh \
     -v /home/stinky/Documents/semantic-robot/llm:/home/stinky/llm \
     -v /home/stinky/Documents/semantic-robot/stt:/home/stinky/stt \
-    plansys:full \
+    cuda:test2 \
     /bin/bash
