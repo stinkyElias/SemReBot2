@@ -1,12 +1,17 @@
 {
+    "ros.distro": "rolling",
     "python.autoComplete.extraPaths": [
-        "/home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_common/local/lib/python3.10/dist-packages",
-        "/opt/ros/humble/lib/python3.10/site-packages",
-        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+        "/opt/ros/rolling/lib/python3.10/site-packages",
+        "/opt/ros/rolling/local/lib/python3.10/dist-packages",
+        "/home/stinky/ros2_ws/install/plansys2_support_py/**"
     ],
+
     "python.analysis.extraPaths": [
-        "/home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_common/local/lib/python3.10/dist-packages",
-        "/opt/ros/humble/lib/python3.10/site-packages",
-        "/opt/ros/humble/local/lib/python3.10/dist-packages"
-    ]
+        "/opt/ros/rolling/lib/python3.10/site-packages",
+        "/opt/ros/rolling/local/lib/python3.10/dist-packages",
+        "/home/stinky/ros2_ws/install/plansys2_support_py/**"
+    ],
+
+    "cmake.configureOnOpen": false,
+    "C_Cpp.default.compilerPath": "/usr/bin/gcc"
 }
