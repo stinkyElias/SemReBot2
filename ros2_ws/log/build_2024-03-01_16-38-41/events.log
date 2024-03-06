@@ -1,0 +1,44 @@
+[0.000000] (-) TimerEvent: {}
+[0.000207] (-) JobUnselected: {'identifier': 'bt_plansys_turtlebot'}
+[0.000308] (-) JobUnselected: {'identifier': 'costmap_queue'}
+[0.000388] (-) JobUnselected: {'identifier': 'dwb_core'}
+[0.000406] (-) JobUnselected: {'identifier': 'dwb_critics'}
+[0.000435] (-) JobUnselected: {'identifier': 'dwb_msgs'}
+[0.000450] (-) JobUnselected: {'identifier': 'dwb_plugins'}
+[0.000547] (-) JobUnselected: {'identifier': 'nav2_amcl'}
+[0.000575] (-) JobUnselected: {'identifier': 'nav2_behavior_tree'}
+[0.000596] (-) JobUnselected: {'identifier': 'nav2_behaviors'}
+[0.000675] (-) JobUnselected: {'identifier': 'nav2_bringup'}
+[0.000697] (-) JobUnselected: {'identifier': 'nav2_bt_navigator'}
+[0.000719] (-) JobUnselected: {'identifier': 'nav2_collision_monitor'}
+[0.000788] (-) JobUnselected: {'identifier': 'nav2_common'}
+[0.000810] (-) JobUnselected: {'identifier': 'nav2_constrained_smoother'}
+[0.000832] (-) JobUnselected: {'identifier': 'nav2_controller'}
+[0.000911] (-) JobUnselected: {'identifier': 'nav2_core'}
+[0.000933] (-) JobUnselected: {'identifier': 'nav2_costmap_2d'}
+[0.000954] (-) JobUnselected: {'identifier': 'nav2_dwb_controller'}
+[0.001050] (-) JobUnselected: {'identifier': 'nav2_graceful_controller'}
+[0.001071] (-) JobUnselected: {'identifier': 'nav2_lifecycle_manager'}
+[0.001084] (-) JobUnselected: {'identifier': 'nav2_map_server'}
+[0.001095] (-) JobUnselected: {'identifier': 'nav2_mppi_controller'}
+[0.001105] (-) JobUnselected: {'identifier': 'nav2_msgs'}
+[0.001115] (-) JobUnselected: {'identifier': 'nav2_navfn_planner'}
+[0.001125] (-) JobUnselected: {'identifier': 'nav2_planner'}
+[0.001140] (-) JobUnselected: {'identifier': 'nav2_regulated_pure_pursuit_controller'}
+[0.001150] (-) JobUnselected: {'identifier': 'nav2_rotation_shim_controller'}
+[0.001160] (-) JobUnselected: {'identifier': 'nav2_rviz_plugins'}
+[0.001169] (-) JobUnselected: {'identifier': 'nav2_simple_commander'}
+[0.001179] (-) JobUnselected: {'identifier': 'nav2_smac_planner'}
+[0.001189] (-) JobUnselected: {'identifier': 'nav2_smoother'}
+[0.001198] (-) JobUnselected: {'identifier': 'nav2_system_tests'}
+[0.001208] (-) JobUnselected: {'identifier': 'nav2_theta_star_planner'}
+[0.001218] (-) JobUnselected: {'identifier': 'nav2_util'}
+[0.001228] (-) JobUnselected: {'identifier': 'nav2_velocity_smoother'}
+[0.001238] (-) JobUnselected: {'identifier': 'nav2_voxel_grid'}
+[0.001248] (-) JobUnselected: {'identifier': 'nav2_waypoint_follower'}
+[0.001257] (-) JobUnselected: {'identifier': 'nav_2d_msgs'}
+[0.001267] (-) JobUnselected: {'identifier': 'nav_2d_utils'}
+[0.001278] (navigation2) JobQueued: {'identifier': 'navigation2', 'dependencies': OrderedDict([('nav2_common', '/home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_common'), ('nav_2d_msgs', '/home/stinky/Documents/semantic-robot/ros2_ws/install/nav_2d_msgs'), ('dwb_msgs', '/home/stinky/Documents/semantic-robot/ros2_ws/install/dwb_msgs'), ('nav2_msgs', '/home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_msgs'), ('nav2_voxel_grid', '/home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_voxel_grid'), ('nav2_simple_commander', '/home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_simple_commander'), ('nav2_util', '/home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_util'), ('nav2_amcl', '/home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_amcl'), ('nav2_behavior_tree', '/home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_behavior_tree'), ('nav2_lifecycle_manager', '/home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_lifecycle_manager'), ('nav2_map_server', '/home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_map_server'), ('nav2_velocity_smoother', '/home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_velocity_smoother'), ('nav_2d_utils', '/home/stinky/Documents/semantic-robot/ros2_ws/install/nav_2d_utils'), ('nav2_costmap_2d', '/home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_costmap_2d'), ('nav2_rviz_plugins', '/home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_rviz_plugins'), ('costmap_queue', '/home/stinky/Documents/semantic-robot/ros2_ws/install/costmap_queue'), ('nav2_collision_monitor', '/home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_collision_monitor'), ('nav2_core', '/home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_core'), ('dwb_core', '/home/stinky/Documents/semantic-robot/ros2_ws/install/dwb_core'), ('nav2_behaviors', '/home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_behaviors'), ('nav2_bt_navigator', '/home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_bt_navigator'), ('nav2_constrained_smoother', '/home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_constrained_smoother'), ('nav2_controller', '/home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_controller'), ('nav2_mppi_controller', '/home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_mppi_controller'), ('nav2_navfn_planner', '/home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_navfn_planner'), ('nav2_planner', '/home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_planner'), ('nav2_regulated_pure_pursuit_controller', '/home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_regulated_pure_pursuit_controller'), ('nav2_smac_planner', '/home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_smac_planner'), ('nav2_smoother', '/home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_smoother'), ('nav2_theta_star_planner', '/home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_theta_star_planner'), ('nav2_waypoint_follower', '/home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_waypoint_follower'), ('dwb_critics', '/home/stinky/Documents/semantic-robot/ros2_ws/install/dwb_critics'), ('dwb_plugins', '/home/stinky/Documents/semantic-robot/ros2_ws/install/dwb_plugins'), ('nav2_graceful_controller', '/home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_graceful_controller'), ('nav2_rotation_shim_controller', '/home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_rotation_shim_controller'), ('nav2_dwb_controller', '/home/stinky/Documents/semantic-robot/ros2_ws/install/nav2_dwb_controller')])}
+[0.001336] (navigation2) JobStarted: {'identifier': 'navigation2'}
+[0.087706] (navigation2) JobEnded: {'identifier': 'navigation2', 'rc': 1}
+[0.097954] (-) EventReactorShutdown: {}
