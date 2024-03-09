@@ -20,11 +20,13 @@
 class TaskControllerNode: public rclcpp::Node{
     public:
         TaskControllerNode();
-    
-        bool init();
+
+        bool get_plan_logic_and_start();
+        void get_problem_specific_knowledge(std::string &command);
+        // bool init();
         // void init_knowledge();
-        void new_knowledge(std::string &command);
-        void step();
+        // void new_knowledge(std::string &command);
+        // void step();
     
     private:
         std::shared_ptr<plansys2::DomainExpertClient> domain_expert_;
