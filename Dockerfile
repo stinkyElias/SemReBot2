@@ -210,6 +210,7 @@ RUN apt-get update \
     && pip install PyAudio \
     && pip install accelerate \
     && pip install bitsandbytes \
+    && pip install keyboard \
     && rm -rf /var/lib/apt/lists/*
   
 ENV DEBIAN_FRONTEND=
