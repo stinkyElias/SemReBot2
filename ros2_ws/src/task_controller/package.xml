@@ -2,8 +2,8 @@
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
   <name>task_controller</name>
-  <version>0.0.4</version>
-  <description>First test package to incorporate PlanSys2 with BT and Turtlebot3. Adapted from PlanSys2 BT example package.</description>
+  <version>1.0.0</version>
+  <description>Package handling everything with PlanSys2.</description>
   <maintainer email="elias.kalland@outlook.com">Elias Helle Kalland</maintainer>
   <license>Apache-2.0</license>
 

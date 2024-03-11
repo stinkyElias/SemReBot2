@@ -8,6 +8,7 @@ docker run -it \
     --env=DISPLAY \
     --env=QT_X11_NO_MITSHM=1 \
     -v /home/stinky/Documents/semantic-robot/ros2_ws/src/task_controller:/home/stinky/ros2_ws/src/task_controller \
+    -v /home/stinky/Documents/semantic-robot/ros2_ws/src/nlp_handler:/home/stinky/ros2_ws/src/nlp_handler \
     -v /home/stinky/Documents/semantic-robot/.vscode:/home/stinky/.vscode \
     -v /home/stinky/.Xauthority:/home/stinky/.Xauthority:rw \
     -v /home/stinky/Documents/semantic-robot/env.sh:/home/stinky/ros2_ws/env.sh \
