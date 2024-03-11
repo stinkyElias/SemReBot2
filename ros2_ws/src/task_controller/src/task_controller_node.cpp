@@ -24,22 +24,32 @@ TaskControllerNode::TaskControllerNode(): rclcpp::Node("task_controller_node"){
     
     // node logic
     auto task_callback = [this](std_msgs::msg::String::UniquePtr msg) -> void{
-        message_ = msg->data.c_str();
+        try{
+            RCLCPP_INFO(this->get_logger(), "Received command: %s", msg->data.c_str());
 
-        get_problem_specific_knowledge(message_);
-        get_plan_logic_and_start();
+            message_ = msg->data.c_str();
 
-        while(true){
-            if(!executor_client_->execute_and_check_plan()){
-                auto result = executor_client_->getResult();
-                if(result.value().success){
-                    RCLCPP_INFO(this->get_logger(), "Plan finished.");
-                    break;
-                }else{
-                    RCLCPP_ERROR(this->get_logger(), "Error in plan execution.");
-                    break;
+            get_problem_specific_knowledge(message_);
+            get_plan_logic_and_start();
+
+            while(true){
+                if(!executor_client_->execute_and_check_plan()){
+                    auto result = executor_client_->getResult();
+                    if(result.value().success){
+                        RCLCPP_INFO(this->get_logger(), "Plan finished.");
+                        break;
+                    }else{
+                        RCLCPP_ERROR(this->get_logger(), "Error in plan execution.");
+                        break;
+                    }
                 }
             }
+        
+        }catch(const rclcpp::exceptions::RCLError &e){
+            RCLCPP_ERROR(this->get_logger(), "ROS 2 client error: %s", e.what());
+        
+        }catch(const std::exception &e){
+            RCLCPP_ERROR(this->get_logger(), "Standard error: %s", e.what());
         }
     };
     
@@ -49,6 +59,8 @@ TaskControllerNode::TaskControllerNode(): rclcpp::Node("task_controller_node"){
 void TaskControllerNode::get_problem_specific_knowledge(std::string &command){
     std::istringstream command_stream(command);
     std::string single_command;
+    std::vector<std::string> goal_container;
+    std::string goals;
 
     while(std::getline(command_stream, single_command, '|')){
         if(single_command.find("set instance") == 0){
@@ -88,18 +100,29 @@ void TaskControllerNode::get_problem_specific_knowledge(std::string &command){
             }
             
         }else if(single_command.find("set goal") == 0){
-            // extract goal
-            std::string goal = single_command.substr(std::string("set goal ").length());
-            auto first_separator_position = goal.find(" ");
-            auto second_separator_position = goal.find(" ", first_separator_position + 1);
+            // extract goals and append to goal_container
+            std::string single_goal = single_command.substr(std::string("set goal ").length());
+            auto first_separator_position = single_goal.find(" ");
+            auto second_separator_position = single_goal.find(" ", first_separator_position + 1);
 
-            std::string predicate = goal.substr(0, first_separator_position);
-            std::string predicate_instance = goal.substr(first_separator_position + 1,
+            std::string predicate = single_goal.substr(0, first_separator_position);
+            std::string predicate_instance = single_goal.substr(first_separator_position + 1,
                                                             second_separator_position - first_separator_position - 1);
-            std::string predicate_zone = goal.substr(second_separator_position + 1);
+            std::string predicate_zone = single_goal.substr(second_separator_position + 1);
 
-            problem_expert_->setGoal(plansys2::Goal("(and("+predicate+" "+predicate_instance+" "+predicate_zone+"))"));
+            goal_container.push_back("(" + predicate + " " + predicate_instance + " " + predicate_zone + ")");          
         }
+    }
+
+    // pass all goals from goal_container to problem expert
+    if(!goal_container.empty()){
+        goals = "(and ";
+        for (const auto &goal: goal_container){
+            goals += goal + " ";
+        }
+        goals += ")";
+
+        problem_expert_->setGoal(plansys2::Goal(goals));
     }
 }
 
