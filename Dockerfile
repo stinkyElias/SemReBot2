@@ -108,7 +108,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   && rm -rf /var/lib/apt/lists/*
 ENV DEBIAN_FRONTEND=
 
-
 # Gazebo image
 FROM full AS gazebo
 
@@ -125,14 +124,17 @@ ENV GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:/opt/ros/rolling/share/turtlebot3_gazeb
 ENV DEBIAN_FRONTEND=
 
 # Navigation2 image
-FROM gazebo AS nav2
+FROM gazebo AS plansys2-depends
 
 ENV DEBIAN_FRONTEND=noninteractive
 
 WORKDIR /home/stinky/ros2_ws
 RUN mkdir -p /home/stinky/ros2_ws/src \
-    && git clone https://github.com/ros-planning/navigation2.git --branch main ./src/navigation2 \
-    && apt update && apt upgrade -y \
+    # && git clone https://github.com/ros-planning/navigation2.git --branch main ./src/navigation2 \
+    && git clone https://github.com/fmrico/navigation2.git --branch nav2_msgs_only ./src/navigation2 \
+    && git clone https://github.com/ros-geographic-info/geographic_info.git --branch ros2 ./src/geographic_info \
+    && git clone https://github.com/BehaviorTree/BehaviorTree.CPP.git --branch master ./src/behaviortree_cpp \
+    && apt-get update && apt-get upgrade -y --no-install-recommends \
     && rosdep update \
     && rosdep install -y --ignore-src --from-paths src -r \
     && . /opt/ros/rolling/setup.sh \
@@ -140,9 +142,28 @@ RUN mkdir -p /home/stinky/ros2_ws/src \
 
 ENV DEBIAN_FRONTEND=
 
+#  Plansys2 image
+FROM plansys2-depends AS plansys2
+
+ENV DEBIAN_FRONTEND=noninteractive
+WORKDIR /home/stinky/ros2_ws
+RUN git clone https://github.com/PlanSys2/ros2_planning_system.git -b rolling ./src/plansys2 \
+    # && git clone https://github.com/PlanSys2/ros2_planning_system_examples.git -b rolling ./src/plansys2_examples \
+    && git clone https://github.com/fmrico/cascade_lifecycle.git -b rolling ./src/cascade_lifecycle \
+    && git clone https://github.com/fmrico/popf.git -b rolling-devel ./src/popf \
+    # testing dependencies
+    && git clone https://github.com/ros2/rcl_interfaces.git -b rolling ./src/rcl_interfaces \
+    && git clone https://github.com/ros2/test_interface_files.git -b rolling ./src/test_interface_files \
+    && apt-get update && apt-get upgrade -y --no-install-recommends \
+    && rosdep update \
+    && rosdep install -y --ignore-src --from-paths src --rosdistro rolling -r \
+    && . /opt/ros/rolling/setup.sh \
+    && colcon build --symlink-install
+
+ENV DEBIAN_FRONTEND=
 
 # Gazebo+Nvidia image
-FROM nav2 AS gazebo-nvidia
+FROM plansys2 AS gazebo-nvidia
 
 # Expose the nvidia driver to allow opengl 
 # Dependencies for glvnd and X11.
@@ -153,28 +174,44 @@ RUN apt-get update \
   libglx0 \
   libegl1 \
   libxext6 \
-  libx11-6
+  libx11-6 \
+  && rm -rf /var/lib/apt/lists/*
 
 # Env vars for the nvidia-container-runtime.
 ENV NVIDIA_VISIBLE_DEVICES all
 ENV NVIDIA_DRIVER_CAPABILITIES graphics,utility,compute
 ENV QT_X11_NO_MITSHM 1
 
-#  Plansys2 image
-FROM gazebo-nvidia AS plansys2
+# NVIDIA container toolkit
+FROM gazebo-nvidia AS cuda
+
+ENV DEBIAN_FRONTEND=noninteractive
+RUN curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg \
+    && curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | \
+    sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | \
+    tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    nvidia-container-toolkit \
+    && rm -rf /var/lib/apt/lists/*
+
+ENV DEBIAN_FRONTEND=
+
+# Python and NLP image
+FROM cuda AS nlp-ros2
 
 ENV DEBIAN_FRONTEND=noninteractive
 WORKDIR /home/stinky/ros2_ws
-RUN git clone https://github.com/PlanSys2/ros2_planning_system.git -b rolling ./src/plansys2 \
-    && git clone https://github.com/PlanSys2/ros2_planning_system_examples.git -b rolling ./src/plansys2_examples \
-    && git clone https://github.com/fmrico/cascade_lifecycle.git -b rolling ./src/cascade_lifecycle \
-    && git clone https://github.com/fmrico/popf.git -b rolling-devel ./src/popf \
-    && apt update && apt upgrade -y \
-    && rosdep update \
-    && rosdep install -y --ignore-src --from-paths src -r \
-    && . /opt/ros/rolling/setup.sh \
-    && colcon build --symlink-install
-
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+    portaudio19-dev \
+    && pip3 install torch torchvision torchaudio \
+    && pip install transformers \
+    && pip install PyAudio \
+    && pip install accelerate \
+    && pip install bitsandbytes \
+    && rm -rf /var/lib/apt/lists/*
+  
 ENV DEBIAN_FRONTEND=
 
 RUN chown -R stinky:stinky /home/stinky
