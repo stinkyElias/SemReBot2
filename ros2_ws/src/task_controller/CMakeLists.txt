@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(bt_plansys_turtlebot)
+project(task_controller)
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
@@ -65,8 +65,8 @@ foreach(bt_plugin ${plugin_libs})
   target_compile_definitions(${bt_plugin} PRIVATE BT_PLUGIN_EXPORT)
 endforeach()
 
-# add_executable(nav2_sim_node src/nav2_sim_node.cpp)
-# ament_target_dependencies(nav2_sim_node ${dependencies})
+add_executable(nav2_sim_node src/nav2_sim_node.cpp)
+ament_target_dependencies(nav2_sim_node ${dependencies})
 
 add_executable(task_controller_node src/task_controller_node.cpp)
 ament_target_dependencies(task_controller_node ${dependencies})
@@ -75,7 +75,7 @@ ament_target_dependencies(task_controller_node ${dependencies})
 install(DIRECTORY bt_xml config launch pddl DESTINATION share/${PROJECT_NAME})
 
 install(TARGETS
-  # nav2_sim_node
+  nav2_sim_node
   task_controller_node
   ${plugin_libs}
   ARCHIVE DESTINATION lib

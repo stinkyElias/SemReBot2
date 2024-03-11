@@ -8,7 +8,7 @@ from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
 
 def generate_launch_description():
-    this_directory = get_package_share_directory('bt_plansys_turtlebot')
+    this_directory = get_package_share_directory('task_controller')
     namespace = LaunchConfiguration('namespace')
 
     declare_namespace_cmd = DeclareLaunchArgument(
