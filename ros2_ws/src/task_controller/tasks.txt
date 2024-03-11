@@ -1,1 +1,17 @@
-set instance pallet_1 pallet|set predicate pallet_at pallet_1 unload_zone|set predicate pallet_not_moved pallet_1|set goal pallet_at pallet_1 reol_1|
+Example 1
+
+Prompt: A new shipment arrived. Please move the new pallet from the unload zone to reol 1. Afterwards, wait at reol 2.
+
+set instance pallet_1 pallet|set predicate pallet_at pallet_1 unload_zone|set predicate pallet_not_moved pallet_1|set goal pallet_at pallet_1 reol_1|set goal robot_at tars reol_2|
+
+Example 2
+
+Prompt: Move the new pallet from the unload zone to reol 2 and recharge at the charging station.
+
+set instance pallet_2 pallet|set predicate pallet_at pallet_2 unload_zone|set predicate pallet_not_moved pallet_2|set goal pallet_at pallet_2 reol_2|set goal robot_at tars charging_station|
+
+Example 3
+
+Prompt: Four new pallets at the unload zone. Move one to reol 1, one to reol 2 and so forth. Drive back to the charging station afterwards.
+
+set instance pallet_1 pallet|set instance pallet_2 pallet|set instance pallet_3 pallet|set instance pallet_4 pallet|set predicate pallet_at pallet_1 unload_zone|set predicate pallet_at pallet_2 unload_zone|set predicate pallet_at pallet_3 unload_zone|set predicate pallet_at pallet_4 unload_zone|set predicate pallet_not_moved pallet_1|set predicate pallet_not_moved pallet_2|set predicate pallet_not_moved pallet_3|set predicate pallet_not_moved pallet_4|set goal pallet_at pallet_1 reol_1|set goal pallet_at pallet_2 reol_2|set goal pallet_at pallet_3 reol_3|set goal pallet_at pallet_4 reol_4|set goal robot_at tars charging_station|
