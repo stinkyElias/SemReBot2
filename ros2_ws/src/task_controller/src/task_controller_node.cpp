@@ -19,7 +19,7 @@ TaskControllerNode::TaskControllerNode(): rclcpp::Node("task_controller_node"){
     problem_expert_->addPredicate(plansys2::Predicate("(is_unload_zone " + zones_[1] + ")"));
 
     for(int i = 2; i < 6; i++){
-        problem_expert_->addPredicate(plansys2::Predicate("(is_reol_zone " + zones_[i] + ")"));
+        problem_expert_->addPredicate(plansys2::Predicate("(is_shelf_zone " + zones_[i] + ")"));
     }
     
     // node logic

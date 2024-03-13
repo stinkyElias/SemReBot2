@@ -19,7 +19,7 @@
     (pallet_not_moved ?pallet - pallet)
 
     (is_unload_zone ?zone - zone)
-    (is_reol_zone ?zone - zone)
+    (is_shelf_zone ?zone - zone)
 )
 
 (:durative-action navigate
@@ -56,7 +56,7 @@
         ))
         (over all (and
             (is_unload_zone ?from_zone)
-            (is_reol_zone ?to_zone)
+            (is_shelf_zone ?to_zone)
         ))
     )
     :effect (and 
