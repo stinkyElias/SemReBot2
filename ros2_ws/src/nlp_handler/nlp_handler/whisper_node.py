@@ -1,16 +1,8 @@
 import os
-os.environ['HF_HOME'] = '/home/stinky/ros2_ws/src/nlp_handler/models'
+os.environ['HF_HOME'] = '/home/stinky/models'
 
 import rclpy
 import torch
-import pyaudio
-import tty
-import termios
-import sys
-import threading
-import select
-import time
-import numpy as np
 
 from rclpy.node import Node
 from std_msgs.msg import String, Int8
@@ -30,7 +22,7 @@ class WhisperNode(Node):
         
         # load whisper model
         try:
-            asr_pipeline_ = pipeline(
+            self.asr_pipeline_ = pipeline(
                 'automatic-speech-recognition',
                 model=self.model_name_,
                 torch_dtype=torch.float16,
@@ -43,62 +35,35 @@ class WhisperNode(Node):
             self.get_logger().error("Failed to load model %s" % self.model_name_)
             raise Exception("Failed to load model %s" % self.model_name_)
 
-    def get_command_callback(self, msg: Int8) -> None:
-        if msg.data == 1:
-            audio_data = '/home/stinky/ros2_ws/src/nlp_handler/audio_files/1.wav'
-        elif msg.data == 2:
-            audio_data = '/home/stinky/ros2_ws/src/nlp_handler/audio_files/2.wav'
-        elif msg.data == 3:
-            audio_data = '/home/stinky/ros2_ws/src/nlp_handler/audio_files/3.wav'
-        elif msg.data == 4:
-            audio_data = '/home/stinky/ros2_ws/src/nlp_handler/audio_files/4.wav'
-        else:
-            self.get_logger().error("No such audio file.")
+    def get_command_callback(self, incoming_msg: Int8) -> None:
+        try:
+            if incoming_msg.data == 1:
+                audio_data = '/home/stinky/ros2_ws/src/nlp_handler/audio_files/1.wav'
+            elif incoming_msg.data == 2:
+                audio_data = '/home/stinky/ros2_ws/src/nlp_handler/audio_files/2.wav'
+            elif incoming_msg.data == 3:
+                audio_data = '/home/stinky/ros2_ws/src/nlp_handler/audio_files/3.wav'
+            elif incoming_msg.data == 4:
+                audio_data = '/home/stinky/ros2_ws/src/nlp_handler/audio_files/4.wav'
+        except:
+            self.get_logger().error("No such audio file %i." % incoming_msg.data)
+            return
         
-        # Transcribe audio
+        self.get_logger().info("Transcribing audio file %i.wav" % incoming_msg.data)
         output = self.asr_pipeline_(
             audio_data,
             chunk_length_s=30,
             batch_size=24,
             return_timestamps=True,
         )
+        self.get_logger().info("Transcription complete.")
 
-        self.publisher_.publish(output['text'])
+        msg = String()
+        msg.data = output['text']
+
+        self.publisher_.publish(msg)
         self.get_logger().info("Publishing transcribed audio.")
-
-        '''
-        # initialize PyAudio
-        try:
-            audio_ = pyaudio.PyAudio()
-            stream_ = audio_.open(format=pyaudio.paInt16, channels=1, rate=44100, input=True, frames_per_buffer=512)
-            frames_ = []
-            
-            self.get_logger().info("Initialized PyAudio")
-        except:
-            self.get_logger().error("Failed to initialize PyAudio")
-            raise Exception("Failed to initialize PyAudio")
-        
-        print("Recording audio...")
-        start_time = time.time()
-
-        try:
-            while time.time() - start_time < 5:
-                data = stream_.read(512)
-                frames_.append(data)
-
-        except KeyboardInterrupt:
-            pass
-
-        stream_.stop_stream()
-        stream_.close()
-        audio_.terminate()
-        print("Finished recording audio.")
-
-        audio_data = np.frombuffer(b''.join(frames_), dtype=np.int16)
-        '''
-
-        
-            
+           
     
 def main(args=None):
     rclpy.init(args=args)
@@ -106,22 +71,8 @@ def main(args=None):
     
     rclpy.spin(whisper_node)
     
+    whisper_node.destroy_node()
     rclpy.shutdown()
 
 if __name__ == '__main__':
     main()
-
-'''
-if __name__ == '__main__':
-    old_settings = termios.tcgetattr(sys.stdin)
-    
-    if sys.platform != 'win32':
-        try:
-            tty.setcbreak(sys.stdin.fileno())
-            main()
-        finally:
-            termios.tcsetattr(sys.stdin, termios.TCSADRAIN, old_settings)
-
-    else:
-        raise Exception("Node 'whisper_node' cannot be run on Windows. Please run on a Unix-based system.")
-'''
