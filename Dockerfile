@@ -197,23 +197,39 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 ENV DEBIAN_FRONTEND=
 
-# Python and NLP image
-FROM cuda AS nlp-ros2
+FROM cuda AS transformers
+
+ENV DEBIAN_FRONTEND=noninteractive
+WORKDIR /home/stinky/ros2_ws
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+    && pip3 install torch torchvision torchaudio \
+    && pip install transformers \
+    && pip install accelerate \
+    && pip install bitsandbytes \
+    && pip install optimum \
+    && rm -rf /var/lib/apt/lists/*
+  
+ENV DEBIAN_FRONTEND=
+
+FROM transformers AS mic
 
 ENV DEBIAN_FRONTEND=noninteractive
 WORKDIR /home/stinky/ros2_ws
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
     portaudio19-dev \
-    && pip3 install torch torchvision torchaudio \
-    && pip install transformers \
+    alsa-base \
+    alsa-utils \
+    ffmpeg \
     && pip install PyAudio \
-    && pip install accelerate \
-    && pip install bitsandbytes \
-    && pip install keyboard \
+    keyboard \
+    tiktoken \
     && rm -rf /var/lib/apt/lists/*
-  
+
 ENV DEBIAN_FRONTEND=
+
+RUN usermod -a -G audio stinky
 
 RUN chown -R stinky:stinky /home/stinky
 USER stinky

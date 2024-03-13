@@ -43,7 +43,7 @@ class TaskControllerNode: public rclcpp::Node{
 
         const std::string robot_name_{"tars"};
         const std::string zones_[6] = {"charging_station", "unload_zone",
-                                       "reol_1", "reol_2", "reol_3", "reol_4"};
+                                       "shelf_1", "shelf_2", "shelf_3", "shelf_4"};
         std::string robot_start_location;
 };
 
