@@ -13,5 +13,6 @@ docker run --gpus all -it \
     -v /home/stinky/Documents/semantic-robot/.vscode:/home/stinky/.vscode \
     -v /home/stinky/.Xauthority:/home/stinky/.Xauthority:rw \
     -v /home/stinky/Documents/semantic-robot/env.sh:/home/stinky/ros2_ws/env.sh \
+    -v /home/stinky/models:/home/stinky/models \
     stinkyelias/rolling:whisper \
     /bin/bash

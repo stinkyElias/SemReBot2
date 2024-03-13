@@ -1,5 +1,5 @@
 import os
-os.environ['HF_HOME'] = '/home/stinky/Documents/semantic-robot/ros2_ws/src/nlp_handler/models'
+os.environ['HF_HOME'] = '/home/stinky/models'
 
 import torch
 
