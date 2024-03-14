@@ -1,0 +1,13 @@
+whisper_node:
+  ros__parameters:
+    model_name: 'openai/whisper-large-v3'
+    device: 'cuda:0'
+    data_type: 'float16'
+    chunk_length: 30
+    batch_size: 24
+    audio_dir: '/home/stinky/ros2_ws/src/nlp_handler/audio_files/'
+
+mistral_node:
+  ros__parameters:
+    model_name: 'mistralai/Mistral-7B-Instruct-v0.2'
+    device: 'cuda'

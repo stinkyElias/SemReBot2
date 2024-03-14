@@ -2,8 +2,7 @@ import os
 
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
-from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch.actions import DeclareLaunchArgument
 from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
 
@@ -22,5 +21,27 @@ def generate_launch_description():
         executable='whisper_node',
         name='whisper_node',
         namespace=namespace,
-        output='screen'
+        output='screen',
+        parameters=[
+            os.path.join(this_directory, 'config', 'params.yaml')
+        ]
     )
+
+    mistral_cmd = Node(
+        package='nlp_handler',
+        executable='mistral_node',
+        name='mistral_node',
+        namespace=namespace,
+        output='screen',
+        parameters=[
+            os.path.join(this_directory, 'config', 'params.yaml')
+        ]
+    )
+
+    ld = LaunchDescription()
+
+    ld.add_action(declare_namespace_cmd)
+    # ld.add_action(whisper_cmd)
+    ld.add_action(mistral_cmd)
+
+    return ld
