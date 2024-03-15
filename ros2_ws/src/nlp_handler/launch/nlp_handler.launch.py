@@ -41,7 +41,7 @@ def generate_launch_description():
     ld = LaunchDescription()
 
     ld.add_action(declare_namespace_cmd)
-    # ld.add_action(whisper_cmd)
+    ld.add_action(whisper_cmd)
     ld.add_action(mistral_cmd)
 
     return ld

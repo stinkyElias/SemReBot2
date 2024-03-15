@@ -40,16 +40,18 @@ class WhisperNode(Node):
 
         torch_dtype = dtype_map.get(dtype, torch.float16)
 
+        device_ = self.get_parameter('device').get_parameter_value().string_value if torch.cuda.is_available() else 'cpu'
+
         try:
             self.asr_pipeline_ = pipeline(
                 'automatic-speech-recognition',
                 model=self.model_name_,
                 torch_dtype=torch_dtype,
-                device=self.get_parameter('device').get_parameter_value().string_value if torch.cuda.is_available() else 'cpu',
+                device=device_,
                 model_kwargs={'attn_implementation': 'flash_attention_2'} if is_flash_attn_2_available() else {'attn_implementation': 'sdpa'},
             )
             
-            self.get_logger().info("Loaded model %s" % self.model_name_)
+            self.get_logger().info("Loaded model %s to device %s" % (self.model_name_, device_))
             self.get_logger().info("Node whisper_node has current state active. Waiting for audio input.")
 
         except:
@@ -87,6 +89,7 @@ class WhisperNode(Node):
            
     
 def main(args=None):
+    torch.cuda.empty_cache()
     rclpy.init(args=args)
     whisper_node = WhisperNode()
     
@@ -94,6 +97,7 @@ def main(args=None):
     
     whisper_node.destroy_node()
     rclpy.shutdown()
+    torch.cuda.empty_cache()
 
 if __name__ == '__main__':
     main()

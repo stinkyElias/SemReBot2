@@ -1,4 +1,5 @@
-dir = '/home/stinky/models'
+# dir = '/home/stinky/models'
+dir = '/home/carla/elias/models'
 
 import os
 os.environ['HF_HOME'] = dir

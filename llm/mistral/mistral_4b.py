@@ -1,12 +1,13 @@
 import os
-os.environ['HF_HOME']='/home/stinky/models'
+# os.environ['HF_HOME']='/home/stinky/models'
+os.environ['HF_HOME']='/home/carla/elias/models'
 
 import torch
 torch.cuda.empty_cache()
 
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 
-device = 'cuda'
+device = 'cuda:0'
 model_id = 'mistralai/Mistral-7B-Instruct-v0.2'
 
 tokenizer = AutoTokenizer.from_pretrained(model_id)
@@ -18,7 +19,14 @@ nf4_config = BitsAndBytesConfig(
     bnb_4bit_compute_dtype=torch.bfloat16,
 )
 
+print("Memory allocated 0: %d" % torch.cuda.memory_allocated())
+print("Max memory allocated 0: %d" % torch.cuda.max_memory_allocated())
+
 model_nf4 = AutoModelForCausalLM.from_pretrained(model_id, quantization_config=nf4_config)
+
+print("Memory allocated 1: %d" % torch.cuda.memory_allocated())
+print("Max memory allocated 1: %d" % torch.cuda.max_memory_allocated())
+
 
 question = 'Move the new pallet from the unload zone to shelf 2 and recharge at the charging station.'
 
@@ -39,8 +47,14 @@ encodeds = tokenizer.apply_chat_template(messages, return_tensors='pt')
 model_inputs = encodeds.to(device)
 # model.to(device)
 
+print("Memory allocated 2: %d" % torch.cuda.memory_allocated())
+print("Max memory allocated 2: %d" % torch.cuda.max_memory_allocated())
+
 generated_ids = model_nf4.generate(model_inputs, pad_token_id=tokenizer.eos_token_id, max_new_tokens=100, do_sample=True)
 decoded = tokenizer.batch_decode(generated_ids)
+
+print("Memory allocated 3: %d" % torch.cuda.memory_allocated())
+print("Max memory allocated 3: %d" % torch.cuda.max_memory_allocated())
 
 # # Remove the pre-prompts and end-of-sentence token
 output_tokens = decoded[0]
