@@ -25,8 +25,10 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'whisper_node = nlp_handler.whisper_node:main',
-            'mistral_node = nlp_handler.mistral_node:main',
+            # 'whisper_node = nlp_handler.whisper_node:main',
+            'whisper_lifecycle_node = nlp_handler.whisper_lifecycle_node:main',
+            # 'mistral_node = nlp_handler.mistral_node:main',
+            'mistral_lifecycle_node = nlp_handler.mistral_lifecycle_node:main',
         ],
     },
 )

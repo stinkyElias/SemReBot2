@@ -1,4 +1,4 @@
-whisper_node:
+whisper:
   ros__parameters:
     model_name: 'openai/whisper-large-v3'
     device: 'cuda:0'
@@ -7,7 +7,7 @@ whisper_node:
     batch_size: 24
     audio_dir: '/home/stinky/ros2_ws/src/nlp_handler/audio_files/'
 
-mistral_node:
+mistral:
   ros__parameters:
     model_name: 'mistralai/Mistral-7B-Instruct-v0.2'
-    device: 'cuda'
+    device: 'cuda:0'
