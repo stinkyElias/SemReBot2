@@ -1,19 +1,22 @@
-#!/usr/bin/env python3
-
 import os
 os.environ['HF_HOME'] = '/home/stinky/models'
 
 import rclpy
 import torch
+import gc
 
-from rclpy.node import Node
+from rclpy.lifecycle import LifecycleNode, LifecycleState, TransitionCallbackReturn
 from std_msgs.msg import String
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 from transformers import BitsAndBytesConfig
 
-class MistralNode(Node):
-    def __init__(self) -> None:
-        super().__init__('mistral_node')
+class MistralNode(LifecycleNode):
+    def __init__(self, node_name) -> None:
+        super().__init__(node_name)
+
+        self.node_name = node_name
+        self.publisher_ = None
+        self.subscriber_ = None
 
         self.declare_parameters(
             namespace='',
@@ -22,12 +25,11 @@ class MistralNode(Node):
                 ('device', ''),
             ]
         )
+        self.get_logger().info("Current state unconfigured [1]")
 
+    def on_configure(self, state: LifecycleState) -> TransitionCallbackReturn:
         model_name_ = self.get_parameter('model_name').get_parameter_value().string_value
         self.device_ = self.get_parameter('device').get_parameter_value().string_value
-
-        self.publisher_ = self.create_publisher(String, 'mistral_output', 10)
-        self.subscriber_ = self.create_subscription(String, 'whisper_output', self.get_command_callback, 10)
 
         self.tokenizer_ = AutoTokenizer.from_pretrained(model_name_)
 
@@ -39,20 +41,70 @@ class MistralNode(Node):
         )
 
         try:
-            self.model = AutoModelForCausalLM.from_pretrained(model_name_, quantization_config=nf4_config)
+            self.model = AutoModelForCausalLM.from_pretrained(model_name_,
+                                                              quantization_config=nf4_config)
 
-            self.get_logger().info("Loaded model %s to device %s" % (model_name_, self.device_))
-            self.get_logger().info("Node mistral_node has current state active. Waiting for natural language input.")
+            self.get_logger().info(f"Loaded model {model_name_} to device {self.device_}")
+            self.get_logger().info("Current state inactive [2]")
 
-        except:
-            self.get_logger().error("Failed to load model %s" % model_name_)
-            raise Exception("Failed to load model %s" % model_name_)
+            return TransitionCallbackReturn.SUCCESS
+        
+        except Exception as e:
+            self.get_logger().error(f"Failed to load model {model_name_} to device {self.device_}: {e}")       
+            return TransitionCallbackReturn.ERROR
     
+    def on_cleanup(self, state: LifecycleState) -> TransitionCallbackReturn:
+        try:
+            del self.model
+            gc.collect()
+            torch.cuda.empty_cache()
+        
+            self.get_logger().info("Current state unconfigured [1]")
+            return TransitionCallbackReturn.SUCCESS
+        
+        except Exception as e:
+            self.get_logger().error(f"Failed to cleanup model {self.model_name_}: {e}")
+            return TransitionCallbackReturn.ERROR
+    
+    def on_activate(self, state: LifecycleState) -> TransitionCallbackReturn:
+        self.publisher_ = self.create_lifecycle_publisher(String,
+                                                          'pddl_command',
+                                                          10)
+        self.subscriber_ = self.create_subscription(String,
+                                                    'command',
+                                                    self.get_command_callback,
+                                                    10)
+
+        self.get_logger().info("Current state active [3]")
+        return super().on_activate(state)
+    
+    def on_deactivate(self, state: LifecycleState) -> TransitionCallbackReturn:
+        self.destroy_lifecycle_publisher(self.publisher_)
+        self.destroy_subscription(self.subscriber_)
+
+        self.get_logger().info("Current state inactive [2]")
+        return super().on_deactivate(state)
+
+    def on_shutdown(self, state: LifecycleState) -> TransitionCallbackReturn:
+        try:
+            del self.model
+            gc.collect()
+            torch.cuda.empty_cache()
+
+            self.destroy_lifecycle_publisher(self.publisher_)
+            self.destroy_subscription(self.subscriber_)
+
+            self.get_logger().info("Current state finalized [4]")
+            return TransitionCallbackReturn.SUCCESS
+        
+        except Exception as e:
+            self.get_logger().error(f"Failed to cleanup model {self.model_name_}: {e}")
+            return TransitionCallbackReturn.ERROR
+
+
     def get_command_callback(self, msg):
         pub_msg = String()
         
-        self.get_logger().info("Received command:\n %s" % msg.data)
-
         # pre-prompt
         messages = [
             {'role': 'user', 'content': 'You will be receiving a natural language input from me, and you will return a text based on the input and on the format that I will show you three examples of. You will act based on a PDDL domain file.'},
@@ -66,10 +118,10 @@ class MistralNode(Node):
             {'role': 'user', 'content': msg.data},
         ]
 
-        self.get_logger().info("Generating response...")
         encodeds = self.tokenizer_.apply_chat_template(messages, return_tensors='pt')
         model_inputs = encodeds.to(self.device_)
 
+        self.get_logger().info("Generating response")
         generated_ids = self.model.generate(model_inputs,
                                             pad_token_id=self.tokenizer_.eos_token_id,
                                             max_new_tokens=100,
@@ -87,23 +139,25 @@ class MistralNode(Node):
         delimiter = '|'
         last_delimiter = sliced_output.rfind(delimiter)
         sliced_output = sliced_output[:last_delimiter + 1]
-        self.get_logger().info("Generated response.")
 
         pub_msg.data = sliced_output
 
         self.publisher_.publish(pub_msg)
-        self.get_logger().info("Published response:\n %s" % pub_msg.data)
+        self.get_logger().info(f"Generated response:\n {pub_msg.data}")
+
+        torch.cuda.empty_cache()
 
 def main(args=None):
     torch.cuda.empty_cache()
-    rclpy.init(args=args)
 
-    mistral_node = MistralNode()
+    rclpy.init(args=args)
+    mistral_node = MistralNode('mistral')
 
     rclpy.spin(mistral_node)
 
     mistral_node.destroy_node()
     rclpy.shutdown()
+
     torch.cuda.empty_cache()
 
 if __name__ == '__main__':

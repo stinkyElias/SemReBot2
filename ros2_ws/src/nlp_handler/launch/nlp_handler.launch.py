@@ -4,7 +4,7 @@ from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument
 from launch.substitutions import LaunchConfiguration
-from launch_ros.actions import Node
+from launch_ros.actions import LifecycleNode
 
 def generate_launch_description():
     this_directory = get_package_share_directory('nlp_handler')
@@ -16,10 +16,10 @@ def generate_launch_description():
         description='Namespace'
     )
 
-    whisper_cmd = Node(
+    whisper_cmd = LifecycleNode(
         package='nlp_handler',
-        executable='whisper_node',
-        name='whisper_node',
+        executable='whisper_lifecycle_node',
+        name='whisper',
         namespace=namespace,
         output='screen',
         parameters=[
@@ -27,10 +27,10 @@ def generate_launch_description():
         ]
     )
 
-    mistral_cmd = Node(
+    mistral_cmd = LifecycleNode(
         package='nlp_handler',
-        executable='mistral_node',
-        name='mistral_node',
+        executable='mistral_lifecycle_node',
+        name='mistral',
         namespace=namespace,
         output='screen',
         parameters=[

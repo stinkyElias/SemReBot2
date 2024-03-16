@@ -9,7 +9,8 @@
                 "/opt/ros/rolling/include/**",
                 "/usr/include/**",
                 "/home/stinky/ros2_ws/install/**",
-                "/home/stinky/ros2_ws/src/task_controller/include/**"
+                "/home/stinky/ros2_ws/src/task_controller/include/**",
+                "/home/stinky/ros2_ws/src/nlp_handler/include/**",
             ],
             "name": "Rolling",
             "intelliSenseMode": "gcc-x64",
