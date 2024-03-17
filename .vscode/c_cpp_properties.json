@@ -9,7 +9,10 @@
                 "/opt/ros/rolling/include/**",
                 "/usr/include/**",
                 "/home/stinky/ros2_ws/install/**",
-                "/home/stinky/ros2_ws/src/task_controller/include/**"
+                "/home/stinky/ros2_ws/src/semrebot2/semrebot2_lifecycle_manager/include/**",
+                "/home/stinky/ros2_ws/src/semrebot2/semrebot2_task_controller/include/**",
+                "/home/stinky/ros2_ws/src/semrebot2/semrebot2_natural_language_processer/include/**",
+                "/home/stinky/ros2_ws/src/semrebot2/semrebot2_bringup/include/**"
             ],
             "name": "Rolling",
             "intelliSenseMode": "gcc-x64",
