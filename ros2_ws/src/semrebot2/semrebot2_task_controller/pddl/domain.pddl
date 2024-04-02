@@ -9,7 +9,7 @@
 )
 
 (:predicates
-    (robot_available ?robot - robot) ; if robot is NOT holding a pallet
+    (robot_available ?robot - robot)
     
     (robot_at ?robot - robot ?zone - zone)
     (pallet_at ?pallet - pallet ?zone - zone)

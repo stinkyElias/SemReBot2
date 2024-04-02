@@ -4,6 +4,7 @@ os.environ['HF_HOME'] = '/home/stinky/models'
 import rclpy
 import torch
 import gc
+import re
 
 from rclpy.lifecycle import LifecycleNode, LifecycleState, TransitionCallbackReturn
 from std_msgs.msg import String
@@ -35,20 +36,49 @@ class MistralNode(LifecycleNode):
         self.tokenizer_ = AutoTokenizer.from_pretrained(model_name_)
 
         nf4_config = BitsAndBytesConfig(
-            load_in_4bit=True,
+            load_in_4bit=True,  
             bnb_4bit_quant_type='nf4',
             bnb_4bit_use_double_quant=True,
             bnb_4bit_compute_dtype=torch.bfloat16,
         )
+        
+        # Read domain file and extract only the available types and predicates
+        home_dir = os.path.expanduser('~')
+        domain_dir = os.path.join(home_dir, 'ros2_ws/src/semrebot2/semrebot2_task_controller/pddl/domain.pddl')
 
-        self.domain = '(:types robot zone pallet ) (:predicates (robot_available ?robot - robot) (robot_at ?robot - robot ?zone - zone) (pallet_at ?pallet - pallet ?zone - zone) (is_pallet ?pallet - pallet) (pallet_not_moved ?pallet - pallet) (is_unload_zone ?zone - zone) (is_shelf_zone ?zone - zone) )'
+        with open(domain_dir, 'r') as file:
+            data = file.read()
+        
+        domain = data.replace('\n', ' ').replace('\r', ' ')
+        domain = ' '.join(domain.split())
 
+        types_start = domain.find(':types')
+        types_end = domain.find(')', types_start)
+
+        predicates_start = domain.find(':predicates')
+
+        match = re.search('\)\s*\)', domain[predicates_start:])
+        
+        if match:
+            predicates_end = predicates_start + match.start() + 1
+        else:
+            self.get_logger().error(f"Couldn't read domain.pddl due to mismatch in expected predicates syntax")
+
+            return TransitionCallbackReturn.ERROR
+
+        types = domain[types_start:types_end + 1]
+        predicates = domain[predicates_start:predicates_end + 1]
+
+        self.domain = '(' + types + ' (' + predicates + ')'
+
+        self.get_logger().info(f"Types and predicates successfully extracted from domain.pddl: {self.domain}")
+
+        # Load the model to memory
         try:
             self.model = AutoModelForCausalLM.from_pretrained(model_name_,
                                                               quantization_config=nf4_config)
 
             self.get_logger().info(f"Loaded model {model_name_} to device {self.device_}")
-            # self.get_logger().info("Current state inactive [2]")
 
             return TransitionCallbackReturn.SUCCESS
         
@@ -62,7 +92,6 @@ class MistralNode(LifecycleNode):
             gc.collect()
             torch.cuda.empty_cache()
         
-            # self.get_logger().info("Current state unconfigured [1]")
             return TransitionCallbackReturn.SUCCESS
         
         except Exception as e:
@@ -78,14 +107,12 @@ class MistralNode(LifecycleNode):
                                                     self.get_command_callback,
                                                     10)
 
-        # self.get_logger().info("Current state active [3]")
         return super().on_activate(state)
     
     def on_deactivate(self, state: LifecycleState) -> TransitionCallbackReturn:
         self.destroy_lifecycle_publisher(self.publisher_)
         self.destroy_subscription(self.subscriber_)
 
-        # self.get_logger().info("Current state inactive [2]")
         return super().on_deactivate(state)
 
     def on_shutdown(self, state: LifecycleState) -> TransitionCallbackReturn:
@@ -97,7 +124,6 @@ class MistralNode(LifecycleNode):
             self.destroy_lifecycle_publisher(self.publisher_)
             self.destroy_subscription(self.subscriber_)
 
-            # self.get_logger().info("Current state finalized [4]")
             return TransitionCallbackReturn.SUCCESS
         
         except Exception as e:
@@ -110,15 +136,15 @@ class MistralNode(LifecycleNode):
         
         # pre-prompt
         messages = [
-            {'role': 'user', 'content': 'You will receive a natural language prompt and create text based on the prompt and a domain from domain.pddl.'},
-            {'role': 'assistant', 'content': 'I understand. Give me the domain.pddl'},
-            {'role': 'user', 'content': 'domain.pddl: ' + self.domain},
-            {'role': 'assistant', 'content': 'Thank you. This is the types and predicates in the domain.pddl.'},
-            {'role': 'user', 'content': 'Yes. I will show you an example, and you will see the format of a prompt and the only accepted format to answer in. Only answer in the same format as this example.'},
-            {'role': 'assistant', 'content': 'Understood, I will learn from the coming example and see how I shall respond.'},
-            {'role': 'user', 'content': 'Prompt: "A new shipment arrived. Please move the new pallet from the unload zone to reol 1. Afterwards, wait at reol 2". From this prompt, the only correct answer would be: set instance pallet_1 pallet|set predicate pallet_at pallet_1 unload_zone|set predicate pallet_not_moved pallet_1|set goal pallet_at pallet_1 reol_1|set goal robot_at tars reol_2|'},
-            {'role': 'assistant', 'content': 'I understand the format. I will respond in the same format, only setting instances, predicates and goals delimited by "|". Please give me the prompt.'},
-            {'role': 'user', 'content': 'Prompt: ' + msg.data},
+            {'role': 'user',        'content': 'You will receive a natural language prompt and create text based on the prompt and a domain from domain.pddl.'},
+            {'role': 'assistant',   'content': 'I understand. Give me the domain.pddl'},
+            {'role': 'user',        'content': 'domain.pddl: ' + self.domain},
+            {'role': 'assistant',   'content': 'Thank you. This is the types and predicates in the domain.pddl.'},
+            {'role': 'user',        'content': 'Yes. I will show you an example, and you will see the format of a prompt and the only accepted format to answer in. Only answer in the same format as this example.'},
+            {'role': 'assistant',   'content': 'Understood, I will learn from the coming example and see how I shall respond.'},
+            {'role': 'user',        'content': 'Prompt: "A new shipment arrived. Please move the new pallet from the unload zone to reol 1. Afterwards, wait at reol 2". From this prompt, the only correct answer would be: set instance pallet_1 pallet|set predicate pallet_at pallet_1 unload_zone|set predicate pallet_not_moved pallet_1|set goal pallet_at pallet_1 reol_1|set goal robot_at tars reol_2|'},
+            {'role': 'assistant',   'content': 'I understand the format. I will respond in the same format, only setting instances, predicates and goals delimited by "|". Please give me the prompt.'},
+            {'role': 'user',        'content': 'Prompt: ' + msg.data},
         ]
 
         encodeds = self.tokenizer_.apply_chat_template(messages, return_tensors='pt')
