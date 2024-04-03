@@ -1,8 +1,20 @@
-# dir = '/home/stinky/models'
-dir = '/home/carla/elias/models'
+import sys
+
+if sys.argv[1] == 'laptop':
+    personal = True
+    idun = False
+elif sys.argv[1] == 'idun':
+    personal = False
+    idun = True
 
 import os
-os.environ['HF_HOME'] = dir
+
+if (personal and not idun):
+    output_dir = os.path.expanduser('~/models')
+elif idun and not personal:
+    output_dir = os.path.expanduser('/cluster/work/eliashk/models')
+
+os.environ['HF_HOME'] = output_dir
 
 import torch
 

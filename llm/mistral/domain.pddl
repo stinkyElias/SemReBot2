@@ -1,6 +1,6 @@
 (define (domain warehouse)
 
-(:requirements :strips :typing :adl :fluents :durative-actions)
+(:requirements :strips :typing :adl :fluents :durative-actions);
 
 (:types
     robot
@@ -20,7 +20,7 @@
 
     (is_unload_zone ?zone - zone)
     (is_shelf_zone ?zone - zone)
-)
+);
 
 (:durative-action navigate
     :parameters (?robot - robot ?from_zone - zone ?to_zone - zone)
