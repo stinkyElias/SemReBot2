@@ -1,0 +1,34 @@
+******** Whisper Automatic Speech Recognition test ********
+___________________________________________________________
+Model                              : openai/whisper-large-v3
+Audio file                         : 1.wav
+WER                                : 71.2
+RTF                                : 41.3
+GPU memory while loaded [MB]       : 2312314
+GPU memory while inference [MB]    : 3545644
+Delta GPU memory [MB]              : 1233330
+___________________________________________________________
+Model                              : openai/whisper-tiny
+Audio file                         : 1.wav
+WER                                : 71.2
+RTF                                : 41.3
+GPU memory while loaded [MB]       : 2312314
+GPU memory while inference [MB]    : 3545644
+Delta GPU memory [MB]              : 1233330
+___________________________________________________________
+Model                         : openai/whisper-tiny
+Audio file                    : 1.wav
+WER                           : 71.2
+RTF                           : 41.3
+GPU memory while loaded [MB]  : 2312314
+GPU memory while inference [MB]: 3545644
+Delta GPU memory [MB]         : 1233330
+___________________________________________________________
+Model                           : openai/whisper-tiny
+Audio file                      : 1.wav
+WER                             : 71.2
+RTF                             : 41.3
+GPU memory while loaded [MB]    : 2312314
+GPU memory while inference [MB] : 3545644
+Delta GPU memory [MB]           : 1233330
+___________________________________________________________
