@@ -65,9 +65,22 @@ void TaskControllerNode::get_problem_specific_knowledge(std::string &command){
     std::string goals;
 
     while(std::getline(command_stream, single_command, '|')){
-        if(single_command.find("set instance") == 0){
+        // create a new string that only contains acceptable characters
+        std::string edited_command;
+
+        for(auto &character: single_command){
+            if(character >= 'A' && character <= 'Z'){
+                edited_command += character + 32;
+            }else if((character >= 'a' && character <= 'z') || character == ' '
+                                                            || character == '_'
+                                                            || character == '|'){
+                edited_command += character;
+            }
+        }
+        
+        if(edited_command.find("set instance") == 0){
             // Extract instance name and type
-            std::string instance = single_command.substr(std::string("set instance ").length());
+            std::string instance = edited_command.substr(std::string("set instance ").length());
             auto separator_position = instance.find(" ");
             std::string name = instance.substr(0, separator_position);
             std::string type = instance.substr(separator_position + 1);
@@ -80,9 +93,9 @@ void TaskControllerNode::get_problem_specific_knowledge(std::string &command){
                 return;
             }
 
-        }else if(single_command.find("set predicate") == 0){
+        }else if(edited_command.find("set predicate") == 0){
             // extract predicate
-            std::string full_predicate = single_command.substr(std::string("set predicate ").length());
+            std::string full_predicate = edited_command.substr(std::string("set predicate ").length());
             auto first_separator_position = full_predicate.find(" ");
             
             std::string predicate = full_predicate.substr(0, first_separator_position);
@@ -101,9 +114,9 @@ void TaskControllerNode::get_problem_specific_knowledge(std::string &command){
                 problem_expert_->addPredicate(plansys2::Predicate("("+predicate+" "+predicate_instance+")" ));
             }
             
-        }else if(single_command.find("set goal") == 0){
+        }else if(edited_command.find("set goal") == 0){
             // extract goals and append to goal_container
-            std::string single_goal = single_command.substr(std::string("set goal ").length());
+            std::string single_goal = edited_command.substr(std::string("set goal ").length());
             auto first_separator_position = single_goal.find(" ");
             auto second_separator_position = single_goal.find(" ", first_separator_position + 1);
 

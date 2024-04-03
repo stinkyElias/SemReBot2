@@ -1,0 +1,267 @@
+// briefcase
+
+{
+    "input": "<domain.pddl>: (define (domain briefcase) (:requirements :adl) (:types portable location) (:predicates (at ?y - portable ?x - location) (in ?x - portable) (is-at ?x - location)) (:action move :parameters (?m ?l - location) :precondition  (is-at ?m) :effect (and (is-at ?l) (not (is-at ?m)) (forall (?x - portable) (when (in ?x) (and (at ?x ?l) (not (at ?x ?m))))))) (:action take-out :parameters (?x - portable) :precondition (in ?x) :effect (not (in ?x))) (:action put-in :parameters (?x - portable ?l - location) :precondition (and (not (in ?x)) (at ?x ?l) (is-at ?l)) :effect (in ?x))) <end domain.pddl> <command>: Please do the following for me: transport all the four objects to their respective location: first object to location 3, second object to location 0, third object to location 1 and fourth object at location 2. Also, go to location 1 afterwards. The four objects are now at location 3, location 1, location 2 and location 0 respectively. We are in location 4. <end command>",
+    "output": "set instance l0 location|set instance l1 location|set instance l2 location|set instance l3 location|set instance l4 location|set instance o0 portable|set instance o1 portable|set instance o2 portable|set instance o3 portable|set predicate at o0 l3|set predicate at o1 l1|set predicate at o2 l2|set predicate at o3 l0|set predicate is-at l4|set goal at o0 l3|set goal at o1 l0|set goal at o2 l1|set goal at o3 l2|set goal is-at l1|"
+}
+
+// assembly
+
+{
+    "input": "<domain.pddl>: (define (domain assembly) (:requirements :adl) (:types assembly resource) ; Individual parts are atomic assemblies (:predicates (available ?x - (either resource assembly)) (complete ?a - assembly) (requires ?a - assembly ?r - resource) (committed ?r - resource ?a - assembly) (incorporated ?part ?whole - assembly) (part-of ?part ?whole - assembly) (to-be-removed ?part ?whole - assembly) (assemble-order ?part1 ?part2 ?whole - assembly) (transient-part ?part ?whole - assembly) ; After ?part1 is included, ?part2 must be removed ; for the ?whole to be complete: (remove-order ?part1 ?part2 ?whole - assembly)) (:action commit :parameters (?res - resource ?as - assembly) :precondition (available ?res) :effect (and (not (available ?res)) (committed ?res ?as))) (:action release :parameters (?res - resource ?as - assembly) :precondition (committed ?res ?as) :effect (and (not (committed ?res ?as)) (available ?res))) (:action assemble :parameters (?part ?whole - assembly) :precondition (and (forall (?res - resource) (imply (requires ?whole ?res) (committed ?res ?whole))) (or (part-of ?part ?whole) (transient-part ?part ?whole)) (available ?part) (forall (?prev - assembly) (imply (assemble-order ?prev ?part ?whole) (incorporated ?prev ?whole)))) :effect (and (incorporated ?part ?whole) (not (available ?part)) (when (and (not (exists (?p - assembly) (and (part-of ?p ?whole) (not (= ?p ?part)) (not (incorporated ?p ?whole))))) (not (exists (?tp - assembly) (and (transient-part ?tp ?whole) (incorporated ?tp ?whole))))) (and (complete ?whole) (available ?whole))))) ; You can remove the last part added, or a cleanup part at the ; end. (:action remove :parameters (?part ?whole - assembly) :vars (?res - resource) :precondition (and (forall (?res - resource) (imply (requires ?whole ?res) (committed ?res ?whole))) (incorporated ?part ?whole) (or (and (transient-part ?part ?whole) (forall (?prev - assembly) (imply (remove-order ?prev ?part ?whole) (incorporated ?prev ?whole)))) (and (part-of ?part ?whole) (not (exists (?prev - assembly) (and (assemble-order ?prev ?part ?whole) (incorporated ?prev ?whole))))))) :effect (and (not (incorporated ?part ?whole)) (available ?part) (when (and (not (exists (?p - assembly) (and (part-of ?p ?whole) (not (incorporated ?p ?whole))))) (not (exists (?tp - assembly) (and (transient-part ?tp ?whole) (not (= ?tp ?part)) (incorporated ?tp ?whole))))) (and (complete ?whole) (available ?whole)))))) <end domain.pddl> <command>: You have one resource and nine assemblies: a-0-0, a-1-0, a-1-1, a-1-2, a-1-3, a-2-0, a-2-1, a-2-2 and a-2-3. The resource is available alongside the assemblies a-1-2, a-2-0, a-2-1, a-2-2 and a-2-3. a-1-0, a-1-1, a-1-2 and a-1-3 is part of a-0-0 while a-2-0 is part of a-1-0, a-2-1 is part of a-1-1, a-2-2 is part of a-1-3 and a-2-3 is part of a-1-3. The assembling order is first a-1-0, second a-1-2, third a-0-0 and first a-1-1, second a-1-2, third a-0-0 and first a-1-1, second a-1-3, third a-0-0 and first a-1-2, second a-1-3, third a-0-0. Please complete a-0-0. <end command>",
+    "output": "set instance r0 resource|set instance a-0-0 assembly|set instance a-1-0 assembly|set instance a-1-1 assembly|set instance a-1-2 assembly|set instance a-1-3 assembly|set instance a-2-0 assembly|set instance a-2-1 assembly|set instance a-2-2 assembly|set instance a-2-3 assembly|set predicate part-of a-1-0 a-0-0|set predicate part-of a-1-1 a-0-0|set predicate part-of a-1-2 a-0-0|set predicate part-of a-1-3 a-0-0|set predicate part-of a-2-0 a-1-0|set predicate part-of a-2-1 a-1-1|set predicate part-of a-2-2 a-1-3|set predicate part-of a-2-3 a-1-3|set predicate assemble-order a-1-0 a-1-2 a-0-0|set predicate assemble-order a-1-1 a-1-2 a-0-0|set predicate assemble-order a-1-1 a-1-3 a-0-01|set predicate assemble-order a-1-2 a-1-3 a-0-0|set predicate available a-1-2|set predicate available a-2-0|set predicate available a-2-1|set predicate available a-2-2|set predicate available a-2-3|set predicate available r0|set goal complete a-0-0|"
+}
+
+// barman
+
+{
+    "input": "<domain.pddl>: (define (domain barman) (:requirements :strips :typing :action-costs) (:types hand level beverage dispenser container - object ingredient cocktail - beverage shot shaker - container) (:predicates (ontable ?c - container) (holding ?h - hand ?c - container) (handempty ?h - hand) (empty ?c - container) (contains ?c - container ?b - beverage) (clean ?c - container) (used ?c - container ?b - beverage) (dispenses ?d - dispenser ?i - ingredient) (shaker-empty-level ?s - shaker ?l - level) (shaker-level ?s - shaker ?l - level) (next ?l1 ?l2 - level) (unshaked ?s - shaker) (shaked ?s - shaker) (cocktail-part1 ?c - cocktail ?i - ingredient) (cocktail-part2 ?c - cocktail ?i - ingredient)) (:functions (total-cost) - number) (:action grasp :parameters (?h - hand ?c - container) :precondition (and (ontable ?c) (handempty ?h)) :effect (and (not (ontable ?c)) (not (handempty ?h)) (holding ?h ?c) (increase (total-cost) 1))) (:action leave :parameters (?h - hand ?c - container) :precondition (holding ?h ?c) :effect (and (not (holding ?h ?c)) (handempty ?h) (ontable ?c) (increase (total-cost) 1))) (:action fill-shot :parameters (?s - shot ?i - ingredient ?h1 ?h2 - hand ?d - dispenser) :precondition (and (holding ?h1 ?s) (handempty ?h2) (dispenses ?d ?i) (empty ?s) (clean ?s)) :effect (and (not (empty ?s)) (contains ?s ?i) (not (clean ?s)) (used ?s ?i) (increase (total-cost) 10))) (:action refill-shot :parameters (?s - shot ?i - ingredient ?h1 ?h2 - hand ?d - dispenser) :precondition (and (holding ?h1 ?s) (handempty ?h2) (dispenses ?d ?i) (empty ?s) (used ?s ?i)) :effect (and (not (empty ?s)) (contains ?s ?i) (increase (total-cost) 10))) (:action empty-shot :parameters (?h - hand ?p - shot ?b - beverage) :precondition (and (holding ?h ?p) (contains ?p ?b)) :effect (and (not (contains ?p ?b)) (empty ?p) (increase (total-cost) 1))) (:action clean-shot :parameters (?s - shot ?b - beverage ?h1 ?h2 - hand) :precondition (and (holding ?h1 ?s) (handempty ?h2) (empty ?s) (used ?s ?b)) :effect (and (not (used ?s ?b)) (clean ?s) (increase (total-cost) 1))) (:action pour-shot-to-clean-shaker :parameters (?s - shot ?i - ingredient ?d - shaker ?h1 - hand ?l ?l1 - level) :precondition (and (holding ?h1 ?s) (contains ?s ?i) (empty ?d) (clean ?d) (shaker-level ?d ?l) (next ?l ?l1)) :effect (and (not (contains ?s ?i)) (empty ?s) (contains ?d ?i) (not (empty ?d)) (not (clean ?d)) (unshaked ?d) (not (shaker-level ?d ?l)) (shaker-level ?d ?l1) (increase (total-cost) 1))) (:action pour-shot-to-used-shaker :parameters (?s - shot ?i - ingredient ?d - shaker ?h1 - hand ?l ?l1 - level) :precondition (and (holding ?h1 ?s) (contains ?s ?i) (unshaked ?d) (shaker-level ?d ?l) (next ?l ?l1)) :effect (and (not (contains ?s ?i)) (contains ?d ?i) (empty ?s) (not (shaker-level ?d ?l)) (shaker-level ?d ?l1) (increase (total-cost) 1))) (:action empty-shaker :parameters (?h - hand ?s - shaker ?b - cocktail ?l ?l1 - level) :precondition (and (holding ?h ?s) (contains ?s ?b) (shaked ?s) (shaker-level ?s ?l) (shaker-empty-level ?s ?l1)) :effect (and (not (shaked ?s)) (not (shaker-level ?s ?l)) (shaker-level ?s ?l1) (not (contains ?s ?b)) (empty ?s) (increase (total-cost) 1))) (:action clean-shaker :parameters (?h1 ?h2 - hand ?s - shaker) :precondition (and (holding ?h1 ?s) (handempty ?h2) (empty ?s)) :effect (and (clean ?s) (increase (total-cost) 1))) (:action shake :parameters (?b - cocktail ?d1 ?d2 - ingredient ?s - shaker ?h1 ?h2 - hand) :precondition (and (holding ?h1 ?s) (handempty ?h2) (contains ?s ?d1) (contains ?s ?d2) (cocktail-part1 ?b ?d1) (cocktail-part2 ?b ?d2) (unshaked ?s)) :effect (and (not (unshaked ?s)) (not (contains ?s ?d1)) (not (contains ?s ?d2)) (shaked ?s) (contains ?s ?b) (increase (total-cost) 1))) (:action pour-shaker-to-shot :parameters (?b - beverage ?d - shot ?h - hand ?s - shaker ?l ?l1 - level) :precondition (and (holding ?h ?s) (shaked ?s) (empty ?d) (clean ?d) (contains ?s ?b) (shaker-level ?s ?l) (next ?l1 ?l)) :effect (and (not (clean ?d)) (not (empty ?d)) (contains ?d ?b) (used ?d ?b) (shaker-level ?s ?l1) (not (shaker-level ?s ?l)) (increase (total-cost) 1))) ) <end domain.pddl> <command>: You have two empty hands. On the table in front of you, you have one clean and empty shaker and two clean and empty shots. The two dispenser dispenses two different ingredients. Please make me a cocktail with one of the shots. <end command>",
+    "output": "set instance shaker1 shaker|set instance left hand|set instance right hand|set instance shot1|set instance shot2 shot|set instance ingredient1 ingredient| set instance ingredient2 ingredient|set instance cocktail1 cocktail|set instance cocktail2 cocktail|set instance dispenser1 dispenser|set instance dispenser2 dispenser|set instance l0 level|set instance l1 level|set instance l2 level|set predicate ontable shaker1|set predicate ontable shot1|set predicate ontable shot2|set predicate dispenses dispenser1 ingredient1|set predicate dispenses dispenser2 ingredient2|set predicate clean shaker1|set predicate clean shot1|set predicate clean shot2|set predicate empty shaker1|set predicate empty shot1|set predicate empty shot2|set predicate handempty left|set predicate handempty right|set predicate shaker-empty-level shaker1 l0|set predicate shaker-level shaker1 l0|set predicate next l0 l1|set predicate l1 l2|set predicate cocktail-part1 cocktail1 ingredient1|set predicate cocktail-part2 cocktail1 ingredient2|set goal contains shot1 cocktail1|"
+}
+
+// blocksworld
+
+{
+    "input": "<domain.pddl>: (define (domain blocksworld) (:requirements :strips) (:predicates (clear ?x) (on-table ?x) (arm-empty) (holding ?x) (on ?x ?y)) (:action pickup :parameters (?ob) :precondition (and (clear ?ob) (on-table ?ob) (arm-empty)) :effect (and (holding ?ob) (not (clear ?ob)) (not (on-table ?ob)) (not (arm-empty)))) (:action putdown :parameters (?ob) :precondition (holding ?ob) :effect (and (clear ?ob) (arm-empty) (on-table ?ob) (not (holding ?ob)))) (:action stack :parameters (?ob ?underob) :precondition (and (clear ?underob) (holding ?ob)) :effect (and (arm-empty) (clear ?ob) (on ?ob ?underob) (not (clear ?underob)) (not (holding ?ob)))) (:action unstack :parameters (?ob ?underob) :precondition (and (on ?ob ?underob) (clear ?ob) (arm-empty)) :effect (and (holding ?ob) (clear ?underob) (not (on ?ob ?underob)) (not (clear ?ob)) (not (arm-empty))))) <end domain.pddl> <command>: Start with four blocks, block 1 through block 4. Initially, block 1 is on block 3, block 2 is on block 1, and block 3 is on block 4, with block 4 directly on the table, and block 2 is clear. Your task is to rearrange these blocks so that block 1 is on block 4, block 2 remains on block 1, and block 4 is placed on block 3. <end command>",
+    "output": "set instance b1 block|set instance b2 block|set instance b3 block|set instance b4 block|set predicate arm-empty|set predicate on b1 b3|set predicate on b2 b1|set predicate on b3 b4|set predicate on-table b4|set predicate clear b2|set goal on b1 b4|set goal on b2 b1|set goal on b4 b3|"
+}
+
+// cavediving
+
+{
+    "input": "<domain.pddl>: (define (domain cave-diving-adl) (:requirements :typing :action-costs :adl :conditional-effects) (:types location diver tank quantity) (:predicates (at-tank ?t - tank ?l - location) (in-storage ?t - tank) (full ?t - tank) (next-tank ?t1 - tank ?t2 - tank) (at-diver ?d - diver ?l - location) (available ?d - diver) (at-surface ?d - diver) (decompressing ?d - diver) (precludes ?d1 - diver ?d2 - diver) (cave-entrance ?l - location) (connected ?l1 - location ?l2 - location) (next-quantity ?q1 - quantity ?q2 - quantity) (holding ?d - diver ?t - tank) (capacity ?d - diver ?q - quantity) (have-photo ?l - location) (in-water ) ) (:functions (hiring-cost ?d - diver) - number (other-cost) - number (total-cost) - number ) (:action hire-diver :parameters (?d1 - diver) :precondition (and (available ?d1) (not (in-water)) ) :effect (and (at-surface ?d1) (not (available ?d1)) (forall (?d2 - diver) (when (precludes ?d1 ?d2) (not (available ?d2)))) (in-water) (increase (total-cost) (hiring-cost ?d1)) ) ) (:action prepare-tank :parameters (?d - diver ?t1 ?t2 - tank ?q1 ?q2 - quantity) :precondition (and (at-surface ?d) (in-storage ?t1) (next-quantity ?q1 ?q2) (capacity ?d ?q2) (next-tank ?t1 ?t2) ) :effect (and (not (in-storage ?t1)) (not (capacity ?d ?q2)) (in-storage ?t2) (full ?t1) (capacity ?d ?q1) (holding ?d ?t1) (increase (total-cost) (other-cost )) ) ) (:action enter-water :parameters (?d - diver ?l - location) :precondition (and (at-surface ?d) (cave-entrance ?l) ) :effect (and (not (at-surface ?d)) (at-diver ?d ?l) (increase (total-cost) (other-cost )) ) ) (:action pickup-tank :parameters (?d - diver ?t - tank ?l - location ?q1 ?q2 - quantity) :precondition (and (at-diver ?d ?l) (at-tank ?t ?l) (next-quantity ?q1 ?q2) (capacity ?d ?q2) ) :effect (and (not (at-tank ?t ?l)) (not (capacity ?d ?q2)) (holding ?d ?t) (capacity ?d ?q1) (increase (total-cost) (other-cost )) ) ) (:action drop-tank :parameters (?d - diver ?t - tank ?l - location ?q1 ?q2 - quantity) :precondition (and (at-diver ?d ?l) (holding ?d ?t) (next-quantity ?q1 ?q2) (capacity ?d ?q1) ) :effect (and (not (holding ?d ?t)) (not (capacity ?d ?q1)) (at-tank ?t ?l) (capacity ?d ?q2) (increase (total-cost) (other-cost )) ) ) (:action swim :parameters (?d - diver ?t - tank ?l1 ?l2 - location) :precondition (and (at-diver ?d ?l1) (holding ?d ?t) (full ?t) (connected ?l1 ?l2) ) :effect (and (not (at-diver ?d ?l1)) (not (full ?t)) (at-diver ?d ?l2) (increase (total-cost) (other-cost )) ) ) (:action photograph :parameters (?d - diver ?l - location ?t - tank) :precondition (and (at-diver ?d ?l) (holding ?d ?t) (full ?t) ) :effect (and (not (full ?t)) (have-photo ?l) (increase (total-cost) (other-cost )) ) ) (:action decompress :parameters (?d - diver ?l - location) :precondition (and (at-diver ?d ?l) (cave-entrance ?l) ) :effect (and (not (at-diver ?d ?l)) (decompressing ?d) (not (in-water)) (increase (total-cost) (other-cost )) ) ) )
+ <end domain.pddl> <command>: Organize a cave diving expedition to photograph objectives in locations l3 and l4. Start by hiring divers who can work together without issues, considering their hiring costs and air tank capacities. Prepare and strategically place air tanks through the cave system for the divers to use. Ensure all divers decompress after their single trip into the cave. Achieve the goals with minimal total cost. There are five locations, six divers, 24 tanks including a dummy tank and five qunatity levels. Initially, all tanks are available and at max capacity. Next tanks are ordered, cave entrance is at the first location and all caves are connected in series. The tank quantities goes from increasing/decreasing. You can decide how the divers preclude and also all the costs. The goal is to have a photo at location 2 and 3 and all divers decompressed. <end command>",
+    "output": "set instance l0 location|set instance l1 location|set instance l2 location|set instance l3 location|set instance l4 location|set instance d0 diver|set instance d1 diver|set instance d2 diver|set instance d3 diver|set instance d4 diver|set instance d5 diver|set instance t0 tank|set instance t1 tank|set instance t2 tank|set instance t3 tank|set instance t4 tank|set instance t5 tank|set instance t6 tank|set instance t7 tank|set instance t8 tank|set instance t9 tank|set instance t10 tank|set instance t11 tank|set instance t12 tank|set instance t13 tank|set instance t14 tank|set instance t15 tank|set instance t16 tank|set instance t17 tank|set instance t18 tank|set instance t19 tank|set instance t20 tank|set instance t21 tank|set instance t22 tank|set instance dummy tank|set instance zero quantity|set instance one quantity|set instance two quantity|set instance three quantity|set instance four quantity|set predicate available d0|set predicate available d1|set predicate available d2|set predicate available d3|set predicate available d4|set predicate available d5|set predicate capacity d0 four|set predicate capacity d1 four|set predicate capacity d2 four|set predicate capacity d3 four|set predicate capacity d4 four|set predicate capacity d5 four|set predicate in-storage t0|set predicate next-tank t0 t1|set predicate next-tank t1 t2|set predicate next-tank t2 t3|set predicate next-tank t3 t4|set predicate next-tank t4 t5|set predicate next-tank t5 t6|set predicate next-tank t6 t7|set predicate next-tank t7 t8|set predicate next-tank t8 t9|set predicate next-tank t9 t10|set predicate next-tank t10 t11|set predicate next-tank t11 t12|set predicate next-tank t12 t13|set predicate next-tank t13 t14|set predicate next-tank t14 t15|set predicate next-tank t15 t16|set predicate next-tank t16 t17|set predicate next-tank t17 t18|set predicate next-tank t18 t19|set predicate next-tank t19 t20|set predicate next-tank t20 t21|set predicate next-tank t21 t22|set predicate next-tank t22 dummy|set predicate cave-entrance l0|set predicate connected l0 l1|set predicate connected l1 l0|set predicate connected l1 l2|set predicate connected l2 l1|set predicate connected l2 l3|set predicate connected l3 l2|set predicate connected l1 l4|set predicate connected l4 l1|set predicate next-quantity zero one|set predicate next-quantity one two|set predicate next-quantity two three|set predicate next-quantity three four|set predicate precludes d2 d3|set predicate precludes d2 d5|set predicate precludes d0 d1|set predicate precludes d3 d5|set predicate precludes d3 d4|set predicate precludes d5 d1|set cost hiring d0 43|set cost hiring d1 71|set cost hiring d2 10|set cost hiring d3 10|set cost hiring d4 74|set cost hiring d5 40|set cost other 1|set cost total-cost 0|set goal have-photo l3|set goal have-photo l4|set goal decompressing d0|set goal decompressing d1|set goal decompressing d2|set goal decompressing d3|set goal decompressing d4|set goal decompressing d5|"
+}
+
+// childsnack
+
+{
+    "input": "<domain.pddl>: (define (domain child-snack) (:requirements :typing :equality) (:types child bread-portion content-portion sandwich tray place) (:constants kitchen - place) (:predicates (at_kitchen_bread ?b - bread-portion) (at_kitchen_content ?c - content-portion) (at_kitchen_sandwich ?s - sandwich) (no_gluten_bread ?b - bread-portion) (no_gluten_content ?c - content-portion) (ontray ?s - sandwich ?t - tray) (no_gluten_sandwich ?s - sandwich) (allergic_gluten ?c - child) (not_allergic_gluten ?c - child) (served ?c - child) (waiting ?c - child ?p - place) (at ?t - tray ?p - place) (notexist ?s - sandwich) ) (:action make_sandwich_no_gluten :parameters (?s - sandwich ?b - bread-portion ?c - content-portion) :precondition (and (at_kitchen_bread ?b) (at_kitchen_content ?c) (no_gluten_bread ?b) (no_gluten_content ?c) (notexist ?s)) :effect (and (not (at_kitchen_bread ?b)) (not (at_kitchen_content ?c)) (at_kitchen_sandwich ?s) (no_gluten_sandwich ?s) (not (notexist ?s)) )) (:action make_sandwich :parameters (?s - sandwich ?b - bread-portion ?c - content-portion) :precondition (and (at_kitchen_bread ?b) (at_kitchen_content ?c) (notexist ?s) ) :effect (and (not (at_kitchen_bread ?b)) (not (at_kitchen_content ?c)) (at_kitchen_sandwich ?s) (not (notexist ?s)) )) (:action put_on_tray :parameters (?s - sandwich ?t - tray) :precondition (and (at_kitchen_sandwich ?s) (at ?t kitchen)) :effect (and (not (at_kitchen_sandwich ?s)) (ontray ?s ?t))) (:action serve_sandwich_no_gluten :parameters (?s - sandwich ?c - child ?t - tray ?p - place) :precondition (and (allergic_gluten ?c) (ontray ?s ?t) (waiting ?c ?p) (no_gluten_sandwich ?s) (at ?t ?p) ) :effect (and (not (ontray ?s ?t)) (served ?c))) (:action serve_sandwich :parameters (?s - sandwich ?c - child ?t - tray ?p - place) :precondition (and (not_allergic_gluten ?c) (waiting ?c ?p) (ontray ?s ?t) (at ?t ?p)) :effect (and (not (ontray ?s ?t)) (served ?c))) (:action move_tray :parameters (?t - tray ?p1 ?p2 - place) :precondition (and (at ?t ?p1)) :effect (and (not (at ?t ?p1)) (at ?t ?p2))) )
+ <end domain.pddl> <command>: In the kitchen, there are three portions each of bread and content to make sandwiches, with bread1 being gluten-free and content3 also gluten-free. There are two trays in the kitchen ready to use. Child1, who is allergic to gluten, is waiting at table2, while child2 and child3, who are not allergic to gluten, are waiting at table1 and table2, respectively. You need to prepare sandwiches, considering the dietary restrictions, and serve them to the children at their respective tables. There are four sandwiches to be made and named from sandw1 to sandw4, which currently do not exist. <end command>",
+    "output": "set instance child1 child|set instance child2 child|set instance child3 child|set instance bread1 bread-portion|set instance bread2 bread-portion|set instance bread3 bread-portion|set instance content1 content-portion|set instance content2 content-portion|set instance content3 content-portion|set instance tray1 tray|set instance tray2 tray|set instance table1 place|set instance table2 place|set instance table3 place|set instance sandw1 sandwich|set instance sandw2 sandwich|set instance sandw3 sandwich|set instance sandw4 sandwich|set predicate at tray1 kitchen|set predicate at tray2 kitchen|set predicate at_kitchen_bread bread1|set predicate at_kitchen_bread bread2|set predicate at_kitchen_bread bread3|set predicate at_kitchen_content content1|set predicate at_kitchen_content content2|set predicate at_kitchen_content content3|set predicate no_gluten_bread bread1|set predicate no_gluten_content content3|set predicate allergic_gluten child1|set predicate not_allergic_gluten child3|set predicate not_allergic_gluten child2|set predicate waiting child1 table2|set predicate waiting child2 table1|set predicate waiting child3 table2|set predicate notexist sandw1|set predicate notexist sandw2|set predicate notexist sandw3|set predicate notexist sandw4|set goal served child1|set goal served child2|set goal served child3|"
+}
+
+// citycar
+
+{
+    "input": "<domain.pddl>: (define (domain citycar) (:requirements :typing :equality :negative-preconditions :action-costs :conditional-effects) (:types car junction garage road ) (:predicates (same_line ?xy - junction ?xy2 - junction) ;; junctions in line (row) (diagonal ?x - junction ?y - junction ) ;; junctions in diagonal (on the map) (at_car_jun ?c - car ?x - junction) ;; a car is at the junction (at_car_road ?c - car ?x - road) ;; a car is in a road (starting ?c - car ?x - garage) ;; a car is in its initial position (arrived ?c - car ?x - junction) ;; a car arrived at destination (road_connect ?r1 - road ?xy - junction ?xy2 - junction) ;; there is a road that connects 2 junctions (clear ?xy - junction ) ;; the junction is clear (in_place ?x - road);; the road has been put in place (at_garage ?g - garage ?xy - junction ) ;; position of the starting garage ) (:functions (total-cost) - number) ;; move the car in a road: no limit on the number of cars on the road (:action move_car_in_road :parameters (?xy_initial - junction ?xy_final - junction ?machine - car ?r1 - road) :precondition (and (at_car_jun ?machine ?xy_initial) (not (= ?xy_initial ?xy_final)) (road_connect ?r1 ?xy_initial ?xy_final) (in_place ?r1) ) :effect (and (clear ?xy_initial) (at_car_road ?machine ?r1) (not (at_car_jun ?machine ?xy_initial) ) (increase (total-cost) 1) ) ) ;; move the car out of the road to a junction. Junction must be clear. (:action move_car_out_road :parameters (?xy_initial - junction ?xy_final - junction ?machine - car ?r1 - road) :precondition (and (at_car_road ?machine ?r1) (clear ?xy_final) (not (= ?xy_initial ?xy_final)) (road_connect ?r1 ?xy_initial ?xy_final) (in_place ?r1) ) :effect (and (at_car_jun ?machine ?xy_final) (not (clear ?xy_final)) (not (at_car_road ?machine ?r1) ) (increase (total-cost) 1) ) ) ;; car in the final position. They are removed from the network and position is cleared. (:action car_arrived :parameters (?xy_final - junction ?machine - car ) :precondition (and (at_car_jun ?machine ?xy_final) ) :effect (and (clear ?xy_final) (arrived ?machine ?xy_final) (not (at_car_jun ?machine ?xy_final)) ) ) ;; car moved from the initial garage in the network. (:action car_start :parameters (?xy_final - junction ?machine - car ?g - garage) :precondition (and (at_garage ?g ?xy_final) (starting ?machine ?g) (clear ?xy_final) ) :effect (and (not (clear ?xy_final)) (at_car_jun ?machine ?xy_final) (not (starting ?machine ?g)) ) ) ;; build diagonal road (:action build_diagonal_oneway :parameters (?xy_initial - junction ?xy_final - junction ?r1 - road) :precondition (and (clear ?xy_final) (not (= ?xy_initial ?xy_final)) (not (in_place ?r1)) (diagonal ?xy_initial ?xy_final) ) :effect (and (road_connect ?r1 ?xy_initial ?xy_final) (in_place ?r1) (increase (total-cost) 30) ) ) ;; build straight road (:action build_straight_oneway :parameters (?xy_initial - junction ?xy_final - junction ?r1 - road) :precondition (and (clear ?xy_final) (not (= ?xy_initial ?xy_final)) (same_line ?xy_initial ?xy_final) (not (in_place ?r1)) ) :effect (and (road_connect ?r1 ?xy_initial ?xy_final) (in_place ?r1) (increase (total-cost) 20) ) ) ;; remove a road (:action destroy_road :parameters (?xy_initial - junction ?xy_final - junction ?r1 - road) :precondition (and (road_connect ?r1 ?xy_initial ?xy_final) (not (= ?xy_initial ?xy_final)) (in_place ?r1) ) :effect (and (not (in_place ?r1)) (not (road_connect ?r1 ?xy_initial ?xy_final)) (increase (total-cost) 10) (forall (?c1 - car) (when (at_car_road ?c1 ?r1) (and (not (at_car_road ?c1 ?r1)) (at_car_jun ?c1 ?xy_initial))))))) <end domain.pddl> <command>: Begin with a grid layout of junctions from junction0-0 to junction2-2, forming a 3x3 matrix. Two cars, car0 and car1, initially start at garage0, located at junction0-1. The city allows for the construction and demolition of roads to facilitate car movement. Your objective is to guide both cars to their destination at junction2-1. You can build straight or diagonal roads between junctions, but each road's construction or demolition incurs specific costs. Ensure that the cars reach their destination with minimal total costs, leveraging the ability to build and remove roads as needed. <end command>",
+    "output": "set instance junction0-0 junction|set instance junction0-1 junction|set instance junction0-2 junction|set instance junction1-0 junction|set instance junction1-1 junction|set instance junction1-2 junction|set instance junction2-0 junction|set instance junction2-1 junction|set instance junction2-2 junction|set instance car0 car|set instance car1 car|set instance garage0 garage|set instance road0 road|set instance road1 road|set instance road2 road|set instance road3 road|set instance road4 road|set predicate clear junction0-0|set predicate clear junction0-1|set predicate clear junction0-2|set predicate clear junction1-0|set predicate clear junction1-1|set predicate clear junction1-2|set predicate clear junction2-0|set predicate clear junction2-1|set predicate clear junction2-2|set predicate same_line junction0-0 junction0-1|set predicate same_line junction0-1 junction0-0|set predicate same_line junction0-1 junction0-2|set predicate same_line junction0-2 junction0-1|set predicate same_line junction1-0 junction1-1|set predicate same_line junction1-1 junction1-0|set predicate same_line junction1-1 junction1-2|set predicate same_line junction1-2 junction1-1|set predicate same_line junction2-0 junction2-1|set predicate same_line junction2-1 junction2-0|set predicate same_line junction2-1 junction2-2|set predicate same_line junction2-2 junction2-1|set predicate same_line junction0-0 junction1-0|set predicate same_line junction1-0 junction0-0|set predicate same_line junction1-0 junction2-0|set predicate same_line junction2-0 junction1-0|set predicate same_line junction0-1 junction1-1|set predicate same_line junction1-1 junction0-1|set predicate same_line junction1-1 junction2-1|set predicate same_line junction2-1 junction1-1|set predicate same_line junction0-2 junction1-2|set predicate same_line junction1-2 junction0-2|set predicate same_line junction1-2 junction2-2|set predicate same_line junction2-2 junction1-2|set predicate diagonal junction0-0 junction1-1|set predicate diagonal junction1-1 junction0-0|set predicate diagonal junction0-1 junction1-0|set predicate diagonal junction1-0 junction0-1|set predicate diagonal junction0-1 junction1-2|set predicate diagonal junction1-2 junction0-1|set predicate diagonal junction0-2 junction1-1|set predicate diagonal junction1-1 junction0-2|set predicate diagonal junction1-0 junction2-1|set predicate diagonal junction2-1 junction1-0|set predicate diagonal junction1-1 junction2-0|set predicate diagonal junction2-0 junction1-1|set predicate diagonal junction1-1 junction2-2|set predicate diagonal junction2-2 junction1-1|set predicate diagonal junction1-2 junction2-1|set predicate diagonal junction2-1 junction1-2|set predicate at_garage garage0 junction0-1|set predicate starting car0 garage0|set predicate starting car1 garage0|set cost total-cost 0|set goal arrived car0 junction2-1|set goal arrived car1 junction2-1|"
+}
+
+// depots
+
+{
+    "input": "<domain.pddl>: (define (domain depots) (:requirements :strips :typing) (:types place locatable - object depot distributor - place truck hoist surface - locatable pallet crate - surface) (:predicates (at ?x - locatable ?y - place) (on ?x - crate ?y - surface) (in ?x - crate ?y - truck) (lifting ?x - hoist ?y - crate) (available ?x - hoist) (clear ?x - surface)) (:action Drive :parameters (?x - truck ?y - place ?z - place) :precondition (and (at ?x ?y)) :effect (and (not (at ?x ?y)) (at ?x ?z))) (:action Lift :parameters (?x - hoist ?y - crate ?z - surface ?p - place) :precondition (and (at ?x ?p) (available ?x) (at ?y ?p) (on ?y ?z) (clear ?y)) :effect (and (not (at ?y ?p)) (lifting ?x ?y) (not (clear ?y)) (not (available ?x)) (clear ?z) (not (on ?y ?z)))) (:action Drop :parameters (?x - hoist ?y - crate ?z - surface ?p - place) :precondition (and (at ?x ?p) (at ?z ?p) (clear ?z) (lifting ?x ?y)) :effect (and (available ?x) (not (lifting ?x ?y)) (at ?y ?p) (not (clear ?z)) (clear ?y)(on ?y ?z))) (:action Load :parameters (?x - hoist ?y - crate ?z - truck ?p - place) :precondition (and (at ?x ?p) (at ?z ?p) (lifting ?x ?y)) :effect (and (not (lifting ?x ?y)) (in ?y ?z) (available ?x))) (:action Unload :parameters (?x - hoist ?y - crate ?z - truck ?p - place) :precondition (and (at ?x ?p) (at ?z ?p) (available ?x) (in ?y ?z)) :effect (and (not (in ?y ?z)) (not (available ?x)) (lifting ?x ?y))) ) <end domain.pddl> <command>: Initiate a logistics operation involving one depot and two distributors. You have at your disposal two trucks, three hoists,five pallets and two crates. Pallet one and four are at the depot, pallet two and five is a the first distributor while pallet three is at the second distributor. Pallets three, four and five and crates are cleared at the beginning. The two trucks start at the first distributor. All hoists are available and the three of them are distributed around the depot and the two distributors. First crate is at the depot placed on the first pallet. The second crate is at the first distributor and placed on the second pallet. Your task is to ensure that the first crate ends up on pallet four at the depot, and that the second crate end up on the fifth pallet, also initially at Distributor0. Utilize the trucks and hoists available at each location to move the crates efficiently, respecting the constraint that crates must be lifted from their current pallets before being moved or loaded into trucks. <end command>",
+    "output": "set instance depot0 depot|set instance distributor0 distributor|set instance distributor1 distributor|set instance truck0 truck|set instance truck1 truck|set instance pallet0 pallet|set instance pallet1 pallet|set instance pallet2 pallet|set instance pallet3 pallet|set instance pallet4 pallet|set instance crate0 crate|set instance crate1 crate|set instance hoist0 hoist|set instance hoist1 hoist|set instance hoist2 hoist|set predicate at pallet0 depot0|set predicate clear crate0|set predicate at pallet1 distributor0|set predicate clear crate1|set predicate at pallet2 distributor1|set predicate clear pallet2|set predicate at pallet3 depot0|set predicate clear pallet3|set predicate at pallet4 distributor0|set predicate clear pallet4|set predicate at truck0 distributor0|set predicate at truck1 distributor0|set predicate at hoist0 depot0|set predicate available hoist0|set predicate at hoist1 distributor0|set predicate available hoist1|set predicate at hoist2 distributor1|set predicate available hoist2|set predicate at crate0 depot0|set predicate on crate0 pallet0|set predicate at crate1 distributor0|set predicate on crate1 pallet1|set goal on crate0 pallet3|set goal on crate1 pallet4|"
+}
+
+// driverlog
+
+{
+    "input": "<domain.pddl>: (define (domain driverlog) (:requirements :typing) (:types location locatable - object driver truck obj - locatable ) (:predicates (at ?obj - locatable ?loc - location) (in ?obj1 - obj ?obj - truck) (driving ?d - driver ?v - truck) (link ?x ?y - location) (path ?x ?y - location) (empty ?v - truck) ) (:action LOAD-TRUCK :parameters (?obj - obj ?truck - truck ?loc - location) :precondition (and (at ?truck ?loc) (at ?obj ?loc)) :effect (and (not (at ?obj ?loc)) (in ?obj ?truck))) (:action UNLOAD-TRUCK :parameters (?obj - obj ?truck - truck ?loc - location) :precondition (and (at ?truck ?loc) (in ?obj ?truck)) :effect (and (not (in ?obj ?truck)) (at ?obj ?loc))) (:action BOARD-TRUCK :parameters (?driver - driver ?truck - truck ?loc - location) :precondition (and (at ?truck ?loc) (at ?driver ?loc) (empty ?truck)) :effect (and (not (at ?driver ?loc)) (driving ?driver ?truck) (not (empty ?truck)))) (:action DISEMBARK-TRUCK :parameters (?driver - driver ?truck - truck ?loc - location) :precondition (and (at ?truck ?loc) (driving ?driver ?truck)) :effect (and (not (driving ?driver ?truck)) (at ?driver ?loc) (empty ?truck))) (:action DRIVE-TRUCK :parameters (?truck - truck ?loc-from - location ?loc-to - location ?driver - driver) :precondition (and (at ?truck ?loc-from) (driving ?driver ?truck) (link ?loc-from ?loc-to)) :effect (and (not (at ?truck ?loc-from)) (at ?truck ?loc-to))) (:action WALK :parameters (?driver - driver ?loc-from - location ?loc-to - location) :precondition (and (at ?driver ?loc-from) (path ?loc-from ?loc-to)) :effect (and (not (at ?driver ?loc-from)) (at ?driver ?loc-to))) ) <end domain.pddl> <command>: Commence a logistics operation with two drivers, two trucks, and two packages distributed across locations s0 and s1. Driver1 and Driver2 start at s0, while Truck1 and Truck2, both empty, are at s1. Package1 starts at s0, and Package2 at s1. The locations s0 and s1 are connected directly and also through a path via p0-1. Your task is to orchestrate the drivers and trucks so that Driver1 ends up back at s0, Driver2 at s1, Truck1 and Truck2 at s0, with Package1 moved to s1 and Package2 to s0, utilizing the paths and links available between the locations. s0 is linked to s1 and vice versa. There are paths from s0 to p0-1, s1 to p0-1 and vice versa. <end command>",
+    "output": "set instance driver1 driver|set instance driver2 driver|set instance truck1 truck|set instance truck2 truck|set instance package1 obj|set instance package2 obj|set instance s0 location|set instance s1 location|set instance p0-1 location|set instance p1-0 location|set predicate at driver1 s0|set predicate at driver2 s0|set predicate at truck1 s1|set predicate empty truck1|set predicate at truck2 s1|set predicate empty truck2|set predicate at package1 s0|set predicate at package2 s1|set predicate path s0 p0-1|set predicate path p0-1 s0|set predicate path s1 p0-1|set predicate path p0-1 s1|set predicate link s0 s1|set predicate link s1 s0|set goal at driver1 s0|set goal at driver2 s1|set goal at truck1 s0|set goal at truck2 s0|set goal at package1 s1|set goal at package2 s0|"
+}
+
+// ferry
+
+{
+    "input": "<domain.pddl>: (define (domain ferry) (:predicates (not-eq ?x ?y) (car ?c) (location ?l) (at-ferry ?l) (at ?c ?l) (empty-ferry) (on ?c)) (:action sail :parameters (?from ?to) :precondition (and (not-eq ?from ?to) (location ?from) (location ?to) (at-ferry ?from)) :effect (and (at-ferry ?to) (not (at-ferry ?from)))) (:action board :parameters (?car ?loc) :precondition (and (car ?car) (location ?loc) (at ?car ?loc) (at-ferry ?loc) (empty-ferry)) :effect (and (on ?car) (not (at ?car ?loc)) (not (empty-ferry)))) (:action debark :parameters (?car ?loc) :precondition (and (car ?car) (location ?loc) (on ?car) (at-ferry ?loc)) :effect (and (at ?car ?loc) (empty-ferry) (not (on ?car))))) <end domain.pddl> <command>: Initiate a ferry operation with three locations (l0, l1, l2) and five cars (c0 to c4). Initially, cars c0, c1, and c3 are at location l1, car c2 is at l0, and car c4 is at l2. The ferry is currently at l2 and is empty. Your task is to organize the cars according to the following goals: keep cars c0 and c1 at l1, move car c2 to l0, move car c3 to l0, and bring car c4 to l1. Use the ferry to transport the cars between the locations, ensuring to respect the ferry's capacity of carrying one car at a time. <end command>",
+    "output": "set instance l0 location|set instance l1 location|set instance l2 location|set instance c0 car|set instance c1 car|set instance c2 car|set instance c3 car|set instance c4 car|set predicate location l0|set predicate location l1|set predicate location l2|set predicate car c0|set predicate car c1|set predicate car c2|set predicate car c3|set predicate car c4|set predicate not-eq l0 l1|set predicate not-eq l1 l0|set predicate not-eq l0 l2|set predicate not-eq l2 l0|set predicate not-eq l1 l2|set predicate not-eq l2 l1|set predicate empty-ferry|set predicate at c0 l1|set predicate at c1 l1|set predicate at c2 l0|set predicate at c3 l1|set predicate at c4 l2|set predicate at-ferry l2|set goal at c0 l1|set goal at c1 l1|set goal at c2 l0|set goal at c3 l0|set goal at c4 l1|"
+
+}
+
+{
+    "input": "<domain.pddl>: <end domain.pddl> <command>: <end command>",
+    "output": ""
+}
+
+{
+    "input": "<domain.pddl>: <end domain.pddl> <command>: <end command>",
+    "output": ""
+}
+
+{
+    "input": "<domain.pddl>: <end domain.pddl> <command>: <end command>",
+    "output": ""
+}
+
+{
+    "input": "<domain.pddl>: <end domain.pddl> <command>: <end command>",
+    "output": ""
+}
+
+{
+    "input": "<domain.pddl>: <end domain.pddl> <command>: <end command>",
+    "output": ""
+}
+
+{
+    "input": "<domain.pddl>: <end domain.pddl> <command>: <end command>",
+    "output": ""
+}
+
+{
+    "input": "<domain.pddl>: <end domain.pddl> <command>: <end command>",
+    "output": ""
+}
+
+{
+    "input": "<domain.pddl>: <end domain.pddl> <command>: <end command>",
+    "output": ""
+}
+
+{
+    "input": "<domain.pddl>: <end domain.pddl> <command>: <end command>",
+    "output": ""
+}
+
+{
+    "input": "<domain.pddl>: <end domain.pddl> <command>: <end command>",
+    "output": ""
+}
+
+{
+    "input": "<domain.pddl>: <end domain.pddl> <command>: <end command>",
+    "output": ""
+}
+
+{
+    "input": "<domain.pddl>: <end domain.pddl> <command>: <end command>",
+    "output": ""
+}
+
+{
+    "input": "<domain.pddl>: <end domain.pddl> <command>: <end command>",
+    "output": ""
+}
+
+{
+    "input": "<domain.pddl>: <end domain.pddl> <command>: <end command>",
+    "output": ""
+}
+
+{
+    "input": "<domain.pddl>: <end domain.pddl> <command>: <end command>",
+    "output": ""
+}
+
+{
+    "input": "<domain.pddl>: <end domain.pddl> <command>: <end command>",
+    "output": ""
+}
+
+{
+    "input": "<domain.pddl>: <end domain.pddl> <command>: <end command>",
+    "output": ""
+}
+
+{
+    "input": "<domain.pddl>: <end domain.pddl> <command>: <end command>",
+    "output": ""
+}
+
+{
+    "input": "<domain.pddl>: <end domain.pddl> <command>: <end command>",
+    "output": ""
+}
+
+{
+    "input": "<domain.pddl>: <end domain.pddl> <command>: <end command>",
+    "output": ""
+}
+
+{
+    "input": "<domain.pddl>: <end domain.pddl> <command>: <end command>",
+    "output": ""
+}
+
+{
+    "input": "<domain.pddl>: <end domain.pddl> <command>: <end command>",
+    "output": ""
+}
+
+{
+    "input": "<domain.pddl>: <end domain.pddl> <command>: <end command>",
+    "output": ""
+}
+
+{
+    "input": "<domain.pddl>: <end domain.pddl> <command>: <end command>",
+    "output": ""
+}
+
+{
+    "input": "<domain.pddl>: <end domain.pddl> <command>: <end command>",
+    "output": ""
+}
+
+{
+    "input": "<domain.pddl>: <end domain.pddl> <command>: <end command>",
+    "output": ""
+}
+
+{
+    "input": "<domain.pddl>: <end domain.pddl> <command>: <end command>",
+    "output": ""
+}
+
+{
+    "input": "<domain.pddl>: <end domain.pddl> <command>: <end command>",
+    "output": ""
+}
+
+{
+    "input": "<domain.pddl>: <end domain.pddl> <command>: <end command>",
+    "output": ""
+}
+
+{
+    "input": "<domain.pddl>: <end domain.pddl> <command>: <end command>",
+    "output": ""
+}
+
+{
+    "input": "<domain.pddl>: <end domain.pddl> <command>: <end command>",
+    "output": ""
+}
+
+{
+    "input": "<domain.pddl>: <end domain.pddl> <command>: <end command>",
+    "output": ""
+}
+
+{
+    "input": "<domain.pddl>: <end domain.pddl> <command>: <end command>",
+    "output": ""
+}
+
+{
+    "input": "<domain.pddl>: <end domain.pddl> <command>: <end command>",
+    "output": ""
+}
+
+{
+    "input": "<domain.pddl>: <end domain.pddl> <command>: <end command>",
+    "output": ""
+}
+
+{
+    "input": "<domain.pddl>: <end domain.pddl> <command>: <end command>",
+    "output": ""
+}
+
+{
+    "input": "<domain.pddl>: <end domain.pddl> <command>: <end command>",
+    "output": ""
+}
+
+{
+    "input": "<domain.pddl>: <end domain.pddl> <command>: <end command>",
+    "output": ""
+}
+
+{
+    "input": "<domain.pddl>: <end domain.pddl> <command>: <end command>",
+    "output": ""
+}
