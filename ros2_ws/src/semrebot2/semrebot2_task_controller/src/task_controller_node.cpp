@@ -78,9 +78,9 @@ void TaskControllerNode::get_problem_specific_knowledge(std::string &command){
             }
         }
         
-        if(edited_command.find("set instance") == 0){
+        if(edited_command.find("instance") == 0){
             // Extract instance name and type
-            std::string instance = edited_command.substr(std::string("set instance ").length());
+            std::string instance = edited_command.substr(std::string("instance ").length());
             auto separator_position = instance.find(" ");
             std::string name = instance.substr(0, separator_position);
             std::string type = instance.substr(separator_position + 1);
@@ -93,9 +93,9 @@ void TaskControllerNode::get_problem_specific_knowledge(std::string &command){
                 return;
             }
 
-        }else if(edited_command.find("set predicate") == 0){
+        }else if(edited_command.find("predicate") == 0){
             // extract predicate
-            std::string full_predicate = edited_command.substr(std::string("set predicate ").length());
+            std::string full_predicate = edited_command.substr(std::string("predicate ").length());
             auto first_separator_position = full_predicate.find(" ");
             
             std::string predicate = full_predicate.substr(0, first_separator_position);
@@ -114,9 +114,9 @@ void TaskControllerNode::get_problem_specific_knowledge(std::string &command){
                 problem_expert_->addPredicate(plansys2::Predicate("("+predicate+" "+predicate_instance+")" ));
             }
             
-        }else if(edited_command.find("set goal") == 0){
+        }else if(edited_command.find("goal") == 0){
             // extract goals and append to goal_container
-            std::string single_goal = edited_command.substr(std::string("set goal ").length());
+            std::string single_goal = edited_command.substr(std::string("goal ").length());
             auto first_separator_position = single_goal.find(" ");
             auto second_separator_position = single_goal.find(" ", first_separator_position + 1);
 
