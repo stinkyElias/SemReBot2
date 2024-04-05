@@ -1,8 +1,13 @@
+idun = True
+
 import os
 import torch
 import json
 import gc
 import time
+
+if idun:
+    os.environ['HF_HOME'] = '/cluster/work/eliashk/models/mistral/4-bit'
 
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 
@@ -35,17 +40,23 @@ for i in range(len(test_data['tests'])):
 
     system_prompt = 'You are a helpful PDDL assistant that will list up the available instances, predicates and goals for the given domain and natural language command. You can only answer in the desired format.'
 
-    results_file = 'mistral_results.txt'
+results_file = 'mistral_results.txt'
 
 if os.path.exists(results_file):
     os.remove(results_file)
 
-header = "******************** Mistral Large Language Model test ********************\n"
-underline = "___________________________________________________________________________\n"
+device_name = torch.cuda.get_device_properties(device).name
+device_capacity = round(torch.cuda.get_device_properties(device).total_memory/(1024**2), 0)
 
-with open(results_file, 'a') as f:
-    f.write(header)
-    f.write(underline)
+header =      "                      Mistral Large Language Model test                    \n"
+underline =   "===========================================================================\n"
+device_info =f"  Test completed on device {device_name} with {device_capacity} MB memory  \n" 
+
+with open(results_file, 'a') as outfile:
+    outfile.write(header)
+    outfile.write(underline)
+    outfile.write(device_info)
+    outfile.write(underline)
 
 nf4_config = BitsAndBytesConfig(
     load_in_4bit=True,
@@ -71,7 +82,7 @@ def compute_accuracy(expected, generated):
     else:
         return round(generated/expected, 2)
     
-for i in range(len(shot_data['shots'])//2):
+for i in range(len(shot_data['shots'])):
     model_4bit = AutoModelForCausalLM.from_pretrained(model_id, quantization_config=nf4_config)
     memory_allocated_loaded = round(torch.cuda.memory_allocated(device)/(1024**2), 5)               # MB
 

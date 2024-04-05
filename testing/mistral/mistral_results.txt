@@ -1,4 +1,4 @@
                       Mistral Large Language Model test                    
 ===========================================================================
-  Test completed on device NVIDIA GeForce RTX 3060 with 12036.0 MB memory  
+  Test completed on device NVIDIA A100 80GB PCIe with 81050.0 MB memory  
 ===========================================================================
