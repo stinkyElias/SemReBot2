@@ -13,8 +13,6 @@
     
     (robot_at ?robot - robot ?zone - zone)
     (pallet_at ?pallet - pallet ?zone - zone)
-
-    (is_pallet ?pallet - pallet)
     
     (pallet_not_moved ?pallet - pallet)
 
