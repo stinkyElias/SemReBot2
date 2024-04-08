@@ -10,84 +10,84 @@
         },
 
         {
-            "domain": "",
-            "command": "",
-            "solution": "",
-            "num_instances": null,
-            "num_predicates": null,
-            "num_goals": null
+            "domain": "(:types worker task location) (:predicates (available ?worker - worker) (assigned ?task - task ?worker - worker) (located ?task - task ?location - location) (completed ?task - task))",
+            "command": "Assign the new tasks to workers efficiently. Task1 is at Location1, Task2 at Location2. Worker1 starts available.",
+            "solution": "instance worker1 worker|instance task1 task|instance task2 task|instance location1 location|instance location2 location|predicate available worker1|predicate located task1 location1|predicate located task2 location2|goal assigned task1 worker1|goal assigned task2 worker1|",
+            "num_instances": 5,
+            "num_predicates": 3,
+            "num_goals": 2
         },
 
         {
-            "domain": "",
-            "command": "",
-            "solution": "",
-            "num_instances": null,
-            "num_predicates": null,
-            "num_goals": null
+            "domain": "(:types drone package zone) (:predicates (drone_at ?drone - drone ?zone - zone) (package_at ?package - package ?zone - zone) (delivery_pending ?package - package))",
+            "command": "A drone must deliver two packages from ZoneA. Start from ZoneA to deliver Package1 to ZoneB, then Package2 to ZoneC.",
+            "solution": "instance drone1 drone|instance package1 package|instance package2 package|instance zoneA zone|instance zoneB zone|instance zoneC zone|predicate drone_at drone1 zoneA|predicate package_at package1 zoneA|predicate package_at package2 zoneA|predicate delivery_pending package1|predicate delivery_pending package2|goal package_at package1 zoneB|goal package_at package2 zoneC|",
+            "num_instances": 6,
+            "num_predicates": 5,
+            "num_goals": 2
         },
 
         {
-            "domain": "",
-            "command": "",
-            "solution": "",
-            "num_instances": null,
-            "num_predicates": null,
-            "num_goals": null
+            "domain": "(:types machine product factory) (:predicates (machine_operational ?machine - machine) (product_needed ?product - product) (product_assembled ?product - product) (located ?machine - machine ?factory - factory))",
+            "command": "Ensure Machine1 in Factory1 assembles Product1. The product is needed urgently.",
+            "solution": "instance machine1 machine|instance product1 product|instance factory1 factory|predicate machine_operational machine1|predicate product_needed product1|predicate located machine1 factory1|goal product_assembled product1|",
+            "num_instances": 3,
+            "num_predicates": 3,
+            "num_goals": 1
         },
 
         {
-            "domain": "",
-            "command": "",
-            "solution": "",
-            "num_instances": null,
-            "num_predicates": null,
-            "num_goals": null
+            "domain": "(:types agent file server) (:predicates (file_stored ?file - file ?server - server) (file_accessed ?file - file ?agent - agent) (not_authenticated ?agent - agent ?file - file))",
+            "command": "Agent1 needs to access File1 stored in Server1. Ensure Agent1 is authenticated and can access the file.",
+            "solution": "instance agent1 agent|instance file1 file|instance server1 server|predicate file_stored file1 server1|predicate not_authenticated agent1 file1|goal file_accessed file1 agent1|",
+            "num_instances": 3,
+            "num_predicates": 2,
+            "num_goals": 1
         },
 
         {
-            "domain": "",
-            "command": "",
-            "solution": "",
-            "num_instances": null,
-            "num_predicates": null,
-            "num_goals": null
+            "domain": "(:types vehicle repair_shop part) (:predicates (vehicle_needs_repair ?vehicle - vehicle) (part_in_stock ?part - part ?repair_shop - repair_shop) (repair_completed ?vehicle - vehicle))",
+            "command": "Vehicle1 needs repairs with Part1. Part1 is available in Shop1. Complete the repair.",
+            "solution": "instance vehicle1 vehicle|instance part1 part|instance shop1 repair_shop|predicate vehicle_needs_repair vehicle1|predicate part_in_stock part1 shop1|goal repair_completed vehicle1|",
+            "num_instances": 3,
+            "num_predicates": 2,
+            "num_goals": 1
         },
 
         {
-            "domain": "",
-            "command": "",
-            "solution": "",
-            "num_instances": null,
-            "num_predicates": null,
-            "num_goals": null
+            "domain": "(:types scientist experiment lab) (:predicates (experiment_pending ?experiment - experiment) (experiment_conducted ?experiment - experiment) (scientist_available ?scientist - scientist) (lab_equipped ?lab - lab))",
+            "command": "Scientist1 is in Lab1 while scientist is in Lab2. Since only lab1 is fully equipped, experiment 2 have to be done in Lab1, while experiment 1 have to be done in lab 2. As scientist1 is occupied, make sure scientist 2 do the experiments.",
+            "solution": "instance scientist1 scientist|instance scientist2 scientist|instance lab1 lab|instance lab2 lab|instance experiment1 experiment|instance experiment2 experiment|predicate experiment_pending experiment1|predicate experiment_pending experiment2|predicate scientist_available scientist2|predicate lab_equipped lab1|goal experiment_conducted experiment1 scientist2 lab2|goal experiment_conducted experiment2 scientist2 lab1|",
+            "num_instances": 6,
+            "num_predicates": 4,
+            "num_goals": 2
         },
 
         {
-            "domain": "",
-            "command": "",
-            "solution": "",
-            "num_instances": null,
-            "num_predicates": null,
-            "num_goals": null
+            "domain": "(:types book library borrower) (:predicates (unknown_availability ?book - book) (unknown_registered ?borrower - borrower)(book_available ?book - book) (book_borrowed ?book - book) (borrower_registered ?borrower - borrower))",
+            "command": "Borrower1 wants to borrow Book1 from Library1. If the book is available and the borrower is registered, let the borrower borrow the book.",
+            "solution": "instance book1 book|instance library1 library|instance borrower1 borrower|predicate unknown_availability book1|predicate unknown_registered borrower1|goal borrower_registered borrower1|goal book_available book1|goal book_borrowed book1|",
+            "num_instances": 3,
+            "num_predicates": 2,
+            "num_goals": 3
         },
 
         {
-            "domain": "",
-            "command": "",
-            "solution": "",
-            "num_instances": null,
-            "num_predicates": null,
-            "num_goals": null
+            "domain": "(:types flower garden gardener) (:predicates (flower_blooming ?flower - flower) (gardener_assigned ?gardener - gardener) (garden_maintained ?garden - garden))",
+            "command": "Gardener1 takes care of Garden1 where Flower1 is blooming. Ensure the garden is well-maintained.",
+            "solution": "instance flower1 flower|instance garden1 garden|instance gardener1 gardener|predicate flower_blooming flower1|predicate gardener_assigned gardener1|goal garden_maintained garden1|",
+            "num_instances": 3,
+            "num_predicates": 2,
+            "num_goals": 1
         },
 
         {
-            "domain": "",
-            "command": "",
-            "solution": "",
-            "num_instances": null,
-            "num_predicates": null,
-            "num_goals": null
+            "domain": "(:types agent item destination weather) (:predicates (predicate unknown_weather weather1) (item_ready ?item - item) (agent_assigned ?agent - agent ?item - item) (destination_set ?item - item ?destination - destination) (item_delivered ?item - item) (safe_to_travel ?agent - agent))",
+            "command": "Agent1 is assigned to deliver Item1 to Destination1. However, the delivery can only proceed if the weather condition is safe. Check if it is safe to travel and make sure the agent delivers the item.",
+            "solution": "instance agent1 agent|instance item1 item|instance destination1 destination|instance weather1 weather|predicate unknown_weather weather1|predicate agent_assigned agent1 item1|predicate item_ready item1|predicate destination_set item1 destination1|goal safe_to_travel agent1|goal item_delivered|",
+            "num_instances": 4,
+            "num_predicates": 4,
+            "num_goals": 2
         }
     ]
 }
