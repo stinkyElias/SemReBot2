@@ -1,5 +1,3 @@
-idun = False
-
 import os
 import torch
 import json
@@ -7,8 +5,52 @@ import gc
 import time
 import sys
 
-if idun:
+if sys.argv[2] == '4bit':
+    _4bit = True
+    _8bit = False
+    half_precision = False
+    full_precision = False
+
+    results_file = 'mistral_results_4bit.txt'
+    precision = '4-bit'
+elif sys.argv[2] == '8bit':
+    _4bit = False
+    _8bit = True
+    half_precision = False
+    full_precision = False
+
+    results_file = 'mistral_results_8bit.txt'
+    precision = '8-bit'
+elif sys.argv[2] == 'half':
+    _4bit = False
+    _8bit = False
+    half_precision = True
+    full_precision = False
+
+    results_file = 'mistral_results_half_precision.txt'
+    precision = 'half precision'
+elif sys.argv[2] == 'full':
+    _4bit = False
+    _8bit = False
+    half_precision = False
+    full_precision = True
+
+    results_file = 'mistral_results_full_precision.txt'
+    precision = 'full precision'
+
+if sys.argv[3] == 'idun':
+    idun = True
+elif sys.argv[3] == 'local':
+    idun = False
+
+if idun and _4bit:
     os.environ['HF_HOME'] = '/cluster/work/eliashk/models/mistral/4-bit'
+elif idun and _8bit:
+    os.environ['HF_HOME'] = '/cluster/work/eliashk/models/mistral/8-bit'
+elif idun and half_precision:
+    os.environ['HF_HOME'] = '/cluster/work/eliashk/models/mistral/half_precision'
+elif idun and full_precision:
+    os.environ['HF_HOME'] = '/cluster/work/eliashk/models/mistral/full_precision'
 
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 
@@ -41,8 +83,6 @@ for i in range(len(test_data['tests'])):
 
 system_prompt = 'You are a helpful PDDL assistant that will list up the available instances, predicates and goals for the given domain and natural language command. You can only answer in the desired format.'
 
-results_file = 'mistral_results.txt'
-
 underline =   "===========================================================================\n"
 
 nf4_config = BitsAndBytesConfig(
@@ -50,6 +90,10 @@ nf4_config = BitsAndBytesConfig(
     bnb_4bit_quant_type='nf4',
     bnb_4bit_use_double_quant=True,
     bnb_4bit_compute_dtype=torch.bfloat16,
+)
+
+nf8_config = BitsAndBytesConfig(
+    load_in_8bit=True,
 )
 
 messages = [
@@ -73,7 +117,15 @@ test_set = int(sys.argv[1])
 number_of_max_new_tokens = 250  # default
 
 for i in range((len(shot_data['shots'])//2)+1, len(shot_data['shots'])):
-    model_4bit = AutoModelForCausalLM.from_pretrained(model_id, quantization_config=nf4_config)
+    if _4bit:
+        model = AutoModelForCausalLM.from_pretrained(model_id, quantization_config=nf4_config)
+    elif _8bit:
+        model = AutoModelForCausalLM.from_pretrained(model_id, quantization_config=nf8_config)
+    elif half_precision:
+        model = AutoModelForCausalLM.from_pretrained(model_id, dtype=torch.float16)
+    elif full_precision:
+        model = AutoModelForCausalLM.from_pretrained(model_id)
+    
     memory_allocated_loaded = round(torch.cuda.memory_allocated(device)/(1024**2), 5)               # MB
 
     allocated.append(memory_allocated_loaded)
@@ -104,7 +156,7 @@ for i in range((len(shot_data['shots'])//2)+1, len(shot_data['shots'])):
     model_input_size.append(round((model_inputs.element_size()*model_inputs.nelement())/(1024**2), 5))    # MB
     
     with torch.no_grad():
-        generated_ids = model_4bit.generate(
+        generated_ids = model.generate(
             model_inputs,
             pad_token_id=tokenizer.eos_token_id,
             max_new_tokens=number_of_max_new_tokens,
@@ -179,7 +231,7 @@ for i in range((len(shot_data['shots'])//2)+1, len(shot_data['shots'])):
 
     # write the results to file
     result = {
-        'Model': model_id + '-4bit',
+        'Model': model_id + f' --- {precision}',
         'Max new tokens': number_of_max_new_tokens,
         'Test set #': test_set + 1,
         'Number of examples': number_of_examples,
@@ -202,10 +254,10 @@ for i in range((len(shot_data['shots'])//2)+1, len(shot_data['shots'])):
             outfile.write(f'{key:<25}: {value}\n')
         outfile.write(underline)
 
-    print(f'Mistral 7B instruct 4-bit finished on test {test_set + 1} with {number_of_examples} examples.')
+    print(f'Mistral 7B instruct {precision} finished on test {test_set + 1} with {number_of_examples} examples.')
 
     # delete model to free up GPU memory
-    del model_4bit
+    del model
     del model_inputs
     del generated_ids
     torch.cuda.empty_cache()
