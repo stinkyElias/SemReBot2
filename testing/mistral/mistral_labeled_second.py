@@ -57,7 +57,7 @@ elif idun and full_precision:
 
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 
-device = 'cuda:0'
+device = 'cuda'
 model_id = 'mistralai/Mistral-7B-Instruct-v0.2'
 tokenizer = AutoTokenizer.from_pretrained(model_id)
 
@@ -129,6 +129,7 @@ for i in range((len(shot_data['shots'])//2)+1, len(shot_data['shots'])):
         model = AutoModelForCausalLM.from_pretrained(model_id, dtype=torch.float16)
     elif full_precision:
         model = AutoModelForCausalLM.from_pretrained(model_id)
+    
     
     memory_allocated_loaded = round(torch.cuda.memory_allocated(device)/(1024**2), 5)               # MB
 

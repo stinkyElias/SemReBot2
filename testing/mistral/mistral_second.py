@@ -54,7 +54,7 @@ elif idun and full_precision:
 
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 
-device = 'cuda:0'
+device = 'cuda'
 model_id = 'mistralai/Mistral-7B-Instruct-v0.2'
 tokenizer = AutoTokenizer.from_pretrained(model_id)
 
