@@ -17,8 +17,7 @@ env=$2
 
 env="idun"
 
-# for precision in "4bit" "8bit" "half" "full"
-for precision in "8bit" "half" "full"
+for precision in "4bit" "8bit" "half" "full"
 do   
    for i in {0..9}   
    do
