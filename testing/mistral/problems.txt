@@ -1,0 +1,40 @@
+# schedule
+# rover
+# childsnack
+# spanner
+# depots
+# miconic
+# citycar
+satellite
+depots2
+parking
+agricola
+# briefcase
+zenotravel
+fridge
+grid-visit-all
+transport
+# hiking
+# tpp
+tyreworld
+maintenance
+# assembly
+# driverlog
+spider
+mystery
+sokoban
+transport
+freecell
+elevators
+woodworking
+termes
+nurikabe
+tetris
+floortile
+matchcellar
+goldminer
+tidybot
+mprime
+# barman
+grippers
+# cavediving
