@@ -58,6 +58,69 @@
             "domain": "(:predicates (not-eq ?x ?y) (car ?c) (location ?l) (at-ferry ?l) (at ?c ?l) (empty-ferry) (on ?c))",
             "input": "Initiate a ferry operation with three locations (l0, l1, l2) and five cars (c0 to c4). Initially, cars c0, c1, and c3 are at location l1, car c2 is at l0, and car c4 is at l2. The ferry is currently at l2 and is empty. Your task is to organize the cars according to the following goals: keep cars c0 and c1 at l1, move car c2 to l0, move car c3 to l0, and bring car c4 to l1. Use the ferry to transport the cars between the locations, ensuring to respect the ferry's capacity of carrying one car at a time.",
             "output": "instance l0 location|instance l1 location|instance l2 location|instance c0 car|instance c1 car|instance c2 car|instance c3 car|instance c4 car|predicate location l0|predicate location l1|predicate location l2|predicate car c0|predicate car c1|predicate car c2|predicate car c3|predicate car c4|predicate not-eq l0 l1|predicate not-eq l1 l0|predicate not-eq l0 l2|predicate not-eq l2 l0|predicate not-eq l1 l2|predicate not-eq l2 l1|predicate empty-ferry|predicate at c0 l1|predicate at c1 l1|predicate at c2 l0|predicate at c3 l1|predicate at c4 l2|predicate at-ferry l2|goal at c0 l1|goal at c1 l1|goal at c2 l0|goal at c3 l0|goal at c4 l1|"
-        }
+        },
+
+        // floortile
+        {
+            "domain": "(:types robot tile color - object) (:predicates (robot-at ?r - robot ?x - tile) (up ?x - tile ?y - tile) (down ?x - tile ?y - tile) (right ?x - tile ?y - tile) (left ?x - tile ?y - tile) (clear ?x - tile) (painted ?x - tile ?c - color) (robot-has ?r - robot ?c - color) (available-color ?c - color) (free-color ?r - robot))",
+            "input": "",
+            "output": "instance tile_0-1 tile|instance tile_0-2 tile|instance tile_1-1 tile|instance tile_1-2 tile|instance tile_2-1 tile|instance tile_2-2 tile|instance robot1 robot|instance robot2 robot|instance white color|instance black color|predicate robot-at robot1 tile_1-1|predicate robot-has robot1 white|predicate robot-at robot2 tile_0-2|predicate robot-has robot2 black|predicate available-color white|predicate available-color black|predicate clear tile_0-1|predicate clear tile_1-2|predicate clear tile_2-1|predicate clear tile_2-2|predicate up tile_1-1 tile_0-1|predicate up tile_1-2 tile_0-2|predicate up tile_2-1 tile_1-1|predicate up tile_2-2 tile_1-2|predicate down tile_0-1 tile_1-1|predicate down tile_0-2 tile_1-2|predicate down tile_1-1 tile_2-1|predicate down tile_1-2 tile_2-2|predicate right tile_0-2 tile_0-1|predicate right tile_1-2 tile_1-1|predicate right tile_2-2 tile_2-1|predicate left tile_0-1 tile_0-2|predicate left tile_1-1 tile_1-2|predicate left tile_2-1 tile_2-2|goal painted tile_1-1 white|goal painted tile_1-2 black|goal painted tile_2-1 black|goal painted tile_2-2 white|"
+        },
+
+        // freecell
+        {
+            "domain": "(:types card colnum cellnum num suit) (:predicates (on ?c1 - card ?c2 - card) (incell ?c - card) (clear ?c - card) (cellspace ?n - cellnum) (colspace ?n - colnum) (home ?c - card) (bottomcol ?c - card) (canstack ?c1 - card ?c2 - card) (hassuit ?c - card ?s - suit) (value ?c - card ?v - num) (successor ?n1 - num ?n0 - num) (colsuccessor ?n1 - colnum ?n0 - colnum) (cellsuccessor ?n1 - cellnum ?n0 - cellnum))",
+            "input": "",
+            "output": "instance C0 card|instance H0 card|instance CELLN0 cellnum|instance COLN1 colnum|instance COLN0 colnum|instance N0 num|instance C suit|instance H suit|predicate VALUE C0 N0|predicate VALUE H0 N0|predicate COLSUCCESSOR COLN1 COLN0|predicate HASSUIT C0 C|predicate HASSUIT H0 H|predicate HOME C0|predicate HOME H0|predicate CELLSPACE CELLN0|predicate COLSPACE COLN-1|goal HOME C0|goal HOME H0|"
+        },
+        
+        // fridge
+        {
+            "domain": "(:types screw backplane compressor fridge) (:predicates (screwed ?s - screw) (attached ?c - compressor ?f - fridge) (fits ?s - screw ?c -compressor) (fridge-on ?f - fridge))",
+            "input": "",
+            "output": "instance s0-0 screw|instance s0-1 screw|instance s0-2 screw|instance s1-0 screw|instance s1-1 screw|instance s1-2 screw|instance c0-0 compressor|instance c0-1 compressor|instance c1-0 compressor|instance c1-1 compressor|instance f0 fridge|instance f1 fridge|predicate fridge-on f0|predicate attached c0-0 f0|predicate fridge-on f1|predicate attached c1-0 f1|predicate fits s0-0 c0-0|predicate fits s0-0 c0-1|predicate screwed s0-0|predicate fits s0-1 c0-0|predicate fits s0-1 c0-1|predicate screwed s0-1|predicate fits s0-2 c0-0|predicate fits s0-2 c0-1|predicate screwed s0-2|predicate fits s1-0 c1-0|predicate fits s1-0 c1-1|predicate screwed s1-0|predicate fits s1-1 c1-0|predicate fits s1-1 c1-1|predicate screwed s1-1|predicate fits s1-2 c1-0|predicate fits s1-2 c1-1|predicate screwed s1-2|goal attached c0-1 f0|goal fridge-on f0|goal attached c1-1 f1|goal fridge-on f1|"
+        },
+
+        //goldminer
+        {
+            "domain": "(:types LOC) (:predicates (robot-at ?x - LOC) (bomb-at ?x - LOC ) (laser-at ?x - LOC) (soft-rock-at ?x - LOC) (hard-rock-at ?x - LOC) (gold-at ?x - LOC) (arm-empty) (holds-bomb) (holds-laser) (holds-gold) (clear ?x - LOC)(connected ?x - LOC ?y - LOC))",
+            "input": "",
+            "output": "instance f0-0f LOC|instance f0-1f LOC|instancef1-0f LOC|instance f1-1f LOC|predicate arm-empty|predicate connected f0-0f f0-1f|predicate connected f1-0f f1-1f|predicate connected f0-0f f1-0f|predicate connected f0-1f f1-1f|predicate connected f0-1f f0-0f|predicate connected f1-1f f1-0f|predicate connected f1-0f f0-0f|predicate connected f1-1f f0-1f|predicate bomb-at f0-0f|predicate laser-at f0-0f|predicate clear f0-0f|predicate gold-at f0-1f|predicate soft-rock-at f0-1f|predicate robot-at f1-0f|predicate clear f1-0f|predicate hard-rock-at f1-1f|goal holds-gold|"
+        },
+
+        // gripper
+        {
+            "domain": "(:predicates (room ?r) (ball ?b) (gripper ?g) (at-robby ?r) (at ?b ?r) (free ?g) (carry ?o ?g))",
+            "input": "",
+            "output": "instance rooma|instance roomb|instance left|instance right|instance ball1|instance ball2|instance ball3|predicate room rooma|predicate room roomb|predicate gripper left|predicate gripper right|predicate ball ball1|predicate ball ball2|predicate ball ball3|predicate free left|predicate free right|predicate at ball1 rooma|predicate at ball2 rooma|predicate at ball3 rooma|predicate at-robby rooma|goal at ball1 roomb|goal at ball2 roomb|goal at ball3 roomb|"
+        },
+        
+        // grippers
+        {
+            "domain": "(:types room object robot gripper) (:predicates (at-robby ?r - robot ?x - room) (at ?o - object ?x - room) (free ?r - robot ?g - gripper) (carry ?r - robot ?o - object ?g - gripper))",
+            "input": "",
+            "output": ""
+        },
+
+        // hanoi
+        {
+            "domain": "",
+            "input": "",
+            "output": ""
+        },
+
+        // hiking
+        {
+            "domain": "",
+            "input": "",
+            "output": ""
+        },
+        
+        // logistics
+        {
+            "domain": "",
+            "input": "",
+            "output": ""
+        },
     ]
 }
