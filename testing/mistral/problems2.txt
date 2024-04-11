@@ -1,0 +1,206 @@
+(define (problem schedule-p1-s0-c2-w2-o2)
+(:domain schedule)
+(:objects 
+    P0
+ - part
+    BLUE
+    YELLOW
+ - colour
+    ONE
+    TWO
+ - width
+    FRONT
+    BACK
+ - anorient
+)
+(:init
+(HAS-PAINT IMMERSION-PAINTER BLUE)
+(HAS-PAINT SPRAY-PAINTER BLUE)
+(HAS-PAINT IMMERSION-PAINTER YELLOW)
+(HAS-PAINT SPRAY-PAINTER YELLOW)
+(CAN-ORIENT DRILL-PRESS FRONT)
+(CAN-ORIENT PUNCH FRONT)
+(CAN-ORIENT DRILL-PRESS BACK)
+(CAN-ORIENT PUNCH BACK)
+(HAS-BIT DRILL-PRESS ONE)
+(HAS-BIT PUNCH ONE)
+(HAS-BIT DRILL-PRESS TWO)
+(HAS-BIT PUNCH TWO)
+(SHAPE P0 CYLINDRICAL)
+(SURFACE-CONDITION P0 POLISHED)
+(PAINTED P0 BLUE)
+(TEMPERATURE P0 COLD)
+)
+(:goal
+(and
+(PAINTED P0 BLUE)
+(HAS-HOLE P0 TWO FRONT)
+)
+)
+)
+
+(define (problem roverprob0) (:domain Rover)
+(:objects
+	general - Lander
+	colour high_res low_res - Mode
+	rover0 - Rover
+	rover0store - Store
+	waypoint0 waypoint1 waypoint2 - Waypoint
+	camera0 - Camera
+	objective0 objective1 - Objective
+	)
+(:init
+	(visible waypoint0 waypoint1)
+	(visible waypoint1 waypoint0)
+	(visible waypoint0 waypoint2)
+	(visible waypoint2 waypoint0)
+	(visible waypoint2 waypoint1)
+	(visible waypoint1 waypoint2)
+	(at_soil_sample waypoint0)
+	(at_rock_sample waypoint0)
+	(at_soil_sample waypoint1)
+	(at_rock_sample waypoint1)
+	(at_soil_sample waypoint2)
+	(at_lander general waypoint2)
+	(channel_free general)
+	(at rover0 waypoint1)
+	(available rover0)
+	(store_of rover0store rover0)
+	(empty rover0store)
+	(equipped_for_soil_analysis rover0)
+	(equipped_for_rock_analysis rover0)
+	(equipped_for_imaging rover0)
+	(can_traverse rover0 waypoint1 waypoint0)
+	(can_traverse rover0 waypoint0 waypoint1)
+	(can_traverse rover0 waypoint1 waypoint2)
+	(can_traverse rover0 waypoint2 waypoint1)
+	(on_board camera0 rover0)
+	(calibration_target camera0 objective0)
+	(supports camera0 low_res)
+	(visible_from objective0 waypoint0)
+	(visible_from objective0 waypoint1)
+	(visible_from objective0 waypoint2)
+	(visible_from objective1 waypoint2)
+)
+
+(:goal (and
+(communicated_soil_data waypoint0)
+(communicated_rock_data waypoint1)
+(communicated_image_data objective1 low_res)
+	)
+)
+)
+
+(define (problem prob)
+ (:domain spanner)
+ (:objects 
+     bob - man
+     spanner1 spanner2 spanner3 - spanner
+     nut1 nut2 - nut
+     location1 - location
+     shed gate - location
+    )
+ (:init 
+    (at bob shed)
+    (at spanner1 location1)
+    (useable spanner1)
+    (at spanner2 location1)
+    (useable spanner2)
+    (at spanner3 location1)
+    (useable spanner3)
+    (loose nut1)
+    (at nut1 gate)
+    (loose nut2)
+    (at nut2 gate)
+    (link shed location1)
+    (link location1 gate)
+)
+ (:goal
+  (and
+   (tightened nut1)
+   (tightened nut2)
+)))
+
+(define (problem depot-3-2-1-5-5-5) (:domain depots)
+(:objects
+	depot0 depot1 depot2 - Depot
+	distributor0 distributor1 - Distributor
+	truck0 - Truck
+	pallet0 pallet1 pallet2 pallet3 pallet4 - Pallet
+	crate0 crate1 crate2 crate3 crate4 - Crate
+	hoist0 hoist1 hoist2 hoist3 hoist4 - Hoist)
+(:init
+	(at pallet0 depot0)
+	(clear crate2)
+	(at pallet1 depot1)
+	(clear pallet1)
+	(at pallet2 depot2)
+	(clear crate4)
+	(at pallet3 distributor0)
+	(clear pallet3)
+	(at pallet4 distributor1)
+	(clear crate3)
+	(at truck0 distributor0)
+	(at hoist0 depot0)
+	(available hoist0)
+	(at hoist1 depot1)
+	(available hoist1)
+	(at hoist2 depot2)
+	(available hoist2)
+	(at hoist3 distributor0)
+	(available hoist3)
+	(at hoist4 distributor1)
+	(available hoist4)
+	(at crate0 distributor1)
+	(on crate0 pallet4)
+	(at crate1 depot0)
+	(on crate1 pallet0)
+	(at crate2 depot0)
+	(on crate2 crate1)
+	(at crate3 distributor1)
+	(on crate3 crate0)
+	(at crate4 depot2)
+	(on crate4 pallet2)
+)
+
+(:goal (and
+		(on crate0 pallet4)
+		(on crate1 pallet2)
+		(on crate2 pallet0)
+		(on crate3 pallet3)
+		(on crate4 crate0)
+	)
+))
+
+(define (problem mixed-f3-p2-u20-v5-d5-a60-n10-A20-B80-N50-F5)
+   (:domain miconic)
+   (:objects p0 p1 - passenger
+             f0 f1 f2 - floor)
+
+
+(:init
+(above f0 f1)
+(above f0 f2)
+
+(above f1 f2)
+
+
+
+(origin p0 f2)
+(destin p0 f1)
+
+(origin p1 f0)
+(destin p1 f1)
+
+
+
+
+
+
+(lift-at f0)
+)
+
+
+(:goal (forall (?p - passenger) (served ?p)))
+)
+
