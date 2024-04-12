@@ -38,7 +38,7 @@
 )
 )
 )
-
+###################################################
 (define (problem roverprob0) (:domain Rover)
 (:objects
 	general - Lander
@@ -90,7 +90,7 @@
 	)
 )
 )
-
+###################################################
 (define (problem prob)
  (:domain spanner)
  (:objects 
@@ -120,7 +120,7 @@
    (tightened nut1)
    (tightened nut2)
 )))
-
+###################################################
 (define (problem depot-3-2-1-5-5-5) (:domain depots)
 (:objects
 	depot0 depot1 depot2 - Depot
@@ -171,7 +171,7 @@
 		(on crate4 crate0)
 	)
 ))
-
+###################################################
 (define (problem mixed-f3-p2-u20-v5-d5-a60-n10-A20-B80-N50-F5)
    (:domain miconic)
    (:objects p0 p1 - passenger
@@ -204,3 +204,811 @@
 (:goal (forall (?p - passenger) (served ?p)))
 )
 
+###################################################
+(define (problem storage-1)
+(:domain Storage-Propositional)
+(:objects
+	depot48-1-1 depot48-1-2 depot48-1-3 depot48-2-1 depot48-2-2 depot48-2-3 depot48-3-1 depot48-3-2 depot48-3-3 container-0-0 container-0-1 container-0-2 container-0-3 container-0-4 - storearea
+	hoist0 hoist1 hoist2 - hoist
+	crate0 crate1 crate2 crate3 crate4 - crate
+	container0 - container
+	depot48 - depot
+	loadarea - transitarea)
+
+(:init
+	(connected depot48-1-1 depot48-2-1)
+	(connected depot48-1-1 depot48-1-2)
+	(connected depot48-1-2 depot48-2-2)
+	(connected depot48-1-2 depot48-1-3)
+	(connected depot48-1-2 depot48-1-1)
+	(connected depot48-1-3 depot48-2-3)
+	(connected depot48-1-3 depot48-1-2)
+	(connected depot48-2-1 depot48-1-1)
+	(connected depot48-2-1 depot48-3-1)
+	(connected depot48-2-1 depot48-2-2)
+	(connected depot48-2-2 depot48-1-2)
+	(connected depot48-2-2 depot48-3-2)
+	(connected depot48-2-2 depot48-2-3)
+	(connected depot48-2-2 depot48-2-1)
+	(connected depot48-2-3 depot48-1-3)
+	(connected depot48-2-3 depot48-3-3)
+	(connected depot48-2-3 depot48-2-2)
+	(connected depot48-3-1 depot48-2-1)
+	(connected depot48-3-1 depot48-3-2)
+	(connected depot48-3-2 depot48-2-2)
+	(connected depot48-3-2 depot48-3-3)
+	(connected depot48-3-2 depot48-3-1)
+	(connected depot48-3-3 depot48-2-3)
+	(connected depot48-3-3 depot48-3-2)
+	(in depot48-1-1 depot48)
+	(in depot48-1-2 depot48)
+	(in depot48-1-3 depot48)
+	(in depot48-2-1 depot48)
+	(in depot48-2-2 depot48)
+	(in depot48-2-3 depot48)
+	(in depot48-3-1 depot48)
+	(in depot48-3-2 depot48)
+	(in depot48-3-3 depot48)
+	(on crate0 container-0-0)
+	(on crate1 container-0-1)
+	(on crate2 container-0-2)
+	(on crate3 container-0-3)
+	(on crate4 container-0-4)
+	(in crate0 container0)
+	(in crate1 container0)
+	(in crate2 container0)
+	(in crate3 container0)
+	(in crate4 container0)
+	(in container-0-0 container0)
+	(in container-0-1 container0)
+	(in container-0-2 container0)
+	(in container-0-3 container0)
+	(in container-0-4 container0)
+	(connected loadarea container-0-0) 
+	(connected container-0-0 loadarea)
+	(connected loadarea container-0-1) 
+	(connected container-0-1 loadarea)
+	(connected loadarea container-0-2) 
+	(connected container-0-2 loadarea)
+	(connected loadarea container-0-3) 
+	(connected container-0-3 loadarea)
+	(connected loadarea container-0-4) 
+	(connected container-0-4 loadarea)  
+	(connected depot48-3-2 loadarea)
+	(connected loadarea depot48-3-2)  
+	(clear depot48-3-1)
+	(clear depot48-1-2)
+	(clear depot48-1-3)
+	(clear depot48-2-1)
+	(clear depot48-2-2)
+	(clear depot48-2-3)  
+	(at hoist0 depot48-3-3)
+	(available hoist0)
+	(at hoist1 depot48-3-2)
+	(available hoist1)
+	(at hoist2 depot48-1-1)
+	(available hoist2))
+
+(:goal (and
+	(in crate0 depot48)
+	(in crate1 depot48)
+	(in crate2 depot48)
+	(in crate3 depot48)
+	(in crate4 depot48)))
+)
+###################################################
+(define   (problem parking)
+  (:domain parking)
+  (:objects
+     car_00  car_01  car_02  car_03  car_04  car_05  car_06  car_07  car_08  car_09  car_10  car_11 - car
+     curb_0 curb_1 curb_2 curb_3 curb_4 curb_5 curb_6 - curb
+  )
+  (:init
+    (at-curb car_02)
+    (at-curb-num car_02 curb_0)
+    (behind-car car_05 car_02)
+    (car-clear car_05)
+    (at-curb car_10)
+    (at-curb-num car_10 curb_1)
+    (behind-car car_11 car_10)
+    (car-clear car_11)
+    (at-curb car_07)
+    (at-curb-num car_07 curb_2)
+    (behind-car car_03 car_07)
+    (car-clear car_03)
+    (at-curb car_06)
+    (at-curb-num car_06 curb_3)
+    (behind-car car_00 car_06)
+    (car-clear car_00)
+    (at-curb car_09)
+    (at-curb-num car_09 curb_4)
+    (behind-car car_04 car_09)
+    (car-clear car_04)
+    (at-curb car_01)
+    (at-curb-num car_01 curb_5)
+    (behind-car car_08 car_01)
+    (car-clear car_08)
+    (curb-clear curb_6)
+  )
+  (:goal
+    (and
+      (at-curb-num car_00 curb_0)
+      (behind-car car_07 car_00)
+      (at-curb-num car_01 curb_1)
+      (behind-car car_08 car_01)
+      (at-curb-num car_02 curb_2)
+      (behind-car car_09 car_02)
+      (at-curb-num car_03 curb_3)
+      (behind-car car_10 car_03)
+      (at-curb-num car_04 curb_4)
+      (behind-car car_11 car_04)
+      (at-curb-num car_05 curb_5)
+      (at-curb-num car_06 curb_6)
+    )
+  )
+)
+###################################################
+(define (problem ZTRAVEL-3-4)
+(:domain zeno-travel)
+(:objects
+	plane1
+	plane2
+	plane3
+	person1
+	person2
+	person3
+	person4
+	city0
+	city1
+	fl0
+	fl1
+	fl2
+	fl3
+	fl4
+	fl5
+	fl6
+	)
+(:init
+	(at plane1 city0)
+	(aircraft plane1)
+	(fuel-level plane1 fl0)
+	(at plane2 city0)
+	(aircraft plane2)
+	(fuel-level plane2 fl0)
+	(at plane3 city1)
+	(aircraft plane3)
+	(fuel-level plane3 fl0)
+	(at person1 city0)
+	(person person1)
+	(at person2 city1)
+	(person person2)
+	(at person3 city0)
+	(person person3)
+	(at person4 city0)
+	(person person4)
+	(city city0)
+	(city city1)
+	(next fl0 fl1)
+	(next fl1 fl2)
+	(next fl2 fl3)
+	(next fl3 fl4)
+	(next fl4 fl5)
+	(next fl5 fl6)
+	(flevel fl0)
+	(flevel fl1)
+	(flevel fl2)
+	(flevel fl3)
+	(flevel fl4)
+	(flevel fl5)
+	(flevel fl6)
+)
+(:goal (and
+	(at person1 city0)
+	(at person2 city0)
+	(at person3 city0)
+	(at person4 city1)
+	))
+
+)
+###################################################
+(define (problem grid-2)
+(:domain grid-visit-all)
+(:objects 
+	loc-x1-y1
+- place 
+        
+)
+(:init
+	(at-robot loc-x1-y1)
+	(visited loc-x1-y1)
+
+)
+(:goal
+(and 
+	(visited loc-x1-y1)
+)
+)
+)
+###################################################
+(define (problem transport-city-sequential-3nodes-1000size-2degree-100mindistance-2trucks-2packages-2008seed)
+ (:domain transport)
+ (:objects
+  city-loc-1 - location
+  city-loc-2 - location
+  city-loc-3 - location
+  truck-1 - vehicle
+  truck-2 - vehicle
+  package-1 - package
+  package-2 - package
+  capacity-0 - capacity-number
+  capacity-1 - capacity-number
+  capacity-2 - capacity-number
+  capacity-3 - capacity-number
+  capacity-4 - capacity-number
+ )
+ (:init
+  (= (total-cost) 0)
+  (capacity-predecessor capacity-0 capacity-1)
+  (capacity-predecessor capacity-1 capacity-2)
+  (capacity-predecessor capacity-2 capacity-3)
+  (capacity-predecessor capacity-3 capacity-4)
+  ; 394,378 -> 51,780
+  (road city-loc-3 city-loc-1)
+  (= (road-length city-loc-3 city-loc-1) 53)
+  ; 51,780 -> 394,378
+  (road city-loc-1 city-loc-3)
+  (= (road-length city-loc-1 city-loc-3) 53)
+  ; 394,378 -> 766,407
+  (road city-loc-3 city-loc-2)
+  (= (road-length city-loc-3 city-loc-2) 38)
+  ; 766,407 -> 394,378
+  (road city-loc-2 city-loc-3)
+  (= (road-length city-loc-2 city-loc-3) 38)
+  (at package-1 city-loc-1)
+  (at package-2 city-loc-2)
+  (at truck-1 city-loc-1)
+  (capacity truck-1 capacity-3)
+  (at truck-2 city-loc-3)
+  (capacity truck-2 capacity-2)
+ )
+ (:goal (and
+  (at package-1 city-loc-3)
+  (at package-2 city-loc-3)
+ ))
+###################################################
+(define (problem tireworld-1)
+(:domain tyreworld)
+(:objects 
+wrench jack pump - tool
+the-hub1 
+- hub
+nuts1 
+- nut
+
+boot - container
+r1 w1 
+- wheel
+)
+(:init
+(in jack boot)
+(in pump boot)
+(in wrench boot)
+(unlocked boot)
+(closed boot)
+(intact r1)
+(in r1 boot)
+(not-inflated r1)
+(on w1 the-hub1)
+(on-ground the-hub1)
+(tight nuts1 the-hub1)
+(fastened the-hub1)
+)
+(:goal
+(and
+(on r1 the-hub1)
+(inflated r1)
+(tight nuts1 the-hub1)
+(in w1 boot)
+(in wrench boot)
+(in jack boot)
+(in pump boot)
+(closed boot)
+)
+)
+)
+###################################################
+(define (problem maintenance-scheduling-1-2-10-30-2)
+ (:domain maintenance-scheduling-domain)
+ (:objects
+   d1 d2 d3 d4 d5 d6 d7 d8 d9 d10 d11 - day
+   FRA BER - airport
+   ap1 ap2 ap3 ap4 ap5 ap6 ap7 ap8 ap9 ap10 ap11 ap12 ap13 ap14 ap15 ap16 ap17 ap18 ap19 ap20 ap21 ap22 ap23 ap24 ap25 ap26 ap27 ap28 ap29 ap30 - plane)
+ (:init
+  (today d1)
+  (today d2)
+  (today d3)
+  (today d4)
+  (today d5)
+  (today d6)
+  (today d7)
+  (today d8)
+  (today d9)
+  (today d10)
+  (at ap1 d8 FRA)
+  (at ap2 d5 BER)
+  (at ap3 d4 BER)
+  (at ap3 d7 BER)
+  (at ap6 d8 FRA)
+  (at ap7 d1 FRA)
+  (at ap7 d8 FRA)
+  (at ap8 d6 BER)
+  (at ap9 d5 FRA)
+  (at ap9 d10 FRA)
+  (at ap11 d1 BER)
+  (at ap12 d2 FRA)
+  (at ap12 d2 BER)
+  (at ap13 d10 BER)
+  (at ap14 d8 FRA)
+  (at ap14 d3 BER)
+  (at ap15 d4 BER)
+  (at ap15 d10 BER)
+  (at ap16 d5 BER)
+  (at ap16 d6 BER)
+  (at ap17 d2 BER)
+  (at ap18 d10 BER)
+  (at ap19 d10 FRA)
+  (at ap22 d2 FRA)
+  (at ap23 d2 FRA)
+  (at ap23 d9 BER)
+  (at ap25 d4 FRA)
+  (at ap25 d10 BER)
+  (at ap26 d7 FRA)
+  (at ap27 d7 FRA)
+  (at ap27 d6 BER)
+  (at ap28 d9 FRA)
+  (at ap29 d4 BER))
+  (:goal 
+    (and 
+      (done ap1)
+      (done ap2)
+      (done ap3)
+      (done ap4)
+      (done ap5)
+      (done ap6)
+      (done ap7)
+      (done ap8)
+      (done ap9)
+      (done ap10)
+      (done ap11)
+      (done ap12)
+      (done ap13)
+      (done ap14)
+      (done ap15)
+      (done ap16)
+      (done ap17)
+      (done ap18)
+      (done ap19)
+      (done ap20)
+      (done ap21)
+      (done ap22)
+      (done ap23)
+      (done ap24)
+      (done ap25)
+      (done ap26)
+      (done ap27)
+      (done ap28)
+      (done ap29)
+      (done ap30))))
+###################################################
+(define (problem strips-mystery-l2-f1-s1-v1-c1)
+(:domain mystery-strips)
+(:objects f0 f1 - fuel
+          s0 s1 - space
+          l0 l1 - location
+          v0 - vehicle
+          c0 - cargo)
+(:init
+(fuel-neighbor f0 f1)
+(space-neighbor s0 s1)
+(conn l0 l1)
+(conn l1 l0)
+(has-fuel l0 f0)
+(has-fuel l1 f0)
+(has-space  v0 s1)
+(at v0 l1)
+(at c0 l1)
+)
+(:goal
+(and
+(at c0 l0)
+)
+)
+)
+###################################################
+(define (problem typed-sokoban-grid5-boxes1-walls1)
+(:domain typed-sokoban)
+(:objects 
+        up down left right - DIR
+        box0 - BOX
+        f0-0f f0-1f f0-2f f0-3f f0-4f 
+        f1-0f f1-1f f1-2f f1-3f f1-4f 
+        f2-0f f2-1f f2-2f f2-3f f2-4f 
+        f3-0f f3-1f f3-2f f3-3f f3-4f 
+        f4-0f f4-1f f4-2f f4-3f f4-4f  - LOC
+)
+(:init
+(adjacent f0-0f f0-1f right)
+(adjacent f0-0f f1-0f down)
+(adjacent f0-1f f0-0f left)
+(adjacent f0-1f f0-2f right)
+(adjacent f0-1f f1-1f down)
+(adjacent f0-2f f0-1f left)
+(adjacent f0-2f f0-3f right)
+(adjacent f0-2f f1-2f down)
+(adjacent f0-3f f0-2f left)
+(adjacent f0-3f f0-4f right)
+(adjacent f0-3f f1-3f down)
+(adjacent f0-4f f0-3f left)
+(adjacent f0-4f f1-4f down)
+(adjacent f1-0f f1-1f right)
+(adjacent f1-0f f0-0f up)
+(adjacent f1-0f f2-0f down)
+(adjacent f1-1f f1-0f left)
+(adjacent f1-1f f1-2f right)
+(adjacent f1-1f f0-1f up)
+(adjacent f1-1f f2-1f down)
+(adjacent f1-2f f1-1f left)
+(adjacent f1-2f f1-3f right)
+(adjacent f1-2f f0-2f up)
+(adjacent f1-2f f2-2f down)
+(adjacent f1-3f f1-2f left)
+(adjacent f1-3f f1-4f right)
+(adjacent f1-3f f0-3f up)
+(adjacent f1-3f f2-3f down)
+(adjacent f1-4f f1-3f left)
+(adjacent f1-4f f0-4f up)
+(adjacent f1-4f f2-4f down)
+(adjacent f2-0f f2-1f right)
+(adjacent f2-0f f1-0f up)
+(adjacent f2-0f f3-0f down)
+(adjacent f2-1f f2-0f left)
+(adjacent f2-1f f2-2f right)
+(adjacent f2-1f f1-1f up)
+(adjacent f2-1f f3-1f down)
+(adjacent f2-2f f2-1f left)
+(adjacent f2-2f f2-3f right)
+(adjacent f2-2f f1-2f up)
+(adjacent f2-2f f3-2f down)
+(adjacent f2-3f f2-2f left)
+(adjacent f2-3f f2-4f right)
+(adjacent f2-3f f1-3f up)
+(adjacent f2-3f f3-3f down)
+(adjacent f2-4f f2-3f left)
+(adjacent f2-4f f1-4f up)
+(adjacent f2-4f f3-4f down)
+(adjacent f3-0f f3-1f right)
+(adjacent f3-0f f2-0f up)
+(adjacent f3-0f f4-0f down)
+(adjacent f3-1f f3-0f left)
+(adjacent f3-1f f3-2f right)
+(adjacent f3-1f f2-1f up)
+(adjacent f3-1f f4-1f down)
+(adjacent f3-2f f3-1f left)
+(adjacent f3-2f f3-3f right)
+(adjacent f3-2f f2-2f up)
+(adjacent f3-2f f4-2f down)
+(adjacent f3-3f f3-2f left)
+(adjacent f3-3f f3-4f right)
+(adjacent f3-3f f2-3f up)
+(adjacent f3-3f f4-3f down)
+(adjacent f3-4f f3-3f left)
+(adjacent f3-4f f2-4f up)
+(adjacent f3-4f f4-4f down)
+(adjacent f4-0f f4-1f right)
+(adjacent f4-0f f3-0f up)
+(adjacent f4-1f f4-0f left)
+(adjacent f4-1f f4-2f right)
+(adjacent f4-1f f3-1f up)
+(adjacent f4-2f f4-1f left)
+(adjacent f4-2f f4-3f right)
+(adjacent f4-2f f3-2f up)
+(adjacent f4-3f f4-2f left)
+(adjacent f4-3f f4-4f right)
+(adjacent f4-3f f3-3f up)
+(adjacent f4-4f f4-3f left)
+(adjacent f4-4f f3-4f up)
+(at box0 f1-1f) 
+(clear f0-0f) 
+(clear f0-1f) 
+(clear f0-2f) 
+(clear f0-3f) 
+(clear f0-4f) 
+(clear f1-0f) 
+(clear f1-2f) 
+(clear f1-3f) 
+(clear f1-4f) 
+(clear f2-0f) 
+(clear f2-1f) 
+(clear f2-2f) 
+(clear f2-3f) 
+(clear f2-4f) 
+(at-robot f3-0f) 
+(clear f3-0f) 
+(clear f3-1f) 
+(clear f3-2f) 
+(clear f3-3f) 
+(clear f3-4f) 
+(clear f4-0f) 
+(clear f4-2f) 
+(clear f4-4f) 
+)
+(:goal
+(and
+(at box0 f4-4f) 
+)
+)
+)
+###################################################
+(define (problem wood-prob)
+  (:domain woodworking)
+  (:objects
+    highspeed-saw0 - highspeed-saw
+    glazer0 - glazer
+    grinder0 - grinder
+    immersion-varnisher0 - immersion-varnisher
+    planer0 - planer
+    saw0 - saw
+    spray-varnisher0 - spray-varnisher
+    blue mauve - acolour
+    teak beech - awood
+    p0 p1 - part
+    b0 - board
+    s0 s1 s2 s3 - aboardsize
+  )
+  (:init
+    (grind-treatment-change varnished colourfragments)
+    (grind-treatment-change glazed untreated)
+    (grind-treatment-change untreated untreated)
+    (grind-treatment-change colourfragments untreated)
+    (is-smooth smooth)
+    (is-smooth verysmooth)
+    (= (total-cost) 0)
+    (boardsize-successor s0 s1)
+    (boardsize-successor s1 s2)
+    (boardsize-successor s2 s3)
+    (empty highspeed-saw0)
+    (has-colour glazer0 mauve)
+    (has-colour immersion-varnisher0 natural)
+    (has-colour spray-varnisher0 natural)
+    (available p0)
+    (treatment p0 glazed)
+    (surface-condition p0 rough)
+    (wood p0 beech)
+    (colour p0 blue)
+    (goalsize p0 small)
+    (= (spray-varnish-cost p0) 5)
+    (= (glaze-cost p0) 10)
+    (= (grind-cost p0) 15)
+    (= (plane-cost p0) 10)
+    (unused p1)
+    (goalsize p1 medium)
+    (= (spray-varnish-cost p1) 10)
+    (= (glaze-cost p1) 15)
+    (= (grind-cost p1) 30)
+    (= (plane-cost p1) 20)
+    (boardsize b0 s3)
+    (wood b0 beech)
+    (surface-condition b0 rough)
+    (available b0)
+  )
+  (:goal
+    (and
+    (available p0)
+    (treatment p0 varnished)
+    (colour p0 natural)
+    (available p1)
+    (wood p1 beech)
+    (surface-condition p1 smooth)
+    )
+  )
+###################################################
+(define (problem nurikabe-lpo2-3x3)
+(:domain paint-nurikabe)
+(:objects
+  pos-0-0 pos-0-1 pos-0-2 pos-1-0 pos-1-1 pos-1-2 pos-2-0 pos-2-1 pos-2-2 - cell
+  n1 n2 n3 n4 - num
+  g0 g1 - group
+)
+(:init
+ (NEXT n0 n1)
+ (NEXT n1 n2)
+ (NEXT n2 n3)
+ (NEXT n3 n4)
+
+ (CONNECTED pos-0-0 pos-1-0)
+ (CONNECTED pos-0-0 pos-0-1)
+ (CONNECTED pos-0-1 pos-1-1)
+ (CONNECTED pos-0-1 pos-0-2)
+ (CONNECTED pos-0-1 pos-0-0)
+ (CONNECTED pos-0-2 pos-1-2)
+ (CONNECTED pos-0-2 pos-0-1)
+ (CONNECTED pos-1-0 pos-2-0)
+ (CONNECTED pos-1-0 pos-1-1)
+ (CONNECTED pos-1-0 pos-0-0)
+ (CONNECTED pos-1-1 pos-2-1)
+ (CONNECTED pos-1-1 pos-1-2)
+ (CONNECTED pos-1-1 pos-0-1)
+ (CONNECTED pos-1-1 pos-1-0)
+ (CONNECTED pos-1-2 pos-2-2)
+ (CONNECTED pos-1-2 pos-0-2)
+ (CONNECTED pos-1-2 pos-1-1)
+ (CONNECTED pos-2-0 pos-2-1)
+ (CONNECTED pos-2-0 pos-1-0)
+ (CONNECTED pos-2-1 pos-2-2)
+ (CONNECTED pos-2-1 pos-1-1)
+ (CONNECTED pos-2-1 pos-2-0)
+ (CONNECTED pos-2-2 pos-1-2)
+ (CONNECTED pos-2-2 pos-2-1)
+
+ (robot-pos pos-0-0)
+ (moving)
+
+ (SOURCE pos-1-0 g0)
+ (SOURCE pos-2-2 g1)
+
+ (available pos-0-1)
+ (available pos-0-2)
+ 
+ (part-of pos-2-0 g0)
+ (part-of pos-1-1 g0)
+ (part-of pos-0-0 g0)
+ (part-of pos-1-2 g1)
+ (part-of pos-2-1 g1)
+ (remaining-cells g0 n4)
+ (remaining-cells g1 n1)
+)
+(:goal (and
+ (group-painted g0)
+ (group-painted g1)
+))
+)
+###################################################
+(define (problem Tetris-4-4-4399049)
+(:domain tetris)
+(:objects  
+f0-0f f0-1f f0-2f f0-3f 
+f1-0f f1-1f f1-2f f1-3f 
+f2-0f f2-1f f2-2f f2-3f 
+f3-0f f3-1f f3-2f f3-3f - position
+square0 square1 square2 - one_square
+nada- two_straight
+rightl0 rightl1 - right_l
+)
+(:init
+(connected f0-0f f0-1f)
+(connected f0-1f f0-0f)
+(connected f0-1f f0-2f)
+(connected f0-2f f0-1f)
+(connected f0-2f f0-3f)
+(connected f0-3f f0-2f)
+(connected f1-0f f1-1f)
+(connected f1-1f f1-0f)
+(connected f1-1f f1-2f)
+(connected f1-2f f1-1f)
+(connected f1-2f f1-3f)
+(connected f1-3f f1-2f)
+(connected f2-0f f2-1f)
+(connected f2-1f f2-0f)
+(connected f2-1f f2-2f)
+(connected f2-2f f2-1f)
+(connected f2-2f f2-3f)
+(connected f2-3f f2-2f)
+(connected f3-0f f3-1f)
+(connected f3-1f f3-0f)
+(connected f3-1f f3-2f)
+(connected f3-2f f3-1f)
+(connected f3-2f f3-3f)
+(connected f3-3f f3-2f)
+(connected f0-0f f1-0f)
+(connected f1-0f f0-0f)
+(connected f0-1f f1-1f)
+(connected f1-1f f0-1f)
+(connected f0-2f f1-2f)
+(connected f1-2f f0-2f)
+(connected f0-3f f1-3f)
+(connected f1-3f f0-3f)
+(connected f1-0f f2-0f)
+(connected f2-0f f1-0f)
+(connected f1-1f f2-1f)
+(connected f2-1f f1-1f)
+(connected f1-2f f2-2f)
+(connected f2-2f f1-2f)
+(connected f1-3f f2-3f)
+(connected f2-3f f1-3f)
+(connected f2-0f f3-0f)
+(connected f3-0f f2-0f)
+(connected f2-1f f3-1f)
+(connected f3-1f f2-1f)
+(connected f2-2f f3-2f)
+(connected f3-2f f2-2f)
+(connected f2-3f f3-3f)
+(connected f3-3f f2-3f)
+(clear f0-2f)
+(clear f0-3f)
+(clear f1-3f)
+(clear f3-0f)
+(clear f3-1f)
+(clear f3-2f)
+(clear f3-3f)
+(at_right_l rightl0 f1-0f f2-0f f2-1f)
+(at_right_l rightl1 f1-2f f2-2f f2-3f)
+(at_square square0 f0-0f)
+(at_square square1 f0-1f)
+(at_square square2 f1-1f)
+ )
+(:goal
+(and
+(clear f0-0f)
+(clear f0-1f)
+(clear f0-2f)
+(clear f0-3f)
+(clear f1-0f)
+(clear f1-1f)
+(clear f1-2f)
+(clear f1-3f)
+)
+)
+)
+###################################################
+(define (problem prob)
+ (:domain matchcellar)
+ (:objects 
+    match0 match1 match2 match3 - match
+    fuse0 fuse1 fuse2 fuse3 fuse4 fuse5 fuse6 fuse7 - fuse
+)
+ (:init 
+  (handfree)
+  (unused match0)
+  (unused match1)
+  (unused match2)
+  (unused match3)
+)
+ (:goal
+  (and
+     (mended fuse0)
+     (mended fuse1)
+     (mended fuse2)
+     (mended fuse3)
+     (mended fuse4)
+     (mended fuse5)
+     (mended fuse6)
+     (mended fuse7)
+))
+###################################################
+(define (problem strips-mprime-l2-f1-s1-v1-c1)
+(:domain mprime-strips)
+(:objects f0 f1 - fuel
+          s0 s1 - space
+          l0 l1 - location
+          v0 - vehicle
+          c0 - cargo)
+(:init
+(not-equal l0 l1)
+(not-equal l1 l0)
+(fuel-neighbor f0 f1)
+(space-neighbor s0 s1)
+(conn l0 l1)
+(conn l1 l0)
+(has-fuel l0 f1)
+(has-fuel l1 f0)
+(has-space  v0 s1)
+(at v0 l1)
+(at c0 l0)
+)
+(:goal
+(and
+(at c0 l0)
+)
+)
+)
+###################################################

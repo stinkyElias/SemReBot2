@@ -1,40 +1,32 @@
 # schedule
-# rover
+# rovers
 # childsnack
 # spanner
 # depots
 # miconic
 # citycar
-satellite
-depots2
-parking
-agricola
+# storage
+# parking
 # briefcase
-zenotravel
-fridge
-grid-visit-all
-transport
+# zenotravel
+# fridge
+# visitall
 # hiking
 # tpp
-tyreworld
-maintenance
+# tyreworld
+# maintenance
 # assembly
 # driverlog
-spider
-mystery
-sokoban
-transport
-freecell
-elevators
-woodworking
-termes
-nurikabe
-tetris
-floortile
-matchcellar
-goldminer
-tidybot
-mprime
+# mystery
+# sokoban typed
+# transport
+# woodworking
+# nurikabe
+# tetris
+# floortile
+# matchcellar
+# goldminer
+# mprime
 # barman
-grippers
+# grippers
 # cavediving
