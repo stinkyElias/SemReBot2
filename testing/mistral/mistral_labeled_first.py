@@ -117,14 +117,7 @@ messages = [
         {'role': 'user', 'content': f'### Output ### {outputs[0]} //{labels[0]}'},
     ]
 
-allocated, model_input_size, inference_times, f1_scores, semantic_similarities, total_match_accuracies, model_outputs = [], [], [], [], [], [], []
-instance_match_accuracies, predicate_match_accuracies, goal_match_accuracies = [], [], []
-
-def compute_accuracy(expected, generated):
-    if expected == None:
-        return 0.0
-    else:
-        return round(generated/expected, 2)
+allocated, model_input_size, inference_times, f1_scores, semantic_similarities, total_match_accuracies, model_outputs = [], [], [], []
     
 test_set = int(sys.argv[1])
 number_of_max_new_tokens = 250  # default
@@ -222,38 +215,12 @@ for i in range(1, (len(shot_data['shots'])//2)+1):
 
     model_outputs.append(model_output)
 
-    f1_score = None
-    semantic_similarity = None
-
-    # count number of instances, predicates and goals in the model output
-    num_instances_output = model_output.count('instance')
-    num_predicates_output = model_output.count('predicate')
-    num_goals_output = model_output.count('goal')
-
-    # compare the number of instances, predicates and goals in the model output to the solution
-    instance_match_accuracies.append(compute_accuracy(num_instances[test_set], num_instances_output))
-    predicate_match_accuracies.append(compute_accuracy(num_predicates[test_set], num_predicates_output))
-    goal_match_accuracies.append(compute_accuracy(num_goals[test_set], num_goals_output))
-
-    #compute the average of the three accuracies
-    total_match_accuracy = round((instance_match_accuracies[-1] + predicate_match_accuracies[-1] + goal_match_accuracies[-1])/3, 2)
-    total_match_accuracies.append(total_match_accuracy)
-
-    f1_scores.append(f1_score)
-    semantic_similarities.append(semantic_similarity)
-
     # write the results to file
     result = {
         'Model': model_id + f' --- {precision}',
         'Max new tokens': number_of_max_new_tokens,
         'Test set #': test_set + 1,
         'Number of examples': number_of_examples,
-        # 'F1Score': f1_scores[-1],
-        # 'Semantic similarity': semantic_similarities[-1],
-        'Instance match accuracy': instance_match_accuracies[-1],
-        'Predicate match accuracy': predicate_match_accuracies[-1],
-        'Goal match accuracy': goal_match_accuracies[-1],
-        'Total match accuracy': total_match_accuracies[-1],
         'Inference time [s]': inference_times[-1],
         'GPU memory loaded [MB]': allocated[-1],
         'Model input size [MB]': model_input_size[-1],
@@ -283,27 +250,3 @@ for i in range(1, (len(shot_data['shots'])//2)+1):
 # clean up
 torch.cuda.empty_cache()
 gc.collect()
-
-# # plot the allocated and reserverd memory for evey iteration
-# import matplotlib.pyplot as plt
-# import numpy as np
-
-# x = np.arange(1, len(allocated)+1)
-# plt.plot(x, allocated)
-# plt.xlabel(' i-th iteration')
-# plt.ylabel('Memory [MB]')
-# plt.title('Memory allocation after loading model')
-# plt.grid()
-# plt.show()
-
-
-# x = np.arange(1, len(model_input_size)+1)
-# plt.plot(x, model_input_size)
-# plt.xlabel('i-th iteration')
-# plt.ylabel('Size [MB]')
-# plt.title('Model input size')
-# plt.grid()
-# plt.show()
-
-# print all lists
-# print(f"Allocated: {allocated}")
