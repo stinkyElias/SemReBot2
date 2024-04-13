@@ -1,7 +1,7 @@
 #!/bin/bash
 
-precision=$1
-env=$2
+# precision=$1
+# env=$2
 
 # for i in {0..9}
 # do

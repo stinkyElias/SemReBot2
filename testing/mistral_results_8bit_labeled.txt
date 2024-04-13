@@ -6,14 +6,14 @@ Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
 Max new tokens           : 250
 Test set #               : 1
 Number of examples       : 2
-Instance match accuracy  : 0.83
-Predicate match accuracy : 1.5
-Goal match accuracy      : 1.5
-Total match accuracy     : 1.28
-Inference time [s]       : 33.4220859375
+Instance match accuracy  : 1.17
+Predicate match accuracy : 0.83
+Goal match accuracy      : 0.5
+Total match accuracy     : 0.83
+Inference time [s]       : 32.4237421875
 GPU memory loaded [MB]   : 7673.77344
 Model input size [MB]    : 0.00378
-Sliced output            : instance c0 robot|instance cs zone|instance new\_pallet pallet|instance r1 zone|instance r2 zone|predicate robot\_available c0|predicate robot\_at c0 cs|predicate pallet\_at new\_pallet unload|predicate pallet\_not\_moved new\_pallet|predicate is\_unload\_zone unload|goal robot\_available r1| predicate at r1 r1| predicate pallet\_at new\_pallet r1| predicate is\_shelf\_zone r2| predicate pallet\_not\_moved new\_pallet| goal is\_shelf\_zone r2| goal not pallet\_at new\_pallet cs|
+Sliced output            : instance s0 robot|instance s1 robot|predicate robot\_available s1|predicate robot\_at s0 s0| instance z0 zone|instance z1 zone|predicate is\_unload\_zone z0| instance p0 pallet|predicate pallet\_at p0 z0|predicate pallet\_not\_moved p0| instance r1 reol|instance r2 reol|goal robot\_at r1 s1|
 Solution                 : instance robot_1 robot|instance charging_station zone|instance unload_zone zone|instance shelf_1 zone|instance shelf_2 zone|instance pallet_1 pallet|predicate robot_at robot_1 charging_station|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|predicate is_unload_zone unload_zone|predicate is_shelf_zone shelf_1|predicate is_shelf_zone shelf_2|goal pallet_at pallet_1 shelf_1|goal robot_at robot_1 shelf_2|
 Labeled                  : Yes
 ===========================================================================
@@ -21,14 +21,14 @@ Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
 Max new tokens           : 250
 Test set #               : 1
 Number of examples       : 3
-Instance match accuracy  : 1.0
-Predicate match accuracy : 0.83
+Instance match accuracy  : 2.0
+Predicate match accuracy : 1.83
 Goal match accuracy      : 0.5
-Total match accuracy     : 0.78
-Inference time [s]       : 46.81231640625
+Total match accuracy     : 1.44
+Inference time [s]       : 45.52462890625
 GPU memory loaded [MB]   : 7681.89844
 Model input size [MB]    : 0.00813
-Sliced output            : instance robotR1 robot|instance zoneCS charging|instance zoneUL unload|instance zoneRL1 reol1|instance zoneRL2 reol2|instance palletP1 pallet|predicate robot\_available robotR1|predicate robot\_at robotR1 zoneCS|predicate pallet\_at NULL|predicate is\_unload\_zone zoneUL|predicate is\_shelf\_zone zoneRL2|goal robot\_at robotR1 zoneRL1|
+Sliced output            : instance robot1 robot|instance charging\_station zone|instance new\_pallet pallet|instance unload\_zone zone|instance reol1 zone|instance reol2 zone|predicate robot\_available robot1|predicate robot\_at robot1 charging\_station|predicate pallet\_at new\_pallet unload\_zone|predicate is\_unload\_zone unload\_zone|predicate pallet\_not\_moved new\_pallet|goal robot\_at robot1 reol1| //after moving the pallet instance robot1 robot|instance charging\_station zone|instance new\_pallet pallet|instance unload\_zone zone|instance reol1 zone|instance reol2 zone|predicate robot\_available robot1|predicate robot\_at robot1 reol1|predicate pallet\_at new\_pallet unload\_zone|predicate is\_unload\_zone unload\_zone|predicate pallet\_not\_moved new\_pallet|predicate robot\_at robot1 reol2|
 Solution                 : instance robot_1 robot|instance charging_station zone|instance unload_zone zone|instance shelf_1 zone|instance shelf_2 zone|instance pallet_1 pallet|predicate robot_at robot_1 charging_station|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|predicate is_unload_zone unload_zone|predicate is_shelf_zone shelf_1|predicate is_shelf_zone shelf_2|goal pallet_at pallet_1 shelf_1|goal robot_at robot_1 shelf_2|
 Labeled                  : Yes
 ===========================================================================
@@ -36,14 +36,14 @@ Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
 Max new tokens           : 250
 Test set #               : 1
 Number of examples       : 4
-Instance match accuracy  : 0.67
-Predicate match accuracy : 1.0
+Instance match accuracy  : 1.0
+Predicate match accuracy : 0.67
 Goal match accuracy      : 0.5
 Total match accuracy     : 0.72
-Inference time [s]       : 28.899640625
+Inference time [s]       : 47.2277265625
 GPU memory loaded [MB]   : 7681.89844
 Model input size [MB]    : 0.01015
-Sliced output            : instance robot_cs robot| instance new_pallet pallet| instance reol_1 zone| instance reol_2 zone| predicate robot_available robot_cs| predicate robot_at robot_cs charging_station| predicate pallet_at new_pallet unload_zone| predicate new_pallet| predicate pallet_not_moved new_pallet| predicate is_unload_zone unload_zone| goal robot_at reol_1 robot|
+Sliced output            : instance cs_station charging_station| instance r0 robot| instance zone1 zone| instance zone2 zone| instance zone_unload zone| instance new_pallet pallet| predicate robot_available r0| predicate robot_at r0 charging_station| predicate pallet_at new_pallet zone_unload| predicate is_unload_zone zone_unload| goal robot_available r0|
 Solution                 : instance robot_1 robot|instance charging_station zone|instance unload_zone zone|instance shelf_1 zone|instance shelf_2 zone|instance pallet_1 pallet|predicate robot_at robot_1 charging_station|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|predicate is_unload_zone unload_zone|predicate is_shelf_zone shelf_1|predicate is_shelf_zone shelf_2|goal pallet_at pallet_1 shelf_1|goal robot_at robot_1 shelf_2|
 Labeled                  : Yes
 ===========================================================================
@@ -52,13 +52,13 @@ Max new tokens           : 250
 Test set #               : 1
 Number of examples       : 5
 Instance match accuracy  : 0.67
-Predicate match accuracy : 1.0
-Goal match accuracy      : 1.5
-Total match accuracy     : 1.06
-Inference time [s]       : 32.87351953125
+Predicate match accuracy : 0.83
+Goal match accuracy      : 1.0
+Total match accuracy     : 0.83
+Inference time [s]       : 22.756763671875
 GPU memory loaded [MB]   : 7681.89844
 Model input size [MB]    : 0.01995
-Sliced output            : instance r0 robot|instance z0 zone|instance z1 zone|instance p0 pallet| predicate robot\_available r0| predicate robot\_at r0 z0| predicate pallet\_at p0 z0| predicate pallet\_not\_moved p0| predicate is\_unload\_zone z0| goal robot\_at r0 reol\_1| goal robot\_at r0 reol\_2| goal pallet\_at p0 reol\_1| predicate is\_shelf\_zone reol\_1|
+Sliced output            : instance rob0 robot|instance z1 zone|instance z2 zone|instance pal0 pallet| predicate robot_available rob0| predicate robot_at rob0 z1| predicate pallet_at pal0 z1| predicate pallet_not_moved pal0| predicate is_unload_zone z1| goal robot_at rob0 reol1| goal robot_at rob0 z2|
 Solution                 : instance robot_1 robot|instance charging_station zone|instance unload_zone zone|instance shelf_1 zone|instance shelf_2 zone|instance pallet_1 pallet|predicate robot_at robot_1 charging_station|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|predicate is_unload_zone unload_zone|predicate is_shelf_zone shelf_1|predicate is_shelf_zone shelf_2|goal pallet_at pallet_1 shelf_1|goal robot_at robot_1 shelf_2|
 Labeled                  : Yes
 ===========================================================================
@@ -66,14 +66,14 @@ Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
 Max new tokens           : 250
 Test set #               : 1
 Number of examples       : 6
-Instance match accuracy  : 0.83
+Instance match accuracy  : 1.0
 Predicate match accuracy : 1.17
-Goal match accuracy      : 0.0
-Total match accuracy     : 0.67
-Inference time [s]       : 26.83292578125
+Goal match accuracy      : 0.5
+Total match accuracy     : 0.89
+Inference time [s]       : 47.44064453125
 GPU memory loaded [MB]   : 7681.89844
 Model input size [MB]    : 0.02522
-Sliced output            : instance robot0 robot|instance robot1 robot|instance new\_pallet pallet|instance reol0 zone|instance reol1 zone|predicate robot\_available robot0|predicate robot\_at robot0 reol0|predicate pallet\_at new\_pallet reol0|predicate is\_unload\_zone reol0|predicate robot\_at robot1 reol1|predicate pallet\_not\_moved new\_pallet|predicate is\_load\_zone reol1 |
+Sliced output            : instance robot1 robot|instance charging_station zone|instance reol1 zone|instance reol2 zone|instance new\_pallet pallet|instance old\_pallet1 pallet|predicate robot\_available robot1|predicate robot\_at robot1 charging\_station|predicate pallet\_at new\_pallet unload\_zone|predicate pallet\_not\_moved new\_pallet|predicate pallet\_at old\_pallet1 reol1|predicate is\_unload\_zone unload\_zone|predicate is\_shelf\_zone reol2|goal robot\_at robot1 reol2|
 Solution                 : instance robot_1 robot|instance charging_station zone|instance unload_zone zone|instance shelf_1 zone|instance shelf_2 zone|instance pallet_1 pallet|predicate robot_at robot_1 charging_station|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|predicate is_unload_zone unload_zone|predicate is_shelf_zone shelf_1|predicate is_shelf_zone shelf_2|goal pallet_at pallet_1 shelf_1|goal robot_at robot_1 shelf_2|
 Labeled                  : Yes
 ===========================================================================
@@ -81,14 +81,14 @@ Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
 Max new tokens           : 250
 Test set #               : 1
 Number of examples       : 7
-Instance match accuracy  : 0.5
-Predicate match accuracy : 1.0
+Instance match accuracy  : 0.0
+Predicate match accuracy : 0.0
 Goal match accuracy      : 0.0
-Total match accuracy     : 0.5
-Inference time [s]       : 48.460375
+Total match accuracy     : 0.0
+Inference time [s]       : 47.8138984375
 GPU memory loaded [MB]   : 7673.77344
 Model input size [MB]    : 0.01145
-Sliced output            : instance reol\_0 zone|instance charging\_station zone|instance unload\_zone zone|predicate robot\_available robot|predicate robot\_at robot zone|predicate pallet\_at pallet zone|predicate pallet\_not\_moved pallet|predicate is\_unload\_zone zone|predicate is\_shelf\_zone zone|
+Sliced output            : 
 Solution                 : instance robot_1 robot|instance charging_station zone|instance unload_zone zone|instance shelf_1 zone|instance shelf_2 zone|instance pallet_1 pallet|predicate robot_at robot_1 charging_station|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|predicate is_unload_zone unload_zone|predicate is_shelf_zone shelf_1|predicate is_shelf_zone shelf_2|goal pallet_at pallet_1 shelf_1|goal robot_at robot_1 shelf_2|
 Labeled                  : Yes
 ===========================================================================
@@ -96,14 +96,14 @@ Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
 Max new tokens           : 250
 Test set #               : 1
 Number of examples       : 8
-Instance match accuracy  : 0.67
+Instance match accuracy  : 0.83
 Predicate match accuracy : 1.17
-Goal match accuracy      : 1.0
-Total match accuracy     : 0.95
-Inference time [s]       : 48.13123046875
+Goal match accuracy      : 0.0
+Total match accuracy     : 0.67
+Inference time [s]       : 27.281640625
 GPU memory loaded [MB]   : 7681.89844
 Model input size [MB]    : 0.01649
-Sliced output            : instance charging\_station charging\_zone| instance unload\_zone unload\_zone| instance reol\_1 zone| instance reol\_2 zone| predicate robot\_available robot| predicate robot\_at robot\_1 charging\_station| predicate pallet\_at pallet\_x unload\_zone| predicate pallet\_not\_moved pallet\_x| predicate is\_unload\_zone unload\_zone| predicate is\_shelf\_zone reol\_1| predicate goal goal\_move\_pallet\_to\_reol\_1|
+Sliced output            : instance charging\_station zone|instance reol\_1 zone|instance reol\_2 zone|instance robot0 robot|predicate robot\_available robot0|predicate robot\_at robot0 charging\_station|predicate is\_unload\_zone unload|predicate is\_shelf\_zone reol\_1|predicate is\_shelf\_zone reol\_2|instance new\_pallet pallet|predicate pallet\_at new\_pallet unload|predicate pallet\_not\_moved new\_pallet|
 Solution                 : instance robot_1 robot|instance charging_station zone|instance unload_zone zone|instance shelf_1 zone|instance shelf_2 zone|instance pallet_1 pallet|predicate robot_at robot_1 charging_station|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|predicate is_unload_zone unload_zone|predicate is_shelf_zone shelf_1|predicate is_shelf_zone shelf_2|goal pallet_at pallet_1 shelf_1|goal robot_at robot_1 shelf_2|
 Labeled                  : Yes
 ===========================================================================
@@ -111,14 +111,14 @@ Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
 Max new tokens           : 250
 Test set #               : 1
 Number of examples       : 9
-Instance match accuracy  : 0.83
+Instance match accuracy  : 1.0
 Predicate match accuracy : 1.0
-Goal match accuracy      : 0.5
-Total match accuracy     : 0.78
-Inference time [s]       : 47.8073828125
+Goal match accuracy      : 0.0
+Total match accuracy     : 0.67
+Inference time [s]       : 47.74112890625
 GPU memory loaded [MB]   : 7681.89844
 Model input size [MB]    : 0.02058
-Sliced output            : instance robot0 robot| instance charging_station zone| instance unload_zone zone| instance reol1 zone| instance reol2 zone| predicate robot_available robot0| predicate robot_at robot0 charging_station| predicate pallet_at undefined pallet unload_zone| predicate pallet_not_moved undefined| predicate is_unload_zone unload_zone| predicate is_shelf_zone reol2| goal robot_at robot0 reol1|
+Sliced output            : instance robott robot| instance new\_pallet pallet| instance charging\_station zone| instance unload\_zone zone| instance reol\_1 zone| instance reol\_2 zone| predicate robot\_available robot| predicate robot\_at robot zone| predicate pallet\_at pallet zone| predicate pallet\_not\_moved pallet| predicate is\_unload\_zone zone| predicate is\_shelf\_zone zone|
 Solution                 : instance robot_1 robot|instance charging_station zone|instance unload_zone zone|instance shelf_1 zone|instance shelf_2 zone|instance pallet_1 pallet|predicate robot_at robot_1 charging_station|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|predicate is_unload_zone unload_zone|predicate is_shelf_zone shelf_1|predicate is_shelf_zone shelf_2|goal pallet_at pallet_1 shelf_1|goal robot_at robot_1 shelf_2|
 Labeled                  : Yes
 ===========================================================================
@@ -126,14 +126,14 @@ Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
 Max new tokens           : 250
 Test set #               : 1
 Number of examples       : 10
-Instance match accuracy  : 0.83
-Predicate match accuracy : 1.17
-Goal match accuracy      : 2.0
-Total match accuracy     : 1.33
-Inference time [s]       : 42.34833203125
+Instance match accuracy  : 0.0
+Predicate match accuracy : 0.0
+Goal match accuracy      : 0.0
+Total match accuracy     : 0.0
+Inference time [s]       : 47.949375
 GPU memory loaded [MB]   : 7681.89844
 Model input size [MB]    : 0.02451
-Sliced output            : instance charging\_station zone|instance reol\_1 zone|instance reol\_2 zone|instance robot\_1 robot|instance pallet\_new pallet|predicate robot\_available robot\_1|predicate robot\_at robot\_1 charging\_station|predicate pallet\_at pallet\_new unload\_zone|predicate pallet\_not\_moved pallet\_new|predicate is\_unload\_zone unload\_zone|predicate is\_shelf\_zone reol\_1|predicate is\_shelf\_zone reol\_2|goal robot\_available robot\_1|goal robot\_at robot\_1 reol\_2|goal pallet\_at pallet\_new reol\_1|goal pallet\_not\_moved pallet\_new|
+Sliced output            : 
 Solution                 : instance robot_1 robot|instance charging_station zone|instance unload_zone zone|instance shelf_1 zone|instance shelf_2 zone|instance pallet_1 pallet|predicate robot_at robot_1 charging_station|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|predicate is_unload_zone unload_zone|predicate is_shelf_zone shelf_1|predicate is_shelf_zone shelf_2|goal pallet_at pallet_1 shelf_1|goal robot_at robot_1 shelf_2|
 Labeled                  : Yes
 ===========================================================================
@@ -141,14 +141,14 @@ Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
 Max new tokens           : 250
 Test set #               : 2
 Number of examples       : 2
-Instance match accuracy  : 1.4
-Predicate match accuracy : 1.0
-Goal match accuracy      : 1.0
-Total match accuracy     : 1.13
-Inference time [s]       : 48.5554140625
+Instance match accuracy  : 2.4
+Predicate match accuracy : 3.67
+Goal match accuracy      : 0.5
+Total match accuracy     : 2.19
+Inference time [s]       : 47.0273359375
 GPU memory loaded [MB]   : 7673.77344
 Model input size [MB]    : 0.00336
-Sliced output            : instance w0 worker|instance t0 task|instance t1 task|instance l0 location|instance l1 location|predicate available w0|predicate located t0 l1|predicate located t1 l2|goal assigned t0 w0|goal assigned t1 w1| // workers: w0 (Worker1) // tasks: t0 (Task1), t1 (Task2) // locations: l0 (Location1), l1 (Location1), l2 (Location2) // If the current state does not match the given instruction, add the following lines: // instance w1 worker|instance w1 worker|
+Sliced output            : instance w1 worker|instance w2 worker|instance t1 task|instance t2 task|instance l1 location|instance l2 location predicate available w1| predicate assigned t1 w1|predicate assigned t2 w2| predicate located t1 l1|predicate located t2 l2| predicate completed NULL| goal (or (and (assigned t1 w1) (assigned t2 w2))       (and (assigned t1 w2) (assigned t2 w1))       ) ) Here's the new state: (instance w1 worker|instance w2 worker|instance t1 task|instance t2 task|instance l1 location|instance l2 location predicate available w1| predicate assigned NULL|NULL| predicate located t1 l1|predicate located t2 l2| predicate completed NULL|
 Solution                 : instance worker1 worker|instance task1 task|instance task2 task|instance location1 location|instance location2 location|predicate available worker1|predicate located task1 location1|predicate located task2 location2|goal assigned task1 worker1|goal assigned task2 worker1|
 Labeled                  : Yes
 ===========================================================================
@@ -157,13 +157,13 @@ Max new tokens           : 250
 Test set #               : 2
 Number of examples       : 3
 Instance match accuracy  : 1.2
-Predicate match accuracy : 1.67
-Goal match accuracy      : 0.0
-Total match accuracy     : 0.96
-Inference time [s]       : 26.797314453125
+Predicate match accuracy : 2.33
+Goal match accuracy      : 1.0
+Total match accuracy     : 1.51
+Inference time [s]       : 23.03203125
 GPU memory loaded [MB]   : 7681.89844
 Model input size [MB]    : 0.0077
-Sliced output            : instance Worker1 worker|instance WorkerN worker (N > 1, different from Worker1)|instance Task1 task|instance Task2 task|instance Location1 location|instance Location2 location|predicate available Worker1|predicate assigned Task1 Worker1|predicate assigned Task2 _|predicate located Task1 Location1|predicate located Task2 Location2|
+Sliced output            : instance Worker1 worker|instance Worker2 worker|instance Task1 task|instance Task2 task|instance Location1 location|instance Location2 location|predicate available Worker1|predicate assigned Task1 Worker1|predicate located Task1 Location1|predicate completed Task1|predicate available Worker2|predicate assigned Task2 Worker2|predicate located Task2 Location2|goal assigned Task1 Worker1|goal assigned Task2 Worker2|
 Solution                 : instance worker1 worker|instance task1 task|instance task2 task|instance location1 location|instance location2 location|predicate available worker1|predicate located task1 location1|predicate located task2 location2|goal assigned task1 worker1|goal assigned task2 worker1|
 Labeled                  : Yes
 ===========================================================================
@@ -171,14 +171,14 @@ Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
 Max new tokens           : 250
 Test set #               : 2
 Number of examples       : 4
-Instance match accuracy  : 1.0
-Predicate match accuracy : 1.67
-Goal match accuracy      : 2.0
-Total match accuracy     : 1.56
-Inference time [s]       : 24.467955078125
+Instance match accuracy  : 0.6
+Predicate match accuracy : 1.33
+Goal match accuracy      : 0.5
+Total match accuracy     : 0.81
+Inference time [s]       : 21.789697265625
 GPU memory loaded [MB]   : 7681.89844
 Model input size [MB]    : 0.00972
-Sliced output            : instance worker1 worker|instance task1 task|instance task2 task|instance l1 location|instance l2 location|predicate available worker1|predicate located task1 l1|predicate located task2 l2|predicate assigned task1 worker1|predicate assigned task2 _|goal \_ assigned task1 worker1|goal \_ assigned task2 _|goal \_ completed task1|goal \_ completed task2|
+Sliced output            : instance t1 task|instance t2 task|instance w1 worker| predicate available w1| predicate located t1 l1| predicate located t2 l2| predicate assigned w1 t1| goal assigned w2 t1|
 Solution                 : instance worker1 worker|instance task1 task|instance task2 task|instance location1 location|instance location2 location|predicate available worker1|predicate located task1 location1|predicate located task2 location2|goal assigned task1 worker1|goal assigned task2 worker1|
 Labeled                  : Yes
 ===========================================================================
@@ -187,13 +187,13 @@ Max new tokens           : 250
 Test set #               : 2
 Number of examples       : 5
 Instance match accuracy  : 1.0
-Predicate match accuracy : 3.0
-Goal match accuracy      : 1.0
-Total match accuracy     : 1.67
-Inference time [s]       : 38.1256640625
+Predicate match accuracy : 2.33
+Goal match accuracy      : 1.5
+Total match accuracy     : 1.61
+Inference time [s]       : 33.55789453125
 GPU memory loaded [MB]   : 7681.89844
 Model input size [MB]    : 0.01952
-Sliced output            : instance w1 worker|instance t1 task|instance t2 task|instance l1 location|instance l2 location| predicate available w1| predicate assigned t1 w1| predicate located t1 l1| predicate completed t1 false| predicate assigned t2 w1| predicate located t2 l2| predicate completed t2 false| predicate located l1 Task1| predicate located l2 Task2| goal assigned t1 w1| goal assigned t2 w1|
+Sliced output            : instance Worker1 worker|instance Task1 task|instance Task2 task|instance Location1 location|instance Location2 location|predicate available Worker1|predicate assigned Task1 Worker1|predicate assigned Task2 Worker1|predicate located Task1 Location1|predicate located Task2 Location2|predicate completed Task1|predicate completed Task2|goal assigned Task1 Worker1|goal assigned Task2 Worker1|goal available Worker1|
 Solution                 : instance worker1 worker|instance task1 task|instance task2 task|instance location1 location|instance location2 location|predicate available worker1|predicate located task1 location1|predicate located task2 location2|goal assigned task1 worker1|goal assigned task2 worker1|
 Labeled                  : Yes
 ===========================================================================
@@ -201,14 +201,14 @@ Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
 Max new tokens           : 250
 Test set #               : 2
 Number of examples       : 6
-Instance match accuracy  : 1.0
-Predicate match accuracy : 2.0
-Goal match accuracy      : 0.0
-Total match accuracy     : 1.0
-Inference time [s]       : 19.5124375
+Instance match accuracy  : 1.2
+Predicate match accuracy : 1.67
+Goal match accuracy      : 1.0
+Total match accuracy     : 1.29
+Inference time [s]       : 25.935740234375
 GPU memory loaded [MB]   : 7681.89844
 Model input size [MB]    : 0.0248
-Sliced output            : instance Worker1 worker|instance Task1 task|instance Task2 task|instance Location1 location|instance Location2 location|predicate available Worker1|predicate assigned Task1 Worker1|predicate assigned Task2 _|predicate located Task1 Location1|predicate located Task2 Location2|predicate completed _ _|
+Sliced output            : instance Worker1 worker|instance Worker2 worker|instance Task1 task|instance Task2 task|instance Location1 location|instance Location2 location| predicate available Worker1| predicate located Task1 Location1| predicate located Task2 Location2| predicate assigned \_ \_| predicate completed \_ \_| goal assigned Worker1 Task1| goal assigned Worker1 Task2|
 Solution                 : instance worker1 worker|instance task1 task|instance task2 task|instance location1 location|instance location2 location|predicate available worker1|predicate located task1 location1|predicate located task2 location2|goal assigned task1 worker1|goal assigned task2 worker1|
 Labeled                  : Yes
 ===========================================================================
@@ -216,14 +216,14 @@ Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
 Max new tokens           : 250
 Test set #               : 2
 Number of examples       : 7
-Instance match accuracy  : 0.6
-Predicate match accuracy : 1.0
-Goal match accuracy      : 1.0
-Total match accuracy     : 0.87
-Inference time [s]       : 48.57809375
+Instance match accuracy  : 0.4
+Predicate match accuracy : 1.67
+Goal match accuracy      : 0.0
+Total match accuracy     : 0.69
+Inference time [s]       : 47.29587109375
 GPU memory loaded [MB]   : 7673.77344
 Model input size [MB]    : 0.01102
-Sliced output            : instance | Location1             | Location2             | | :------------------------------- | :------------------------------- | | instance location1 location    | instance location2 location    | | predicate located task1 location1 | predicate located task2 location2 | | predicate available worker1    |                  | goal |--------------------------------| | goal              | | - and             | |  (and (assigned task1 worker1) | |    (assigned task2 worker2) | |    (not (or (assigned task1 worker2) | |          (assigned task2 worker1)))) |
+Sliced output            : instance Location1 location|instance Location2 location|predicate available worker-1|predicate assigned - - -|predicate located Task1-1 Location1|predicate located Task2-2 Location2|predicate completed - -|
 Solution                 : instance worker1 worker|instance task1 task|instance task2 task|instance location1 location|instance location2 location|predicate available worker1|predicate located task1 location1|predicate located task2 location2|goal assigned task1 worker1|goal assigned task2 worker1|
 Labeled                  : Yes
 ===========================================================================
@@ -231,14 +231,14 @@ Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
 Max new tokens           : 250
 Test set #               : 2
 Number of examples       : 8
-Instance match accuracy  : 0.8
-Predicate match accuracy : 2.33
+Instance match accuracy  : 0.4
+Predicate match accuracy : 3.0
 Goal match accuracy      : 0.0
-Total match accuracy     : 1.04
-Inference time [s]       : 29.993880859375
+Total match accuracy     : 1.13
+Inference time [s]       : 22.796810546875
 GPU memory loaded [MB]   : 7681.89844
 Model input size [MB]    : 0.01606
-Sliced output            : instance Location1 location|instance Location2 location|instance Task1 task|instance Task2 task|worker Worker1| predicate available Worker1| predicate assigned Task1 Worker1| predicate located Task1 Location1| predicate completed Task1 False| predicate assigned Task2 Worker1| predicate located Task2 Location2| predicate completed Task2 False|
+Sliced output            : instance Location1 location|instance Location2 location|worker Worker1| predicate available Worker1| predicate assigned Task1 Worker1| predicate located Task1 Location1| predicate completed Task1 false| predicate available Task1| predicate assigned Task2 Worker1| predicate located Task2 Location2| predicate completed Task2 false| predicate available Task2|
 Solution                 : instance worker1 worker|instance task1 task|instance task2 task|instance location1 location|instance location2 location|predicate available worker1|predicate located task1 location1|predicate located task2 location2|goal assigned task1 worker1|goal assigned task2 worker1|
 Labeled                  : Yes
 ===========================================================================
@@ -247,13 +247,13 @@ Max new tokens           : 250
 Test set #               : 2
 Number of examples       : 9
 Instance match accuracy  : 1.0
-Predicate match accuracy : 1.67
+Predicate match accuracy : 2.33
 Goal match accuracy      : 0.0
-Total match accuracy     : 0.89
-Inference time [s]       : 20.811740234375
+Total match accuracy     : 1.11
+Inference time [s]       : 22.090654296875
 GPU memory loaded [MB]   : 7681.89844
 Model input size [MB]    : 0.02015
-Sliced output            : instance Worker1 worker| instance Task1 task| instance Task2 task| instance Location1 location| instance Location2 location| predicate available Worker1| predicate assigned Task1 Worker1| predicate located Task1 Location1| predicate completed Task1| predicate assigned Task2 Worker1|
+Sliced output            : instance Worker1 worker| instance Task1 task| instance Task2 task| instance Location1 location| instance Location2 location| predicate available Worker1| predicate assigned Task1 Worker1| predicate assigned Task2 Worker1| predicate located Task1 Location1| predicate located Task2 Location2| predicate completed Task1| predicate completed Task2|
 Solution                 : instance worker1 worker|instance task1 task|instance task2 task|instance location1 location|instance location2 location|predicate available worker1|predicate located task1 location1|predicate located task2 location2|goal assigned task1 worker1|goal assigned task2 worker1|
 Labeled                  : Yes
 ===========================================================================
@@ -261,14 +261,14 @@ Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
 Max new tokens           : 250
 Test set #               : 2
 Number of examples       : 10
-Instance match accuracy  : 1.0
-Predicate match accuracy : 2.0
-Goal match accuracy      : 1.5
-Total match accuracy     : 1.5
-Inference time [s]       : 29.68448828125
+Instance match accuracy  : 1.4
+Predicate match accuracy : 0.67
+Goal match accuracy      : 0.5
+Total match accuracy     : 0.86
+Inference time [s]       : 46.9501484375
 GPU memory loaded [MB]   : 7681.89844
 Model input size [MB]    : 0.02409
-Sliced output            : instance Worker1 worker| instance Task1 task| instance Location1 location| predicate available Worker1| predicate assigned Task1 Worker1| predicate located Task1 Location1| instance Task2 task| instance Location2 location| predicate available Worker1| predicate location Location1| predicate location Location2| goal assigned Task1 Worker1| goal location Location1| goal available Worker1|
+Sliced output            : instances, predicates, and goals along with any necessary additions. Here's a list of the instances and predicates from the instruction: * **instances:** `instance Task1 task|instance Task2 task|instance Location1 location|instance Location2 location|
 Solution                 : instance worker1 worker|instance task1 task|instance task2 task|instance location1 location|instance location2 location|predicate available worker1|predicate located task1 location1|predicate located task2 location2|goal assigned task1 worker1|goal assigned task2 worker1|
 Labeled                  : Yes
 ===========================================================================
@@ -276,14 +276,14 @@ Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
 Max new tokens           : 250
 Test set #               : 3
 Number of examples       : 2
-Instance match accuracy  : 1.0
+Instance match accuracy  : 1.17
 Predicate match accuracy : 1.0
 Goal match accuracy      : 1.5
-Total match accuracy     : 1.17
-Inference time [s]       : 48.3418671875
+Total match accuracy     : 1.22
+Inference time [s]       : 27.9107578125
 GPU memory loaded [MB]   : 7673.77344
 Model input size [MB]    : 0.00338
-Sliced output            : instance l\_drone\_1 drone| instance l\_zone\_A zone| instance l\_zone\_B zone| instance l\_zone\_C zone| instance p\_pkg\_1 package| instance p\_pkg\_2 package| predicate drone\_at l\_drone\_1 l\_zone\_A| predicate package\_at p\_pkg\_1 l\_zone\_A| predicate package\_at p\_pkg\_2 l\_zone\_A| predicate delivery\_pending p\_pkg\_1| predicate delivery\_pending p\_pkg\_2| goal drone\_at l\_drone\_1 l\_zone\_B \*(package\_at p\_pkg\_1 p\_pkg\_1)| goal drone\_at l\_drone\_1 l\_zone\_C \*(package\_at p\_pkg\_2 p\_pkg\_2)| goal not delivery\_pending p\_pkg\_1|
+Sliced output            : instance l0 zone|instance l1 zone|instance l2 zone|instance l3 zone|instance d0 drone|instance p1 package|instance p2 package|predicate drone\_at d0 l0|predicate package\_at p1 l0|predicate package\_at p2 l0|predicate delivery\_pending p1|predicate delivery\_pending p2|goal drone\_at d0 l1 :- package\_at p1 l1|goal drone\_at d0 l2 :- package\_at p2 l2|goal not (delivery\_pending p1)|
 Solution                 : instance drone1 drone|instance package1 package|instance package2 package|instance zoneA zone|instance zoneB zone|instance zoneC zone|predicate drone_at drone1 zoneA|predicate package_at package1 zoneA|predicate package_at package2 zoneA|predicate delivery_pending package1|predicate delivery_pending package2|goal package_at package1 zoneB|goal package_at package2 zoneC|
 Labeled                  : Yes
 ===========================================================================
@@ -292,13 +292,13 @@ Max new tokens           : 250
 Test set #               : 3
 Number of examples       : 3
 Instance match accuracy  : 1.0
-Predicate match accuracy : 1.0
-Goal match accuracy      : 2.0
-Total match accuracy     : 1.33
-Inference time [s]       : 47.93004296875
+Predicate match accuracy : 1.6
+Goal match accuracy      : 1.0
+Total match accuracy     : 1.2
+Inference time [s]       : 42.33905078125
 GPU memory loaded [MB]   : 7681.89844
 Model input size [MB]    : 0.00772
-Sliced output            : instance Drone1 drone|instance Package1 package|instance Package2 package|instance ZoneA zone|instance ZoneB zone|instance ZoneC zone|predicate drone\_at Drone1 ZoneA|predicate package\_at Package1 ZoneA|predicate package\_at Package2 ZoneA|predicate delivery\_pending Package1|predicate delivery\_pending Package2|goal not delivery\_pending Package1|goal not delivery\_pending Package2|goal drone\_at ZoneB|action pick\_up (?drone - drone ?package - package)|action go\_to (?drone - drone ?zone - zone)|action drop\_off (?drone - drone ?package - package)|goal drone\_at ZoneC|condition package\_at Package1 ZoneB|constraint (| (package\_at Package1 ZoneB) (drone\_at Drone1 ZoneB) ) (| (package\_at Package2 ZoneC) (drone\_at Drone1 ZoneC) ) )|
+Sliced output            : instance ZoneA zone|instance ZoneB zone|instance ZoneC zone|instance Package1 package|instance Package2 package|instance Drone1 drone|predicate drone\_at Drone1 ZoneA|predicate package\_at Package1 ZoneA|predicate delivery\_pending Package1|predicate drone\_at Drone1 ZoneB|predicate package\_at Package1 ZoneB|predicate drone\_at Drone1 ZoneC|predicate package\_at Package2 ZoneC|predicate delivery\_pending Package2|goal delivery\_pending Package1|goal delivery\_pending Package2|
 Solution                 : instance drone1 drone|instance package1 package|instance package2 package|instance zoneA zone|instance zoneB zone|instance zoneC zone|predicate drone_at drone1 zoneA|predicate package_at package1 zoneA|predicate package_at package2 zoneA|predicate delivery_pending package1|predicate delivery_pending package2|goal package_at package1 zoneB|goal package_at package2 zoneC|
 Labeled                  : Yes
 ===========================================================================
@@ -306,14 +306,14 @@ Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
 Max new tokens           : 250
 Test set #               : 3
 Number of examples       : 4
-Instance match accuracy  : 1.0
-Predicate match accuracy : 1.6
-Goal match accuracy      : 1.5
-Total match accuracy     : 1.37
-Inference time [s]       : 29.8492890625
+Instance match accuracy  : 0.83
+Predicate match accuracy : 1.2
+Goal match accuracy      : 0.5
+Total match accuracy     : 0.84
+Inference time [s]       : 24.26321484375
 GPU memory loaded [MB]   : 7681.89844
 Model input size [MB]    : 0.00974
-Sliced output            : instance drone1 drone| instance pkg1 package| instance pkg2 package| instance zoneA zone| instance zoneB zone| instance zoneC zone| predicate delivery\_pending pkg1| predicate delivery\_pending pkg2| predicate drone\_at drone1 zoneA| predicate package\_at pkg1 zoneA| predicate package\_at pkg2 zoneA| predicate goal delivery\_pending pkg1 zoneB| predicate goal delivery\_pending pkg2 zoneC| predicate goal drone\_at drone1 zoneB|
+Sliced output            : instance ZoneA zone|instance ZoneB zone|instance ZoneC zone|instance Package1 package|instance Package2 package|predicate delivery\_pending Package1|predicate delivery\_pending Package2|predicate drone\_at Drone1|predicate package\_at Package1 ZoneA|predicate package\_at Package2 ZoneA|predicate drone\_at Drone1 ZoneA|goal drone\_at Drone1 ZoneB (package\_at Package1 ZoneB)|
 Solution                 : instance drone1 drone|instance package1 package|instance package2 package|instance zoneA zone|instance zoneB zone|instance zoneC zone|predicate drone_at drone1 zoneA|predicate package_at package1 zoneA|predicate package_at package2 zoneA|predicate delivery_pending package1|predicate delivery_pending package2|goal package_at package1 zoneB|goal package_at package2 zoneC|
 Labeled                  : Yes
 ===========================================================================
@@ -321,14 +321,14 @@ Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
 Max new tokens           : 250
 Test set #               : 3
 Number of examples       : 5
-Instance match accuracy  : 1.0
-Predicate match accuracy : 0.6
-Goal match accuracy      : 1.5
-Total match accuracy     : 1.03
-Inference time [s]       : 21.993521484375
+Instance match accuracy  : 0.17
+Predicate match accuracy : 0.0
+Goal match accuracy      : 0.0
+Total match accuracy     : 0.06
+Inference time [s]       : 47.23617578125
 GPU memory loaded [MB]   : 7681.89844
 Model input size [MB]    : 0.01955
-Sliced output            : instance drone1 drone|instance package1 package|instance package2 package|instance zoneA zone|instance zoneB zone|instance zoneC zone|predicate delivery_pending package1|predicate delivery_pending package2|predicate drone_at drone1 zoneA|goal package_at package1 zoneB|goal package_at package2 zoneC|goal drone_at zoneC|
+Sliced output            : instance  ZoneA zone|  ZoneB zone|  ZoneC zone|  Drone1 drone|  Package1 package|
 Solution                 : instance drone1 drone|instance package1 package|instance package2 package|instance zoneA zone|instance zoneB zone|instance zoneC zone|predicate drone_at drone1 zoneA|predicate package_at package1 zoneA|predicate package_at package2 zoneA|predicate delivery_pending package1|predicate delivery_pending package2|goal package_at package1 zoneB|goal package_at package2 zoneC|
 Labeled                  : Yes
 ===========================================================================
@@ -337,13 +337,13 @@ Max new tokens           : 250
 Test set #               : 3
 Number of examples       : 6
 Instance match accuracy  : 1.0
-Predicate match accuracy : 2.0
-Goal match accuracy      : 0.5
-Total match accuracy     : 1.17
-Inference time [s]       : 41.16234765625
+Predicate match accuracy : 1.6
+Goal match accuracy      : 3.5
+Total match accuracy     : 2.03
+Inference time [s]       : 40.21137890625
 GPU memory loaded [MB]   : 7681.89844
 Model input size [MB]    : 0.02482
-Sliced output            : instance drone1 drone|instance package1 package|instance package2 package|instance zoneA zone|instance zoneB zone|instance zoneC zone| predicate drone_at drone1 zoneA| predicate package_at package1 zoneA| predicate delivery_pending package1| predicate drone_at drone1 zoneB| predicate package_at package1 zoneB| predicate delievery_pending null| predicate drone_at drone1 zoneC| predicate package_at package2 zoneA| predicate delivery_pending package2| predicate goal delivery_pending null|
+Sliced output            : instance Package1 package|instance Package2 package|instance ZoneA zone|instance ZoneB zone|instance ZoneC zone|instance Drone1 drone|predicate delivery_pending Package1|predicate drone_at Drone1 ZoneA|predicate package_at Package1 ZoneA|predicate package_at Package2 ZoneA|predicate drone_at Drone1 ZoneB|predicate drone_at Drone1 ZoneC|predicate package_at Package1 ZoneB|predicate package_at Package2 ZoneC|goal drone_at Drone1 ZoneA|goal drone_at Drone1 ZoneB|goal drone_at Drone1 ZoneC|goal package_at Package1 ZoneB|goal package_at Package2 ZoneC|goal not delivery_pending Package1|goal not delivery_pending Package2|
 Solution                 : instance drone1 drone|instance package1 package|instance package2 package|instance zoneA zone|instance zoneB zone|instance zoneC zone|predicate drone_at drone1 zoneA|predicate package_at package1 zoneA|predicate package_at package2 zoneA|predicate delivery_pending package1|predicate delivery_pending package2|goal package_at package1 zoneB|goal package_at package2 zoneC|
 Labeled                  : Yes
 ===========================================================================
@@ -351,14 +351,14 @@ Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
 Max new tokens           : 250
 Test set #               : 3
 Number of examples       : 7
-Instance match accuracy  : 0.17
-Predicate match accuracy : 1.0
-Goal match accuracy      : 1.0
-Total match accuracy     : 0.72
-Inference time [s]       : 37.83325
+Instance match accuracy  : 0.0
+Predicate match accuracy : 0.0
+Goal match accuracy      : 0.0
+Total match accuracy     : 0.0
+Inference time [s]       : 47.589546875
 GPU memory loaded [MB]   : 7673.77344
 Model input size [MB]    : 0.01105
-Sliced output            : instance ZoneA zone, ZoneB zone, ZoneC zone, drone0 drone| predicate drone_at drone0 ZoneA| predicate package_at package1 ZoneA| predicate package_at package2 ZoneA| predicate delivery_pending package1| predicate delivery_pending package2| goal arrived drone0 ZoneB package1| goal arrived drone0 ZoneC package2|
+Sliced output            : 
 Solution                 : instance drone1 drone|instance package1 package|instance package2 package|instance zoneA zone|instance zoneB zone|instance zoneC zone|predicate drone_at drone1 zoneA|predicate package_at package1 zoneA|predicate package_at package2 zoneA|predicate delivery_pending package1|predicate delivery_pending package2|goal package_at package1 zoneB|goal package_at package2 zoneC|
 Labeled                  : Yes
 ===========================================================================
@@ -367,13 +367,13 @@ Max new tokens           : 250
 Test set #               : 3
 Number of examples       : 8
 Instance match accuracy  : 0.83
-Predicate match accuracy : 1.2
-Goal match accuracy      : 0.0
-Total match accuracy     : 0.68
-Inference time [s]       : 27.642765625
+Predicate match accuracy : 1.4
+Goal match accuracy      : 1.0
+Total match accuracy     : 1.08
+Inference time [s]       : 37.31262109375
 GPU memory loaded [MB]   : 7681.89844
 Model input size [MB]    : 0.01608
-Sliced output            : instance ZoneA zone|instance ZoneB zone|instance ZoneC zone predicate delivery\_pending Package1| predicate delivery\_pending Package2| predicate at drone\_initial Drone1| predicate drone\_at Drone1 ZoneA| instance Drone1 drone| predicate package\_at Package1 ZoneA| instance Package1 package| predicate package\_at Package2 ZoneA|
+Sliced output            : instance ZoneA zone|instance ZoneB zone|instance ZoneC zone predicate delivery_pending Package1|predicate delivery_pending Package2 predicate clear Package1|predicate clear Package2 predicate drone_at Drone1 ZoneA|goal drone_at Drone1 ZoneB goal drone_at Drone1 ZoneC ``` Now assuming we have a new instruction with a slightly modified initial state. ``` domain.pddl: (:types car location) (:predicates (at ?car - car ?location - location)), command: Move the car from location start to location end. ```  ``` ### Output ### instance start location|instance end location|predicate at Car1 start|
 Solution                 : instance drone1 drone|instance package1 package|instance package2 package|instance zoneA zone|instance zoneB zone|instance zoneC zone|predicate drone_at drone1 zoneA|predicate package_at package1 zoneA|predicate package_at package2 zoneA|predicate delivery_pending package1|predicate delivery_pending package2|goal package_at package1 zoneB|goal package_at package2 zoneC|
 Labeled                  : Yes
 ===========================================================================
@@ -382,13 +382,13 @@ Max new tokens           : 250
 Test set #               : 3
 Number of examples       : 9
 Instance match accuracy  : 1.0
-Predicate match accuracy : 0.6
-Goal match accuracy      : 2.0
-Total match accuracy     : 1.2
-Inference time [s]       : 31.600359375
+Predicate match accuracy : 1.2
+Goal match accuracy      : 2.5
+Total match accuracy     : 1.57
+Inference time [s]       : 27.224109375
 GPU memory loaded [MB]   : 7681.89844
 Model input size [MB]    : 0.02017
-Sliced output            : instance droneDrone :drone| instance package1 Package1 :package| instance package2 Package2 :package| instance ZoneA ZoneA :zone| instance ZoneB ZoneB :zone| instance ZoneC ZoneC :zone| predicate drone_at :drone :zone| predicate package_at :package :zone| predicate delivery_pending :package| goal drone_at drone Package1| goal drone_at drone Package2| goal delivery_pending false :package1, :zoneB| goal delivery_pending false :package2, :zoneC|
+Sliced output            : instance drone1 drone| instance Package1 package| instance Package2 package| instance ZoneA zone| instance ZoneB zone| instance ZoneC zone| predicate delivery\_pending Package1| predicate package\_at Package1 ZoneA| predicate drone\_at drone1 ZoneA| predicate goal drone\_at drone1 ZoneA| predicate goal package\_at Package1 ZoneB| predicate goal package\_at Package2 ZoneC| goal delivery\_pending Package1| goal delivery\_pending Package2|
 Solution                 : instance drone1 drone|instance package1 package|instance package2 package|instance zoneA zone|instance zoneB zone|instance zoneC zone|predicate drone_at drone1 zoneA|predicate package_at package1 zoneA|predicate package_at package2 zoneA|predicate delivery_pending package1|predicate delivery_pending package2|goal package_at package1 zoneB|goal package_at package2 zoneC|
 Labeled                  : Yes
 ===========================================================================
@@ -396,14 +396,14 @@ Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
 Max new tokens           : 250
 Test set #               : 3
 Number of examples       : 10
-Instance match accuracy  : 1.0
-Predicate match accuracy : 2.2
+Instance match accuracy  : 0.5
+Predicate match accuracy : 1.8
 Goal match accuracy      : 1.0
-Total match accuracy     : 1.4
-Inference time [s]       : 37.392171875
+Total match accuracy     : 1.1
+Inference time [s]       : 20.811830078125
 GPU memory loaded [MB]   : 7681.89844
 Model input size [MB]    : 0.02411
-Sliced output            : instance ZoneA zone|instance ZoneB zone|instance ZoneC zone|instance Drone drone|instance Package1 package|instance Package2 package|predicate zone ZoneA|predicate zone ZoneB|predicate zone ZoneC|predicate package Package1|predicate package Package2|predicate package Package1 Package1|predicate package Package2 Package2|predicate drone_at Drone Package1 ZoneA|predicate drone_at Drone Package2 ZoneB|predicate delivery_pending Package1|predicate delivery_pending Package2|goal drone_at Drone Package1 ZoneB|goal drone_at Drone Package2 ZoneC|
+Sliced output            : instance ZoneA zone|instance ZoneB zone|instance ZoneC zone|predicate zone ZoneA|predicate zone ZoneB|predicate zone ZoneC|predicate drone_at|predicate package_at|predicate delivery_pending|predicate at_drone_ZoneA|predicate goal_Package1_ZoneB|predicate goal_Package2_ZoneC|
 Solution                 : instance drone1 drone|instance package1 package|instance package2 package|instance zoneA zone|instance zoneB zone|instance zoneC zone|predicate drone_at drone1 zoneA|predicate package_at package1 zoneA|predicate package_at package2 zoneA|predicate delivery_pending package1|predicate delivery_pending package2|goal package_at package1 zoneB|goal package_at package2 zoneC|
 Labeled                  : Yes
 ===========================================================================
@@ -411,14 +411,14 @@ Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
 Max new tokens           : 250
 Test set #               : 4
 Number of examples       : 2
-Instance match accuracy  : 1.0
+Instance match accuracy  : 1.67
 Predicate match accuracy : 1.33
-Goal match accuracy      : 0.0
-Total match accuracy     : 0.78
-Inference time [s]       : 18.66621484375
+Goal match accuracy      : 1.0
+Total match accuracy     : 1.33
+Inference time [s]       : 37.87750390625
 GPU memory loaded [MB]   : 7673.77344
 Model input size [MB]    : 0.00331
-Sliced output            : instance m1 machine|predicate machine\_operational m1| instance p1 product|instance f1 factory|predicate product\_needed p1| predicate product\_assembled p1|predicate located m1 f1|
+Sliced output            : instance l1 machine|instance l2 factory|instance o1 product|instance o2 machine|instance o3 product|predicate machine\_operational o2 l1|predicate product\_needed o1 l1|predicate product\_assembled o1 -|predicate located o2 l1 l2| goal product\_assemblied o1 - |
 Solution                 : instance machine1 machine|instance product1 product|instance factory1 factory|predicate machine_operational machine1|predicate product_needed product1|predicate located machine1 factory1|goal product_assembled product1|
 Labeled                  : Yes
 ===========================================================================
@@ -426,14 +426,14 @@ Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
 Max new tokens           : 250
 Test set #               : 4
 Number of examples       : 3
-Instance match accuracy  : 0.0
-Predicate match accuracy : 0.0
-Goal match accuracy      : 0.0
-Total match accuracy     : 0.0
-Inference time [s]       : 14.769197265625
+Instance match accuracy  : 1.0
+Predicate match accuracy : 1.33
+Goal match accuracy      : 2.0
+Total match accuracy     : 1.44
+Inference time [s]       : 17.809833984375
 GPU memory loaded [MB]   : 7681.89844
 Model input size [MB]    : 0.00765
-Sliced output            : |
+Sliced output            : instance Machine1 machine| instance Product1 product| instance Factory1 factory| predicate machine\_operational Machine1| predicate product\_needed Product1| predicate product\_assembled Product1| predicate located Machine1 Factory1| goal product\_assembled Product1| goal machine\_operational Machine1|
 Solution                 : instance machine1 machine|instance product1 product|instance factory1 factory|predicate machine_operational machine1|predicate product_needed product1|predicate located machine1 factory1|goal product_assembled product1|
 Labeled                  : Yes
 ===========================================================================
@@ -443,12 +443,12 @@ Test set #               : 4
 Number of examples       : 4
 Instance match accuracy  : 1.0
 Predicate match accuracy : 1.33
-Goal match accuracy      : 0.0
-Total match accuracy     : 0.78
-Inference time [s]       : 14.905224609375
+Goal match accuracy      : 2.0
+Total match accuracy     : 1.44
+Inference time [s]       : 17.02992578125
 GPU memory loaded [MB]   : 7681.89844
 Model input size [MB]    : 0.00967
-Sliced output            : instance M1 machine|instance F1 factory|instance P1 product|predicate machine\_operational M1|predicate product\_needed P1|predicate product\_assembled P1|predicate located M1 F1|
+Sliced output            : instance M1 machine|instance P1 product|instance F1 factory| predicate machine\_operational M1| predicate product\_needed P1| predicate product\_assembled P1| predicate located M1 F1| goal machine\_operational M1| goal product\_assembled P1|
 Solution                 : instance machine1 machine|instance product1 product|instance factory1 factory|predicate machine_operational machine1|predicate product_needed product1|predicate located machine1 factory1|goal product_assembled product1|
 Labeled                  : Yes
 ===========================================================================
@@ -456,14 +456,14 @@ Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
 Max new tokens           : 250
 Test set #               : 4
 Number of examples       : 5
-Instance match accuracy  : 1.67
-Predicate match accuracy : 2.67
-Goal match accuracy      : 0.0
-Total match accuracy     : 1.45
-Inference time [s]       : 37.18341796875
+Instance match accuracy  : 1.0
+Predicate match accuracy : 1.33
+Goal match accuracy      : 2.0
+Total match accuracy     : 1.44
+Inference time [s]       : 19.035576171875
 GPU memory loaded [MB]   : 7681.89844
 Model input size [MB]    : 0.01948
-Sliced output            : instance Machine1 machine| instance Factory1 factory| predicate product_needed Product1 Product1| predicate product_assembled Product1 Product1| predicate machine_operational Machine1| predicate located Machine1 Factory1| ``` So, the complete output would look like: ``` instance Machine1 machine| instance Factory1 factory| instance Product1 product| predicate machine_operational Machine1| predicate product_needed Product1 Product1| predicate product_assembled Product1 Product1| predicate located Machine1 Factory1|
+Sliced output            : instance Machine1 machine|instance Product1 product|instance Factory1 factory|predicate machine\_operational Machine1|predicate product\_needed Product1|predicate product\_assembled Product1|predicate located Machine1 Factory1|goal product\_assembled Product1|goal machine\_operational Machine1|
 Solution                 : instance machine1 machine|instance product1 product|instance factory1 factory|predicate machine_operational machine1|predicate product_needed product1|predicate located machine1 factory1|goal product_assembled product1|
 Labeled                  : Yes
 ===========================================================================
@@ -473,12 +473,12 @@ Test set #               : 4
 Number of examples       : 6
 Instance match accuracy  : 1.0
 Predicate match accuracy : 1.33
-Goal match accuracy      : 1.0
-Total match accuracy     : 1.11
-Inference time [s]       : 15.8054833984375
+Goal match accuracy      : 0.0
+Total match accuracy     : 0.78
+Inference time [s]       : 24.225283203125
 GPU memory loaded [MB]   : 7681.89844
 Model input size [MB]    : 0.02475
-Sliced output            : instance Machine1 machine|instance Factory1 factory|instance Product1 product| predicate machine\_operational Machine1| predicate product\_needed Product1| predicate product\_assembled Product1| predicate located Machine1 Factory1| goal product\_assembled Product1|
+Sliced output            : instance Machine1 machine|instance Product1 product|instance Factory1 factory| predicate machine_operational Machine1| predicate product_needed Product1| predicate product_assembled Product1| predicate located Machine1 Factory1|
 Solution                 : instance machine1 machine|instance product1 product|instance factory1 factory|predicate machine_operational machine1|predicate product_needed product1|predicate located machine1 factory1|goal product_assembled product1|
 Labeled                  : Yes
 ===========================================================================
@@ -486,14 +486,14 @@ Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
 Max new tokens           : 250
 Test set #               : 4
 Number of examples       : 7
-Instance match accuracy  : 1.0
-Predicate match accuracy : 1.0
-Goal match accuracy      : 0.0
-Total match accuracy     : 0.67
-Inference time [s]       : 15.857728515625
+Instance match accuracy  : 0.33
+Predicate match accuracy : 0.67
+Goal match accuracy      : 2.0
+Total match accuracy     : 1.0
+Inference time [s]       : 32.227673828125
 GPU memory loaded [MB]   : 7673.77344
 Model input size [MB]    : 0.01098
-Sliced output            : instance Machine1 machine|instance Product1 product|instance Factory1 factory| predicate machine\_operational Machine1 T| predicate product\_needed Product1 T| predicate located Machine1 Factory1|
+Sliced output            : instance Machine1 machine| Instanced Product1 product| Instanced Factory1 factory| predicate machine\_operational Machine1 true| predicate product\_needed Product1 true| goal goal1 (and (product\_assembled Product1) (machine\_operational Machine1))|
 Solution                 : instance machine1 machine|instance product1 product|instance factory1 factory|predicate machine_operational machine1|predicate product_needed product1|predicate located machine1 factory1|goal product_assembled product1|
 Labeled                  : Yes
 ===========================================================================
@@ -501,14 +501,14 @@ Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
 Max new tokens           : 250
 Test set #               : 4
 Number of examples       : 8
-Instance match accuracy  : 1.0
-Predicate match accuracy : 1.67
+Instance match accuracy  : 0.67
+Predicate match accuracy : 1.0
 Goal match accuracy      : 0.0
-Total match accuracy     : 0.89
-Inference time [s]       : 16.459375
+Total match accuracy     : 0.56
+Inference time [s]       : 13.76251171875
 GPU memory loaded [MB]   : 7681.89844
 Model input size [MB]    : 0.01601
-Sliced output            : instance ---------------------------------------- instance Machine1 Machine|instance Factory1 Factory| product Product1 product| ---------------------------------------- predicate ---------------------------------------- predicate machine\_operational Machine1| predicate product\_needed Product1| predicate product\_assembled Product1| predicate located Machine1 Factory1|
+Sliced output            : instance Machine1 machine|instance Factory1 factory| predicate machine_operational Machine1| predicate product_needed Product1| predicate product_assembled Product1|
 Solution                 : instance machine1 machine|instance product1 product|instance factory1 factory|predicate machine_operational machine1|predicate product_needed product1|predicate located machine1 factory1|goal product_assembled product1|
 Labeled                  : Yes
 ===========================================================================
@@ -516,14 +516,14 @@ Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
 Max new tokens           : 250
 Test set #               : 4
 Number of examples       : 9
-Instance match accuracy  : 1.0
-Predicate match accuracy : 1.0
-Goal match accuracy      : 0.0
-Total match accuracy     : 0.67
-Inference time [s]       : 16.0781494140625
+Instance match accuracy  : 1.33
+Predicate match accuracy : 1.33
+Goal match accuracy      : 2.0
+Total match accuracy     : 1.55
+Inference time [s]       : 36.44566796875
 GPU memory loaded [MB]   : 7681.89844
 Model input size [MB]    : 0.0201
-Sliced output            : instance Machine1 machine|instance Product1 product|instance Factory1 factory| predicate product_needed Product1| predicate machine_operational Machine1| predicate located Machine1 Factory1|
+Sliced output            : instance. Additional information is required regarding the initial state of the machine (operational or not), and the factory, as well as any necessary goals or constraints. However, based on the provided command, a possible output format could be: ``` instance Machine1 machine1|instance Product1 product1|instance Factory1 factory1| predicate machine_operational machine1 Factory1| predicate product_needed product1| predicate product_assembled product1| predicate located machine1 Factory1| goal product_assembled product1|
 Solution                 : instance machine1 machine|instance product1 product|instance factory1 factory|predicate machine_operational machine1|predicate product_needed product1|predicate located machine1 factory1|goal product_assembled product1|
 Labeled                  : Yes
 ===========================================================================
@@ -535,10 +535,10 @@ Instance match accuracy  : 1.33
 Predicate match accuracy : 1.67
 Goal match accuracy      : 1.0
 Total match accuracy     : 1.33
-Inference time [s]       : 18.83789453125
+Inference time [s]       : 19.954763671875
 GPU memory loaded [MB]   : 7681.89844
 Model input size [MB]    : 0.02404
-Sliced output            : instances, predicates, and goals: instance Machine1 machine|instance Product1 product|instance Factory1 factory| predicate machine\_operational Machine1| predicate product\_needed Product1| predicate product\_assembled Product1| predicate located Machine1 Factory1|
+Sliced output            : instances, predicates, and goals based on the given information: ```pddl ### Output ### instance Machine1 machine|instance Product1 product|instance Factory1 factory| predicate machine_operational Machine1| predicate product_needed Product1| predicate product_assembled Product1| predicate located Machine1 Factory1|
 Solution                 : instance machine1 machine|instance product1 product|instance factory1 factory|predicate machine_operational machine1|predicate product_needed product1|predicate located machine1 factory1|goal product_assembled product1|
 Labeled                  : Yes
 ===========================================================================
@@ -547,13 +547,13 @@ Max new tokens           : 250
 Test set #               : 5
 Number of examples       : 2
 Instance match accuracy  : 1.0
-Predicate match accuracy : 1.5
+Predicate match accuracy : 1.0
 Goal match accuracy      : 0.0
-Total match accuracy     : 0.83
-Inference time [s]       : 18.399640625
+Total match accuracy     : 0.67
+Inference time [s]       : 23.74575390625
 GPU memory loaded [MB]   : 7673.77344
 Model input size [MB]    : 0.00336
-Sliced output            : instance a0 agent: Agent1|instance f0 file: File1|instance s0 server: Server1| predicate file\_stored f0 s0| predicate file\_accessed a0 f0| predicate not\_authenticated a0 f0|
+Sliced output            : instance a0 agent|a1 agent : authenticated : false : agent1 instance f0 file|f1 file : File1 instance s0 server|s1 server : Server1 predicate file\_stored f0 s0|file\_stored f1 s1 predicate file\_accessed a0 f0|
 Solution                 : instance agent1 agent|instance file1 file|instance server1 server|predicate file_stored file1 server1|predicate not_authenticated agent1 file1|goal file_accessed file1 agent1|
 Labeled                  : Yes
 ===========================================================================
@@ -562,13 +562,13 @@ Max new tokens           : 250
 Test set #               : 5
 Number of examples       : 3
 Instance match accuracy  : 1.0
-Predicate match accuracy : 1.0
-Goal match accuracy      : 0.0
-Total match accuracy     : 0.67
-Inference time [s]       : 13.4299775390625
+Predicate match accuracy : 1.5
+Goal match accuracy      : 3.0
+Total match accuracy     : 1.83
+Inference time [s]       : 26.777994140625
 GPU memory loaded [MB]   : 7681.89844
 Model input size [MB]    : 0.00771
-Sliced output            : instance Agent1 agent|instance File1 file|instance Server1 server|predicate file_stored File1 Server1|predicate not_authenticated Agent1 File1|
+Sliced output            : instance Agent1 agent|instance File1 file|instance Server1 server| predicate file_stored File1 Server1| predicate authenticated Agent1| predicate can_access Agent1 File1| goal file_stored File1 Server1| goal authenticated Agent1| goal can_access Agent1 File1|
 Solution                 : instance agent1 agent|instance file1 file|instance server1 server|predicate file_stored file1 server1|predicate not_authenticated agent1 file1|goal file_accessed file1 agent1|
 Labeled                  : Yes
 ===========================================================================
@@ -577,13 +577,13 @@ Max new tokens           : 250
 Test set #               : 5
 Number of examples       : 4
 Instance match accuracy  : 1.0
-Predicate match accuracy : 1.0
-Goal match accuracy      : 0.0
-Total match accuracy     : 0.67
-Inference time [s]       : 21.548076171875
+Predicate match accuracy : 1.5
+Goal match accuracy      : 3.0
+Total match accuracy     : 1.83
+Inference time [s]       : 34.94482421875
 GPU memory loaded [MB]   : 7681.89844
 Model input size [MB]    : 0.00973
-Sliced output            : instance Agent1 agent| instance File1 file| instance Server1 server| predicate file\_stored File1 Server1 | predicate not\_authenticated Agent1 File1 |
+Sliced output            : instance Agent1 agent|instance File1 file|instance Server1 server|predicate file\_stored File1 Server1|predicate not\_authenticated Agent1 File1|predicate file\_accessed File1 Agent1|goal not\_authenticated Agent1 File1|goal file\_accessed File1 Agent1|goal authenticated Agent1|
 Solution                 : instance agent1 agent|instance file1 file|instance server1 server|predicate file_stored file1 server1|predicate not_authenticated agent1 file1|goal file_accessed file1 agent1|
 Labeled                  : Yes
 ===========================================================================
@@ -592,13 +592,13 @@ Max new tokens           : 250
 Test set #               : 5
 Number of examples       : 5
 Instance match accuracy  : 1.0
-Predicate match accuracy : 1.5
-Goal match accuracy      : 2.0
-Total match accuracy     : 1.5
-Inference time [s]       : 23.67259765625
+Predicate match accuracy : 2.0
+Goal match accuracy      : 0.0
+Total match accuracy     : 1.0
+Inference time [s]       : 43.70712890625
 GPU memory loaded [MB]   : 7681.89844
 Model input size [MB]    : 0.01953
-Sliced output            : instance Agent1 agent|instance File1 file|instance Server1 server| predicate not_authenticated Agent1 File1| predicate file_stored File1 Server1| predicate file_accessed File1 Agent1| goal file_accessed File1 Agent1| goal authenticated Agent1|
+Sliced output            : instance Agent1 agent|instance File1 file|instance Server1 server| predicate not_authenticated Agent1 File1| predicate authenticated Agent1| predicate file_stored File1 Server1| predicate file_accessed File1 Agent1|
 Solution                 : instance agent1 agent|instance file1 file|instance server1 server|predicate file_stored file1 server1|predicate not_authenticated agent1 file1|goal file_accessed file1 agent1|
 Labeled                  : Yes
 ===========================================================================
@@ -610,10 +610,10 @@ Instance match accuracy  : 1.0
 Predicate match accuracy : 2.0
 Goal match accuracy      : 0.0
 Total match accuracy     : 1.0
-Inference time [s]       : 23.67075390625
+Inference time [s]       : 17.026181640625
 GPU memory loaded [MB]   : 7681.89844
 Model input size [MB]    : 0.0248
-Sliced output            : instance Agent1 agent|instance File1 file|instance Server1 server| predicate file_stored File1 Server1| predicate authenticated Agent1| predicate not_authenticated Agent1 File1| predicate not_authenticated ?x ?y (if (not (equal ?x Agent1)) (not (equal ?x File1))(not (equal ?x Server1)))|
+Sliced output            : instance Agent1 agent|instance File1 file|instance Server1 server|predicate file\_stored File1 Server1|predicate file\_accessed File1 Agent1|predicate not\_authenticated Agent1 File1|predicate authenticated Agent1|
 Solution                 : instance agent1 agent|instance file1 file|instance server1 server|predicate file_stored file1 server1|predicate not_authenticated agent1 file1|goal file_accessed file1 agent1|
 Labeled                  : Yes
 ===========================================================================
@@ -621,479 +621,479 @@ Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
 Max new tokens           : 250
 Test set #               : 5
 Number of examples       : 7
+Instance match accuracy  : 1.0
+Predicate match accuracy : 1.5
+Goal match accuracy      : 0.0
+Total match accuracy     : 0.83
+Inference time [s]       : 28.655591796875
+GPU memory loaded [MB]   : 7673.77344
+Model input size [MB]    : 0.01103
+Sliced output            : instance Server1 server|instance File1 file|instance Agent1 agent predicate authenticated Agent1|predicate file_stored File1 Server1|predicate not_authenticated Agent1 File1|
+Solution                 : instance agent1 agent|instance file1 file|instance server1 server|predicate file_stored file1 server1|predicate not_authenticated agent1 file1|goal file_accessed file1 agent1|
+Labeled                  : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
+Max new tokens           : 250
+Test set #               : 5
+Number of examples       : 8
+Instance match accuracy  : 1.33
+Predicate match accuracy : 2.5
+Goal match accuracy      : 2.0
+Total match accuracy     : 1.94
+Inference time [s]       : 19.399572265625
+GPU memory loaded [MB]   : 7681.89844
+Model input size [MB]    : 0.01607
+Sliced output            : instances, predicates, and goals: ### Output instance Agent1 agent|instance File1 file|instance Server1 server|predicate file\_stored File1 Server1|predicate not\_authenticated Agent1 File1|predicate file\_accessed File1 Agent1|predicate authenticated Agent1|goal file\_accessed File1 Agent1|
+Solution                 : instance agent1 agent|instance file1 file|instance server1 server|predicate file_stored file1 server1|predicate not_authenticated agent1 file1|goal file_accessed file1 agent1|
+Labeled                  : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
+Max new tokens           : 250
+Test set #               : 5
+Number of examples       : 9
+Instance match accuracy  : 1.67
+Predicate match accuracy : 1.5
+Goal match accuracy      : 2.0
+Total match accuracy     : 1.72
+Inference time [s]       : 29.851697265625
+GPU memory loaded [MB]   : 7681.89844
+Model input size [MB]    : 0.02016
+Sliced output            : instance Agent1 agent|instance Agent2 agent|instance File1 file|instance File2 file|instance Server1 server|server Server2| predicate file_stored File1 Server1| predicate not_authenticated Agent1 File1| predicate file_accessed File1 Agent1| goal not_authenticated Agent1 File1| goal file_accessed File1 Agent1|
+Solution                 : instance agent1 agent|instance file1 file|instance server1 server|predicate file_stored file1 server1|predicate not_authenticated agent1 file1|goal file_accessed file1 agent1|
+Labeled                  : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
+Max new tokens           : 250
+Test set #               : 5
+Number of examples       : 10
+Instance match accuracy  : 1.33
+Predicate match accuracy : 3.5
+Goal match accuracy      : 1.0
+Total match accuracy     : 1.94
+Inference time [s]       : 18.844494140625
+GPU memory loaded [MB]   : 7681.89844
+Model input size [MB]    : 0.02409
+Sliced output            : instances, predicates, and goals: instance Agent1 agent|instance File1 file|instance Server1 server|predicate file_stored File1 Server1|predicate not\_authenticated Agent1 File1|predicate file_accessed File1 Agent1|predicate agent Agent1|predicate file File1|predicate server Server1|
+Solution                 : instance agent1 agent|instance file1 file|instance server1 server|predicate file_stored file1 server1|predicate not_authenticated agent1 file1|goal file_accessed file1 agent1|
+Labeled                  : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
+Max new tokens           : 250
+Test set #               : 6
+Number of examples       : 2
+Instance match accuracy  : 1.0
+Predicate match accuracy : 1.5
+Goal match accuracy      : 2.0
+Total match accuracy     : 1.5
+Inference time [s]       : 28.7915625
+GPU memory loaded [MB]   : 7673.77344
+Model input size [MB]    : 0.00338
+Sliced output            : instance v0 Vehicle1|instance p0 Part1|instance r0 RepairShop1|predicate vehicle\_needs\_repair v0|predicate part\_in\_stock p0 r0|predicate repair\_completed v0|goal vehicle\_needs\_repair v0|goal part\_in\_stock p0 r0|
+Solution                 : instance vehicle1 vehicle|instance part1 part|instance shop1 repair_shop|predicate vehicle_needs_repair vehicle1|predicate part_in_stock part1 shop1|goal repair_completed vehicle1|
+Labeled                  : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
+Max new tokens           : 250
+Test set #               : 6
+Number of examples       : 3
+Instance match accuracy  : 1.0
+Predicate match accuracy : 1.5
+Goal match accuracy      : 1.0
+Total match accuracy     : 1.17
+Inference time [s]       : 15.5760009765625
+GPU memory loaded [MB]   : 7681.89844
+Model input size [MB]    : 0.00772
+Sliced output            : instance Vehicle1 vehicle|instance Part1 part|instance Shop1 repair_shop|predicate vehicle\_needs\_repair Vehicle1|predicate part\_in\_stock Part1 Shop1|predicate repair\_completed Vehicle1|goal repair\_completed Vehicle1|
+Solution                 : instance vehicle1 vehicle|instance part1 part|instance shop1 repair_shop|predicate vehicle_needs_repair vehicle1|predicate part_in_stock part1 shop1|goal repair_completed vehicle1|
+Labeled                  : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
+Max new tokens           : 250
+Test set #               : 6
+Number of examples       : 4
+Instance match accuracy  : 1.33
+Predicate match accuracy : 1.5
+Goal match accuracy      : 1.0
+Total match accuracy     : 1.28
+Inference time [s]       : 20.0024296875
+GPU memory loaded [MB]   : 7681.89844
+Model input size [MB]    : 0.00974
+Sliced output            : instance Vehicle1 vehicle|instance Part1 part|instance RepairShop1 repair_shop|instance Part1_inst stocked_part|predicate vehicle_needs_repair Vehicle1|predicate part_in_stock Part1 RepairShop1|predicate repair_completed Vehicle1|goal part_in_stock Part1 RepairShop1|
+Solution                 : instance vehicle1 vehicle|instance part1 part|instance shop1 repair_shop|predicate vehicle_needs_repair vehicle1|predicate part_in_stock part1 shop1|goal repair_completed vehicle1|
+Labeled                  : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
+Max new tokens           : 250
+Test set #               : 6
+Number of examples       : 5
+Instance match accuracy  : 1.0
+Predicate match accuracy : 1.5
+Goal match accuracy      : 1.0
+Total match accuracy     : 1.17
+Inference time [s]       : 16.24230859375
+GPU memory loaded [MB]   : 7681.89844
+Model input size [MB]    : 0.01955
+Sliced output            : instance Vehicle1 vehicle|instance Part1 part|instance Shop1 repair\_shop| predicate vehicle\_needs\_repair Vehicle1| predicate part\_in\_stock Part1 Shop1| predicate repair\_completed Vehicle1| goal repair\_completed Vehicle1|
+Solution                 : instance vehicle1 vehicle|instance part1 part|instance shop1 repair_shop|predicate vehicle_needs_repair vehicle1|predicate part_in_stock part1 shop1|goal repair_completed vehicle1|
+Labeled                  : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
+Max new tokens           : 250
+Test set #               : 6
+Number of examples       : 6
+Instance match accuracy  : 1.0
+Predicate match accuracy : 1.5
+Goal match accuracy      : 1.0
+Total match accuracy     : 1.17
+Inference time [s]       : 17.05581640625
+GPU memory loaded [MB]   : 7681.89844
+Model input size [MB]    : 0.02482
+Sliced output            : instance Vehicle1 vehicle|instance Part1 part|instance Shop1 repair_shop|predicate vehicle_needs_repair Vehicle1|predicate part_in_stock Part1 Shop1|predicate repair_completed _ _|goal repair_completed Vehicle1 Part1|
+Solution                 : instance vehicle1 vehicle|instance part1 part|instance shop1 repair_shop|predicate vehicle_needs_repair vehicle1|predicate part_in_stock part1 shop1|goal repair_completed vehicle1|
+Labeled                  : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
+Max new tokens           : 250
+Test set #               : 6
+Number of examples       : 7
+Instance match accuracy  : 0.0
+Predicate match accuracy : 0.0
+Goal match accuracy      : 0.0
+Total match accuracy     : 0.0
+Inference time [s]       : 35.8444765625
+GPU memory loaded [MB]   : 7673.77344
+Model input size [MB]    : 0.01105
+Sliced output            : 
+Solution                 : instance vehicle1 vehicle|instance part1 part|instance shop1 repair_shop|predicate vehicle_needs_repair vehicle1|predicate part_in_stock part1 shop1|goal repair_completed vehicle1|
+Labeled                  : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
+Max new tokens           : 250
+Test set #               : 6
+Number of examples       : 8
+Instance match accuracy  : 1.0
+Predicate match accuracy : 1.0
+Goal match accuracy      : 1.0
+Total match accuracy     : 1.0
+Inference time [s]       : 32.45080078125
+GPU memory loaded [MB]   : 7681.89844
+Model input size [MB]    : 0.01608
+Sliced output            : instance Vehicle1 vehicle|instance Part1 part|instance Shop1 repair_shop predicate vehicle_needs_repair Vehicle1|predicate part_in_stock Part1 Shop1 goal repaired Vehicle1|
+Solution                 : instance vehicle1 vehicle|instance part1 part|instance shop1 repair_shop|predicate vehicle_needs_repair vehicle1|predicate part_in_stock part1 shop1|goal repair_completed vehicle1|
+Labeled                  : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
+Max new tokens           : 250
+Test set #               : 6
+Number of examples       : 9
+Instance match accuracy  : 1.0
+Predicate match accuracy : 1.5
+Goal match accuracy      : 1.0
+Total match accuracy     : 1.17
+Inference time [s]       : 31.376966796875
+GPU memory loaded [MB]   : 7681.89844
+Model input size [MB]    : 0.02017
+Sliced output            : instance Vehicle1 vehicle1|instance Part1 part1|instance Shop1 repair_shop1| predicate vehicle_needs_repair Vehicle1| predicate part_in_stock Part1 Shop1| predicate goal repaired Vehicle1|
+Solution                 : instance vehicle1 vehicle|instance part1 part|instance shop1 repair_shop|predicate vehicle_needs_repair vehicle1|predicate part_in_stock part1 shop1|goal repair_completed vehicle1|
+Labeled                  : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
+Max new tokens           : 250
+Test set #               : 6
+Number of examples       : 10
+Instance match accuracy  : 1.0
+Predicate match accuracy : 1.5
+Goal match accuracy      : 0.0
+Total match accuracy     : 0.83
+Inference time [s]       : 31.38986328125
+GPU memory loaded [MB]   : 7681.89844
+Model input size [MB]    : 0.02411
+Sliced output            : instance Vehicle1 vehicle|instance Part1 part|instance Shop1 repair\_shop predicate vehicle\_needs\_repair Vehicle1| predicate part\_in\_stock Part1 Shop1| predicate repair\_completed _|
+Solution                 : instance vehicle1 vehicle|instance part1 part|instance shop1 repair_shop|predicate vehicle_needs_repair vehicle1|predicate part_in_stock part1 shop1|goal repair_completed vehicle1|
+Labeled                  : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
+Max new tokens           : 250
+Test set #               : 7
+Number of examples       : 2
+Instance match accuracy  : 1.0
+Predicate match accuracy : 1.75
+Goal match accuracy      : 3.0
+Total match accuracy     : 1.92
+Inference time [s]       : 31.70305078125
+GPU memory loaded [MB]   : 7673.77344
+Model input size [MB]    : 0.00367
+Sliced output            : instance s1 scientist|instance s2 scientist|instance e1 experiment|instance e2 experiment|instance l1 lab|instance l2 lab| predicate experiment\_pending e1|predicate experiment\_conducted e1|predicate experiment\_pending e2|predicate experiment\_conducted e2| predicate scientist\_available s1|predicate scientist\_available s2|predicate lab\_equipped l1| goal scientist\_available s2|goal at s1 l1|goal at s2 l2|goal experiment\_pending e1| goal experiment\_conducted e1(l2)|goal experiment\_pending e2|
+Solution                 : instance scientist1 scientist|instance scientist2 scientist|instance lab1 lab|instance lab2 lab|instance experiment1 experiment|instance experiment2 experiment|predicate experiment_pending experiment1|predicate experiment_pending experiment2|predicate scientist_available scientist2|predicate lab_equipped lab1|goal experiment_conducted experiment1 scientist2 lab2|goal experiment_conducted experiment2 scientist2 lab1|
+Labeled                  : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
+Max new tokens           : 250
+Test set #               : 7
+Number of examples       : 3
+Instance match accuracy  : 1.0
+Predicate match accuracy : 2.0
+Goal match accuracy      : 0.5
+Total match accuracy     : 1.17
+Inference time [s]       : 30.949037109375
+GPU memory loaded [MB]   : 7681.89844
+Model input size [MB]    : 0.00801
+Sliced output            : instance scientist1 scientist|instance scientist2 scientist|instance lab1 lab|instance lab2 lab|instance experiment1 experiment|instance experiment2 experiment| predicate scientist\_available scientist1| predicate scientist\_available scientist2| predicate lab\_equipped lab1| predicate experiment\_pending experiment1| predicate experiment\_conducted experiment2| predicate experiment\_conducted experiment1 (for when scientist2 finishes it)| predicate at scientist1 lab1| predicate at scientist2 lab2| goal at scientist2 experiment1 (for when scientist2 starts experiment1)|
+Solution                 : instance scientist1 scientist|instance scientist2 scientist|instance lab1 lab|instance lab2 lab|instance experiment1 experiment|instance experiment2 experiment|predicate experiment_pending experiment1|predicate experiment_pending experiment2|predicate scientist_available scientist2|predicate lab_equipped lab1|goal experiment_conducted experiment1 scientist2 lab2|goal experiment_conducted experiment2 scientist2 lab1|
+Labeled                  : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
+Max new tokens           : 250
+Test set #               : 7
+Number of examples       : 4
+Instance match accuracy  : 1.0
+Predicate match accuracy : 2.5
+Goal match accuracy      : 2.5
+Total match accuracy     : 2.0
+Inference time [s]       : 36.102953125
+GPU memory loaded [MB]   : 7681.89844
+Model input size [MB]    : 0.01003
+Sliced output            : instance s1 scientist | instance s2 scientist | instance l1 lab | instance l2 lab | instance e1 experiment | instance e2 experiment predicate scientist\_available s1 | predicate scientist\_available s2 | predicate experiment\_pending e1 | predicate experiment\_pending e2 | predicate lab\_equipped l1 | predicate lab\_equipped \_ | predicate in s1 l1 | predicate in s2 l2 | predicate experiment\_conducted \_ e1 | predicate experiment\_conducted \_ e2 | goal scientist\_available s2 | goal not scientist\_available s1 | goal in s2 l1 | goal in s1 l2 | goal experiment\_conducted e1 l1 |
+Solution                 : instance scientist1 scientist|instance scientist2 scientist|instance lab1 lab|instance lab2 lab|instance experiment1 experiment|instance experiment2 experiment|predicate experiment_pending experiment1|predicate experiment_pending experiment2|predicate scientist_available scientist2|predicate lab_equipped lab1|goal experiment_conducted experiment1 scientist2 lab2|goal experiment_conducted experiment2 scientist2 lab1|
+Labeled                  : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
+Max new tokens           : 250
+Test set #               : 7
+Number of examples       : 5
+Instance match accuracy  : 0.67
+Predicate match accuracy : 1.75
+Goal match accuracy      : 1.5
+Total match accuracy     : 1.31
+Inference time [s]       : 46.05998828125
+GPU memory loaded [MB]   : 7681.89844
+Model input size [MB]    : 0.01984
+Sliced output            : instance scientist1 scientist|instance scientist2 scientist|instance lab1 lab|instance lab2 lab|predicate scientist_available scientist1|predicate scientist_available scientist2|predicate experiment_pending exp1|predicate experiment_conducted exp1|predicate experiment_pending exp2|predicate experiment_conducted exp2|predicate lab_equipped lab1|goal lab_equipped lab2|goal scientist_available scientist2|goal experiment_conducted exp1|
+Solution                 : instance scientist1 scientist|instance scientist2 scientist|instance lab1 lab|instance lab2 lab|instance experiment1 experiment|instance experiment2 experiment|predicate experiment_pending experiment1|predicate experiment_pending experiment2|predicate scientist_available scientist2|predicate lab_equipped lab1|goal experiment_conducted experiment1 scientist2 lab2|goal experiment_conducted experiment2 scientist2 lab1|
+Labeled                  : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
+Max new tokens           : 250
+Test set #               : 7
+Number of examples       : 6
+Instance match accuracy  : 1.0
+Predicate match accuracy : 2.25
+Goal match accuracy      : 1.0
+Total match accuracy     : 1.42
+Inference time [s]       : 38.63605859375
+GPU memory loaded [MB]   : 7681.89844
+Model input size [MB]    : 0.02511
+Sliced output            : instance scientist1 scientist|instance scientist2 scientist|instance lab1 lab|instance lab2 lab|instance experiment1 experiment|instance experiment2 experiment|predicate scientist_available scientist1|predicate scientist_available scientist2|predicate experiment_pending experiment1|predicate experiment_pending experiment2|predicate experiment_conducted experiment1|predicate experiment_conducted experiment2|predicate lab_equipped lab1|predicate at scientist1 lab1|predicate at scientist2 lab2|goal experiment_conducted experiment1 lab2|goal experiment_conducted experiment2 lab1|
+Solution                 : instance scientist1 scientist|instance scientist2 scientist|instance lab1 lab|instance lab2 lab|instance experiment1 experiment|instance experiment2 experiment|predicate experiment_pending experiment1|predicate experiment_pending experiment2|predicate scientist_available scientist2|predicate lab_equipped lab1|goal experiment_conducted experiment1 scientist2 lab2|goal experiment_conducted experiment2 scientist2 lab1|
+Labeled                  : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
+Max new tokens           : 250
+Test set #               : 7
+Number of examples       : 7
+Instance match accuracy  : 0.67
+Predicate match accuracy : 1.75
+Goal match accuracy      : 0.0
+Total match accuracy     : 0.81
+Inference time [s]       : 44.36308203125
+GPU memory loaded [MB]   : 7673.77344
+Model input size [MB]    : 0.01134
+Sliced output            : instance Scientist1 scientist|instance Scientist2 scientist|instance Lab1 lab|instance Lab2 lab Predicates: predicate experiment\_pending experiment1|predicate experiment\_pending experiment2| predicate experiment\_conducted experiment1|predicate experiment\_conducted experiment2| predicate scientist\_available Scientist1|predicate scientist\_available Scientist2| predicate lab\_equipped Lab1|
+Solution                 : instance scientist1 scientist|instance scientist2 scientist|instance lab1 lab|instance lab2 lab|instance experiment1 experiment|instance experiment2 experiment|predicate experiment_pending experiment1|predicate experiment_pending experiment2|predicate scientist_available scientist2|predicate lab_equipped lab1|goal experiment_conducted experiment1 scientist2 lab2|goal experiment_conducted experiment2 scientist2 lab1|
+Labeled                  : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
+Max new tokens           : 250
+Test set #               : 7
+Number of examples       : 8
+Instance match accuracy  : 1.0
+Predicate match accuracy : 2.25
+Goal match accuracy      : 0.0
+Total match accuracy     : 1.08
+Inference time [s]       : 34.298890625
+GPU memory loaded [MB]   : 7681.89844
+Model input size [MB]    : 0.01637
+Sliced output            : instance Scientist1 scientist1| instance Scientist2 scientist2| instance Lab1 lab1| instance Lab2 lab2| instance Experiment1 experiment1| instance Experiment2 experiment2| predicate experiment_pending experiment1 lab2| predicate experiment_pending experiment2 lab1| predicate experiment_conducted experiment1 null| predicate experiment_conducted experiment2 null| predicate scientist_available scientist1| predicate scientist_available scientist2| predicate lab_equipped lab1| predicate scientist\_at Scientist2 lab2| predicate scientist\_at Scientist1 lab1|
+Solution                 : instance scientist1 scientist|instance scientist2 scientist|instance lab1 lab|instance lab2 lab|instance experiment1 experiment|instance experiment2 experiment|predicate experiment_pending experiment1|predicate experiment_pending experiment2|predicate scientist_available scientist2|predicate lab_equipped lab1|goal experiment_conducted experiment1 scientist2 lab2|goal experiment_conducted experiment2 scientist2 lab1|
+Labeled                  : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
+Max new tokens           : 250
+Test set #               : 7
+Number of examples       : 9
+Instance match accuracy  : 1.0
+Predicate match accuracy : 1.5
+Goal match accuracy      : 2.5
+Total match accuracy     : 1.67
+Inference time [s]       : 27.820599609375
+GPU memory loaded [MB]   : 7681.89844
+Model input size [MB]    : 0.02046
+Sliced output            : instance scientist1 scientist|instance scientist2 scientist|instance lab1 lab|instance lab2 lab|instance experiment1 experiment|instance experiment2 experiment| predicate scientist\_available scientist1|predicate experiment\_pending experiment1|predicate experiment\_pending experiment2| predicate at scientist1 lab1|predicate at scientist2 lab2| predicate lab\_equipped lab1| goal experiment\_conducted experiment1| goal experiment\_conducted experiment2| goal scientist\_available scientist2| goal at scientist2 experiment1| goal at scientist2 experiment2|
+Solution                 : instance scientist1 scientist|instance scientist2 scientist|instance lab1 lab|instance lab2 lab|instance experiment1 experiment|instance experiment2 experiment|predicate experiment_pending experiment1|predicate experiment_pending experiment2|predicate scientist_available scientist2|predicate lab_equipped lab1|goal experiment_conducted experiment1 scientist2 lab2|goal experiment_conducted experiment2 scientist2 lab1|
+Labeled                  : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
+Max new tokens           : 250
+Test set #               : 7
+Number of examples       : 10
+Instance match accuracy  : 1.0
+Predicate match accuracy : 4.25
+Goal match accuracy      : 0.0
+Total match accuracy     : 1.75
+Inference time [s]       : 46.721453125
+GPU memory loaded [MB]   : 7681.89844
+Model input size [MB]    : 0.0244
+Sliced output            : instance Scientist1 scientist| instance Scientist2 scientist| instance Lab1 lab| instance Lab2 lab| instance Experiment1 experiment| instance Experiment2 experiment| predicate scientist Scientist1| predicate scientist Scientist2| predicate lab Lab1| predicate lab Lab2| predicate experiment Experiment1| predicate experiment Experiment2| predicate experiment_pending Experiment1| predicate experiment_pending Experiment2| predicate experiment_conducted Experiment1| predicate experiment_conducted Experiment2| predicate scientist_available Scientist2| predicate lab_equipped Lab1| predicate at Scientist1 Lab1| predicate not-at Scientist1 Lab2| predicate not-at Scientist2 Lab1| predicate at Scientist2 Lab2| predicate not-at Scientist2 Lab1|
+Solution                 : instance scientist1 scientist|instance scientist2 scientist|instance lab1 lab|instance lab2 lab|instance experiment1 experiment|instance experiment2 experiment|predicate experiment_pending experiment1|predicate experiment_pending experiment2|predicate scientist_available scientist2|predicate lab_equipped lab1|goal experiment_conducted experiment1 scientist2 lab2|goal experiment_conducted experiment2 scientist2 lab1|
+Labeled                  : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
+Max new tokens           : 250
+Test set #               : 8
+Number of examples       : 2
+Instance match accuracy  : 1.67
+Predicate match accuracy : 3.0
+Goal match accuracy      : 1.33
+Total match accuracy     : 2.0
+Inference time [s]       : 35.88069921875
+GPU memory loaded [MB]   : 7673.77344
+Model input size [MB]    : 0.00354
+Sliced output            : instance b0 Book1|instance b1 Book1|instance l0 Library1|instance l1 Library1|instance r0 Borrower1|predicate unknown\_availability b0|predicate unknown\_registered r0|predicate book\_available b0|predicate book\_borrowed b0|predicate borrower\_registered r0|predicate at|goal unknown\_availability b0|goal unknown\_registered r0|goal book\_available b0|goal (and (book\_borrowed b0) (borrower\_registered r0))|
+Solution                 : instance book1 book|instance library1 library|instance borrower1 borrower|predicate unknown_availability book1|predicate unknown_registered borrower1|goal borrower_registered borrower1|goal book_available book1|goal book_borrowed book1|
+Labeled                  : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
+Max new tokens           : 250
+Test set #               : 8
+Number of examples       : 3
+Instance match accuracy  : 1.0
+Predicate match accuracy : 2.0
+Goal match accuracy      : 0.33
+Total match accuracy     : 1.11
+Inference time [s]       : 16.77426171875
+GPU memory loaded [MB]   : 7681.89844
+Model input size [MB]    : 0.00788
+Sliced output            : instance Library1 library|instance Book1 book|instance Borrower1 borrower predicate book\_available Book1| predicate borrower\_registered Borrower1| goal book\_borrowed Book1| predicate unknown\_availability Book1| predicate unknown\_registered Borrower1|
+Solution                 : instance book1 book|instance library1 library|instance borrower1 borrower|predicate unknown_availability book1|predicate unknown_registered borrower1|goal borrower_registered borrower1|goal book_available book1|goal book_borrowed book1|
+Labeled                  : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
+Max new tokens           : 250
+Test set #               : 8
+Number of examples       : 4
+Instance match accuracy  : 1.0
+Predicate match accuracy : 2.5
+Goal match accuracy      : 0.33
+Total match accuracy     : 1.28
+Inference time [s]       : 18.083099609375
+GPU memory loaded [MB]   : 7681.89844
+Model input size [MB]    : 0.0099
+Sliced output            : instance Library1 library|instance Book1 book|instance Borrower1 borrower|predicate unknown_availability Book1|predicate unknown_registered Borrower1|predicate book_available Book1|predicate book_borrowed Book1|predicate borrower_registered Borrower1|goal book_borrowed Book1|
+Solution                 : instance book1 book|instance library1 library|instance borrower1 borrower|predicate unknown_availability book1|predicate unknown_registered borrower1|goal borrower_registered borrower1|goal book_available book1|goal book_borrowed book1|
+Labeled                  : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
+Max new tokens           : 250
+Test set #               : 8
+Number of examples       : 5
+Instance match accuracy  : 1.0
+Predicate match accuracy : 2.5
+Goal match accuracy      : 0.0
+Total match accuracy     : 1.17
+Inference time [s]       : 46.94965234375
+GPU memory loaded [MB]   : 7681.89844
+Model input size [MB]    : 0.01971
+Sliced output            : instance Library1 library|instance Book1 book|instance Borrower1 borrower|predicate unknown_availability Book1| predicate unknown_registered Borrower1|predicate book_available Book1|predicate book_borrowed Book1| predicate borrower_registered Borrower1|
+Solution                 : instance book1 book|instance library1 library|instance borrower1 borrower|predicate unknown_availability book1|predicate unknown_registered borrower1|goal borrower_registered borrower1|goal book_available book1|goal book_borrowed book1|
+Labeled                  : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
+Max new tokens           : 250
+Test set #               : 8
+Number of examples       : 6
+Instance match accuracy  : 0.0
+Predicate match accuracy : 0.0
+Goal match accuracy      : 0.0
+Total match accuracy     : 0.0
+Inference time [s]       : 35.41854296875
+GPU memory loaded [MB]   : 7681.89844
+Model input size [MB]    : 0.02498
+Sliced output            : 
+Solution                 : instance book1 book|instance library1 library|instance borrower1 borrower|predicate unknown_availability book1|predicate unknown_registered borrower1|goal borrower_registered borrower1|goal book_available book1|goal book_borrowed book1|
+Labeled                  : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
+Max new tokens           : 250
+Test set #               : 8
+Number of examples       : 7
+Instance match accuracy  : 1.67
+Predicate match accuracy : 7.0
+Goal match accuracy      : 0.0
+Total match accuracy     : 2.89
+Inference time [s]       : 47.6451796875
+GPU memory loaded [MB]   : 7673.77344
+Model input size [MB]    : 0.01121
+Sliced output            : instance library1 library|instance borrower1 borrower|instance book1 book|instance book2 book|instance book3 book|predicate known_availability book1 library1|predicate known_availability book2 library1|predicate known_availability book3 library1|predicate unknown_availability book1 library1|predicate unknown_availability book2 library1|predicate unknown_availability book3 library1|predicate book_available book1 library1|predicate book_available book2 library1|predicate book_available book3 library1|predicate book_borrowed book1 library1|predicate book_borrowed book2 library1|predicate book_borrowed book3 library1|predicate borrower_registered borrower1|predicate unknown_registered borrower1|
+Solution                 : instance book1 book|instance library1 library|instance borrower1 borrower|predicate unknown_availability book1|predicate unknown_registered borrower1|goal borrower_registered borrower1|goal book_available book1|goal book_borrowed book1|
+Labeled                  : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
+Max new tokens           : 250
+Test set #               : 8
+Number of examples       : 8
+Instance match accuracy  : 0.33
+Predicate match accuracy : 0.0
+Goal match accuracy      : 0.0
+Total match accuracy     : 0.11
+Inference time [s]       : 30.77097265625
+GPU memory loaded [MB]   : 7681.89844
+Model input size [MB]    : 0.01624
+Sliced output            : instance Library1 library|
+Solution                 : instance book1 book|instance library1 library|instance borrower1 borrower|predicate unknown_availability book1|predicate unknown_registered borrower1|goal borrower_registered borrower1|goal book_available book1|goal book_borrowed book1|
+Labeled                  : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
+Max new tokens           : 250
+Test set #               : 8
+Number of examples       : 9
+Instance match accuracy  : 1.0
+Predicate match accuracy : 2.0
+Goal match accuracy      : 1.33
+Total match accuracy     : 1.44
+Inference time [s]       : 38.66549609375
+GPU memory loaded [MB]   : 7681.89844
+Model input size [MB]    : 0.02033
+Sliced output            : instanceLibrary1 library|instanceBook1 book|instanceBorrower1 borrower predicatebook\_available Book1 library1| predicateborrower\_registered Borrower1| predicateunknown\_availability Book1| predicateunknown\_registered Borrower1 goalbook\_available Book1| goalborrower\_registered Borrower1| goal(and (book\_available Book1)(borrower\_registered Borrower1))| goal(or (not(book\_available Book1))(not(borrower\_registered Borrower1)))->(not(and(book\_available Book1)(borrower\_registered Borrower1)))|
+Solution                 : instance book1 book|instance library1 library|instance borrower1 borrower|predicate unknown_availability book1|predicate unknown_registered borrower1|goal borrower_registered borrower1|goal book_available book1|goal book_borrowed book1|
+Labeled                  : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
+Max new tokens           : 250
+Test set #               : 8
+Number of examples       : 10
+Instance match accuracy  : 1.33
+Predicate match accuracy : 4.5
+Goal match accuracy      : 0.33
+Total match accuracy     : 2.05
+Inference time [s]       : 22.257076171875
+GPU memory loaded [MB]   : 7681.89844
+Model input size [MB]    : 0.02427
+Sliced output            : instances, predicates, and goals? Here is a recommendation: instance Library1 library|instance Borrower1 borrower|instance Book1 book|predicate library Library1|predicate borrower Borrower1|predicate book Book1|predicate unknown_availability Book1|predicate unknown_registered Borrower1|predicate book_available Book1|predicate book_borrowed Book1|predicate borrower_registered Borrower1|
+Solution                 : instance book1 book|instance library1 library|instance borrower1 borrower|predicate unknown_availability book1|predicate unknown_registered borrower1|goal borrower_registered borrower1|goal book_available book1|goal book_borrowed book1|
+Labeled                  : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
+Max new tokens           : 250
+Test set #               : 9
+Number of examples       : 2
 Instance match accuracy  : 1.33
 Predicate match accuracy : 2.0
 Goal match accuracy      : 2.0
 Total match accuracy     : 1.78
-Inference time [s]       : 35.6234609375
-GPU memory loaded [MB]   : 7673.77344
-Model input size [MB]    : 0.01103
-Sliced output            : instances, predicates, and goals for your problem: ### Output ### instance File1 file|instance Agent1 agent|instance Server1 server| predicate file\_stored File1 Server1| predicate file\_accessed File1 Agent1| predicate not\_authenticated Agent1 File1| goal (and (file\_stored File1 Server1) (file\_accessed File1 Agent1) (not (not\_authenticated Agent1 File1)))|
-Solution                 : instance agent1 agent|instance file1 file|instance server1 server|predicate file_stored file1 server1|predicate not_authenticated agent1 file1|goal file_accessed file1 agent1|
-Labeled                  : Yes
-===========================================================================
-Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
-Max new tokens           : 250
-Test set #               : 5
-Number of examples       : 8
-Instance match accuracy  : 1.0
-Predicate match accuracy : 1.5
-Goal match accuracy      : 1.0
-Total match accuracy     : 1.17
-Inference time [s]       : 14.3436181640625
-GPU memory loaded [MB]   : 7681.89844
-Model input size [MB]    : 0.01607
-Sliced output            : instance Server1 server|instance Agent1 agent|instance File1 file predicate file\_stored File1 Server1| predicate file\_accessed File1 Agent1| predicate not\_authenticated Agent1 File1 goal authenticated Agent1|
-Solution                 : instance agent1 agent|instance file1 file|instance server1 server|predicate file_stored file1 server1|predicate not_authenticated agent1 file1|goal file_accessed file1 agent1|
-Labeled                  : Yes
-===========================================================================
-Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
-Max new tokens           : 250
-Test set #               : 5
-Number of examples       : 9
-Instance match accuracy  : 1.0
-Predicate match accuracy : 1.5
-Goal match accuracy      : 2.0
-Total match accuracy     : 1.5
-Inference time [s]       : 17.004615234375
-GPU memory loaded [MB]   : 7681.89844
-Model input size [MB]    : 0.02016
-Sliced output            : instance Agent1 agent|instance File1 file|instance Server1 server predicate file\_stored File1 Server1| predicate file\_accessed File1 Agent1| predicate authenticated Agent1| goal and authenticated Agent1| goal file\_accessed File1 Agent1|
-Solution                 : instance agent1 agent|instance file1 file|instance server1 server|predicate file_stored file1 server1|predicate not_authenticated agent1 file1|goal file_accessed file1 agent1|
-Labeled                  : Yes
-===========================================================================
-Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
-Max new tokens           : 250
-Test set #               : 5
-Number of examples       : 10
-Instance match accuracy  : 1.0
-Predicate match accuracy : 3.0
-Goal match accuracy      : 3.0
-Total match accuracy     : 2.33
-Inference time [s]       : 23.277033203125
-GPU memory loaded [MB]   : 7681.89844
-Model input size [MB]    : 0.02409
-Sliced output            : instance Agent1 agent|instance File1 file|instance Server1 server|predicate agent Agent1|predicate file File1|predicate server Server1|predicate file\_stored File1 Server1|predicate file\_accessed File1 Agent1|predicate not\_authenticated Agent1 File1|goal \- not\_authenticated false|goal file\_accessed File1 Agent1|goal authenticated Agent1|
-Solution                 : instance agent1 agent|instance file1 file|instance server1 server|predicate file_stored file1 server1|predicate not_authenticated agent1 file1|goal file_accessed file1 agent1|
-Labeled                  : Yes
-===========================================================================
-Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
-Max new tokens           : 250
-Test set #               : 6
-Number of examples       : 2
-Instance match accuracy  : 1.0
-Predicate match accuracy : 1.5
-Goal match accuracy      : 2.0
-Total match accuracy     : 1.5
-Inference time [s]       : 18.058640625
-GPU memory loaded [MB]   : 7673.77344
-Model input size [MB]    : 0.00338
-Sliced output            : instance v0 vehicle|instance p0 part|instance s0 repair_shop predicate vehicle_needs_repair v0|predicate part_in_stock p0 s0|predicate repair_completed v0| goal vehicle_needs_repair v0|goal part_in_stock p0 s0|
-Solution                 : instance vehicle1 vehicle|instance part1 part|instance shop1 repair_shop|predicate vehicle_needs_repair vehicle1|predicate part_in_stock part1 shop1|goal repair_completed vehicle1|
-Labeled                  : Yes
-===========================================================================
-Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
-Max new tokens           : 250
-Test set #               : 6
-Number of examples       : 3
-Instance match accuracy  : 1.0
-Predicate match accuracy : 1.5
-Goal match accuracy      : 1.0
-Total match accuracy     : 1.17
-Inference time [s]       : 16.0494208984375
-GPU memory loaded [MB]   : 7681.89844
-Model input size [MB]    : 0.00772
-Sliced output            : instance Vehicle1 vehicle|instance Part1 part|instance Shop1 repair\_shop|predicate vehicle\_needs\_repair Vehicle1|predicate part\_in\_stock Part1 Shop1|predicate repair\_completed Vehicle1|goal repair\_completed Vehicle1|
-Solution                 : instance vehicle1 vehicle|instance part1 part|instance shop1 repair_shop|predicate vehicle_needs_repair vehicle1|predicate part_in_stock part1 shop1|goal repair_completed vehicle1|
-Labeled                  : Yes
-===========================================================================
-Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
-Max new tokens           : 250
-Test set #               : 6
-Number of examples       : 4
-Instance match accuracy  : 1.0
-Predicate match accuracy : 1.0
-Goal match accuracy      : 1.0
-Total match accuracy     : 1.0
-Inference time [s]       : 32.248751953125
-GPU memory loaded [MB]   : 7681.89844
-Model input size [MB]    : 0.00974
-Sliced output            : instance Vehicle1 vehicle|instance Part1 part|instance Shop1 repair\_shop|predicate vehicle\_needs\_repair Vehicle1|predicate part\_in\_stock Part1 Shop1|goal repair\_completed Vehicle1|
-Solution                 : instance vehicle1 vehicle|instance part1 part|instance shop1 repair_shop|predicate vehicle_needs_repair vehicle1|predicate part_in_stock part1 shop1|goal repair_completed vehicle1|
-Labeled                  : Yes
-===========================================================================
-Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
-Max new tokens           : 250
-Test set #               : 6
-Number of examples       : 5
-Instance match accuracy  : 1.0
-Predicate match accuracy : 1.5
-Goal match accuracy      : 1.0
-Total match accuracy     : 1.17
-Inference time [s]       : 26.94174609375
-GPU memory loaded [MB]   : 7681.89844
-Model input size [MB]    : 0.01955
-Sliced output            : instance Vehicle1 vehicle|instance Part1 part|instance Shop1 repair_shop| predicate vehicle_needs_repair Vehicle1| predicate part_in_stock Part1 Shop1| predicate repair_completed _ _| goal repair_completed Vehicle1|
-Solution                 : instance vehicle1 vehicle|instance part1 part|instance shop1 repair_shop|predicate vehicle_needs_repair vehicle1|predicate part_in_stock part1 shop1|goal repair_completed vehicle1|
-Labeled                  : Yes
-===========================================================================
-Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
-Max new tokens           : 250
-Test set #               : 6
-Number of examples       : 6
-Instance match accuracy  : 1.0
-Predicate match accuracy : 1.5
-Goal match accuracy      : 0.0
-Total match accuracy     : 0.83
-Inference time [s]       : 13.939943359375
-GPU memory loaded [MB]   : 7681.89844
-Model input size [MB]    : 0.02482
-Sliced output            : instance vehicle1 vehicle|instance part1 part|instance shop1 repair_shop|predicate vehicle\_needs\_repair vehicle1|predicate part\_in\_stock part1 shop1|predicate repair\_completed vehicle1|
-Solution                 : instance vehicle1 vehicle|instance part1 part|instance shop1 repair_shop|predicate vehicle_needs_repair vehicle1|predicate part_in_stock part1 shop1|goal repair_completed vehicle1|
-Labeled                  : Yes
-===========================================================================
-Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
-Max new tokens           : 250
-Test set #               : 6
-Number of examples       : 7
-Instance match accuracy  : 1.0
-Predicate match accuracy : 1.0
-Goal match accuracy      : 1.0
-Total match accuracy     : 1.0
-Inference time [s]       : 44.20757421875
-GPU memory loaded [MB]   : 7673.77344
-Model input size [MB]    : 0.01105
-Sliced output            : instance Vehicle1 vehicle|instance Part1 part|instance Shop1 repair_shop predicate vehicle_needs_repair Vehicle1|predicate part_in_stock Part1 Shop1 goal repair_completed Vehicle1|
-Solution                 : instance vehicle1 vehicle|instance part1 part|instance shop1 repair_shop|predicate vehicle_needs_repair vehicle1|predicate part_in_stock part1 shop1|goal repair_completed vehicle1|
-Labeled                  : Yes
-===========================================================================
-Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
-Max new tokens           : 250
-Test set #               : 6
-Number of examples       : 8
-Instance match accuracy  : 1.0
-Predicate match accuracy : 1.0
-Goal match accuracy      : 1.0
-Total match accuracy     : 1.0
-Inference time [s]       : 17.638876953125
-GPU memory loaded [MB]   : 7681.89844
-Model input size [MB]    : 0.01608
-Sliced output            : instance Vehicle1 vehicle|instance Part1 part|instance Shop1 repair_shop predicate vehicle_needs_repair Vehicle1| predicate part_in_stock Part1 Shop1| goal repair_completed Vehicle1|
-Solution                 : instance vehicle1 vehicle|instance part1 part|instance shop1 repair_shop|predicate vehicle_needs_repair vehicle1|predicate part_in_stock part1 shop1|goal repair_completed vehicle1|
-Labeled                  : Yes
-===========================================================================
-Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
-Max new tokens           : 250
-Test set #               : 6
-Number of examples       : 9
-Instance match accuracy  : 0.0
-Predicate match accuracy : 0.0
-Goal match accuracy      : 0.0
-Total match accuracy     : 0.0
-Inference time [s]       : 27.262279296875
-GPU memory loaded [MB]   : 7681.89844
-Model input size [MB]    : 0.02017
-Sliced output            : |
-Solution                 : instance vehicle1 vehicle|instance part1 part|instance shop1 repair_shop|predicate vehicle_needs_repair vehicle1|predicate part_in_stock part1 shop1|goal repair_completed vehicle1|
-Labeled                  : Yes
-===========================================================================
-Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
-Max new tokens           : 250
-Test set #               : 6
-Number of examples       : 10
-Instance match accuracy  : 1.33
-Predicate match accuracy : 1.5
-Goal match accuracy      : 2.0
-Total match accuracy     : 1.61
-Inference time [s]       : 48.54344921875
-GPU memory loaded [MB]   : 7681.89844
-Model input size [MB]    : 0.02411
-Sliced output            : instance, predicates and goals for the given domain and command. ### Output ### instance Vehicle1 vehicle|instance Part1 part|instance Shop1 repair_shop|predicate vehicle_needs_repair Vehicle1|predicate part_in_stock Part1 Shop1|goal repair_completed Vehicle1|
-Solution                 : instance vehicle1 vehicle|instance part1 part|instance shop1 repair_shop|predicate vehicle_needs_repair vehicle1|predicate part_in_stock part1 shop1|goal repair_completed vehicle1|
-Labeled                  : Yes
-===========================================================================
-Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
-Max new tokens           : 250
-Test set #               : 7
-Number of examples       : 2
-Instance match accuracy  : 0.17
-Predicate match accuracy : 2.5
-Goal match accuracy      : 1.0
-Total match accuracy     : 1.22
-Inference time [s]       : 33.59664453125
-GPU memory loaded [MB]   : 7673.77344
-Model input size [MB]    : 0.00367
-Sliced output            : instance s1 scientist|s2 scientist|l1 lab|l2 lab|e1 experiment|e2 experiment|predicate experiment\_pending e1 e1|predicate experiment\_conducted e1 e1|predicate experiment\_pending e2 e2|predicate experiment\_conducted e2 e2|predicate scientist\_available s1 s1|predicate scientist\_available s2 s2|predicate lab\_equipped l1 e1|predicate lab\_equipped l2 e2| predicate at s1 l1| predicate at s2 l2| goal experiment\_conducted e1 l2| goal experiment\_conducted e2 l1|
-Solution                 : instance scientist1 scientist|instance scientist2 scientist|instance lab1 lab|instance lab2 lab|instance experiment1 experiment|instance experiment2 experiment|predicate experiment_pending experiment1|predicate experiment_pending experiment2|predicate scientist_available scientist2|predicate lab_equipped lab1|goal experiment_conducted experiment1 scientist2 lab2|goal experiment_conducted experiment2 scientist2 lab1|
-Labeled                  : Yes
-===========================================================================
-Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
-Max new tokens           : 250
-Test set #               : 7
-Number of examples       : 3
-Instance match accuracy  : 1.0
-Predicate match accuracy : 2.5
-Goal match accuracy      : 1.0
-Total match accuracy     : 1.5
-Inference time [s]       : 38.6567421875
-GPU memory loaded [MB]   : 7681.89844
-Model input size [MB]    : 0.00801
-Sliced output            : instance Scientist1 scientist|instance Scientist2 scientist|instance Lab1 lab|instance Lab2 lab|instance exp1 experiment|instance exp2 experiment|predicate scientist_available Scientist1|predicate scientist_available Scientist2|predicate experiment_pending exp1|predicate experiment_pending exp2|predicate experiment_conducted exp1|predicate experiment_conducted exp2|predicate at Scientist1 Lab1|predicate at Scientist2 Lab2|predicate lab_equipped Lab1|predicate lab_equipped Lab2|goal experiment_conducted exp1 Lab2|goal experiment_conducted exp2 Lab1|
-Solution                 : instance scientist1 scientist|instance scientist2 scientist|instance lab1 lab|instance lab2 lab|instance experiment1 experiment|instance experiment2 experiment|predicate experiment_pending experiment1|predicate experiment_pending experiment2|predicate scientist_available scientist2|predicate lab_equipped lab1|goal experiment_conducted experiment1 scientist2 lab2|goal experiment_conducted experiment2 scientist2 lab1|
-Labeled                  : Yes
-===========================================================================
-Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
-Max new tokens           : 250
-Test set #               : 7
-Number of examples       : 4
-Instance match accuracy  : 1.0
-Predicate match accuracy : 1.75
-Goal match accuracy      : 1.0
-Total match accuracy     : 1.25
-Inference time [s]       : 34.544046875
-GPU memory loaded [MB]   : 7681.89844
-Model input size [MB]    : 0.01003
-Sliced output            : instance s1 scientist|instance s2 scientist|instance e1 experiment|instance e2 experiment|instance l1 lab|instance l2 lab|predicate experiment_pending e1|predicate experiment_conducted e2|predicate scientist_available s1|predicate scientist_available s2|predicate lab_equipped l1|predicate scientist\_at s1 l1|predicate scientist\_at s2 l2|goal scientist\_at s2 e1 l1|goal scientist\_at s2 e2 l2|
-Solution                 : instance scientist1 scientist|instance scientist2 scientist|instance lab1 lab|instance lab2 lab|instance experiment1 experiment|instance experiment2 experiment|predicate experiment_pending experiment1|predicate experiment_pending experiment2|predicate scientist_available scientist2|predicate lab_equipped lab1|goal experiment_conducted experiment1 scientist2 lab2|goal experiment_conducted experiment2 scientist2 lab1|
-Labeled                  : Yes
-===========================================================================
-Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
-Max new tokens           : 250
-Test set #               : 7
-Number of examples       : 5
-Instance match accuracy  : 1.0
-Predicate match accuracy : 2.5
-Goal match accuracy      : 2.0
-Total match accuracy     : 1.83
-Inference time [s]       : 48.13621484375
-GPU memory loaded [MB]   : 7681.89844
-Model input size [MB]    : 0.01984
-Sliced output            : instance Scientist1 scientist|instance Scientist2 scientist|instance Lab1 lab|instance Lab2 lab|instance Experiment1 experiment|instance Experiment2 experiment|predicate scientist_available Scientist1|predicate scientist_available Scientist2|predicate experiment_pending Experiment1|predicate experiment_pending Experiment2|predicate lab_equipped Lab1|predicate lab_equipped Lab2|predicate experiment_conducted False|predicate experiment_conducted False|predicate in Lab1 Scientist1|predicate in Lab2 Scientist2|goal in Lab1 Experiment2|goal in Lab2 Experiment1|goal experiment_conducted Experiment1|goal experiment_conducted Experiment2|
-Solution                 : instance scientist1 scientist|instance scientist2 scientist|instance lab1 lab|instance lab2 lab|instance experiment1 experiment|instance experiment2 experiment|predicate experiment_pending experiment1|predicate experiment_pending experiment2|predicate scientist_available scientist2|predicate lab_equipped lab1|goal experiment_conducted experiment1 scientist2 lab2|goal experiment_conducted experiment2 scientist2 lab1|
-Labeled                  : Yes
-===========================================================================
-Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
-Max new tokens           : 250
-Test set #               : 7
-Number of examples       : 6
-Instance match accuracy  : 1.0
-Predicate match accuracy : 1.75
-Goal match accuracy      : 1.0
-Total match accuracy     : 1.25
-Inference time [s]       : 34.95540625
-GPU memory loaded [MB]   : 7681.89844
-Model input size [MB]    : 0.02511
-Sliced output            : instance scientist1 scientist|instance scientist2 scientist|instance lab1 lab|instance lab2 lab|instance experiment1 experiment|instance experiment2 experiment| predicate experiment_pending experiment1| predicate experiment_pending experiment2| predicate experiment_conducted experiment1| predicate experiment_conducted experiment2| predicate scientist_available scientist2| predicate at_lab scientist1 lab1| predicate at_lab scientist2 lab2| goal experiment_conducted experiment1 lab2| goal experiment_conducted experiment2 lab1|
-Solution                 : instance scientist1 scientist|instance scientist2 scientist|instance lab1 lab|instance lab2 lab|instance experiment1 experiment|instance experiment2 experiment|predicate experiment_pending experiment1|predicate experiment_pending experiment2|predicate scientist_available scientist2|predicate lab_equipped lab1|goal experiment_conducted experiment1 scientist2 lab2|goal experiment_conducted experiment2 scientist2 lab1|
-Labeled                  : Yes
-===========================================================================
-Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
-Max new tokens           : 250
-Test set #               : 7
-Number of examples       : 7
-Instance match accuracy  : 0.0
-Predicate match accuracy : 0.0
-Goal match accuracy      : 0.0
-Total match accuracy     : 0.0
-Inference time [s]       : 48.4044921875
-GPU memory loaded [MB]   : 7673.77344
-Model input size [MB]    : 0.01134
-Sliced output            : 
-Solution                 : instance scientist1 scientist|instance scientist2 scientist|instance lab1 lab|instance lab2 lab|instance experiment1 experiment|instance experiment2 experiment|predicate experiment_pending experiment1|predicate experiment_pending experiment2|predicate scientist_available scientist2|predicate lab_equipped lab1|goal experiment_conducted experiment1 scientist2 lab2|goal experiment_conducted experiment2 scientist2 lab1|
-Labeled                  : Yes
-===========================================================================
-Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
-Max new tokens           : 250
-Test set #               : 7
-Number of examples       : 8
-Instance match accuracy  : 0.33
-Predicate match accuracy : 1.75
-Goal match accuracy      : 0.0
-Total match accuracy     : 0.69
-Inference time [s]       : 32.47120703125
-GPU memory loaded [MB]   : 7681.89844
-Model input size [MB]    : 0.01637
-Sliced output            : instance Lab1 lab|instance Lab2 lab| predicate experiment_pending experiment1 Lab2| predicate experiment_pending experiment2 Lab1| predicate scientist_available Scientist2| predicate scientist_available Scientist1| predicate experiment_conducted (not experiment1) (not experiment2)| predicate lab_equipped Lab1| predicate lab_equipped (not Lab2)|
-Solution                 : instance scientist1 scientist|instance scientist2 scientist|instance lab1 lab|instance lab2 lab|instance experiment1 experiment|instance experiment2 experiment|predicate experiment_pending experiment1|predicate experiment_pending experiment2|predicate scientist_available scientist2|predicate lab_equipped lab1|goal experiment_conducted experiment1 scientist2 lab2|goal experiment_conducted experiment2 scientist2 lab1|
-Labeled                  : Yes
-===========================================================================
-Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
-Max new tokens           : 250
-Test set #               : 7
-Number of examples       : 9
-Instance match accuracy  : 1.0
-Predicate match accuracy : 1.75
-Goal match accuracy      : 1.0
-Total match accuracy     : 1.25
-Inference time [s]       : 28.9149921875
-GPU memory loaded [MB]   : 7681.89844
-Model input size [MB]    : 0.02046
-Sliced output            : instance scientist1 scientist|instance scientist2 scientist|instance lab1 lab|instance lab2 lab|instance experiment1 experiment|instance experiment2 experiment| predicate experiment_pending experiment1 lab2|predicate experiment_pending experiment2 lab1| predicate scientist_available scientist1|predicate scientist_available scientist2| predicate at scientist1 lab1|predicate at scientist2 lab2| predicate lab_equipped lab1| goal experiment_conducted experiment1 lab2| goal experiment_conducted experiment2 lab1|
-Solution                 : instance scientist1 scientist|instance scientist2 scientist|instance lab1 lab|instance lab2 lab|instance experiment1 experiment|instance experiment2 experiment|predicate experiment_pending experiment1|predicate experiment_pending experiment2|predicate scientist_available scientist2|predicate lab_equipped lab1|goal experiment_conducted experiment1 scientist2 lab2|goal experiment_conducted experiment2 scientist2 lab1|
-Labeled                  : Yes
-===========================================================================
-Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
-Max new tokens           : 250
-Test set #               : 7
-Number of examples       : 10
-Instance match accuracy  : 0.83
-Predicate match accuracy : 3.75
-Goal match accuracy      : 3.0
-Total match accuracy     : 2.53
-Inference time [s]       : 47.915421875
-GPU memory loaded [MB]   : 7681.89844
-Model input size [MB]    : 0.0244
-Sliced output            : instances, predicates, and goals? ### Output ### instance Scientist1 scientist|instance Scientist2 scientist|instance Lab1 lab|instance Lab2 lab|predicate scientist Scientist1|predicate scientist Scientist2|predicate lab Lab1|predicate lab Lab2|predicate experiment_pending exp2| predicate experiment_pending exp1| predicate experiment_conducted (not exp2)|predicate experiment_conducted (not exp1)| predicate scientist_available Sci2| (not predicate scientist\_available Sci1)| predicate lab\_equipped Lab1|predicate lab\_equipped (not Lab2)| predicate in Scientist1 Lab1|predicate in Sci2 Lab2| goal experiment\_conducted exp2| goal experiment\_conducted exp1| goal scientist\_available Sci2| goal in Sci2 Lab1| (not goal in Sci1 Lab1)|
-Solution                 : instance scientist1 scientist|instance scientist2 scientist|instance lab1 lab|instance lab2 lab|instance experiment1 experiment|instance experiment2 experiment|predicate experiment_pending experiment1|predicate experiment_pending experiment2|predicate scientist_available scientist2|predicate lab_equipped lab1|goal experiment_conducted experiment1 scientist2 lab2|goal experiment_conducted experiment2 scientist2 lab1|
-Labeled                  : Yes
-===========================================================================
-Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
-Max new tokens           : 250
-Test set #               : 8
-Number of examples       : 2
-Instance match accuracy  : 2.0
-Predicate match accuracy : 2.5
-Goal match accuracy      : 0.33
-Total match accuracy     : 1.61
-Inference time [s]       : 40.56523046875
-GPU memory loaded [MB]   : 7673.77344
-Model input size [MB]    : 0.00354
-Sliced output            : instance b1 book_instance\_1|instances l1 library\_instance\_1|instance b1\_borrower1 borrower\_instance\_1| predicate unknown\_availability b1 L1| predicate unknown\_registered borrower1 L1| predicate book\_available b1 L1| predicate book\_borrowed b1| goal (and (unknown\_availability b1 L1) (unknown\_registered borrower1 L1) (book\_available b1 L1) (borrowed b1))| predicate borrower\_registered borrower1 L1|
-Solution                 : instance book1 book|instance library1 library|instance borrower1 borrower|predicate unknown_availability book1|predicate unknown_registered borrower1|goal borrower_registered borrower1|goal book_available book1|goal book_borrowed book1|
-Labeled                  : Yes
-===========================================================================
-Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
-Max new tokens           : 250
-Test set #               : 8
-Number of examples       : 3
-Instance match accuracy  : 1.0
-Predicate match accuracy : 2.5
-Goal match accuracy      : 0.33
-Total match accuracy     : 1.28
-Inference time [s]       : 20.139865234375
-GPU memory loaded [MB]   : 7681.89844
-Model input size [MB]    : 0.00788
-Sliced output            : instance Book1 book|instance Library1 library|instance Borrower1 borrower| predicate unknown\_availability Book1| predicate unknown\_registered Borrower1| predicate book\_available Book1| predicate book\_borrowed Book1| predicate borrower\_registered Borrower1| goal book\_borrowed Book1|
-Solution                 : instance book1 book|instance library1 library|instance borrower1 borrower|predicate unknown_availability book1|predicate unknown_registered borrower1|goal borrower_registered borrower1|goal book_available book1|goal book_borrowed book1|
-Labeled                  : Yes
-===========================================================================
-Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
-Max new tokens           : 250
-Test set #               : 8
-Number of examples       : 4
-Instance match accuracy  : 1.0
-Predicate match accuracy : 2.5
-Goal match accuracy      : 0.33
-Total match accuracy     : 1.28
-Inference time [s]       : 25.683568359375
-GPU memory loaded [MB]   : 7681.89844
-Model input size [MB]    : 0.0099
-Sliced output            : instance Library1 library|instance Borrower1 borrower|instance Book1 book|predicate unknown_availability Book1| predicate unknown_registered Borrower1|predicate book_available Book1|predicate book_borrowed Book1| predicate borrower_registered Borrower1|goal (not unknown_availability Book1) | book_available Book1 | (not unknown_registered Borrower1) |
-Solution                 : instance book1 book|instance library1 library|instance borrower1 borrower|predicate unknown_availability book1|predicate unknown_registered borrower1|goal borrower_registered borrower1|goal book_available book1|goal book_borrowed book1|
-Labeled                  : Yes
-===========================================================================
-Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
-Max new tokens           : 250
-Test set #               : 8
-Number of examples       : 5
-Instance match accuracy  : 1.0
-Predicate match accuracy : 1.0
-Goal match accuracy      : 0.33
-Total match accuracy     : 0.78
-Inference time [s]       : 21.572171875
-GPU memory loaded [MB]   : 7681.89844
-Model input size [MB]    : 0.01971
-Sliced output            : instance Library1 library|instance Book1 book|instance Borrower1 borrower| predicate book_available Book1| predicate borrower_registered Borrower1| goal (and (book_available Book1) (borrower_registered Borrower1))|
-Solution                 : instance book1 book|instance library1 library|instance borrower1 borrower|predicate unknown_availability book1|predicate unknown_registered borrower1|goal borrower_registered borrower1|goal book_available book1|goal book_borrowed book1|
-Labeled                  : Yes
-===========================================================================
-Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
-Max new tokens           : 250
-Test set #               : 8
-Number of examples       : 6
-Instance match accuracy  : 1.0
-Predicate match accuracy : 2.5
-Goal match accuracy      : 0.67
-Total match accuracy     : 1.39
-Inference time [s]       : 47.0016171875
-GPU memory loaded [MB]   : 7681.89844
-Model input size [MB]    : 0.02498
-Sliced output            : instance Book1 book|instance Library1 library|instance Borrower1 borrower| predicate unknown_availability Book1| predicate unknown_registered Borrower1| predicate book_available Book1| predicate book_borrowed Book1| predicate borrower_registered Borrower1| goal borrowed Book1 Borrower1| goal registered Borrower1|
-Solution                 : instance book1 book|instance library1 library|instance borrower1 borrower|predicate unknown_availability book1|predicate unknown_registered borrower1|goal borrower_registered borrower1|goal book_available book1|goal book_borrowed book1|
-Labeled                  : Yes
-===========================================================================
-Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
-Max new tokens           : 250
-Test set #               : 8
-Number of examples       : 7
-Instance match accuracy  : 2.0
-Predicate match accuracy : 0.0
-Goal match accuracy      : 0.0
-Total match accuracy     : 0.67
-Inference time [s]       : 33.58481640625
-GPU memory loaded [MB]   : 7673.77344
-Model input size [MB]    : 0.01121
-Sliced output            : instances: library1 library|instance library|instance Library1 borrower1 borrower|instance borrower|instance Borrower1 book1 book|instance book|
-Solution                 : instance book1 book|instance library1 library|instance borrower1 borrower|predicate unknown_availability book1|predicate unknown_registered borrower1|goal borrower_registered borrower1|goal book_available book1|goal book_borrowed book1|
-Labeled                  : Yes
-===========================================================================
-Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
-Max new tokens           : 250
-Test set #               : 8
-Number of examples       : 8
-Instance match accuracy  : 1.0
-Predicate match accuracy : 3.5
-Goal match accuracy      : 0.0
-Total match accuracy     : 1.5
-Inference time [s]       : 47.70733984375
-GPU memory loaded [MB]   : 7681.89844
-Model input size [MB]    : 0.01624
-Sliced output            : instance Library1 library|instance Borrower1 borrower|instance Book1 book| predicate book_available Book1 library1| predicate unknown_availability Book1| predicate borrower_registered Borrower1| predicate unknown_registered Borrower1| predicate book Book1| predicate library library1| predicate borrower Borrower1|
-Solution                 : instance book1 book|instance library1 library|instance borrower1 borrower|predicate unknown_availability book1|predicate unknown_registered borrower1|goal borrower_registered borrower1|goal book_available book1|goal book_borrowed book1|
-Labeled                  : Yes
-===========================================================================
-Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
-Max new tokens           : 250
-Test set #               : 8
-Number of examples       : 9
-Instance match accuracy  : 1.0
-Predicate match accuracy : 2.5
-Goal match accuracy      : 0.33
-Total match accuracy     : 1.28
-Inference time [s]       : 30.44121875
-GPU memory loaded [MB]   : 7681.89844
-Model input size [MB]    : 0.02033
-Sliced output            : instance Library1 library|instance Book1 book|instance Borrower1 borrower| predicate unknown\_availability Book1| predicate unknown\_registered Borrower1| predicate book\_available Book1| predicate book\_borrowed Book1| predicate borrower\_registered Borrower1| goal (and (unknown\_availability Book1) (unknown\_registered Borrower1) (if (book\_available Book1) (book\_borrowed Book1) (nop) (if (borrower\_registered Borrower1) (fail) (register\_borrower Borrower1) (book\_borrowed Book1))))|
-Solution                 : instance book1 book|instance library1 library|instance borrower1 borrower|predicate unknown_availability book1|predicate unknown_registered borrower1|goal borrower_registered borrower1|goal book_available book1|goal book_borrowed book1|
-Labeled                  : Yes
-===========================================================================
-Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
-Max new tokens           : 250
-Test set #               : 8
-Number of examples       : 10
-Instance match accuracy  : 1.0
-Predicate match accuracy : 4.0
-Goal match accuracy      : 0.0
-Total match accuracy     : 1.67
-Inference time [s]       : 34.27651171875
-GPU memory loaded [MB]   : 7681.89844
-Model input size [MB]    : 0.02427
-Sliced output            : instance Library1 library|instance Borrower1 borrower|instance Book1 book| predicate library Library1|predicate borrower Borrower1|predicate book Book1| predicate unknown_availability Book1|predicate unknown_registered Borrower1| predicate book_available Book1|predicate book_borrowed Book1| predicate borrower_registered Borrower1|
-Solution                 : instance book1 book|instance library1 library|instance borrower1 borrower|predicate unknown_availability book1|predicate unknown_registered borrower1|goal borrower_registered borrower1|goal book_available book1|goal book_borrowed book1|
-Labeled                  : Yes
-===========================================================================
-Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
-Max new tokens           : 250
-Test set #               : 9
-Number of examples       : 2
-Instance match accuracy  : 1.0
-Predicate match accuracy : 1.5
-Goal match accuracy      : 3.0
-Total match accuracy     : 1.83
-Inference time [s]       : 19.83072265625
+Inference time [s]       : 26.025142578125
 GPU memory loaded [MB]   : 7673.77344
 Model input size [MB]    : 0.00336
-Sliced output            : instance Gardener1 gardener| instance Garden1 garden| instance Flower1 flower| predicate gardener\_assigned Gardener1 Garden1| predicate flower\_blooming Flower1| predicate garden\_maintained Garden1| goal gardener\_assigned Gardener1 Garden1| goal flower\_blooming Flower1| goal garden\_maintained Garden1|
+Sliced output            : instance Gardener1 gardener| instance Gardener2 gardener| instance Garden1 garden| instance Flower1 flower| predicate gardener\_assigned Gardener1 Garden1| predicate flower\_blooming Flower1| predicate garden\_maintained Garden1| predicate gardener\_assigned (unassigned _ Gardener1) :bind unassigned "Gardener2"| goal gardener\_assigned Gardener1 Garden1| goal flower\_blooming Flower1|
 Solution                 : instance flower1 flower|instance garden1 garden|instance gardener1 gardener|predicate flower_blooming flower1|predicate gardener_assigned gardener1|goal garden_maintained garden1|
 Labeled                  : Yes
 ===========================================================================
@@ -1101,14 +1101,14 @@ Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
 Max new tokens           : 250
 Test set #               : 9
 Number of examples       : 3
-Instance match accuracy  : 1.0
-Predicate match accuracy : 1.5
-Goal match accuracy      : 1.0
-Total match accuracy     : 1.17
-Inference time [s]       : 18.66780859375
+Instance match accuracy  : 2.33
+Predicate match accuracy : 2.5
+Goal match accuracy      : 2.0
+Total match accuracy     : 2.28
+Inference time [s]       : 46.8078671875
 GPU memory loaded [MB]   : 7681.89844
 Model input size [MB]    : 0.0077
-Sliced output            : instance Gardener1 gardener| instance Flower1 flower| instance Garden1 garden| predicate flower\_blooming Flower1| predicate gardener\_assigned Gardener1 Garden1| predicate garden\_maintained Garden1| goal gardener\_assigned Gardener1 Garden1|
+Sliced output            : instances, predicates, and goals should be included in the output: ``` ### Output ### instance Gardener1 gardener|instance Gardener2 gardener|instance Flower1 flower|instance Flower2 flower|instance Garden1 garden|instance Garden2 garden|predicate gardener_assigned Gardener1 Garden1|predicate gardener_assigned Gardener2 Garden2|predicate flower_blooming Flower1|predicate garden_maintained Garden1|goal garden_maintained Garden1|
 Solution                 : instance flower1 flower|instance garden1 garden|instance gardener1 gardener|predicate flower_blooming flower1|predicate gardener_assigned gardener1|goal garden_maintained garden1|
 Labeled                  : Yes
 ===========================================================================
@@ -1120,10 +1120,10 @@ Instance match accuracy  : 1.0
 Predicate match accuracy : 1.5
 Goal match accuracy      : 2.0
 Total match accuracy     : 1.5
-Inference time [s]       : 20.04665625
+Inference time [s]       : 18.47876171875
 GPU memory loaded [MB]   : 7681.89844
 Model input size [MB]    : 0.00972
-Sliced output            : instance g1 Garden1|instance g1g1 Gardener1|instance f1 Flower1| predicate flower_blooming f1| predicate gardener_assigned g1g1| predicate garden_maintained g1| goal gardener_assigned g1g1| goal garden_maintained g1|
+Sliced output            : instance gardener1 gardener|instance flower1 flower|instance garden1 garden|predicate gardener_assigned gardener1 gardener1|predicate flower_blooming flower1|predicate garden_maintained garden1 true|goal gardener_assigned gardener1 garden1|goal flower_blooming flower1|
 Solution                 : instance flower1 flower|instance garden1 garden|instance gardener1 gardener|predicate flower_blooming flower1|predicate gardener_assigned gardener1|goal garden_maintained garden1|
 Labeled                  : Yes
 ===========================================================================
@@ -1135,10 +1135,10 @@ Instance match accuracy  : 0.0
 Predicate match accuracy : 0.0
 Goal match accuracy      : 0.0
 Total match accuracy     : 0.0
-Inference time [s]       : 16.70411328125
+Inference time [s]       : 43.547375
 GPU memory loaded [MB]   : 7681.89844
 Model input size [MB]    : 0.01952
-Sliced output            : |
+Sliced output            : 
 Solution                 : instance flower1 flower|instance garden1 garden|instance gardener1 gardener|predicate flower_blooming flower1|predicate gardener_assigned gardener1|goal garden_maintained garden1|
 Labeled                  : Yes
 ===========================================================================
@@ -1148,12 +1148,12 @@ Test set #               : 9
 Number of examples       : 6
 Instance match accuracy  : 1.0
 Predicate match accuracy : 1.5
-Goal match accuracy      : 1.0
-Total match accuracy     : 1.17
-Inference time [s]       : 15.527822265625
+Goal match accuracy      : 2.0
+Total match accuracy     : 1.5
+Inference time [s]       : 20.08426171875
 GPU memory loaded [MB]   : 7681.89844
 Model input size [MB]    : 0.0248
-Sliced output            : instance Gardener1 gardener|instance Garden1 garden|instance Flower1 flower|predicate gardener_assigned Gardener1|predicate flower_blooming Flower1|predicate garden_maintained Garden1|goal garden_maintained Garden1|
+Sliced output            : instance gardener1 gardener| instance flower1 flower| instance garden1 garden| predicate flower_blooming flower1| predicate gardener_assigned gardener1 garden1| predicate garden_maintained garden1| goal gardener_assigned gardener1 garden1| goal garden_maintained garden1|
 Solution                 : instance flower1 flower|instance garden1 garden|instance gardener1 gardener|predicate flower_blooming flower1|predicate gardener_assigned gardener1|goal garden_maintained garden1|
 Labeled                  : Yes
 ===========================================================================
@@ -1161,14 +1161,14 @@ Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
 Max new tokens           : 250
 Test set #               : 9
 Number of examples       : 7
-Instance match accuracy  : 1.0
-Predicate match accuracy : 1.5
+Instance match accuracy  : 2.33
+Predicate match accuracy : 3.5
 Goal match accuracy      : 0.0
-Total match accuracy     : 0.83
-Inference time [s]       : 15.7977607421875
+Total match accuracy     : 1.94
+Inference time [s]       : 30.79036328125
 GPU memory loaded [MB]   : 7673.77344
 Model input size [MB]    : 0.01102
-Sliced output            : instance Gardener1 gardener|instance Flower1 flower|instance Garden1 garden| predicate flower_blooming Flower1| predicate gardener_assigned Gardener1| predicate garden_maintained Garden1|
+Sliced output            : instance Gardener1 gardener|instance Gardener2 gardener|instance Flower1 flower|instance Flower2 flower|instance Flower3 flower|instance Garden1 garden|instance Garden2 garden| predicate flower\_blooming Flower1| predicate flower\_blooming Flower2| predicate flower\_blooming Flower3| predicate gardener\_assigned Gardener1| predicate gardener\_assigned Gardener2| predicate garden\_maintained Garden1| predicate garden\_maintained Garden2|
 Solution                 : instance flower1 flower|instance garden1 garden|instance gardener1 gardener|predicate flower_blooming flower1|predicate gardener_assigned gardener1|goal garden_maintained garden1|
 Labeled                  : Yes
 ===========================================================================
@@ -1177,13 +1177,13 @@ Max new tokens           : 250
 Test set #               : 9
 Number of examples       : 8
 Instance match accuracy  : 1.0
-Predicate match accuracy : 1.0
-Goal match accuracy      : 0.0
-Total match accuracy     : 0.67
-Inference time [s]       : 15.2141796875
+Predicate match accuracy : 1.5
+Goal match accuracy      : 1.0
+Total match accuracy     : 1.17
+Inference time [s]       : 16.697091796875
 GPU memory loaded [MB]   : 7681.89844
 Model input size [MB]    : 0.01606
-Sliced output            : instance Gardener1 gardener|instance Flower1 flower|instance Garden1 garden| predicate flower_blooming Flower1| predicate gardener_assigned Gardener1|
+Sliced output            : instance Gardener1 gardener|instance Flower1 flower|instance Garden1 garden|predicate flower\_blooming Flower1|predicate gardener\_assigned Gardener1|predicate garden\_maintained Garden1|goal gardener\_assigned Gardener1|
 Solution                 : instance flower1 flower|instance garden1 garden|instance gardener1 gardener|predicate flower_blooming flower1|predicate gardener_assigned gardener1|goal garden_maintained garden1|
 Labeled                  : Yes
 ===========================================================================
@@ -1191,14 +1191,14 @@ Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
 Max new tokens           : 250
 Test set #               : 9
 Number of examples       : 9
-Instance match accuracy  : 1.0
-Predicate match accuracy : 1.5
-Goal match accuracy      : 3.0
-Total match accuracy     : 1.83
-Inference time [s]       : 23.07923046875
+Instance match accuracy  : 2.33
+Predicate match accuracy : 1.0
+Goal match accuracy      : 0.0
+Total match accuracy     : 1.11
+Inference time [s]       : 36.0798671875
 GPU memory loaded [MB]   : 7681.89844
 Model input size [MB]    : 0.02015
-Sliced output            : instance Gardener1 gardener|instance Flower1 flower|instance Garden1 garden| predicate gardener_assigned Gardener1| predicate flower_blooming Flower1| predicate garden_maintained Garden1| goal gardener_assigned Gardener1| goal flower_blooming Flower1| goal garden_maintained Garden1|
+Sliced output            : instance Gardener1 gardener|instance Gardener2 gardener|instance Flower1 flower|instance Flower2 flower|instance Flower3 flower|instance Garden1 garden|instance Garden2 garden|predicate gardener_assigned Gardener1 Garden1|predicate flower_blooming Flower1|
 Solution                 : instance flower1 flower|instance garden1 garden|instance gardener1 gardener|predicate flower_blooming flower1|predicate gardener_assigned gardener1|goal garden_maintained garden1|
 Labeled                  : Yes
 ===========================================================================
@@ -1206,14 +1206,14 @@ Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
 Max new tokens           : 250
 Test set #               : 9
 Number of examples       : 10
-Instance match accuracy  : 1.67
-Predicate match accuracy : 1.5
-Goal match accuracy      : 1.0
-Total match accuracy     : 1.39
-Inference time [s]       : 27.165529296875
+Instance match accuracy  : 0.0
+Predicate match accuracy : 0.0
+Goal match accuracy      : 0.0
+Total match accuracy     : 0.0
+Inference time [s]       : 47.3422578125
 GPU memory loaded [MB]   : 7681.89844
 Model input size [MB]    : 0.02409
-Sliced output            : instance of the relationship between a gardener, a garden, and a flower. Based on the domain definition and the given command, here is the set of instances, predicates, and goals: ### Output ### instance Gardener1 gardener|instance Garden1 garden|instance Flower1 flower predicate flower_blooming Flower1 | predicate gardener_assigned Gardener1 |
+Sliced output            : 
 Solution                 : instance flower1 flower|instance garden1 garden|instance gardener1 gardener|predicate flower_blooming flower1|predicate gardener_assigned gardener1|goal garden_maintained garden1|
 Labeled                  : Yes
 ===========================================================================
@@ -1221,14 +1221,14 @@ Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
 Max new tokens           : 250
 Test set #               : 10
 Number of examples       : 2
-Instance match accuracy  : 2.5
+Instance match accuracy  : 0.75
 Predicate match accuracy : 1.25
-Goal match accuracy      : 1.0
-Total match accuracy     : 1.58
-Inference time [s]       : 33.12562890625
+Goal match accuracy      : 0.5
+Total match accuracy     : 0.83
+Inference time [s]       : 19.854955078125
 GPU memory loaded [MB]   : 7673.77344
 Model input size [MB]    : 0.00372
-Sliced output            : instance i0 agent|agent1 agent|instance i1 item|instance i1 item1 item|instance i2 item|instance i3 item|instance i4 destination|instance i1 d1 destination|instance i2 d2 destination|instance i3 d3 destination|instance i4 d4 destination|predicate agent_assigned o1 a1 i1|predicate destination_set i1 d1|predicate item_readi o1 i1|predicate unknown_weather w1|predicate safe_to_travel a1|goal agent_assigned o1 i1|goal destination_set i1 d1|
+Sliced output            : instance a1 agent:agent1|instance i1 item:Item1|instance d1 destination:Destination1|predicate agent\_assigned a1 i1|predicate destination\_set i1 d1|predicate item\_ready i1|predicate unknown\_weather w|predicate safe\_to\_travel a1| goal agent\_assigned a1 i1|
 Solution                 : instance agent1 agent|instance item1 item|instance destination1 destination|instance weather1 weather|predicate unknown_weather weather1|predicate agent_assigned agent1 item1|predicate item_ready item1|predicate destination_set item1 destination1|goal safe_to_travel agent1|goal item_delivered|
 Labeled                  : Yes
 ===========================================================================
@@ -1237,13 +1237,13 @@ Max new tokens           : 250
 Test set #               : 10
 Number of examples       : 3
 Instance match accuracy  : 0.75
-Predicate match accuracy : 1.25
-Goal match accuracy      : 0.0
-Total match accuracy     : 0.67
-Inference time [s]       : 27.566556640625
+Predicate match accuracy : 1.5
+Goal match accuracy      : 1.0
+Total match accuracy     : 1.08
+Inference time [s]       : 20.235228515625
 GPU memory loaded [MB]   : 7681.89844
 Model input size [MB]    : 0.00806
-Sliced output            : instance Agent1 agent|instance Item1 item|instance Destination1 destination|predicate agent\_assigned Agent1 Item1|predicate destination\_set Item1 Destination1|predicate item\_delivered Item1|predicate safe\_to\_travel Agent1|predicate unknown\_weather| гол deliver Item1 Destination1|гол safe\_to\_travel Agent1|
+Sliced output            : instance Agent1 agent|instance Item1 item|instance Destination1 destination|predicate agent\_assigned Agent1 Item1|predicate item\_ready Item1|predicate destination\_set Item1 Destination1|predicate item\_delivered Item1|predicate safe\_to\_travel Agent1|predicate unknown\_weather weather1|goal safe\_to\_travel Agent1|goal item\_delivered Item1|
 Solution                 : instance agent1 agent|instance item1 item|instance destination1 destination|instance weather1 weather|predicate unknown_weather weather1|predicate agent_assigned agent1 item1|predicate item_ready item1|predicate destination_set item1 destination1|goal safe_to_travel agent1|goal item_delivered|
 Labeled                  : Yes
 ===========================================================================
@@ -1251,14 +1251,14 @@ Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
 Max new tokens           : 250
 Test set #               : 10
 Number of examples       : 4
-Instance match accuracy  : 0.75
+Instance match accuracy  : 1.0
 Predicate match accuracy : 1.5
-Goal match accuracy      : 0.5
-Total match accuracy     : 0.92
-Inference time [s]       : 22.5366328125
+Goal match accuracy      : 0.0
+Total match accuracy     : 0.83
+Inference time [s]       : 24.32434375
 GPU memory loaded [MB]   : 7681.89844
 Model input size [MB]    : 0.01008
-Sliced output            : instance agent1 agent|instance item1 item|instance destination1 destination|predicate unknown_weather weather1|predicate item_ready item1|predicate agent_assigned agent1 item1|predicate destination_set item1 destination1|predicate item_delivered item1|predicate safe_to_travel agent1|goal item_delivered item1|
+Sliced output            : instance a1 agent|instance i1 item|instance d1 destination|instance w1 weather| predicate unknown_weather w1| predicate item_ready i1| predicate agent_assigned a1 i1| predicate destination_set i1 d1| predicate safe_to_travel a1| predicate item_delivered i1|
 Solution                 : instance agent1 agent|instance item1 item|instance destination1 destination|instance weather1 weather|predicate unknown_weather weather1|predicate agent_assigned agent1 item1|predicate item_ready item1|predicate destination_set item1 destination1|goal safe_to_travel agent1|goal item_delivered|
 Labeled                  : Yes
 ===========================================================================
@@ -1266,59 +1266,59 @@ Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
 Max new tokens           : 250
 Test set #               : 10
 Number of examples       : 5
-Instance match accuracy  : 0.75
-Predicate match accuracy : 1.0
-Goal match accuracy      : 0.5
-Total match accuracy     : 0.75
-Inference time [s]       : 33.28225
-GPU memory loaded [MB]   : 7681.89844
-Model input size [MB]    : 0.01988
-Sliced output            : instance Agent1 agent|instance Item1 item|instance Destination1 destination|predicate agent\_assigned Agent1 Item1|predicate item\_ready Item1|predicate unknown\_weather Weather1|predicate safe\_to\_travel Agent1|goal item\_delivered Item1|
-Solution                 : instance agent1 agent|instance item1 item|instance destination1 destination|instance weather1 weather|predicate unknown_weather weather1|predicate agent_assigned agent1 item1|predicate item_ready item1|predicate destination_set item1 destination1|goal safe_to_travel agent1|goal item_delivered|
-Labeled                  : Yes
-===========================================================================
-Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
-Max new tokens           : 250
-Test set #               : 10
-Number of examples       : 6
-Instance match accuracy  : 1.75
-Predicate match accuracy : 1.25
-Goal match accuracy      : 0.0
-Total match accuracy     : 1.0
-Inference time [s]       : 28.77113671875
-GPU memory loaded [MB]   : 7681.89844
-Model input size [MB]    : 0.02515
-Sliced output            : instance weather1 weather| instance Item1 item| instance Destination1 destination| instance Agent1 agent| instance Item2 item| instance Destination2 destination| instance Agent2 agent| predicate item_ready Item1| predicate agent_assigned Agent1 Item1| predicate destination_set Item1 Destination1| predicate safe_to_travel Agent1| predicate unknown_weather weather1|
-Solution                 : instance agent1 agent|instance item1 item|instance destination1 destination|instance weather1 weather|predicate unknown_weather weather1|predicate agent_assigned agent1 item1|predicate item_ready item1|predicate destination_set item1 destination1|goal safe_to_travel agent1|goal item_delivered|
-Labeled                  : Yes
-===========================================================================
-Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
-Max new tokens           : 250
-Test set #               : 10
-Number of examples       : 7
-Instance match accuracy  : 0.0
-Predicate match accuracy : 0.0
-Goal match accuracy      : 0.0
-Total match accuracy     : 0.0
-Inference time [s]       : 30.53249609375
-GPU memory loaded [MB]   : 7673.77344
-Model input size [MB]    : 0.01138
-Sliced output            : 
-Solution                 : instance agent1 agent|instance item1 item|instance destination1 destination|instance weather1 weather|predicate unknown_weather weather1|predicate agent_assigned agent1 item1|predicate item_ready item1|predicate destination_set item1 destination1|goal safe_to_travel agent1|goal item_delivered|
-Labeled                  : Yes
-===========================================================================
-Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
-Max new tokens           : 250
-Test set #               : 10
-Number of examples       : 8
 Instance match accuracy  : 0.75
 Predicate match accuracy : 1.0
 Goal match accuracy      : 0.0
 Total match accuracy     : 0.58
-Inference time [s]       : 35.16840234375
+Inference time [s]       : 33.0788125
+GPU memory loaded [MB]   : 7681.89844
+Model input size [MB]    : 0.01988
+Sliced output            : instance Agent1 agent|instance Item1 item|instance Destination1 destination|predicate agent_assigned Agent1 Item1|predicate destination_set Item1 Destination1|predicate safe_to_travel Agent1|predicate item_delivered Item1|
+Solution                 : instance agent1 agent|instance item1 item|instance destination1 destination|instance weather1 weather|predicate unknown_weather weather1|predicate agent_assigned agent1 item1|predicate item_ready item1|predicate destination_set item1 destination1|goal safe_to_travel agent1|goal item_delivered|
+Labeled                  : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
+Max new tokens           : 250
+Test set #               : 10
+Number of examples       : 6
+Instance match accuracy  : 1.0
+Predicate match accuracy : 1.0
+Goal match accuracy      : 0.5
+Total match accuracy     : 0.83
+Inference time [s]       : 19.488775390625
+GPU memory loaded [MB]   : 7681.89844
+Model input size [MB]    : 0.02515
+Sliced output            : instance Agent1 agent|instance Item1 item|instance Destination1 destination|instance Weather1 weather| predicate agent_assigned Agent1 Item1| predicate destination_set Item1 Destination1| predicate unknown_weather Weather1| predicate safe_to_travel Agent1| goal item_delivered Item1|
+Solution                 : instance agent1 agent|instance item1 item|instance destination1 destination|instance weather1 weather|predicate unknown_weather weather1|predicate agent_assigned agent1 item1|predicate item_ready item1|predicate destination_set item1 destination1|goal safe_to_travel agent1|goal item_delivered|
+Labeled                  : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
+Max new tokens           : 250
+Test set #               : 10
+Number of examples       : 7
+Instance match accuracy  : 1.5
+Predicate match accuracy : 2.5
+Goal match accuracy      : 1.0
+Total match accuracy     : 1.67
+Inference time [s]       : 47.33670703125
+GPU memory loaded [MB]   : 7673.77344
+Model input size [MB]    : 0.01138
+Sliced output            : instance item1 item|instance agent1 agent|instance destination1 destination|predicate unknown_weather weather|predicate item\_ready item1|predicate agent\_assigned agent1 item1|predicate destination\_set item1 destination1|goal item\_delivered item1|predicate safe\_to\_travel agent1 Regarding the command, it appears to have incomplete information, such as omitting the specific weather condition to check. So, I suggest the following predicates be included as placeholders: ### Output instance item1 item|instance agent1 agent|instance destination1 destination|predicate unknown\_weather - weather|predicate item\_ready item1|predicate agent\_assigned agent1 item1|predicate destination\_set item1 destination1|goal item\_delivered item1|
+Solution                 : instance agent1 agent|instance item1 item|instance destination1 destination|instance weather1 weather|predicate unknown_weather weather1|predicate agent_assigned agent1 item1|predicate item_ready item1|predicate destination_set item1 destination1|goal safe_to_travel agent1|goal item_delivered|
+Labeled                  : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 8-bit
+Max new tokens           : 250
+Test set #               : 10
+Number of examples       : 8
+Instance match accuracy  : 0.75
+Predicate match accuracy : 1.25
+Goal match accuracy      : 0.0
+Total match accuracy     : 0.67
+Inference time [s]       : 35.54017578125
 GPU memory loaded [MB]   : 7681.89844
 Model input size [MB]    : 0.01642
-Sliced output            : instance Agent1 agent|instance Item1 item|instance Destination1 destination predicate safe_to_travel agent1| predicate item_ready Item1| predicate agent_assigned agent1 Item1| predicate destination_set Item1 Destination1|
+Sliced output            : instance Item1 item|instance Destination1 destination|instance Agent1 agent| predicate item_ready Item1| predicate agent_assigned Agent1 Item1| predicate destination_set Item1 Destination1| predicate safe\_to\_travel Agent1| predicate unknown\_weather Weather1|
 Solution                 : instance agent1 agent|instance item1 item|instance destination1 destination|instance weather1 weather|predicate unknown_weather weather1|predicate agent_assigned agent1 item1|predicate item_ready item1|predicate destination_set item1 destination1|goal safe_to_travel agent1|goal item_delivered|
 Labeled                  : Yes
 ===========================================================================
@@ -1327,13 +1327,13 @@ Max new tokens           : 250
 Test set #               : 10
 Number of examples       : 9
 Instance match accuracy  : 0.75
-Predicate match accuracy : 1.25
-Goal match accuracy      : 0.0
-Total match accuracy     : 0.67
-Inference time [s]       : 37.24484375
+Predicate match accuracy : 1.0
+Goal match accuracy      : 1.0
+Total match accuracy     : 0.92
+Inference time [s]       : 19.585361328125
 GPU memory loaded [MB]   : 7681.89844
 Model input size [MB]    : 0.02051
-Sliced output            : instance Item1 item|instance Agent1 agent|instance Destination1 destination|predicate item_ready Item1|predicate agent\_assigned Agent1 Item1|predicate destination\_set Item1 Destination1|predicate safe\_to\_travel Agent1|predicate unknown\_weather|
+Sliced output            : instance item1 item|instance destination1 destination|instance agent1 agent| predicate item_ready item1| predicate destination_set item1 destination1| predicate agent_assigned agent1 item1| predicate unknown_weather weather1| goal safe_to_travel agent1| goal item_delivered item1|
 Solution                 : instance agent1 agent|instance item1 item|instance destination1 destination|instance weather1 weather|predicate unknown_weather weather1|predicate agent_assigned agent1 item1|predicate item_ready item1|predicate destination_set item1 destination1|goal safe_to_travel agent1|goal item_delivered|
 Labeled                  : Yes
 ===========================================================================
@@ -1342,13 +1342,13 @@ Max new tokens           : 250
 Test set #               : 10
 Number of examples       : 10
 Instance match accuracy  : 0.75
-Predicate match accuracy : 2.5
-Goal match accuracy      : 2.0
-Total match accuracy     : 1.75
-Inference time [s]       : 48.14860546875
+Predicate match accuracy : 1.5
+Goal match accuracy      : 0.5
+Total match accuracy     : 0.92
+Inference time [s]       : 24.975896484375
 GPU memory loaded [MB]   : 7681.89844
 Model input size [MB]    : 0.02444
-Sliced output            : instance Agent1 agent|instance Item1 item|instance Destination1 destination|predicate agent Agent1|predicate item Item1|predicate destination Destination1|predicate item\_ready Item1|predicate agent\_assigned Agent1 Item1|predicate destination\_set Item1 Destination1|predicate safe\_to\_travel Agent1|predicate unknown\_weather Weather|goal agent\_assigned Agent1 Item1|goal safe\_to\_travel Agent1|goal destination\_set Item1 Destination1|goal item\_delivered Item1| //correct but incomplete, lacks checking the weather. To ensure safety, add these predicates: predicate known\_weather Weather|
+Sliced output            : instance Agent1 agent|instance Item1 item|instance Destination1 destination|predicate unknown_weather|predicate item_ready Item1|predicate agent_assigned Agent1 Item1|predicate destination_set Item1 Destination1|predicate item_delivered Item1|predicate safe_to_travel Agent1|goal item_delivered Item1|
 Solution                 : instance agent1 agent|instance item1 item|instance destination1 destination|instance weather1 weather|predicate unknown_weather weather1|predicate agent_assigned agent1 item1|predicate item_ready item1|predicate destination_set item1 destination1|goal safe_to_travel agent1|goal item_delivered|
 Labeled                  : Yes
 ===========================================================================
