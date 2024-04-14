@@ -146,7 +146,8 @@ messages_list = [
 
 for messages in messages_list:
     # endre range så vi får med alle shotsa
-    for i in range(1, (len(shot_data['shots'])//2)+1):
+    # for i in range(1, (len(shot_data['shots'])//2)+1):
+    for i in range(1, len(shot_data['shots'])):
         number_of_examples = i+1
         
         if _4bit:
@@ -298,8 +299,8 @@ for messages in messages_list:
         gc.collect()
 
         # wait for memory to reach <250 MB
-        while torch.cuda.memory_allocated(device) > 300*(1024**2):
-            time.sleep(0.1)
+        # while torch.cuda.memory_allocated(device) > 300*(1024**2):
+        #     time.sleep(0.1)
 
 # clean up
 torch.cuda.empty_cache()
