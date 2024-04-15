@@ -22,6 +22,11 @@
     (is_shelf_zone ?zone - zone)
 )
 
+(:functions
+    (distance ?from - zone ?to - zone)- number
+    (speed ?robot - robot)- number
+)
+
 (:durative-action navigate
     :parameters (?robot - robot ?from_zone - zone ?to_zone - zone)
     :duration (= ?duration 3)
