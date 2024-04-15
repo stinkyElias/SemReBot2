@@ -1,0 +1,4 @@
+               Mistral Large Language Model full precision test             
+===========================================================================
+  Test completed on device NVIDIA GeForce RTX 3060 with 12036.0 MB memory  
+===========================================================================

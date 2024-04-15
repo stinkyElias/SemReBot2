@@ -2,8 +2,9 @@ import os
 import torch
 import json
 import gc
-import time
 import sys
+
+test_set = int(sys.argv[1])
 
 if sys.argv[2] == '4bit':
     _4bit = True
@@ -106,20 +107,11 @@ nf8_config = BitsAndBytesConfig(
     load_in_8bit=True,
 )
 
-system_prompt = 'As a PDDL assistant, your task is to outline the available instances, predicates, and goals based on the provided domain and command. Answer in the format shown after ### Output ###.'
-
-messages = [
-        {'role': 'user', 'content': system_prompt},
-        {'role': 'assistant', 'content': 'Please provide the domain.pddl and corresponding command.'},
-        {'role': 'user', 'content': f'domain.pddl: {domains[0]}, command: {inputs[0]}'},
-        {'role': 'assistant', 'content': 'Understood. What is the expected output format?'},
-        {'role': 'user', 'content': f'### Output ### {outputs[0]}'},
-    ]
-
 allocated, model_input_size, inference_times, model_outputs = [], [], [], []
 
-test_set = int(sys.argv[1])
 number_of_max_new_tokens = 250  # default
+
+system_prompt = 'As a PDDL assistant, your task is to outline the available instances, predicates, and goals based on the provided domain and command. Answer in the format shown after ### Output ###.'
 
 messages_list = [
                  [ # short and precise
@@ -144,163 +136,151 @@ messages_list = [
                  ]
 ]
 
-for messages in messages_list:
-    # endre range så vi får med alle shotsa
-    # for i in range(1, (len(shot_data['shots'])//2)+1):
-    for i in range(1, len(shot_data['shots'])):
-        number_of_examples = i+1
+
+msg_idx = int(sys.argv[4])
+messages = messages_list[msg_idx]
+
+range_start = 1
+range_end = 5
+
+# endre range så vi får med alle shotsa
+for i in range(range_start, range_end+1):
+    number_of_examples = i+1
+    
+    if _4bit:
+        model = AutoModelForCausalLM.from_pretrained(model_id, quantization_config=nf4_config)
+    elif _8bit:
+        model = AutoModelForCausalLM.from_pretrained(model_id, quantization_config=nf8_config)
+    elif half_precision:
+        model = AutoModelForCausalLM.from_pretrained(model_id, dtype=torch.float16)
+    elif full_precision:
+        model = AutoModelForCausalLM.from_pretrained(model_id)
+
+    allocated.append(round(torch.cuda.memory_allocated(device)/(1024**2), 5))
+
+    if len(messages) > 2:
+        del messages[-1:]
+
+        if msg_idx == 0:
+            messages.append({'role': 'user', 'content': f'Here is a new example. Domain: {domains[i]}, command: {inputs[i]}. ### Output ### {outputs[0]}.'})
+            messages.append({'role': 'assistant', 'content': 'Understood. Awaiting new domain and command.'})
         
-        if _4bit:
-            model = AutoModelForCausalLM.from_pretrained(model_id, quantization_config=nf4_config)
-        elif _8bit:
-            model = AutoModelForCausalLM.from_pretrained(model_id, quantization_config=nf8_config)
-        elif half_precision:
-            model = AutoModelForCausalLM.from_pretrained(model_id, dtype=torch.float16)
-        elif full_precision:
-            model = AutoModelForCausalLM.from_pretrained(model_id)
-
-        allocated.append(round(torch.cuda.memory_allocated(device)/(1024**2), 5))
-
-        if i>1:
-            del messages[-1:]
-
-            if messages == messages_list[0]:
-                messages.append({'role': 'user', 'content': f'Here is a new example. Domain: {domains[i]}, command: {inputs[i]}. ### Output ### {outputs[0]}.'})
-                messages.append({'role': 'assistant', 'content': 'Understood. Awaiting new domain and command.'})
-            
-            if messages == messages_list[1]:
-                messages.append({'role': 'user', 'content': f'Here is a domain {domains[i]}, and command {inputs[i]}.'})
-                messages.append({'role': 'assistant', 'content': 'Thank you. What is the desired output?'})
-                messages.append({'role': 'user', 'content': f'### Output ### {outputs[i]}'})
-                messages.append({'role': 'assistant', 'content': 'Understood. I will generate an output based on a domain and command.'})
-            
-            if messages == messages_list[2]:
-                messages.append({'role': 'user', 'content': f'The domain under consideration is {domains[i]}, accompanied by the corresponding command {inputs[i]}. Please align the output format as described in the template provided.'})
-                messages.append({'role': 'assistant', 'content': ' I have received the information regarding the domain and command. To proceed accurately, could you please confirm the exact format for the output? This will ensure that the results are generated in complete alignment with your expectations and requirements for the PDDL environment.'})
-                messages.append({'role': 'user', 'content': f'The required output format should adhere to the following structure: ### Output ### {outputs[i]}'})
-                messages.append({'role': 'assistant', 'content': 'Your specifications have been meticulously noted. I am now fully prepared to process the subsequent set of data. Please provide the next domain and its associated command so that I can continue to deliver outputs that meet the high standards of accuracy and detail required.'})
-
-        if messages == messages_list[0]:
-            messages.append({'role': 'user', 'content': f'Domain: {test_domains[test_set]}, command: {commands[test_set]}. Give me the output.'})
-            prompt = 1
+        if msg_idx == 1:
+            messages.append({'role': 'user', 'content': f'Here is a domain {domains[i]}, and command {inputs[i]}.'})
+            messages.append({'role': 'assistant', 'content': 'Thank you. What is the desired output?'})
+            messages.append({'role': 'user', 'content': f'### Output ### {outputs[i]}'})
+            messages.append({'role': 'assistant', 'content': 'Understood. I will generate an output based on a domain and command.'})
         
-        if messages == messages_list[1]:
-            messages.append(messages.append({'role': 'user', 'content': f'Here is a domain {test_domains[test_set]}, and command {commands[test_set]}. Give me the output.'}))
-            prompt = 2
+        if msg_idx == 2:
+            messages.append({'role': 'user', 'content': f'The domain under consideration is {domains[i]}, accompanied by the corresponding command {inputs[i]}. Please align the output format as described in the template provided.'})
+            messages.append({'role': 'assistant', 'content': ' I have received the information regarding the domain and command. To proceed accurately, could you please confirm the exact format for the output? This will ensure that the results are generated in complete alignment with your expectations and requirements for the PDDL environment.'})
+            messages.append({'role': 'user', 'content': f'The required output format should adhere to the following structure: ### Output ### {outputs[i]}'})
+            messages.append({'role': 'assistant', 'content': 'Your specifications have been meticulously noted. I am now fully prepared to process the subsequent set of data. Please provide the next domain and its associated command so that I can continue to deliver outputs that meet the high standards of accuracy and detail required.'})
 
-        if messages == messages_list[2]:
-            messages.append({'role': 'user', 'content': f'The domain under consideration is {test_domains[test_set]}, accompanied by the corresponding command {commands[test_set]}. Give me the output.'})
-            prompt = 3
+    if msg_idx == 0:
+        messages.append({'role': 'user', 'content': f'Domain: {test_domains[test_set]}, command: {commands[test_set]}. Give me the output.'})
+        prompt = 1
+    
+    if msg_idx == 1:
+        messages.append({'role': 'user', 'content': f'Here is a domain {test_domains[test_set]}, and command {commands[test_set]}. Give me the output.'})
+        prompt = 2
 
-        # # if the loop has been executed at least once, remove the last two messages which is the ones that have to be last
-        # # the new messages to be added is another example from the shot_data
-        # if i>1:
-        #     del messages[-2:]
+    if msg_idx == 2:
+        messages.append({'role': 'user', 'content': f'The domain under consideration is {test_domains[test_set]}, accompanied by the corresponding command {commands[test_set]}. Give me the output.'})
+        prompt = 3
 
-        #     messages.append({'role': 'assistant', 'content': 'Please provide the domain.pddl and corresponding command.'})
-        #     messages.append({'role': 'user', 'content': f'domain.pddl: {domains[i]}, command: {inputs[i]}'})
-        #     messages.append({'role': 'assistant', 'content': 'Understood. What is the expected output format?'})
-        #     messages.append({'role': 'user', 'content': f'### Output ### {outputs[i]}'})
+    # start timer
+    start = torch.cuda.Event(enable_timing=True)
+    start.record()
 
-        # messages.append({'role': 'assistant', 'content': 'Thank you. Ready for the new instruction.'})
-        # messages.append({'role': 'user', 'content': f'domain.pddl: {test_domains[test_set]}, command: {commands[test_set]}'})
+    # inference
+    encodeds = tokenizer.apply_chat_template(messages, return_tensors='pt')
+    model_inputs = encodeds.to(device)
 
-        # start timer
-        start = torch.cuda.Event(enable_timing=True)
-        start.record()
-
-        # inference
-        encodeds = tokenizer.apply_chat_template(messages, return_tensors='pt')
-        model_inputs = encodeds.to(device)
-
-        model_input_size.append(round((model_inputs.element_size()*model_inputs.nelement())/(1024**2), 5))    # MB
+    model_input_size.append(round((model_inputs.element_size()*model_inputs.nelement())/(1024**2), 5))    # MB
+    
+    with torch.no_grad():
+        generated_ids = model.generate(
+            model_inputs,
+            pad_token_id=tokenizer.eos_token_id,
+            max_new_tokens=number_of_max_new_tokens,
+            do_sample=True,
+        )
         
-        with torch.no_grad():
-            generated_ids = model.generate(
-                model_inputs,
-                pad_token_id=tokenizer.eos_token_id,
-                max_new_tokens=number_of_max_new_tokens,
-                do_sample=True,
-            )
-            
-        decoded = tokenizer.batch_decode(generated_ids)
+    decoded = tokenizer.batch_decode(generated_ids)
 
-        end = torch.cuda.Event(enable_timing=True)
-        end.record()
-        
-        torch.cuda.synchronize()
+    end = torch.cuda.Event(enable_timing=True)
+    end.record()
+    
+    torch.cuda.synchronize()
 
-        # compute inference time
-        timer = start.elapsed_time(end)/1000
-        inference_times.append(timer)
+    # compute inference time
+    timer = start.elapsed_time(end)/1000
+    inference_times.append(timer)
 
-        '''
-        Format the output string - remove the last 4 characters which are the end token,
-        then remove everything after the last delimiter and
-        remove everything before the first occurence of "instance" or "### Output ### ".
-        Finally, remove newlines in output
-        '''
-        output_tokens = decoded[0]
-        end_token = '[/INST]'
+    '''
+    Format the output string - remove the last 4 characters which are the end token,
+    then remove everything after the last delimiter and
+    remove everything before the first occurence of "instance" or "### Output ### ".
+    Finally, remove newlines in output
+    '''
+    output_tokens = decoded[0]
+    end_token = '[/INST]'
 
-        end_tag_index = output_tokens.rfind(end_token)
-        end_of_sentence = -4
-        sliced_output = output_tokens[end_tag_index + len(end_token):end_of_sentence]
+    end_tag_index = output_tokens.rfind(end_token)
+    end_of_sentence = -4
+    sliced_output = output_tokens[end_tag_index + len(end_token):end_of_sentence]
 
-        delimiter = '|'
-        last_delimiter = sliced_output.rfind(delimiter)
-        model_output = sliced_output[:last_delimiter+1]
+    delimiter = '|'
+    last_delimiter = sliced_output.rfind(delimiter)
+    model_output = sliced_output[:last_delimiter+1]
 
-        # check if the model output contains "### Output ### " and delete everything before it.
-        # if not found, delete everything before first "instance"
-        output_flag = '### Output ### '
-        expected_output_index = model_output.find(output_flag)
-        
-        if expected_output_index != -1:
-            model_output = model_output[expected_output_index + len(output_flag):]
-        else:
-            model_output = model_output[model_output.find('instance'):]
+    # check if the model output contains "### Output ### " and delete everything before it.
+    # if not found, delete everything before first "instance"
+    output_flag = '### Output ### '
+    expected_output_index = model_output.find(output_flag)
+    
+    if expected_output_index != -1:
+        model_output = model_output[expected_output_index + len(output_flag):]
+    else:
+        model_output = model_output[model_output.find('instance'):]
 
-        # remove newlines in output
-        model_output = model_output.replace('\n', ' ')
-        model_output = model_output.replace('\t', ' ')
-        model_output = model_output.replace('\r', ' ')
-        model_output = model_output.replace('  ', ' ')
+    # remove newlines in output
+    model_output = model_output.replace('\n', ' ')
+    model_output = model_output.replace('\t', ' ')
+    model_output = model_output.replace('\r', ' ')
+    model_output = model_output.replace('  ', ' ')
 
-        model_outputs.append(model_output)
+    model_outputs.append(model_output)
 
-        # write the results to file
-        result = {
-            'Model': model_id + f' --- {precision}',
-            'Max new tokens': number_of_max_new_tokens,
-            'Prompt number': prompt,
-            'Test set #': test_set + 1,
-            'Number of examples': number_of_examples,
-            'Inference time [s]': inference_times[-1],
-            'GPU memory loaded [MB]': allocated[-1],
-            'Model input size [MB]': model_input_size[-1],
-            'Sliced output': model_outputs[-1],
-            'Solution': solutions[test_set],
-            'Labeled': 'No',
-        }
+    # write the results to file
+    result = {
+        'Model': model_id + f' --- {precision}',
+        'Max new tokens': number_of_max_new_tokens,
+        'Prompt number': prompt,
+        'Test set #': test_set + 1,
+        'Number of examples': number_of_examples,
+        'Inference time [s]': inference_times[-1],
+        'GPU memory loaded [MB]': allocated[-1],
+        'Model input size [MB]': model_input_size[-1],
+        'Sliced output': model_outputs[-1],
+        'Solution': solutions[test_set],
+        'Labeled': 'No',
+    }
 
-        with open(results_file, 'a') as outfile:
-            for key, value in result.items():
-                outfile.write(f'{key:<25}: {value}\n')
-            outfile.write(underline)
+    with open(results_file, 'a') as outfile:
+        for key, value in result.items():
+            outfile.write(f'{key:<25}: {value}\n')
+        outfile.write(underline)
 
-        print(f'Mistral 7B instruct {precision} finished on test {test_set + 1} with {number_of_examples} examples and prompt {prompt}.')
+    print(f'Mistral 7B instruct {precision} finished on test {test_set + 1} with {number_of_examples} examples and prompt {prompt}. No label.')
 
-        # delete model to free up GPU memory
-        del model
-        del model_inputs
-        del generated_ids
-        torch.cuda.empty_cache()
-        gc.collect()
-
-        # wait for memory to reach <250 MB
-        # while torch.cuda.memory_allocated(device) > 300*(1024**2):
-        #     time.sleep(0.1)
+    # delete model to free up GPU memory
+    del model
+    del model_inputs
+    del generated_ids
+    torch.cuda.empty_cache()
+    gc.collect()
 
 # clean up
 torch.cuda.empty_cache()

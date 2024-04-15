@@ -2,8 +2,9 @@ import os
 import torch
 import json
 import gc
-import time
 import sys
+
+test_set = int(sys.argv[1])
 
 if sys.argv[2] == '4bit':
     _4bit = True
@@ -81,8 +82,6 @@ for i in range(len(test_data['tests'])):
     num_predicates.append(test_data['tests'][i]['num_predicates'])
     num_goals.append(test_data['tests'][i]['num_goals'])
 
-system_prompt = 'You are a helpful PDDL assistant that will list up the available instances, predicates and goals for the given domain and natural language command. You can only answer in the desired format.'
-
 underline =   "===========================================================================\n"
 
 nf4_config = BitsAndBytesConfig(
@@ -96,20 +95,44 @@ nf8_config = BitsAndBytesConfig(
     load_in_8bit=True,
 )
 
-messages = [
-        {'role': 'user', 'content': system_prompt},
-        {'role': 'assistant', 'content': 'Please provide the domain.pddl and corresponding command.'},
-        {'role': 'user', 'content': f'domain.pddl: {domains[0]}, command: {inputs[0]}'},
-        {'role': 'assistant', 'content': 'Understood. What is the expected output format?'},
-        {'role': 'user', 'content': f'### Expected output ### {outputs[0]}'},
-    ]
-
 allocated, model_input_size, inference_times, model_outputs = [], [], [], []
 
-test_set = int(sys.argv[1])
 number_of_max_new_tokens = 250  # default
 
-for i in range((len(shot_data['shots'])//2)+1, len(shot_data['shots'])):
+system_prompt = 'As a PDDL assistant, your task is to outline the available instances, predicates, and goals based on the provided domain and command. Answer in the format shown after ### Output ###.'
+
+messages_list = [
+                 [ # short and precise
+                    {'role': 'user', 'content': system_prompt + f' Here is a domain: {domains[0]}, and command {inputs[0]}. ### Output ### {outputs[0]}.'},
+                    {'role': 'assistant', 'content': 'Understood. Awaiting new domain and command.'},
+                 ],
+                 [ # medium detailed
+                    {'role': 'user', 'content': system_prompt},
+                    {'role': 'assistant', 'content': 'Understood, please give me a domain and command.'},
+                    {'role': 'user', 'content': f'Here is a domain {domains[0]}, and command {inputs[0]}.'},
+                    {'role': 'assistant', 'content': 'Thank you. What is the desired output?'},
+                    {'role': 'user', 'content': f'### Output ### {outputs[0]}'},
+                    {'role': 'assistant', 'content': 'Understood. I will generate an output based on a domain and command.'}
+                 ],
+                 [ # long and detailed
+                    {'role': 'user', 'content': system_prompt},
+                    {'role': 'assistant', 'content': 'Absolutely, I am ready to assist. Please provide the complete details of the domain and the specific command you wish to evaluate. This will enable me to accurately generate the necessary PDDL structures and outputs.'},
+                    {'role': 'user', 'content': f'The domain under consideration is {domains[0]}, accompanied by the corresponding command {inputs[0]}. Please align the output format as described in the template provided.'},
+                    {'role': 'assistant', 'content': ' I have received the information regarding the domain and command. To proceed accurately, could you please confirm the exact format for the output? This will ensure that the results are generated in complete alignment with your expectations and requirements for the PDDL environment.'},
+                    {'role': 'user', 'content': f'The required output format should adhere to the following structure: ### Output ### {outputs[0]}'},
+                    {'role': 'assistant', 'content': 'Your specifications have been meticulously noted. I am now fully prepared to process the subsequent set of data. Please provide the next domain and its associated command so that I can continue to deliver outputs that meet the high standards of accuracy and detail required.'},
+                 ]
+]
+
+msg_idx = int(sys.argv[4])
+messages = messages_list[msg_idx]
+
+range_start = int(sys.argv[5])
+range_end = int(sys.argv[6])
+
+for i in range(range_start, range_end+1):
+    number_of_examples = i+1
+    
     if _4bit:
         model = AutoModelForCausalLM.from_pretrained(model_id, quantization_config=nf4_config)
     elif _8bit:
@@ -118,25 +141,39 @@ for i in range((len(shot_data['shots'])//2)+1, len(shot_data['shots'])):
         model = AutoModelForCausalLM.from_pretrained(model_id, dtype=torch.float16)
     elif full_precision:
         model = AutoModelForCausalLM.from_pretrained(model_id)
+
+    allocated.append(round(torch.cuda.memory_allocated(device)/(1024**2), 5))
+
+    if len(messages) > 2:
+        del messages[-1:]
+
+        if msg_idx == 0:
+            messages.append({'role': 'user', 'content': f'Here is a new example. Domain: {domains[i]}, command: {inputs[i]}. ### Output ### {outputs[0]}.'})
+            messages.append({'role': 'assistant', 'content': 'Understood. Awaiting new domain and command.'})
+        
+        if msg_idx == 1:
+            messages.append({'role': 'user', 'content': f'Here is a domain {domains[i]}, and command {inputs[i]}.'})
+            messages.append({'role': 'assistant', 'content': 'Thank you. What is the desired output?'})
+            messages.append({'role': 'user', 'content': f'### Output ### {outputs[i]}'})
+            messages.append({'role': 'assistant', 'content': 'Understood. I will generate an output based on a domain and command.'})
+        
+        if msg_idx == 2:
+            messages.append({'role': 'user', 'content': f'The domain under consideration is {domains[i]}, accompanied by the corresponding command {inputs[i]}. Please align the output format as described in the template provided.'})
+            messages.append({'role': 'assistant', 'content': ' I have received the information regarding the domain and command. To proceed accurately, could you please confirm the exact format for the output? This will ensure that the results are generated in complete alignment with your expectations and requirements for the PDDL environment.'})
+            messages.append({'role': 'user', 'content': f'The required output format should adhere to the following structure: ### Output ### {outputs[i]}'})
+            messages.append({'role': 'assistant', 'content': 'Your specifications have been meticulously noted. I am now fully prepared to process the subsequent set of data. Please provide the next domain and its associated command so that I can continue to deliver outputs that meet the high standards of accuracy and detail required.'})
+
+    if msg_idx == 0:
+        messages.append({'role': 'user', 'content': f'Domain: {test_domains[test_set]}, command: {commands[test_set]}. Give me the output.'})
+        prompt = 1
     
-    memory_allocated_loaded = round(torch.cuda.memory_allocated(device)/(1024**2), 5)               # MB
+    if msg_idx == 1:
+        messages.append({'role': 'user', 'content': f'Here is a domain {test_domains[test_set]}, and command {commands[test_set]}. Give me the output.'})
+        prompt = 2
 
-    allocated.append(memory_allocated_loaded)
-
-    number_of_examples = i+1
-
-    # if the loop has been executed at least once, remove the last two messages which is the ones that have to be last
-    # the new messages to be added is another example from the shot_data
-    if i>1:
-        del messages[-2:]
-
-        messages.append({'role': 'assistant', 'content': 'Please provide the domain.pddl and corresponding command.'})
-        messages.append({'role': 'user', 'content': f'domain.pddl: {domains[i]}, command: {inputs[i]}'})
-        messages.append({'role': 'assistant', 'content': 'Understood. What is the expected output format?'})
-        messages.append({'role': 'user', 'content': f'### Output ### {outputs[i]}'})
-
-    messages.append({'role': 'assistant', 'content': 'Thank you. Ready for the new instruction.'})
-    messages.append({'role': 'user', 'content': f'domain.pddl: {test_domains[test_set]}, command: {commands[test_set]}'})
+    if msg_idx == 2:
+        messages.append({'role': 'user', 'content': f'The domain under consideration is {test_domains[test_set]}, accompanied by the corresponding command {commands[test_set]}. Give me the output.'})
+        prompt = 3
 
     # start timer
     start = torch.cuda.Event(enable_timing=True)
@@ -206,6 +243,7 @@ for i in range((len(shot_data['shots'])//2)+1, len(shot_data['shots'])):
     result = {
         'Model': model_id + f' --- {precision}',
         'Max new tokens': number_of_max_new_tokens,
+        'Prompt number': prompt,
         'Test set #': test_set + 1,
         'Number of examples': number_of_examples,
         'Inference time [s]': inference_times[-1],
@@ -221,7 +259,7 @@ for i in range((len(shot_data['shots'])//2)+1, len(shot_data['shots'])):
             outfile.write(f'{key:<25}: {value}\n')
         outfile.write(underline)
 
-    print(f'Mistral 7B instruct {precision} finished on test {test_set + 1} with {number_of_examples} examples.')
+    print(f'Mistral 7B instruct {precision} finished on test {test_set + 1} with {number_of_examples} examples and prompt {prompt}. No label.')
 
     # delete model to free up GPU memory
     del model
@@ -229,10 +267,6 @@ for i in range((len(shot_data['shots'])//2)+1, len(shot_data['shots'])):
     del generated_ids
     torch.cuda.empty_cache()
     gc.collect()
-
-    # wait for memory to reach <250 MB
-    while torch.cuda.memory_allocated(device) > 300*(1024**2):
-        time.sleep(0.1)
 
 # clean up
 torch.cuda.empty_cache()
