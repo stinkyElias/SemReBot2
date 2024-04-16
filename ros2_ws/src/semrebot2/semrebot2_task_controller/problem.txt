@@ -1,0 +1,25 @@
+(define 
+    (problem robot_warehouse)
+    (:domain warehouse)
+    (:objects
+        tars - robot
+        charging_station unload_zone shelf_1 shelf_2 shelf_3 shelf_4 - zone
+        pallet_1 - pallet
+    )
+    (:init
+        (robot_at tars charging_station)
+        (robot_available tars)
+        (is_unload_zone unload_zone)
+        (is_shelf_zone shelf_1)
+        (is_shelf_zone shelf_2)
+        (is_shelf_zone shelf_3)
+        (is_shelf_zone shelf_4)
+        (pallet_at pallet_1 unload_zone)
+        (pallet_not_moved pallet_1)
+    )
+
+    (:goal (and
+        (pallet_at pallet_1 shelf_1)
+    ))
+)
+

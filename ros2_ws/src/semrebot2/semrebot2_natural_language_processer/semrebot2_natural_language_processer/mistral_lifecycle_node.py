@@ -71,7 +71,7 @@ class MistralNode(LifecycleNode):
 
         self.domain = '(' + types + ' (' + predicates + ')'
 
-        self.get_logger().info(f"Types and predicates successfully extracted from domain.pddl: {self.domain}")
+        self.get_logger().info(f"domain.pddl successfully extracted")
 
         # Load the model to memory
         try:
@@ -176,13 +176,13 @@ class MistralNode(LifecycleNode):
 
         pub_msg.data = sliced_output
 
-        self.publisher_.publish(pub_msg)
+        # self.publisher_.publish(pub_msg)
         self.get_logger().info(f"Generated response:\n {pub_msg.data}")
 
-        # training_msg = String()
-        # training_msg.data = "set instance pallet_2 pallet|set predicate pallet_at pallet_2 unload_zone|set predicate pallet_not_moved pallet_2|set goal pallet_at pallet_2 shelf_2|set goal robot_at tars charging_station|"
+        training_msg = String()
+        training_msg.data = "goal robot_at tars shelf_1|"
 
-        # self.publisher_.publish(training_msg)
+        self.publisher_.publish(training_msg)
 
         torch.cuda.empty_cache()
 

@@ -1,0 +1,54 @@
+Tester
+    Navigere
+        Test 1: fra charging_station til unload_zone
+        Test 2: fra shelf_3 til shelf_1
+    
+    Transportere én palle
+        Test 3: fra unload_zone til shelf_1
+        Test 4: fra unload_zone til shelf_4
+    
+    Transportere to paller
+        Test 5: fra unload_zone til shelf_2 og shelf_3
+        Test 6: fra unload_zone og begge til shelf_4
+        Test 7: fra unload_zone til shelf_1 og 2, men kun 50 % batteri fra start
+        Test 8: fra unload_zone til shelf_1 og 2, men kun 50 % batteri fra start og starter ved shelf_1
+    
+    Transportere seks paller med ladestopp
+        Test 9: fra unload_zone og tre paller til shelf_1, én palle til resterende shelves
+    
+    Gigantisk test
+        Test 10: 50 paller til forskjellig sted
+
+Ikke vits å teste feil, for jeg har ingen feilbehandling
+
+Metrics
+    - Planning time
+    - Success rate
+    - Path efficiency (var det raskeste ruta?)
+    - Notere ned uventa oppførsel
+
+====================================================================
+Test 1
+
+Received command: goal robot_at tars unload_zone|
+Planner time: 0.246944 s
+Callback time: 0.291218 s
+------------------------------ Plan -----------------------------
+0:	(navigate tars charging_station unload_zone)	[15.858]
+-----------------------------------------------------------------
+
+Fasit: navigate tars charging_station unload_zone
+Success: Yes 
+====================================================================
+Test 2
+
+Received command: goal robot_at tars shelf_1|
+Planner time: 0.246729 s
+Callback time: 0.293438 s
+------------------------------ Plan -----------------------------
+0:	(navigate tars shelf_3 shelf_1)	[15.385]
+-----------------------------------------------------------------
+
+Fasit: navigate tars shelf_3 shelf_1
+Success: Yes
+====================================================================

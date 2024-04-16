@@ -233,3 +233,14 @@ RUN usermod -a -G audio stinky
 
 RUN chown -R stinky:stinky /home/stinky
 USER stinky
+
+FROM mic AS tdf
+
+ENV DEBIAN_FRONTEND=noninteractive
+WORKDIR /home/stinky/ros2_ws/src
+RUN git clone https://github.com/sea-bass/TemporalFastDownward.git ./src/tfd \
+    && cd tfd \
+    && ./build \
+    && export $TFD_HOME=/home/stinky/ros2_ws/src/tfd/downward
+  
+ENV DEBIAN_FRONTEND=
