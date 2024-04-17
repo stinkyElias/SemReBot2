@@ -15,7 +15,7 @@ namespace semrebot2{
             problem_expert_->addInstance(plansys2::Instance{zone, "zone"});
         }
 
-        problem_expert_->addPredicate(plansys2::Predicate("(robot_at " + robot_name_ + " " + zones_[4] + ")"));
+        problem_expert_->addPredicate(plansys2::Predicate("(robot_at " + robot_name_ + " " + zones_[0] + ")"));
         problem_expert_->addPredicate(plansys2::Predicate("(robot_available " + robot_name_ + ")"));
 
         problem_expert_->addPredicate(plansys2::Predicate("(is_recharge_zone " + zones_[0] + ")"));

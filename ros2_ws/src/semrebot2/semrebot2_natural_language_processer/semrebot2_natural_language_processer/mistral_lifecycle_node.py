@@ -180,8 +180,7 @@ class MistralNode(LifecycleNode):
         self.get_logger().info(f"Generated response:\n {pub_msg.data}")
 
         training_msg = String()
-        training_msg.data = "goal robot_at tars shelf_1|"
-
+        training_msg.data = "instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_1|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_1|instance pallet_3 pallet|predicate pallet_at pallet_3 unload_zone|predicate pallet_not_moved pallet_3|goal pallet_at pallet_3 shelf_1|instance pallet_4 pallet|predicate pallet_at pallet_4 unload_zone|predicate pallet_not_moved pallet_4|goal pallet_at pallet_4 shelf_2|instance pallet_5 pallet|predicate pallet_at pallet_5 unload_zone|predicate pallet_not_moved pallet_5|goal pallet_at pallet_5 shelf_3|instance pallet_6 pallet|predicate pallet_at pallet_6 unload_zone|predicate pallet_not_moved pallet_6|goal pallet_at pallet_6 shelf_4|"
         self.publisher_.publish(training_msg)
 
         torch.cuda.empty_cache()

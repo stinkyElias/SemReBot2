@@ -6,20 +6,53 @@ Tester
     Transportere én palle
         Test 3: fra unload_zone til shelf_1
         Test 4: fra unload_zone til shelf_4
+            instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_4|
     
     Transportere to paller
-        Test 5: fra unload_zone til shelf_2 og shelf_3
-        Test 6: fra unload_zone og begge til shelf_4
-        Test 7: fra unload_zone til shelf_1 og 2, men kun 50 % batteri fra start
-        Test 8: fra unload_zone til shelf_1 og 2, men kun 50 % batteri fra start og starter ved shelf_1
+        Test 5: fra unload_zone til shelf_2 og shelf_4  (rekkefølgen har noe å si)
+            instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_2|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_4|
+
+        Test 6: fra unload_zone til shelf_2 og shelf_3   (rekkefølgen har ikke noe å si)
+            instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_2|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_3|
+
+    Transportere to paller med 50% batteri
+        Test 7: fra unload_zone til shelf_1 og 2 (rekkefølgen har noe å si)
+            instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_1|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_2|
+
+        Test 8: fra unload_zone til shelf_1 og 2, men starter ved shelf_1
+            instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_1|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_2|
     
     Transportere seks paller med ladestopp
         Test 9: fra unload_zone og tre paller til shelf_1, én palle til resterende shelves
+            instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_1|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_1|instance pallet_3 pallet|predicate pallet_at pallet_3 unload_zone|predicate pallet_not_moved pallet_3|goal pallet_at pallet_3 shelf_1|instance pallet_4 pallet|predicate pallet_at pallet_4 unload_zone|predicate pallet_not_moved pallet_4|goal pallet_at pallet_4 shelf_2|instance pallet_5 pallet|predicate pallet_at pallet_5 unload_zone|predicate pallet_not_moved pallet_5|goal pallet_at pallet_5 shelf_3|instance pallet_6 pallet|predicate pallet_at pallet_6 unload_zone|predicate pallet_not_moved pallet_6|goal pallet_at pallet_6 shelf_4|
     
-    Gigantisk test
-        Test 10: 50 paller til forskjellig sted
+    Tilfeldig rekkefølge
+        Test 10: 10 paller til forskjellige steder
+            instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_3|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_4|instance pallet_3 pallet|predicate pallet_at pallet_3 unload_zone|predicate pallet_not_moved pallet_3|goal pallet_at pallet_3 shelf_2|instance pallet_4 pallet|predicate pallet_at pallet_4 unload_zone|predicate pallet_not_moved pallet_4|goal pallet_at pallet_4 shelf_3|instance pallet_5 pallet|predicate pallet_at pallet_5 unload_zone|predicate pallet_not_moved pallet_5|goal pallet_at pallet_5 shelf_3|instance pallet_6 pallet|predicate pallet_at pallet_6 unload_zone|predicate pallet_not_moved pallet_6|goal pallet_at pallet_6 shelf_1|instance pallet_7 pallet|predicate pallet_at pallet_7 unload_zone|predicate pallet_not_moved pallet_7|goal pallet_at pallet_7 shelf_4|instance pallet_8 pallet|predicate pallet_at pallet_8 unload_zone|predicate pallet_not_moved pallet_8|goal pallet_at pallet_8 shelf_1|instance pallet_9 pallet|predicate pallet_at pallet_9 unload_zone|predicate pallet_not_moved pallet_9|goal pallet_at pallet_9 shelf_1|instance pallet_10 pallet|predicate pallet_at pallet_10 unload_zone|predicate pallet_not_moved pallet_10|goal pallet_at pallet_10 shelf_2|
+                    p1 -> s3
+                    p2 -> s4
+                    p3 -> s2
+                    p4 -> s3
+                    p5 -> s3
+                    p6 -> s1
+                    p7 -> s4
+                    p8 -> s1
+                    p9 -> s1
+                    p10 -> s2
+    
+    Test med vilkårlig sluttposisjon
+        Test 11: flytt to paller til shelf_1 og shelf_2. Avslutt ved shelf_4 (rekkefølge har noe å si)
+            instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_1|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_2|goal robot_at tars shelf_4|
 
-Ikke vits å teste feil, for jeg har ingen feilbehandling
+        Test 12: start ved shelf_1, flytt to paller til shelf_4 og shelf_2. Avslutt ved charging_station
+            instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_4|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_2|goal robot_at tars charging_station|
+
+    Testing med feil
+        Test 13: feil i domain.pddl
+        Test 14: koordinater utenfor verdenen
+        Test 15: sjekke om den flytter paller som er markert som flytta
+
+
 
 Metrics
     - Planning time
@@ -27,28 +60,29 @@ Metrics
     - Path efficiency (var det raskeste ruta?)
     - Notere ned uventa oppførsel
 
-====================================================================
-Test 1
+Batterikapasitet
+    Fra start   100
+    navigate    -10
+    transport   -20
+    recharge    =100 på 10 s
 
-Received command: goal robot_at tars unload_zone|
-Planner time: 0.246944 s
-Callback time: 0.291218 s
------------------------------- Plan -----------------------------
-0:	(navigate tars charging_station unload_zone)	[15.858]
------------------------------------------------------------------
+Avstander (hastiget = 0.26 m/s)
+    charging_station - unload_zone  4.12 m  15.85 s
+    charging_station - shelf_1      3.54 m  13.62 s
+    charging_station - shelf_2      2.92 m  11.23 s
+    charging_station - shelf_3      2.92 m  11.23 s
+    charging_station - shelf_4      2.12 m  08.15 s
 
-Fasit: navigate tars charging_station unload_zone
-Success: Yes 
-====================================================================
-Test 2
+    unload_zone - shelf_1           2.12 m  08.15 s
+    unload_zone - shelf_2           2.92 m  11.23 s
+    unload_zone - shelf_3           2.92 m  11.23 s
+    unload_zone - shelf_4           3.54 m  13.62 s
 
-Received command: goal robot_at tars shelf_1|
-Planner time: 0.246729 s
-Callback time: 0.293438 s
------------------------------- Plan -----------------------------
-0:	(navigate tars shelf_3 shelf_1)	[15.385]
------------------------------------------------------------------
+    shelf_1 - shelf_2               1.00 m  03.85 s
+    shelf_1 - shelf_3               4.00 m  15.38 s
+    shelf_1 - shelf_4               4.12 m  15.85 s
 
-Fasit: navigate tars shelf_3 shelf_1
-Success: Yes
-====================================================================
+    shelf_2 - shelf_3               4.12 m  15.85 s
+    shelf_2 - shelf_4               4.00 m  15.38 s
+
+    shelf_3 - shelf_4               1.00 m  03.85 s
