@@ -29,7 +29,7 @@ namespace semrebot2{
         // params.yaml file. It's hardcoded for simplicity.
         set_hardcoded_speed_and_distance();
 
-        problem_expert_->addFunction(plansys2::Function("(= (battery_level " + robot_name_ + ") " + battery_level + ")"));      
+        problem_expert_->addFunction(plansys2::Function("(= (battery_level " + robot_name_ + ") " + battery_level + ")"));
 
         // node logic
         auto task_callback = [this](std_msgs::msg::String::UniquePtr msg) -> void{

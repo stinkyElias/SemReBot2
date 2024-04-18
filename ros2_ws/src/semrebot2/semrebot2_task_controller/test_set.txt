@@ -48,9 +48,17 @@ Tester
             instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_4|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_2|goal robot_at tars charging_station|
 
     Testing med feil
-        Test 13: feil i domain.pddl
-        Test 14: koordinater utenfor verdenen
-        Test 15: sjekke om den flytter paller som er markert som flytta
+        Test 13: sjekke om den flytter paller som er markert som flytta
+            instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_2|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|goal pallet_at pallet_2 shelf_4|
+                - pallet_2 har ikke predicate pallet_not_moved
+        
+        Test 14: sjekke om den flytter paller som ikke skal flyttes
+            instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_2|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|
+                - uten mål om at pallet_2 skal flyttes
+        
+        Test 15: feil i domain.pddl
+        
+        Test 16: koordinater utenfor verdenen
 
 
 
