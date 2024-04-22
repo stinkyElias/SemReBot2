@@ -5,11 +5,12 @@ import rclpy
 import torch
 import gc
 import re
+import jsonl
 
 from rclpy.lifecycle import LifecycleNode, LifecycleState, TransitionCallbackReturn
 from std_msgs.msg import String
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
-from transformers import BitsAndBytesConfig
+from ament_index_python.packages import get_package_share_directory
 
 class MistralNode(LifecycleNode):
     def __init__(self, node_name) -> None:
@@ -19,6 +20,9 @@ class MistralNode(LifecycleNode):
         self.publisher_ = None
         self.subscriber_ = None
         self.domain = None
+
+        self.commands, self.solutions = [], []
+        self.data = None
 
         self.declare_parameters(
             namespace='',
@@ -43,6 +47,7 @@ class MistralNode(LifecycleNode):
         )
         
         # Read domain file and extract only the available types and predicates
+        package_dir = get_package_share_directory('semrebot2_natural_language_processer')
         home_dir = os.path.expanduser('~')
         domain_dir = os.path.join(home_dir, 'ros2_ws/src/semrebot2/semrebot2_task_controller/pddl/domain.pddl')
 
@@ -72,6 +77,23 @@ class MistralNode(LifecycleNode):
         self.domain = '(' + types + ' (' + predicates + ')'
 
         self.get_logger().info(f"domain.pddl successfully extracted")
+
+        # Load shots for few-shot prompting
+        shot_dir = os.path.join(package_dir, 'config', 'shots.jsonl')
+        
+        with open(shot_dir, 'r') as infile:
+            self.data = jsonl.load(infile)
+        
+        for i in range(len(data['shots'])):
+            self.commands.append(data['shots'][i]['command'])
+            self.solutions.append(data['shots'][i]['solution'])
+        
+        if self.commands and self.solutions:
+            self.get_logger().info(f"Successfully loaded {len(self.commands)} commands and {len(self.solutions)} solutions")
+        else:
+            self.get_logger().error(f"Failed to load commands and solutions")
+
+            return TransitionCallbackReturn.ERROR
 
         # Load the model to memory
         try:
@@ -135,17 +157,19 @@ class MistralNode(LifecycleNode):
         pub_msg = String()
         
         # pre-prompt
+        generated_knowledge = 'instance tars robot|instance charging_station zone|instance unload_zone zone|instance shelf_1 zone|instance shelf_2 zone|instance shelf_3 zone|instance shelf_4 zone|predicate robot_availabletars|predicate is_recharge_zone charging_station|predicate is_unload_zone unload_zone|predicate is_shelf_zone shelf_1|predicate is_shelf_zone shelf_2|predicate is_shelf_zone shelf_3|predicate is_shelf_zone shelf_4|'
+        system_prompt = f'You are the robot tars, an automatic forklift that will move pallets around a warehouse. Your task is to outline the available instances, predicates, and goals based on the provided domain and command. Answer in the format shown after ### Output ###. This is the domain: {domains[0]}.'
+
         messages = [
-            {'role': 'user',        'content': 'You will receive a natural language prompt and create text based on the prompt and a domain from domain.pddl.'},
-            {'role': 'assistant',   'content': 'I understand. Give me the domain.pddl'},
-            {'role': 'user',        'content': 'domain.pddl: ' + self.domain},
-            {'role': 'assistant',   'content': 'Thank you. This is the types and predicates in the domain.pddl.'},
-            {'role': 'user',        'content': 'Yes. I will show you an example, and you will see the format of a prompt and the only accepted format to answer in. Only answer in the same format as this example.'},
-            {'role': 'assistant',   'content': 'Understood, I will learn from the coming example and see how I shall respond.'},
-            {'role': 'user',        'content': 'Prompt: "A new shipment arrived. Please move the new pallet from the unload zone to reol 1. Afterwards, wait at reol 2". From this prompt, the only correct answer would be: set instance pallet_1 pallet|set predicate pallet_at pallet_1 unload_zone|set predicate pallet_not_moved pallet_1|set goal pallet_at pallet_1 reol_1|set goal robot_at tars reol_2|'},
-            {'role': 'assistant',   'content': 'I understand the format. I will respond in the same format, only setting instances, predicates and goals delimited by "|". Please give me the prompt.'},
-            {'role': 'user',        'content': 'Prompt: ' + msg.data},
+            {'role': 'user', 'content': system_prompt + f'At all times, these instances and predicates are true: {generated_knowledge}. You do not have to repeat them in your output.' + f' Here is a command {commands[0]}. ### Output ### {solutions[0]}.'},
+            {'role': 'assistant', 'content': 'Understood. Awaiting new domain and command.'},
         ]
+
+        for i in range(1, len(self.data['shots'])):
+            messages.append({'role': 'user', 'content': f'Command: {self.commands[i]}'})
+            messages.append({'role': 'assistant', 'content': f'### Output ### {self.solutions[i]}'})
+
+        messages.append({'role': 'user', 'content': f'Command: {msg.data}'})
 
         encodeds = self.tokenizer_.apply_chat_template(messages, return_tensors='pt')
         model_inputs = encodeds.to(self.device_)
@@ -153,35 +177,35 @@ class MistralNode(LifecycleNode):
         self.get_logger().info("Generating response")
         generated_ids = self.model.generate(model_inputs,
                                             pad_token_id=self.tokenizer_.eos_token_id,
-                                            max_new_tokens=100,
+                                            max_new_tokens=1000,
                                             do_sample=True)
         
         decoded = self.tokenizer_.batch_decode(generated_ids)
 
-        output_tokens = decoded[0]
-        end_token = "[/INST]"
+        start_token = '[/INST]'
+        start_tag_index = decoded[0].rfind(start_token)
+        decoded[0] = decoded[0][start_tag_index+len(start_token):]
 
-        end_tag_index = output_tokens.rfind(end_token)
-        end_of_sentence = -4
-        sliced_output = output_tokens[end_tag_index + len(end_token):end_of_sentence]
+        end_token = '</s>'
+        end_tag_index = decoded[0].rfind(end_token)
+        decoded[0] = decoded[0][:end_tag_index]
 
         delimiter = '|'
-        last_delimiter = sliced_output.rfind(delimiter)
-        sliced_output = sliced_output[:last_delimiter + 1]
+        last_delimiter_index = decoded[0].rfind(delimiter)
+        decoded[0] = decoded[0][:last_delimiter_index+len(delimiter)]
 
-        # remove newlines
-        sliced_output = sliced_output.replace('\n', '')
-        # remove leading whitespaces
-        sliced_output = sliced_output.strip()
+        output_token = '### Output ###'
+        output_tag_index = decoded[0].find(output_token)
+        decoded[0] = decoded[0][output_tag_index+len(output_token)+1:]
 
-        pub_msg.data = sliced_output
+        pub_msg.data = decoded[0]
 
-        # self.publisher_.publish(pub_msg)
+        self.publisher_.publish(pub_msg)
         self.get_logger().info(f"Generated response:\n {pub_msg.data}")
 
         training_msg = String()
         training_msg.data = "instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_1|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_2|"
-        self.publisher_.publish(training_msg)
+        # self.publisher_.publish(training_msg)
 
         torch.cuda.empty_cache()
 

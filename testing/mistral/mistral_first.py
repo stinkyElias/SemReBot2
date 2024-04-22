@@ -41,16 +41,7 @@ elif sys.argv[2] == 'full':
 
     results_file = 'mistral_results_full_precision.txt'
     precision = 'full precision'
-    test_set_file = 'test_set.jsonl'
-elif sys.argv[2] == '4bit-specific':
-    _4bit = True
-    _8bit = False
-    half_precision = False
-    full_precision = False
-
-    results_file = 'mistral_results_4bit_specific.txt'
-    precision = '4-bit specific'
-    test_set_file = 'test_set_specific.jsonl'    
+    test_set_file = 'test_set.jsonl'   
 
 if sys.argv[3] == 'idun':
     idun = True
@@ -124,9 +115,7 @@ allocated, model_input_size, inference_times, model_outputs = [], [], [], []
 
 number_of_max_new_tokens = 250  # default
 
-generated_knowledge = 'instance tars robot|instance charging_station zone|instance unload_zone zone|instance shelf_1 zone|instance shelf_2 zone|instance shelf_3 zone|instance shelf_4 zone|predicate robot_availabletars|predicate is_recharge_zone charging_station|predicate is_unload_zone unload_zone|predicate is_shelf_zone shelf_1|predicate is_shelf_zone shelf_2|predicate is_shelf_zone shelf_3|predicate is_shelf_zone shelf_4|'
 system_prompt = 'As a PDDL assistant, your task is to outline the available instances, predicates, and goals based on the provided domain and command. Answer in the format shown after ### Output ###.'
-system_prompt_specific = f'You are the robot tars, an automatic forklift that will move pallets around a warehouse. Your task is to outline the available instances, predicates, and goals based on the provided domain and command. Answer in the format shown after ### Output ###. This is the domain: {test_domains[0]}.'
 
 messages_list = [
                  [ # short and precise
@@ -148,53 +137,7 @@ messages_list = [
                     {'role': 'assistant', 'content': ' I have received the information regarding the domain and command. To proceed accurately, could you please confirm the exact format for the output? This will ensure that the results are generated in complete alignment with your expectations and requirements for the PDDL environment.'},
                     {'role': 'user', 'content': f'The required output format should adhere to the following structure: ### Output ### {outputs[0]}'},
                     {'role': 'assistant', 'content': 'Your specifications have been meticulously noted. I am now fully prepared to process the subsequent set of data. Please provide the next domain and its associated command so that I can continue to deliver outputs that meet the high standards of accuracy and detail required.'},
-                 ],
-
-                 [  # user specific, short and precise, no generated knowledge
-                    {'role': 'user', 'content': system_prompt_specific + f' Here is a command {commands[0]}. ### Output ### {solutions[0]}.'},
-                    {'role': 'assistant', 'content': 'Understood. Awaiting new domain and command.'},
-                 ],
-
-                 [ # user specific, medium detailed, no generated knowledge
-                    {'role': 'user', 'content': system_prompt_specific},
-                    {'role': 'assistant', 'content': 'Understood, please give me a command.'},
-                    {'role': 'user', 'content': f'Here is a command {commands[0]}.'},
-                    {'role': 'assistant', 'content': 'Thank you. What is the desired output?'},
-                    {'role': 'user', 'content': f'### Output ### {solutions[0]}'},
-                    {'role': 'assistant', 'content': 'Understood. I will generate an output based on the domain and command.'}
-                 ],
-
-                 [ # user specific, long and detailed, no generated knowledge
-                    {'role': 'user', 'content': system_prompt_specific},
-                    {'role': 'assistant', 'content': 'As tars, I am ready to assist. Please provide the complete details of the specific command you wish to evaluate. This will enable me to accurately generate the necessary PDDL structures and outputs.'},
-                    {'role': 'user', 'content': f'The command under consideration is {commands[0]}. Please align the output format as described in the template provided.'},
-                    {'role': 'assistant', 'content': ' I have received the information regarding the domain and command. To proceed accurately, could you please confirm the exact format for the output? This will ensure that the results are generated in complete alignment with your expectations and requirements for the PDDL environment.'},
-                    {'role': 'user', 'content': f'The required output format should adhere to the following structure: ### Output ### {solutions[0]}'},
-                    {'role': 'assistant', 'content': 'Your specifications have been meticulously noted. I am now fully prepared to process the subsequent set of data. Please provide the next command so that I can continue to deliver outputs that meet the high standards of accuracy and detail required.'},
-                 ],
-
-                 [  # user specific, short and precise, generated knowledge
-                    {'role': 'user', 'content': system_prompt_specific + f'At all times, these instances and predicates are true: {generated_knowledge}. You do not have to repeat them in your output.' + f' Here is a command {commands[0]}. ### Output ### {solutions[0]}.'},
-                    {'role': 'assistant', 'content': 'Understood. Awaiting new domain and command.'},
-                 ],
-
-                 [ # user specific, medium detailed, generated knowledge
-                    {'role': 'user', 'content': system_prompt_specific + f'At all times, these instances and predicates are true: {generated_knowledge}. You do not have to repeat them in your output.' },
-                    {'role': 'assistant', 'content': 'Understood, please give me a command.'},
-                    {'role': 'user', 'content': f'Here is a command {commands[0]}.'},
-                    {'role': 'assistant', 'content': 'Thank you. What is the desired output?'},
-                    {'role': 'user', 'content': f'### Output ### {solutions[0]}'},
-                    {'role': 'assistant', 'content': 'Understood. I will generate an output based on the domain and command.'}
-                 ],
-
-                 [ # user specific, long and detailed, generated knowledge
-                    {'role': 'user', 'content': system_prompt_specific + f'At all times, these instances and predicates are true: {generated_knowledge}. You do not have to repeat them in your output.' },
-                    {'role': 'assistant', 'content': 'As tars, I am ready to assist. Please provide the complete details of the specific command you wish to evaluate. This will enable me to accurately generate the necessary PDDL structures and outputs.'},
-                    {'role': 'user', 'content': f'The command under consideration is {commands[0]}. Please align the output format as described in the template provided.'},
-                    {'role': 'assistant', 'content': ' I have received the information regarding the domain and command. To proceed accurately, could you please confirm the exact format for the output? This will ensure that the results are generated in complete alignment with your expectations and requirements for the PDDL environment.'},
-                    {'role': 'user', 'content': f'The required output format should adhere to the following structure: ### Output ### {solutions[0]}'},
-                    {'role': 'assistant', 'content': 'Your specifications have been meticulously noted. I am now fully prepared to process the subsequent set of data. Please provide the next command so that I can continue to deliver outputs that meet the high standards of accuracy and detail required.'},
-                 ],
+                 ]
 ]
 
 msg_idx = int(sys.argv[4])
@@ -237,23 +180,6 @@ for i in range(range_start, range_end+1):
             messages.append({'role': 'user', 'content': f'The required output format should adhere to the following structure: ### Output ### {outputs[i]}'})
             messages.append({'role': 'assistant', 'content': 'Your specifications have been meticulously noted. I am now fully prepared to process the subsequent set of data. Please provide the next domain and its associated command so that I can continue to deliver outputs that meet the high standards of accuracy and detail required.'})
 
-        if msg_idx == 3 or msg_idx == 6:
-            messages.append({'role': 'user', 'content': f'Here is a new example. Command: {commands[i]}. ### Output ### {solutions[0]}.'})
-            messages.append({'role': 'assistant', 'content': 'Understood. Awaiting new command.'})
-        
-        if msg_idx == 4 or msg_idx == 7:
-            messages.append({'role': 'user', 'content': f'Here is the command {commands[i]}.'})
-            messages.append({'role': 'assistant', 'content': 'Thank you. What is the desired output?'})
-            messages.append({'role': 'user', 'content': f'### Output ### {solutions[i]}'})
-            messages.append({'role': 'assistant', 'content': 'Understood. I will generate an output based on a command.'})
-        
-        if msg_idx == 5 or msg_idx == 8:
-            messages.append({'role': 'user', 'content': f'The command under consideration is {commands[i]}. Please align the output format as described in the template provided.'})
-            messages.append({'role': 'assistant', 'content': ' I have received the information regarding the domain and command. To proceed accurately, could you please confirm the exact format for the output? This will ensure that the results are generated in complete alignment with your expectations and requirements for the PDDL environment.'})
-            messages.append({'role': 'user', 'content': f'The required output format should adhere to the following structure: ### Output ### {solutions[i]}'})
-            messages.append({'role': 'assistant', 'content': 'Your specifications have been meticulously noted. I am now fully prepared to process the subsequent set of data. Please provide the next command so that I can continue to deliver outputs that meet the high standards of accuracy and detail required.'})
-
-
     if msg_idx == 0:
         messages.append({'role': 'user', 'content': f'Domain: {test_domains[test_set]}, command: {commands[test_set]}. Give me the output.'})
         prompt = 1
@@ -266,36 +192,6 @@ for i in range(range_start, range_end+1):
         messages.append({'role': 'user', 'content': f'The domain under consideration is {test_domains[test_set]}, accompanied by the corresponding command {commands[test_set]}. Give me the output.'})
         prompt = 3
     
-    elif msg_idx == 3:
-        messages.append({'role': 'user', 'content': f'Command: {commands[i+1]}. Give me the output.'})
-        prompt = 1
-        generated_knowledge_bool = False
-    
-    elif msg_idx == 4:
-        messages.append({'role': 'user', 'content': f'Here is the command {commands[i+1]}. Give me the output.'})
-        prompt = 2
-        generated_knowledge_bool = False
-    
-    elif msg_idx == 5:
-        messages.append({'role': 'user', 'content': f'The command under consideration is {commands[i+1]}. Give me the output.'})
-        prompt = 3
-        generated_knowledge_bool = False
-    
-    elif msg_idx == 6:
-        messages.append({'role': 'user', 'content': f'Command: {commands[i+1]}. Give me the output.'})
-        prompt = 1
-        generated_knowledge_bool = True
-    
-    elif msg_idx == 7:
-        messages.append({'role': 'user', 'content': f'Here is the command {commands[i+1]}. Give me the output.'})
-        prompt = 2
-        generated_knowledge_bool = True
-    
-    elif msg_idx == 8:
-        messages.append({'role': 'user', 'content': f'The command under consideration is {commands[i+1]}. Give me the output.'})
-        prompt = 3
-        generated_knowledge_bool = True
-
     # start timer
     start = torch.cuda.Event(enable_timing=True)
     start.record()
@@ -373,7 +269,6 @@ for i in range(range_start, range_end+1):
         'Sliced output': model_outputs[-1],
         'Solution': solutions[test_set],
         'Labeled': 'No',
-        'Generated knowledge': generated_knowledge_bool,
     }
 
     with open(results_file, 'a') as outfile:

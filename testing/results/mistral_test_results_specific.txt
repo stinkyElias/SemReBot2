@@ -1,0 +1,784 @@
+               Mistral Large Language Model 4-bit specific test             
+===========================================================================
+  Test completed on device NVIDIA GeForce RTX 3060 with 12036.0 MB memory  
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 1
+Test set #               : 1
+Number of examples       : 1
+Inference time [s]       : 6.84540185546875
+GPU memory loaded [MB]   : 4447.36816
+Model input size [MB]    : 0.00221
+Sliced output            : instance robot_available robot\_Tars| predicate robot\_at robot\_Tars unload\_zone| goal robot\_at shelf\_2|
+Solution                 : goal robot_at tars shelf_2|
+Labeled                  : No
+Generated knowledge      : No
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 1
+Test set #               : 2
+Number of examples       : 2
+Inference time [s]       : 5.78874267578125
+GPU memory loaded [MB]   : 4454.49316
+Model input size [MB]    : 0.00268
+Sliced output            : instance pallett\_1 pallet, pallett\_2 pallet | predicate pallet\_at pallett\_1 unload\_zone, pallett\_2 unload\_zone | predicate pallet\_not\_moved pallett\_1, pallett\_2 | goal pallet\_at pallett\_1 shelf\_2, pallet\_at pallett\_2 shelf\_4 |
+Solution                 : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_2|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_4|
+Labeled                  : No
+Generated knowledge      : No
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 1
+Test set #               : 3
+Number of examples       : 3
+Inference time [s]       : 10.71245703125
+GPU memory loaded [MB]   : 4454.49316
+Model input size [MB]    : 0.00394
+Sliced output            : instance pallet_1 pallet|predicate pallet_number pallet_1 1|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_2| :instance pallet_2 pallet|predicate pallet_number pallet_2 2|predicate pallet_at pallet_2 unload_zone|
+Solution                 : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_2|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_3|
+Labeled                  : No
+Generated knowledge      : No
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 1
+Test set #               : 4
+Number of examples       : 4
+Inference time [s]       : 10.7808369140625
+GPU memory loaded [MB]   : 4454.49316
+Model input size [MB]    : 0.00549
+Sliced output            : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_1| instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_1| instance pallet_3 pallet|predicate pallet_at pallet_3 unload_zone|predicate pallet_not_moved pallet_3|goal pallet_at pallet_3 shelf_1| Now, let's move pallets 4, 5, and 6 to their respective shelves. instance pallet_4 pallet|predicate pallet_at pallet_4 unload_zone|predicate pallet_not_moved pallet_4|
+Solution                 : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_1|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_1|instance pallet_3 pallet|predicate pallet_at pallet_3 unload_zone|predicate pallet_not_moved pallet_3|goal pallet_at pallet_3 shelf_1|instance pallet_4 pallet|predicate pallet_at pallet_4 unload_zone|predicate pallet_not_moved pallet_4|goal pallet_at pallet_4 shelf_2|instance pallet_5 pallet|predicate pallet_at pallet_5 unload_zone|predicate pallet_not_moved pallet_5|goal pallet_at pallet_5 shelf_3|instance pallet_6 pallet|predicate pallet_at pallet_6 unload_zone|predicate pallet_not_moved pallet_6|goal pallet_at pallet_6 shelf_4|
+Labeled                  : No
+Generated knowledge      : No
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 1
+Test set #               : 5
+Number of examples       : 5
+Inference time [s]       : 11.62158203125
+GPU memory loaded [MB]   : 4454.49316
+Model input size [MB]    : 0.0089
+Sliced output            : instance pallet\_1 pallet|predicate pallet\_at pallet\_1 unload_zone|predicate pallet\_not_moved pallet\_1|goal pallet\_at pallet\_1 shelf\_3| instance pallet\_2 pallet|predicate pallet\_at pallet\_2 unload_zone|predicate pallet\_not_moved pallet\_2|goal pallet\_at pallet\_2 shelf\_2| instance pallet\_4 pallet|predicate pallet\_at pallet\_4 unload_zone|predicate pallet\_not_moved pallet\_4|goal pallet_at pallet\_4 shelf\_3| instance pallet\_5 pallet|predicate pallet\_at pallet\_5 unload_zone|predicate pallet\_not_moved pallet\_5|goal pallet\_at pallet\_5 shelf\_3| instance pallet\_6 pallet|predicate pallet\_not_moved pallet\_6|
+Solution                 : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_3|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_4|instance pallet_3 pallet|predicate pallet_at pallet_3 unload_zone|predicate pallet_not_moved pallet_3|goal pallet_at pallet_3 shelf_2|instance pallet_4 pallet|predicate pallet_at pallet_4 unload_zone|predicate pallet_not_moved pallet_4|goal pallet_at pallet_4 shelf_3|instance pallet_5 pallet|predicate pallet_at pallet_5 unload_zone|predicate pallet_not_moved pallet_5|goal pallet_at pallet_5 shelf_3|instance pallet_6 pallet|predicate pallet_at pallet_6 unload_zone|predicate pallet_not_moved pallet_6|goal pallet_at pallet_6 shelf_1|instance pallet_7 pallet|predicate pallet_at pallet_7 unload_zone|predicate pallet_not_moved pallet_7|goal pallet_at pallet_7 shelf_4|instance pallet_8 pallet|predicate pallet_at pallet_8 unload_zone|predicate pallet_not_moved pallet_8|goal pallet_at pallet_8 shelf_1|instance pallet_9 pallet|predicate pallet_at pallet_9 unload_zone|predicate pallet_not_moved pallet_9|goal pallet_at pallet_9 shelf_1|instance pallet_10 pallet|predicate pallet_at pallet_10 unload_zone|predicate pallet_not_moved pallet_10|goal pallet_at pallet_10 shelf_2|
+Labeled                  : No
+Generated knowledge      : No
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 1
+Test set #               : 6
+Number of examples       : 6
+Inference time [s]       : 8.089626953125
+GPU memory loaded [MB]   : 4447.36816
+Model input size [MB]    : 0.00243
+Sliced output            : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|) (instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|) (goal pallet_at pallet_1 shelf_1|) (goal pallet_at pallet_2 shelf_2|) (goal robot_at robot shelf_4|
+Solution                 : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_1|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_2|goal robot_at tars shelf_4|
+Labeled                  : No
+Generated knowledge      : No
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 1
+Test set #               : 7
+Number of examples       : 7
+Inference time [s]       : 7.60013427734375
+GPU memory loaded [MB]   : 4454.49316
+Model input size [MB]    : 0.0038
+Sliced output            : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_4| instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_2| goal robot_at tars charging\_station|goal pallet_at pallet_1 shelf_4|goal pallet_at pallet_2 shelf_2|
+Solution                 : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_4|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_2|goal robot_at tars charging_station|
+Labeled                  : No
+Generated knowledge      : No
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 1
+Test set #               : 8
+Number of examples       : 8
+Inference time [s]       : 3.41041064453125
+GPU memory loaded [MB]   : 4454.49316
+Model input size [MB]    : 0.00509
+Sliced output            : instance pallet\_11 pallet|predicate pallet\_at pallet\_11 unload\_zone|predicate pallet\_not\_moved pallet\_11|goal pallet\_at pallet\_11 shelf\_1|goal robot\_at tars shelf\_2|
+Solution                 : instance pallet_11 pallet|predicate pallet_at pallet_11 unload_zone|predicate pallet_not_moved pallet_11|goal pallet_at pallet_11 shelf_1|goal robot_at tars shelf_2|
+Labeled                  : No
+Generated knowledge      : No
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 1
+Test set #               : 9
+Number of examples       : 9
+Inference time [s]       : 11.0263193359375
+GPU memory loaded [MB]   : 4454.49316
+Model input size [MB]    : 0.00601
+Sliced output            : 
+Solution                 : instance pallet_1 pallet|instance pallet_2 pallet|instance pallet_3 pallet|instance pallet_4 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_at pallet_2 unload_zone|predicate pallet_at pallet_3 unload_zone|predicate pallet_at pallet_4 unload_zone|predicate pallet_not_moved pallet_1|predicate pallet_not_moved pallet_2|predicate pallet_not_moved pallet_3|predicate pallet_not_moved pallet_4|goal pallet_at pallet_1 shelf_3|goal pallet_at pallet_2 shelf_3|goal pallet_at pallet_3 shelf_3|goal pallet_at pallet_4 shelf_3|
+Labeled                  : No
+Generated knowledge      : No
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 1
+Test set #               : 10
+Number of examples       : 10
+Inference time [s]       : 5.508779296875
+GPU memory loaded [MB]   : 4454.49316
+Model input size [MB]    : 0.00803
+Sliced output            : instance pallet_13 pallet|predicate pallet_at pallet_13 unload_zone|predicate pallet_not_moved pallet_13|goal pallet_at pallet_13 shelf_2|goal robot_at tars shelf_1|
+Solution                 : instance pallet_13 pallet|predicate pallet_at pallet_13 unload_zone|predicate pallet_not_moved pallet_13|goal pallet_at pallet_13 shelf_2|goal robot_at tars shelf_1|
+Labeled                  : No
+Generated knowledge      : No
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 2
+Test set #               : 1
+Number of examples       : 1
+Inference time [s]       : 8.9189619140625
+GPU memory loaded [MB]   : 4447.36816
+Model input size [MB]    : 0.00251
+Sliced output            : instance robot_x robot|goal robot_available robot_x instance shelf_2 zone|
+Solution                 : goal robot_at tars shelf_2|
+Labeled                  : No
+Generated knowledge      : No
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 2
+Test set #               : 2
+Number of examples       : 2
+Inference time [s]       : 10.6887568359375
+GPU memory loaded [MB]   : 4454.49316
+Model input size [MB]    : 0.00311
+Sliced output            : 
+Solution                 : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_2|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_4|
+Labeled                  : No
+Generated knowledge      : No
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 2
+Test set #               : 3
+Number of examples       : 3
+Inference time [s]       : 7.8163857421875
+GPU memory loaded [MB]   : 4454.49316
+Model input size [MB]    : 0.0045
+Sliced output            : instance pallet\_1 pallet|predicate pallet\_at pallet\_1 unload\_zone|predicate pallet\_not\_moved pallet\_1|goal pallet\_at pallet\_1 shelf\_2| instance pallet\_2 pallet|predicate pallet\_at pallet\_2 unload\_zone|goal pallet\_at pallet\_2 shelf\_3|
+Solution                 : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_2|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_3|
+Labeled                  : No
+Generated knowledge      : No
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 2
+Test set #               : 4
+Number of examples       : 4
+Inference time [s]       : 11.35419140625
+GPU memory loaded [MB]   : 4454.49316
+Model input size [MB]    : 0.00617
+Sliced output            : instance pallet_1 pallet| :predicate pallet_at pallet_1 unload_zone| :predicate pallet_not_moved pallet_1| :goal pallet_at pallet_1 shelf_1| :instance pallet_2 pallet| :predicate pallet_at pallet_2 unload_zone| :predicate pallet_not_moved pallet_2| :goal pallet_at pallet_2 shelf_1| :instance pallet_3 pallet| :predicate pallet_at pallet_3 unload_zone| :predicate pallet_not_moved pallet_3| :goal pallet_at pallet_3 shelf_1| :instance pallet_4 pallet| :predicate pallet_at pallet_4 unload_zone| :predicate pallet_not_moved pallet_4|
+Solution                 : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_1|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_1|instance pallet_3 pallet|predicate pallet_at pallet_3 unload_zone|predicate pallet_not_moved pallet_3|goal pallet_at pallet_3 shelf_1|instance pallet_4 pallet|predicate pallet_at pallet_4 unload_zone|predicate pallet_not_moved pallet_4|goal pallet_at pallet_4 shelf_2|instance pallet_5 pallet|predicate pallet_at pallet_5 unload_zone|predicate pallet_not_moved pallet_5|goal pallet_at pallet_5 shelf_3|instance pallet_6 pallet|predicate pallet_at pallet_6 unload_zone|predicate pallet_not_moved pallet_6|goal pallet_at pallet_6 shelf_4|
+Labeled                  : No
+Generated knowledge      : No
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 2
+Test set #               : 5
+Number of examples       : 5
+Inference time [s]       : 11.9400302734375
+GPU memory loaded [MB]   : 4454.49316
+Model input size [MB]    : 0.00972
+Sliced output            : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_3| instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_4| instance pallet_3 pallet|predicate pallet_at pallet_3 unload_zone|predicate pallet_not_moved pallet_3|goal pallet_at pallet_3 shelf_2| instance pallet_4 pallet|predicate pallet_at pallet_4 unload_zone|predicate pallet_not_moved pallet_4|goal pallet_at pallet_4 shelf_3| instance pallet_5 pallet|
+Solution                 : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_3|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_4|instance pallet_3 pallet|predicate pallet_at pallet_3 unload_zone|predicate pallet_not_moved pallet_3|goal pallet_at pallet_3 shelf_2|instance pallet_4 pallet|predicate pallet_at pallet_4 unload_zone|predicate pallet_not_moved pallet_4|goal pallet_at pallet_4 shelf_3|instance pallet_5 pallet|predicate pallet_at pallet_5 unload_zone|predicate pallet_not_moved pallet_5|goal pallet_at pallet_5 shelf_3|instance pallet_6 pallet|predicate pallet_at pallet_6 unload_zone|predicate pallet_not_moved pallet_6|goal pallet_at pallet_6 shelf_1|instance pallet_7 pallet|predicate pallet_at pallet_7 unload_zone|predicate pallet_not_moved pallet_7|goal pallet_at pallet_7 shelf_4|instance pallet_8 pallet|predicate pallet_at pallet_8 unload_zone|predicate pallet_not_moved pallet_8|goal pallet_at pallet_8 shelf_1|instance pallet_9 pallet|predicate pallet_at pallet_9 unload_zone|predicate pallet_not_moved pallet_9|goal pallet_at pallet_9 shelf_1|instance pallet_10 pallet|predicate pallet_at pallet_10 unload_zone|predicate pallet_not_moved pallet_10|goal pallet_at pallet_10 shelf_2|
+Labeled                  : No
+Generated knowledge      : No
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 2
+Test set #               : 6
+Number of examples       : 6
+Inference time [s]       : 7.56370849609375
+GPU memory loaded [MB]   : 4447.36816
+Model input size [MB]    : 0.00273
+Sliced output            : 
+Solution                 : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_1|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_2|goal robot_at tars shelf_4|
+Labeled                  : No
+Generated knowledge      : No
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 2
+Test set #               : 7
+Number of examples       : 7
+Inference time [s]       : 6.9051884765625
+GPU memory loaded [MB]   : 4454.49316
+Model input size [MB]    : 0.00422
+Sliced output            : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_4| instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|goal pallet_at pallet_2 shelf_2|goal robot_at tars charging_zone|
+Solution                 : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_4|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_2|goal robot_at tars charging_station|
+Labeled                  : No
+Generated knowledge      : No
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 2
+Test set #               : 8
+Number of examples       : 8
+Inference time [s]       : 5.880455078125
+GPU memory loaded [MB]   : 4454.49316
+Model input size [MB]    : 0.00563
+Sliced output            : instance pallet_11 pallet|predicate pallet_at pallet_11 unload_zone|predicate pallet_not_moved pallet_11|goal pallet_at pallet_11 shelf_1|goal robot_at tars shelf_2|
+Solution                 : instance pallet_11 pallet|predicate pallet_at pallet_11 unload_zone|predicate pallet_not_moved pallet_11|goal pallet_at pallet_11 shelf_1|goal robot_at tars shelf_2|
+Labeled                  : No
+Generated knowledge      : No
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 2
+Test set #               : 9
+Number of examples       : 9
+Inference time [s]       : 7.62015869140625
+GPU memory loaded [MB]   : 4454.49316
+Model input size [MB]    : 0.00668
+Sliced output            : instance pallet\_1, pallet\_2, pallet\_3, pallet\_4 pallet| predicate \_ at unload\_zone pallet\_1, pallet\_2, pallet\_3, pallet\_4| predicate pallet\_not\_moved pallet\_1, pallet\_2, pallet\_3, pallet\_4| goal pallet\_at pallet\_1 shelf\_3| goal pallet\_at pallet\_2 shelf\_3| goal pallet\_at pallet\_3 shelf\_3| goal pallet\_at pallet\_4 shelf\_3| goal robot\_at tars shelf\_3|
+Solution                 : instance pallet_1 pallet|instance pallet_2 pallet|instance pallet_3 pallet|instance pallet_4 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_at pallet_2 unload_zone|predicate pallet_at pallet_3 unload_zone|predicate pallet_at pallet_4 unload_zone|predicate pallet_not_moved pallet_1|predicate pallet_not_moved pallet_2|predicate pallet_not_moved pallet_3|predicate pallet_not_moved pallet_4|goal pallet_at pallet_1 shelf_3|goal pallet_at pallet_2 shelf_3|goal pallet_at pallet_3 shelf_3|goal pallet_at pallet_4 shelf_3|
+Labeled                  : No
+Generated knowledge      : No
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 2
+Test set #               : 10
+Number of examples       : 10
+Inference time [s]       : 8.12612646484375
+GPU memory loaded [MB]   : 4454.49316
+Model input size [MB]    : 0.00881
+Sliced output            : instance pallet_13 pallet| predicate pallet_at pallet_13 unload_zone| predicate pallet_not_moved pallet_13| goal pallet_at pallet_13 shelf_2| instance tars robot| goal robot_at tars shelf_1 ### Output ### instance pallet_13 pallet| predicate pallet_at pallet_13 shelf_2| predicate pallet_not_moved pallet_13| goal true instance tars robot| predicate robot_at tars shelf_1|
+Solution                 : instance pallet_13 pallet|predicate pallet_at pallet_13 unload_zone|predicate pallet_not_moved pallet_13|goal pallet_at pallet_13 shelf_2|goal robot_at tars shelf_1|
+Labeled                  : No
+Generated knowledge      : No
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 3
+Test set #               : 1
+Number of examples       : 1
+Inference time [s]       : 11.323193359375
+GPU memory loaded [MB]   : 4447.36816
+Model input size [MB]    : 0.00349
+Sliced output            : instance robot_1 robot|
+Solution                 : goal robot_at tars shelf_2|
+Labeled                  : No
+Generated knowledge      : No
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 3
+Test set #               : 2
+Number of examples       : 2
+Inference time [s]       : 11.1222900390625
+GPU memory loaded [MB]   : 4454.49316
+Model input size [MB]    : 0.00484
+Sliced output            : instances: pallet_1 pallet|goal pallet_1 pallet (NOT (pallet_not_moved pallet_1))|predicate pallet_1 pallet: pallet_2 pallet|goal pallet_2 pallet (NOT (pallet_not_moved pallet_2))|
+Solution                 : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_2|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_4|
+Labeled                  : No
+Generated knowledge      : No
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 3
+Test set #               : 3
+Number of examples       : 3
+Inference time [s]       : 8.6361591796875
+GPU memory loaded [MB]   : 4454.49316
+Model input size [MB]    : 0.00698
+Sliced output            : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_2| instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_3|
+Solution                 : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_2|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_3|
+Labeled                  : No
+Generated knowledge      : No
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 3
+Test set #               : 4
+Number of examples       : 4
+Inference time [s]       : 11.0163466796875
+GPU memory loaded [MB]   : 4454.49316
+Model input size [MB]    : 0.0094
+Sliced output            : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 (shelf_1 pos1) instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 (shelf_1 pos2) instance pallet_3 pallet|predicate pallet_at pallet_3 unload_zone|predicate pallet_not_moved pallet_3|goal pallet_at pallet_3 (shelf_1 pos3) instance pallet_4 pallet|predicate pallet_at pallet_4 unload_zone|
+Solution                 : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_1|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_1|instance pallet_3 pallet|predicate pallet_at pallet_3 unload_zone|predicate pallet_not_moved pallet_3|goal pallet_at pallet_3 shelf_1|instance pallet_4 pallet|predicate pallet_at pallet_4 unload_zone|predicate pallet_not_moved pallet_4|goal pallet_at pallet_4 shelf_2|instance pallet_5 pallet|predicate pallet_at pallet_5 unload_zone|predicate pallet_not_moved pallet_5|goal pallet_at pallet_5 shelf_3|instance pallet_6 pallet|predicate pallet_at pallet_6 unload_zone|predicate pallet_not_moved pallet_6|goal pallet_at pallet_6 shelf_4|
+Labeled                  : No
+Generated knowledge      : No
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 3
+Test set #               : 5
+Number of examples       : 5
+Inference time [s]       : 12.066615234375
+GPU memory loaded [MB]   : 4454.49316
+Model input size [MB]    : 0.01369
+Sliced output            : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_3 instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_4 instance pallet_3 pallet|predicate pallet_at pallet_3 unload_zone|predicate pallet_not_moved pallet_3|goal pallet_at pallet_3 shelf_2 instance pallet_4 pallet|predicate pallet_at pallet_4 unload_zone|predicate pallet_not_moved pallet_4|goal pallet_at pallet_4 shelf_3 instance pallet_5 pallet|
+Solution                 : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_3|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_4|instance pallet_3 pallet|predicate pallet_at pallet_3 unload_zone|predicate pallet_not_moved pallet_3|goal pallet_at pallet_3 shelf_2|instance pallet_4 pallet|predicate pallet_at pallet_4 unload_zone|predicate pallet_not_moved pallet_4|goal pallet_at pallet_4 shelf_3|instance pallet_5 pallet|predicate pallet_at pallet_5 unload_zone|predicate pallet_not_moved pallet_5|goal pallet_at pallet_5 shelf_3|instance pallet_6 pallet|predicate pallet_at pallet_6 unload_zone|predicate pallet_not_moved pallet_6|goal pallet_at pallet_6 shelf_1|instance pallet_7 pallet|predicate pallet_at pallet_7 unload_zone|predicate pallet_not_moved pallet_7|goal pallet_at pallet_7 shelf_4|instance pallet_8 pallet|predicate pallet_at pallet_8 unload_zone|predicate pallet_not_moved pallet_8|goal pallet_at pallet_8 shelf_1|instance pallet_9 pallet|predicate pallet_at pallet_9 unload_zone|predicate pallet_not_moved pallet_9|goal pallet_at pallet_9 shelf_1|instance pallet_10 pallet|predicate pallet_at pallet_10 unload_zone|predicate pallet_not_moved pallet_10|goal pallet_at pallet_10 shelf_2|
+Labeled                  : No
+Generated knowledge      : No
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 3
+Test set #               : 6
+Number of examples       : 6
+Inference time [s]       : 11.498978515625
+GPU memory loaded [MB]   : 4447.36816
+Model input size [MB]    : 0.00372
+Sliced output            : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_1---> instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|goal pallet_at pallet_2 shelf_2---> instance robot_1 robot|
+Solution                 : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_1|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_2|goal robot_at tars shelf_4|
+Labeled                  : No
+Generated knowledge      : No
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 3
+Test set #               : 7
+Number of examples       : 7
+Inference time [s]       : 5.85288525390625
+GPU memory loaded [MB]   : 4454.49316
+Model input size [MB]    : 0.00596
+Sliced output            : instance pallet_1 pallet| predicate pallet_at pallet_1 unload_zone| predicate pallet_not_moved pallet_1| goal pallet_at pallet_1 shelf_4| instance pallet_2 pallet| predicate pallet_at pallet_2 unload_zone| predicate pallet_not_moved pallet_2| goal pallet_at pallet_2 shelf_2| goal robot_at tars charging\_station|
+Solution                 : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_4|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_2|goal robot_at tars charging_station|
+Labeled                  : No
+Generated knowledge      : No
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 3
+Test set #               : 8
+Number of examples       : 8
+Inference time [s]       : 7.043408203125
+GPU memory loaded [MB]   : 4454.49316
+Model input size [MB]    : 0.00813
+Sliced output            : instance pallet_11 pallet|predicate pallet_at pallet_11 unload_zone|predicate pallet_not_moved pallet_11|goal pallet_at pallet_11 shelf_1| instance tars robot|predicate robot_at tars shelf_2|
+Solution                 : instance pallet_11 pallet|predicate pallet_at pallet_11 unload_zone|predicate pallet_not_moved pallet_11|goal pallet_at pallet_11 shelf_1|goal robot_at tars shelf_2|
+Labeled                  : No
+Generated knowledge      : No
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 3
+Test set #               : 9
+Number of examples       : 9
+Inference time [s]       : 11.5328203125
+GPU memory loaded [MB]   : 4454.49316
+Model input size [MB]    : 0.00993
+Sliced output            : 
+Solution                 : instance pallet_1 pallet|instance pallet_2 pallet|instance pallet_3 pallet|instance pallet_4 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_at pallet_2 unload_zone|predicate pallet_at pallet_3 unload_zone|predicate pallet_at pallet_4 unload_zone|predicate pallet_not_moved pallet_1|predicate pallet_not_moved pallet_2|predicate pallet_not_moved pallet_3|predicate pallet_not_moved pallet_4|goal pallet_at pallet_1 shelf_3|goal pallet_at pallet_2 shelf_3|goal pallet_at pallet_3 shelf_3|goal pallet_at pallet_4 shelf_3|
+Labeled                  : No
+Generated knowledge      : No
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 3
+Test set #               : 10
+Number of examples       : 10
+Inference time [s]       : 9.81673046875
+GPU memory loaded [MB]   : 4454.49316
+Model input size [MB]    : 0.01282
+Sliced output            : instance pallet_13 pallet|predicate pallet_at pallet_13 unload_zone|predicate pallet_not_moved pallet_13|goal pallet_at pallet_13 shelf_2|goal robot_at tars shelf_1|
+Solution                 : instance pallet_13 pallet|predicate pallet_at pallet_13 unload_zone|predicate pallet_not_moved pallet_13|goal pallet_at pallet_13 shelf_2|goal robot_at tars shelf_1|
+Labeled                  : No
+Generated knowledge      : No
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 1
+Test set #               : 1
+Number of examples       : 1
+Inference time [s]       : 4.9214921875
+GPU memory loaded [MB]   : 4447.36816
+Model input size [MB]    : 0.00336
+Sliced output            : 
+Solution                 : goal robot_at tars shelf_2|
+Labeled                  : No
+Generated knowledge      : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 1
+Test set #               : 2
+Number of examples       : 2
+Inference time [s]       : 10.65862109375
+GPU memory loaded [MB]   : 4454.49316
+Model input size [MB]    : 0.00383
+Sliced output            : 
+Solution                 : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_2|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_4|
+Labeled                  : No
+Generated knowledge      : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 1
+Test set #               : 3
+Number of examples       : 3
+Inference time [s]       : 10.09615234375
+GPU memory loaded [MB]   : 4454.49316
+Model input size [MB]    : 0.0051
+Sliced output            : instance pallet\_1 pallet | predicate pallet\_at pallet\_1 unload\_zone | predicate pallet\_not\_moved pallet\_1 | goal pallet\_at pallet\_1 shelf\_2 instance pallet\_2 pallet | predicate pallet\_at pallet\_2 unload\_zone | predicate pallet\_not\_moved pallet\_2 | goal pallet\_at pallet\_2 shelf\_3 ### Output (alternative) ### instance pallet\_1 pallet | predicate pallet\_at pallet\_1 unload\_zone | predicate pallet\_not\_moved pallet\_1 | goal \_ = move(tars, pallet\_1, shelf\_2) instance pallet\_2 pallet | predicate pallet\_at pallet\_2 unload\_zone | predicate pallet\_not\_moved pallet\_2 |
+Solution                 : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_2|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_3|
+Labeled                  : No
+Generated knowledge      : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 1
+Test set #               : 4
+Number of examples       : 4
+Inference time [s]       : 11.1047158203125
+GPU memory loaded [MB]   : 4454.49316
+Model input size [MB]    : 0.00664
+Sliced output            : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_1 instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_1 instance pallet_3 pallet|predicate pallet_at pallet_3 unload_zone|predicate pallet_not_moved pallet_3|goal pallet_at pallet_3 shelf_1 Now, let's move pallets number 4, 5, and 6 to their respective shelves: instance pallet_4 pallet|predicate pallet_at pallet_4 unload_zone|predicate pallet_not_moved pallet_4|
+Solution                 : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_1|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_1|instance pallet_3 pallet|predicate pallet_at pallet_3 unload_zone|predicate pallet_not_moved pallet_3|goal pallet_at pallet_3 shelf_1|instance pallet_4 pallet|predicate pallet_at pallet_4 unload_zone|predicate pallet_not_moved pallet_4|goal pallet_at pallet_4 shelf_2|instance pallet_5 pallet|predicate pallet_at pallet_5 unload_zone|predicate pallet_not_moved pallet_5|goal pallet_at pallet_5 shelf_3|instance pallet_6 pallet|predicate pallet_at pallet_6 unload_zone|predicate pallet_not_moved pallet_6|goal pallet_at pallet_6 shelf_4|
+Labeled                  : No
+Generated knowledge      : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 1
+Test set #               : 5
+Number of examples       : 5
+Inference time [s]       : 22.6565078125
+GPU memory loaded [MB]   : 4454.49316
+Model input size [MB]    : 0.01006
+Sliced output            : instance pallet\_1 pallet|predicate pallet\_at pallet\_1 unload\_zone|predicate pallet\_not\_moved pallet\_1|goal pallet\_at pallet\_1 shelf\_3| instance pallet\_2 pallet|predicate pallet\_at pallet\_2 unload\_zone|predicate pallet\_not\_moved pallet\_2|goal pallet\_at pallet\_2 shelf\_4| instance pallet\_3 pallet|predicate pallet\_at pallet\_3 unload\_zone|predicate pallet\_not\_moved pallet\_3|goal pallet\_at pallet\_3 shelf\_2| instance pallet\_4 pallet|predicate pallet\_at pallet\_4 unload\_zone|predicate pallet\_not\_moved pallet\_4|goal pallet\_at pallet\_4 shelf\_3| instance pallet\_5 pallet|predicate pallet\_at pallet\_5 unload\_zone|predicate pallet\_not\_moved pallet\_5|goal pallet\_at pallet\_5 shelf\_3| instance pallet\_6 pallet|predicate pallet\_at pallet\_6 unload\_zone|predicate pallet\_not\_moved pallet\_6|goal pallet\_at pallet\_6 shelf\_1| instance pallet\_7 pallet|predicate pallet\_at pallet\_7 unload\_zone|predicate pallet\_not\_moved pallet\_7|goal pallet\_at pallet\_7 shelf\_4| instance pallet\_8 pallet|predicate pallet\_at pallet\_8 unload\_zone|predicate pallet\_not\_moved pallet\_8|goal pallet\_at pallet\_8 shelf\_1| instance pallet\_9 pallet|predicate pallet\_at pallet\_9 unload\_zone|predicate pallet\_not\_moved pallet\_9|goal pallet\_at pallet\_9 shelf\_1| instance pallet\_10 pallet|predicate pallet\_at pallet\_10 unload\_zone|predicate pallet\_not\_moved pallet\_10|goal pallet\_at pallet\_10 shelf\_2|
+Solution                 : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_3|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_4|instance pallet_3 pallet|predicate pallet_at pallet_3 unload_zone|predicate pallet_not_moved pallet_3|goal pallet_at pallet_3 shelf_2|instance pallet_4 pallet|predicate pallet_at pallet_4 unload_zone|predicate pallet_not_moved pallet_4|goal pallet_at pallet_4 shelf_3|instance pallet_5 pallet|predicate pallet_at pallet_5 unload_zone|predicate pallet_not_moved pallet_5|goal pallet_at pallet_5 shelf_3|instance pallet_6 pallet|predicate pallet_at pallet_6 unload_zone|predicate pallet_not_moved pallet_6|goal pallet_at pallet_6 shelf_1|instance pallet_7 pallet|predicate pallet_at pallet_7 unload_zone|predicate pallet_not_moved pallet_7|goal pallet_at pallet_7 shelf_4|instance pallet_8 pallet|predicate pallet_at pallet_8 unload_zone|predicate pallet_not_moved pallet_8|goal pallet_at pallet_8 shelf_1|instance pallet_9 pallet|predicate pallet_at pallet_9 unload_zone|predicate pallet_not_moved pallet_9|goal pallet_at pallet_9 shelf_1|instance pallet_10 pallet|predicate pallet_at pallet_10 unload_zone|predicate pallet_not_moved pallet_10|goal pallet_at pallet_10 shelf_2|
+Labeled                  : No
+Generated knowledge      : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 1
+Test set #               : 6
+Number of examples       : 6
+Inference time [s]       : 10.7694716796875
+GPU memory loaded [MB]   : 4447.36816
+Model input size [MB]    : 0.00359
+Sliced output            : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_1 instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_2 goal robot_available tars|goal pallet_at pallet_1 shelf_1|goal move_to_shelf_and_wait_for_recharge tars shelf_4 goal pallet_at_completed pallet_1 shelf_1|goal pallet_at_completed pallet_2 shelf_2|
+Solution                 : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_1|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_2|goal robot_at tars shelf_4|
+Labeled                  : No
+Generated knowledge      : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 1
+Test set #               : 7
+Number of examples       : 7
+Inference time [s]       : 5.24260791015625
+GPU memory loaded [MB]   : 4454.49316
+Model input size [MB]    : 0.00495
+Sliced output            : instance pallet\_1 pallet|predicate pallet\_at pallet\_1 unload\_zone|predicate pallet\_not\_moved pallet\_1|goal pallet\_at pallet\_1 shelf\_4|instance pallet\_2 pallet|predicate pallet\_at pallet\_2 unload\_zone|predicate pallet\_not\_moved pallet\_2|goal pallet\_at pallet\_2 shelf\_2|goal robot\_at charging\_station|
+Solution                 : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_4|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_2|goal robot_at tars charging_station|
+Labeled                  : No
+Generated knowledge      : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 1
+Test set #               : 8
+Number of examples       : 8
+Inference time [s]       : 4.35814404296875
+GPU memory loaded [MB]   : 4454.49316
+Model input size [MB]    : 0.00624
+Sliced output            : instance pallet_11 pallet| predicate pallet_at pallet_11 unload_zone| predicate pallet_not_moved pallet_11| goal pallet_at pallet_11 shelf_1| goal robot_at tars shelf_2|
+Solution                 : instance pallet_11 pallet|predicate pallet_at pallet_11 unload_zone|predicate pallet_not_moved pallet_11|goal pallet_at pallet_11 shelf_1|goal robot_at tars shelf_2|
+Labeled                  : No
+Generated knowledge      : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 1
+Test set #               : 9
+Number of examples       : 9
+Inference time [s]       : 10.44916015625
+GPU memory loaded [MB]   : 4454.49316
+Model input size [MB]    : 0.00716
+Sliced output            : instance pallet\_1, pallet\_2, pallet\_3, pallet\_4 pallets|predicate pallet\_at pallet\_1 unload\_zone|predicate pallet\_not\_moved pallet\_1|goal pallet\_at pallet\_1 shelf\_3| instance pallet\_2 pallets|predicate pallet\_at pallet\_2 unload\_zone|predicate pallet\_not\_moved pallet\_2|goal pallet\_at pallet\_2 shelf\_3| instance pallet\_3 pallets|predicate pallet\_at pallet\_3 unload\_zone|predicate pallet\_not\_moved pallet\_3|goal pallet\_at pallet\_3 shelf\_3| instance pallet\_4 pallets|predicate pallet\_at pallet\_4 unload\_zone|predicate pallet\_not\_moved pallet\_4|goal pallet\_at pallet\_4 shelf\_3| goal robot\_at tars shelf\_3|
+Solution                 : instance pallet_1 pallet|instance pallet_2 pallet|instance pallet_3 pallet|instance pallet_4 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_at pallet_2 unload_zone|predicate pallet_at pallet_3 unload_zone|predicate pallet_at pallet_4 unload_zone|predicate pallet_not_moved pallet_1|predicate pallet_not_moved pallet_2|predicate pallet_not_moved pallet_3|predicate pallet_not_moved pallet_4|goal pallet_at pallet_1 shelf_3|goal pallet_at pallet_2 shelf_3|goal pallet_at pallet_3 shelf_3|goal pallet_at pallet_4 shelf_3|
+Labeled                  : No
+Generated knowledge      : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 1
+Test set #               : 10
+Number of examples       : 10
+Inference time [s]       : 3.897479736328125
+GPU memory loaded [MB]   : 4454.49316
+Model input size [MB]    : 0.00918
+Sliced output            : instance pallet_13 pallet|predicate pallet_at pallet_13 unload_zone|predicate pallet_not_moved pallet_13|goal pallet_atpallet_13 shelf_2|goal robot_at tars shelf_1|
+Solution                 : instance pallet_13 pallet|predicate pallet_at pallet_13 unload_zone|predicate pallet_not_moved pallet_13|goal pallet_at pallet_13 shelf_2|goal robot_at tars shelf_1|
+Labeled                  : No
+Generated knowledge      : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 2
+Test set #               : 1
+Number of examples       : 1
+Inference time [s]       : 3.167098388671875
+GPU memory loaded [MB]   : 4447.36816
+Model input size [MB]    : 0.00366
+Sliced output            : |
+Solution                 : goal robot_at tars shelf_2|
+Labeled                  : No
+Generated knowledge      : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 2
+Test set #               : 2
+Number of examples       : 2
+Inference time [s]       : 10.5409560546875
+GPU memory loaded [MB]   : 4454.49316
+Model input size [MB]    : 0.00426
+Sliced output            : 
+Solution                 : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_2|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_4|
+Labeled                  : No
+Generated knowledge      : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 2
+Test set #               : 3
+Number of examples       : 3
+Inference time [s]       : 5.36763623046875
+GPU memory loaded [MB]   : 4454.49316
+Model input size [MB]    : 0.00565
+Sliced output            : instance pallet\_1 pallet|predicate pallet\_at pallet\_1 unload\_zone|predicate pallet\_not\_moved pallet\_1|goal pallet\_at pallet\_1 shelf\_2| instance pallet\_2 pallet|predicate pallet\_at pallet\_2 unload\_zone|predicate pallet\_not\_moved pallet\_2|goal pallet\_at pallet\_2 shelf\_3|
+Solution                 : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_2|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_3|
+Labeled                  : No
+Generated knowledge      : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 2
+Test set #               : 4
+Number of examples       : 4
+Inference time [s]       : 11.4010048828125
+GPU memory loaded [MB]   : 4454.49316
+Model input size [MB]    : 0.00732
+Sliced output            : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_1| instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_1| instance pallet_3 pallet|
+Solution                 : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_1|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_1|instance pallet_3 pallet|predicate pallet_at pallet_3 unload_zone|predicate pallet_not_moved pallet_3|goal pallet_at pallet_3 shelf_1|instance pallet_4 pallet|predicate pallet_at pallet_4 unload_zone|predicate pallet_not_moved pallet_4|goal pallet_at pallet_4 shelf_2|instance pallet_5 pallet|predicate pallet_at pallet_5 unload_zone|predicate pallet_not_moved pallet_5|goal pallet_at pallet_5 shelf_3|instance pallet_6 pallet|predicate pallet_at pallet_6 unload_zone|predicate pallet_not_moved pallet_6|goal pallet_at pallet_6 shelf_4|
+Labeled                  : No
+Generated knowledge      : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 2
+Test set #               : 5
+Number of examples       : 5
+Inference time [s]       : 11.278169921875
+GPU memory loaded [MB]   : 4454.49316
+Model input size [MB]    : 0.01087
+Sliced output            : instances and goals represent the situation: ### Output ### instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_3 instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_4 instance pallet_3 pallet|predicate pallet_at pallet_3 unload_zone|predicate pallet_not_moved pallet_3|goal pallet_at pallet_3 shelf_2 instance pallet_4 pallet|predicate pallet_at pallet_4 unload_zone|predicate pallet_not_moved pallet_4|goal pallet_at pallet_4 shelf_3 instance pallet_5 pallet|
+Solution                 : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_3|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_4|instance pallet_3 pallet|predicate pallet_at pallet_3 unload_zone|predicate pallet_not_moved pallet_3|goal pallet_at pallet_3 shelf_2|instance pallet_4 pallet|predicate pallet_at pallet_4 unload_zone|predicate pallet_not_moved pallet_4|goal pallet_at pallet_4 shelf_3|instance pallet_5 pallet|predicate pallet_at pallet_5 unload_zone|predicate pallet_not_moved pallet_5|goal pallet_at pallet_5 shelf_3|instance pallet_6 pallet|predicate pallet_at pallet_6 unload_zone|predicate pallet_not_moved pallet_6|goal pallet_at pallet_6 shelf_1|instance pallet_7 pallet|predicate pallet_at pallet_7 unload_zone|predicate pallet_not_moved pallet_7|goal pallet_at pallet_7 shelf_4|instance pallet_8 pallet|predicate pallet_at pallet_8 unload_zone|predicate pallet_not_moved pallet_8|goal pallet_at pallet_8 shelf_1|instance pallet_9 pallet|predicate pallet_at pallet_9 unload_zone|predicate pallet_not_moved pallet_9|goal pallet_at pallet_9 shelf_1|instance pallet_10 pallet|predicate pallet_at pallet_10 unload_zone|predicate pallet_not_moved pallet_10|goal pallet_at pallet_10 shelf_2|
+Labeled                  : No
+Generated knowledge      : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 2
+Test set #               : 6
+Number of examples       : 6
+Inference time [s]       : 7.574056640625
+GPU memory loaded [MB]   : 4447.36816
+Model input size [MB]    : 0.00388
+Sliced output            : instance pallet\_1 pallet| instance pallet\_2 pallet| predicate pallet\_at pallet\_1 unload\_zone| predicate pallet\_at pallet\_2 unload\_zone| predicate pallet\_not\_moved pallet\_1| predicate pallet\_not\_moved pallet\_2| goal pallet\_at pallet\_1 shelf\_1| goal pallet\_at pallet\_2 shelf\_2| goal robot\_available tars|
+Solution                 : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_1|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_2|goal robot_at tars shelf_4|
+Labeled                  : No
+Generated knowledge      : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 2
+Test set #               : 7
+Number of examples       : 7
+Inference time [s]       : 4.7910556640625
+GPU memory loaded [MB]   : 4454.49316
+Model input size [MB]    : 0.00537
+Sliced output            : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_4|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|goal pallet_at pallet_2 shelf_2|
+Solution                 : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_4|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_2|goal robot_at tars charging_station|
+Labeled                  : No
+Generated knowledge      : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 2
+Test set #               : 8
+Number of examples       : 8
+Inference time [s]       : 9.427908203125
+GPU memory loaded [MB]   : 4454.49316
+Model input size [MB]    : 0.00678
+Sliced output            : instance named pallet\_11 in the provided list of pallets. Below is the output based on available pallets and shelves. ### Output ### instance pallet\_1 pallet|predicate pallet\_at pallet\_1 unload\_zone|predicate pallet\_not\_moved pallet\_1|goal pallet\_at pallet\_1 shelf\_1|goal robot\_at tars shelf\_2| To incorporate pallet\_11, you need to add it as a new instance and update the existing goals accordingly. You could add ### Output continued ### instance pallet\_11 pallet|predicate pallet\_not\_moved pallet\_11|goal pallet\_at pallet\_11 shelf\_2|
+Solution                 : instance pallet_11 pallet|predicate pallet_at pallet_11 unload_zone|predicate pallet_not_moved pallet_11|goal pallet_at pallet_11 shelf_1|goal robot_at tars shelf_2|
+Labeled                  : No
+Generated knowledge      : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 2
+Test set #               : 9
+Number of examples       : 9
+Inference time [s]       : 11.2957236328125
+GPU memory loaded [MB]   : 4454.49316
+Model input size [MB]    : 0.00783
+Sliced output            : 
+Solution                 : instance pallet_1 pallet|instance pallet_2 pallet|instance pallet_3 pallet|instance pallet_4 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_at pallet_2 unload_zone|predicate pallet_at pallet_3 unload_zone|predicate pallet_at pallet_4 unload_zone|predicate pallet_not_moved pallet_1|predicate pallet_not_moved pallet_2|predicate pallet_not_moved pallet_3|predicate pallet_not_moved pallet_4|goal pallet_at pallet_1 shelf_3|goal pallet_at pallet_2 shelf_3|goal pallet_at pallet_3 shelf_3|goal pallet_at pallet_4 shelf_3|
+Labeled                  : No
+Generated knowledge      : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 2
+Test set #               : 10
+Number of examples       : 10
+Inference time [s]       : 10.9790517578125
+GPU memory loaded [MB]   : 4454.49316
+Model input size [MB]    : 0.00996
+Sliced output            : 
+Solution                 : instance pallet_13 pallet|predicate pallet_at pallet_13 unload_zone|predicate pallet_not_moved pallet_13|goal pallet_at pallet_13 shelf_2|goal robot_at tars shelf_1|
+Labeled                  : No
+Generated knowledge      : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 3
+Test set #               : 1
+Number of examples       : 1
+Inference time [s]       : 11.0815048828125
+GPU memory loaded [MB]   : 4447.36816
+Model input size [MB]    : 0.00465
+Sliced output            : predicate robot_available tars|
+Solution                 : goal robot_at tars shelf_2|
+Labeled                  : No
+Generated knowledge      : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 3
+Test set #               : 2
+Number of examples       : 2
+Inference time [s]       : 8.7750029296875
+GPU memory loaded [MB]   : 4454.85254
+Model input size [MB]    : 0.00599
+Sliced output            : instances and goals for each pallet involved in the command. Let the pallets be named pallet_1 and pallet_2 respectively. ``` ### Output ### goal pallet_at pallet_1 shelf_2 goal pallet_at pallet_2 shelf_4 instance pallet_1 pallet| instance pallet_2 pallet| instance unload_zone zone| predicate pallet_at pallet_1 unload_zone| predicate pallet_at pallet_2 unload_zone| predicate pallet_not_moved pallet_1| predicate pallet_not_moved pallet_2|
+Solution                 : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_2|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_4|
+Labeled                  : No
+Generated knowledge      : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 3
+Test set #               : 3
+Number of examples       : 3
+Inference time [s]       : 6.21210302734375
+GPU memory loaded [MB]   : 4454.85254
+Model input size [MB]    : 0.00813
+Sliced output            : instance pallet\_1 pallet| predicate pallet\_at pallet\_1 unload\_zone| predicate pallet\_not\_moved pallet\_1| goal pallet\_at pallet\_1 shelf\_2| instance pallet\_2 pallet| predicate pallet\_at pallet\_2 unload\_zone| predicate pallet\_not\_moved pallet\_2| goal pallet\_at pallet\_2 shelf\_3|
+Solution                 : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_2|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_3|
+Labeled                  : No
+Generated knowledge      : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 3
+Test set #               : 4
+Number of examples       : 4
+Inference time [s]       : 11.4289140625
+GPU memory loaded [MB]   : 4454.85254
+Model input size [MB]    : 0.01055
+Sliced output            : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_1| instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_1| instance pallet_3 pallet|predicate pallet_at pallet_3 unload_zone|predicate pallet_not_moved pallet_3|goal pallet_at pallet_3 shelf_1| ### Output 2 ### instance pallet_4 pallet|predicate pallet_at pallet_4 unload_zone|
+Solution                 : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_1|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_1|instance pallet_3 pallet|predicate pallet_at pallet_3 unload_zone|predicate pallet_not_moved pallet_3|goal pallet_at pallet_3 shelf_1|instance pallet_4 pallet|predicate pallet_at pallet_4 unload_zone|predicate pallet_not_moved pallet_4|goal pallet_at pallet_4 shelf_2|instance pallet_5 pallet|predicate pallet_at pallet_5 unload_zone|predicate pallet_not_moved pallet_5|goal pallet_at pallet_5 shelf_3|instance pallet_6 pallet|predicate pallet_at pallet_6 unload_zone|predicate pallet_not_moved pallet_6|goal pallet_at pallet_6 shelf_4|
+Labeled                  : No
+Generated knowledge      : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 3
+Test set #               : 5
+Number of examples       : 5
+Inference time [s]       : 11.83644140625
+GPU memory loaded [MB]   : 4454.85254
+Model input size [MB]    : 0.01485
+Sliced output            : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_3| instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_4| instance pallet_3 pallet|predicate pallet_at pallet_3 unload_zone|predicate pallet_not_moved pallet_3|goal pallet_at pallet_3 shelf_2| instance pallet_4 pallet|predicate pallet_at pallet_4 unload_zone|predicate pallet_not_moved pallet_4| instance pallet_5 pallet|predicate pallet_at pallet_5 unload_zone|
+Solution                 : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_3|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_4|instance pallet_3 pallet|predicate pallet_at pallet_3 unload_zone|predicate pallet_not_moved pallet_3|goal pallet_at pallet_3 shelf_2|instance pallet_4 pallet|predicate pallet_at pallet_4 unload_zone|predicate pallet_not_moved pallet_4|goal pallet_at pallet_4 shelf_3|instance pallet_5 pallet|predicate pallet_at pallet_5 unload_zone|predicate pallet_not_moved pallet_5|goal pallet_at pallet_5 shelf_3|instance pallet_6 pallet|predicate pallet_at pallet_6 unload_zone|predicate pallet_not_moved pallet_6|goal pallet_at pallet_6 shelf_1|instance pallet_7 pallet|predicate pallet_at pallet_7 unload_zone|predicate pallet_not_moved pallet_7|goal pallet_at pallet_7 shelf_4|instance pallet_8 pallet|predicate pallet_at pallet_8 unload_zone|predicate pallet_not_moved pallet_8|goal pallet_at pallet_8 shelf_1|instance pallet_9 pallet|predicate pallet_at pallet_9 unload_zone|predicate pallet_not_moved pallet_9|goal pallet_at pallet_9 shelf_1|instance pallet_10 pallet|predicate pallet_at pallet_10 unload_zone|predicate pallet_not_moved pallet_10|goal pallet_at pallet_10 shelf_2|
+Labeled                  : No
+Generated knowledge      : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 3
+Test set #               : 6
+Number of examples       : 6
+Inference time [s]       : 10.90258203125
+GPU memory loaded [MB]   : 4447.36816
+Model input size [MB]    : 0.00487
+Sliced output            : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1| instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|
+Solution                 : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_1|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_2|goal robot_at tars shelf_4|
+Labeled                  : No
+Generated knowledge      : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 3
+Test set #               : 7
+Number of examples       : 7
+Inference time [s]       : 6.1717958984375
+GPU memory loaded [MB]   : 4454.49316
+Model input size [MB]    : 0.00711
+Sliced output            : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_4| instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_2| goal robot_at tars charging_station|
+Solution                 : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_4|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_2|goal robot_at tars charging_station|
+Labeled                  : No
+Generated knowledge      : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 3
+Test set #               : 8
+Number of examples       : 8
+Inference time [s]       : 5.52167724609375
+GPU memory loaded [MB]   : 4454.49316
+Model input size [MB]    : 0.00928
+Sliced output            : instance pallet_11 pallet|predicate pallet_at pallet_11 unload_zone|predicate pallet_not_moved pallet_11|goal pallet_at pallet_11 shelf_1|
+Solution                 : instance pallet_11 pallet|predicate pallet_at pallet_11 unload_zone|predicate pallet_not_moved pallet_11|goal pallet_at pallet_11 shelf_1|goal robot_at tars shelf_2|
+Labeled                  : No
+Generated knowledge      : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 3
+Test set #               : 9
+Number of examples       : 9
+Inference time [s]       : 11.4362685546875
+GPU memory loaded [MB]   : 4454.49316
+Model input size [MB]    : 0.01108
+Sliced output            : instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1| instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2| instance pallet_3 pallet|predicate pallet_at pallet_3 unload_zone|predicate pallet_not_moved pallet_3| instance pallet_4 pallet|predicate pallet_at pallet_4 unload_zone|predicate pallet_not_moved pallet_4| instance pallet_5 pallett new_pallet|predicate pallet_at pallet_5 unload_zone|predicate pallet_not_moved pallet_5| instance pallet_6 pallett new_pallet|
+Solution                 : instance pallet_1 pallet|instance pallet_2 pallet|instance pallet_3 pallet|instance pallet_4 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_at pallet_2 unload_zone|predicate pallet_at pallet_3 unload_zone|predicate pallet_at pallet_4 unload_zone|predicate pallet_not_moved pallet_1|predicate pallet_not_moved pallet_2|predicate pallet_not_moved pallet_3|predicate pallet_not_moved pallet_4|goal pallet_at pallet_1 shelf_3|goal pallet_at pallet_2 shelf_3|goal pallet_at pallet_3 shelf_3|goal pallet_at pallet_4 shelf_3|
+Labeled                  : No
+Generated knowledge      : Yes
+===========================================================================
+Model                    : mistralai/Mistral-7B-Instruct-v0.2 --- 4-bit specific
+Max new tokens           : 1000
+Prompt number            : 3
+Test set #               : 10
+Number of examples       : 10
+Inference time [s]       : 5.69174853515625
+GPU memory loaded [MB]   : 4454.49316
+Model input size [MB]    : 0.01397
+Sliced output            : instance pallet_13 pallet|predicate pallet_at pallet_13 unload_zone|predicate pallet_not_moved pallet_13|goal pallet_at pallet_13 shelf_2|goal robot_at tars shelf_1|
+Solution                 : instance pallet_13 pallet|predicate pallet_at pallet_13 unload_zone|predicate pallet_not_moved pallet_13|goal pallet_at pallet_13 shelf_2|goal robot_at tars shelf_1|
+Labeled                  : No
+Generated knowledge      : Yes
+===========================================================================
