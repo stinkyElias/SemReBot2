@@ -1,5 +1,6 @@
 import os
 os.environ['HF_HOME'] = '/home/stinky/models'
+# result_dir = '/home/stinky/ros2_ws/results'
 
 import rclpy
 import torch
@@ -137,6 +138,11 @@ class WhisperNode(LifecycleNode):
 
         msg = String()
         msg.data = output['text']
+
+        # # write to file
+        # with open(os.path.join(result_dir, 'results.txt'), 'a') as f:
+        #     f.write('\n====================================================================\n')
+        #     f.write(f'Transcription {str(incoming_msg.data)}:\n' + output['text'] + '\n')
 
         self.publisher_.publish(msg)
 

@@ -1,5 +1,8 @@
 #include "semrebot2_task_controller/task_controller_node.hpp"
 
+// #include <fstream>
+// std::string result = "/home/stinky/ros2_ws/results/results.txt";
+
 namespace semrebot2{
 
     TaskControllerNode::TaskControllerNode() : rclcpp::Node("task_controller_node"){
@@ -34,7 +37,7 @@ namespace semrebot2{
         // node logic
         auto task_callback = [this](std_msgs::msg::String::UniquePtr msg) -> void{
             ///////////////////////////////////////////////////////////////
-            start_time_callback = std::chrono::high_resolution_clock::now();
+            // start_time_callback = std::chrono::high_resolution_clock::now();
             ///////////////////////////////////////////////////////////////
 
             try
@@ -84,21 +87,9 @@ namespace semrebot2{
         std::string goals;
 
         while (std::getline(command_stream, single_command, '|'))
-        {
-            // // create a new string that only contains acceptable characters
-            // std::string edited_command;
-
-            // for (auto &character : single_command)
-            // {
-            //     if (character >= 'A' && character <= 'Z')
-            //     {
-            //         edited_command += character + 32;
-            //     }
-            //     else if ((character >= 'a' && character <= 'z') || character == ' ' || character == '_' || character == '|')
-            //     {
-            //         edited_command += character;
-            //     }
-            // }
+        {   
+            // if single_command contains '\' character, remove all of them
+            single_command.erase(std::remove(single_command.begin(), single_command.end(), '\\'), single_command.end());
 
             if (single_command.find("instance") == 0)
             {
@@ -196,11 +187,11 @@ namespace semrebot2{
 
 
         ///////////////////////////////////////////////////////////////
-        end_time = std::chrono::high_resolution_clock::now();
-        elapsed_time_planner = end_time - start_time_planner;
-        elapsed_time_callback = end_time - start_time_callback;
-        std::cout << "Planner time: " << elapsed_time_planner.count() << " s" << std::endl;
-        std::cout << "Callback time: " << elapsed_time_callback.count() << " s" << std::endl;
+        // end_time = std::chrono::high_resolution_clock::now();
+        // elapsed_time_planner = end_time - start_time_planner;
+        // elapsed_time_callback = end_time - start_time_callback;
+        // std::cout << "Planner time: " << elapsed_time_planner.count() << " s" << std::endl;
+        // std::cout << "Callback time: " << elapsed_time_callback.count() << " s" << std::endl;
         ///////////////////////////////////////////////////////////////
         // print plan to console
         std::cout << "------------------------------ Plan -----------------------------" << std::endl;
@@ -210,6 +201,21 @@ namespace semrebot2{
         }
         std::cout << "-----------------------------------------------------------------" << std::endl;
 
+        ///////////////////////////////////////////////////////////////
+        // std::ofstream outfile;
+        // outfile.open(result, std::ios_base::app); // open in append mode
+
+        // if (outfile.is_open()) {
+        //     outfile << "------------------------------ Plan -----------------------------" << std::endl;
+        //     for (const auto &plan_item : plan.value().items)
+        //     {
+        //         outfile << plan_item.time << ":\t" << plan_item.action << "\t[" << plan_item.duration << "]" << std::endl;
+        //     }
+        //     outfile << "-----------------------------------------------------------------" << std::endl;
+        //     outfile.close();
+        // }
+        // ///////////////////////////////////////////////////////////////
+        
         // start plan execution
         if (!executor_client_->start_plan_execution(plan.value()))
         {
@@ -266,7 +272,7 @@ namespace semrebot2{
 } // end namespace semrebot2
 
 int main(int argc, char **argv)
-{
+{   
     rclcpp::init(argc, argv);
     std::shared_ptr<semrebot2::TaskControllerNode> node;
     

@@ -1,11 +1,12 @@
 import os
 os.environ['HF_HOME'] = '/home/stinky/models'
+# result_dir = '/home/stinky/ros2_ws/results'
 
 import rclpy
 import torch
 import gc
 import re
-import jsonl
+import json
 
 from rclpy.lifecycle import LifecycleNode, LifecycleState, TransitionCallbackReturn
 from std_msgs.msg import String
@@ -47,7 +48,6 @@ class MistralNode(LifecycleNode):
         )
         
         # Read domain file and extract only the available types and predicates
-        package_dir = get_package_share_directory('semrebot2_natural_language_processer')
         home_dir = os.path.expanduser('~')
         domain_dir = os.path.join(home_dir, 'ros2_ws/src/semrebot2/semrebot2_task_controller/pddl/domain.pddl')
 
@@ -79,17 +79,17 @@ class MistralNode(LifecycleNode):
         self.get_logger().info(f"domain.pddl successfully extracted")
 
         # Load shots for few-shot prompting
-        shot_dir = os.path.join(package_dir, 'config', 'shots.jsonl')
+        shot_dir = os.path.join(home_dir, 'ros2_ws/src/semrebot2/semrebot2_natural_language_processer/config/shots.jsonl')
         
         with open(shot_dir, 'r') as infile:
-            self.data = jsonl.load(infile)
+            self.data = json.load(infile)
         
-        for i in range(len(data['shots'])):
-            self.commands.append(data['shots'][i]['command'])
-            self.solutions.append(data['shots'][i]['solution'])
-        
+        for i in range(len(self.data['shots'])):
+            self.commands.append(self.data['shots'][i]['command'])
+            self.solutions.append(self.data['shots'][i]['solution'])
+
         if self.commands and self.solutions:
-            self.get_logger().info(f"Successfully loaded {len(self.commands)} commands and {len(self.solutions)} solutions")
+            self.get_logger().info(f"Successfully loaded {len(self.commands)} commands and {len(self.solutions)} solutions for prompting")
         else:
             self.get_logger().error(f"Failed to load commands and solutions")
 
@@ -158,10 +158,10 @@ class MistralNode(LifecycleNode):
         
         # pre-prompt
         generated_knowledge = 'instance tars robot|instance charging_station zone|instance unload_zone zone|instance shelf_1 zone|instance shelf_2 zone|instance shelf_3 zone|instance shelf_4 zone|predicate robot_availabletars|predicate is_recharge_zone charging_station|predicate is_unload_zone unload_zone|predicate is_shelf_zone shelf_1|predicate is_shelf_zone shelf_2|predicate is_shelf_zone shelf_3|predicate is_shelf_zone shelf_4|'
-        system_prompt = f'You are the robot tars, an automatic forklift that will move pallets around a warehouse. Your task is to outline the available instances, predicates, and goals based on the provided domain and command. Answer in the format shown after ### Output ###. This is the domain: {domains[0]}.'
+        system_prompt = f'You are the robot tars, an automatic forklift that will move pallets around a warehouse. Your task is to outline the available instances, predicates, and goals based on the provided domain and command. Answer in the format shown after ### Output ###. This is the domain: {self.domain}.'
 
         messages = [
-            {'role': 'user', 'content': system_prompt + f'At all times, these instances and predicates are true: {generated_knowledge}. You do not have to repeat them in your output.' + f' Here is a command {commands[0]}. ### Output ### {solutions[0]}.'},
+            {'role': 'user', 'content': system_prompt + f'At all times, these instances and predicates are true: {generated_knowledge}. You do not have to repeat them in your output.' + f' Here is a command {self.commands[0]}. ### Output ### {self.solutions[0]}.'},
             {'role': 'assistant', 'content': 'Understood. Awaiting new domain and command.'},
         ]
 
@@ -198,13 +198,39 @@ class MistralNode(LifecycleNode):
         output_tag_index = decoded[0].find(output_token)
         decoded[0] = decoded[0][output_tag_index+len(output_token)+1:]
 
+        first_instance = decoded[0].find('instance ')
+        first_predicate = decoded[0].find('predicate ')
+        first_goal = decoded[0].find('goal ')
+
+        if first_instance != -1 and (first_predicate == -1 or first_instance < first_predicate) and (first_goal == -1 or first_instance < first_goal):
+            decoded[0] = decoded[0][first_instance:]
+        elif first_predicate != -1 and (first_goal == -1 or first_predicate < first_goal):
+            decoded[0] = decoded[0][first_predicate:]
+        elif first_goal != -1:
+            decoded[0] = decoded[0][first_goal:]
+
+        for i in range(len(decoded[0])):
+            if decoded[0][i] == delimiter:
+                j = i+1
+                
+                while j < len(decoded[0]) and decoded[0][j].isspace():
+                    j += 1
+
+                if j < len(decoded[0]) and decoded[0][j] not in ['i', 'p', 'g']:
+                    decoded[0] = decoded[0][:i+len(delimiter)]
+                    break
+
         pub_msg.data = decoded[0]
 
-        self.publisher_.publish(pub_msg)
-        self.get_logger().info(f"Generated response:\n {pub_msg.data}")
+        # # write to file
+        # with open(os.path.join(result_dir, 'results.txt'), 'a') as outfile:
+        #     outfile.write(f'Mistral: \n{pub_msg.data}\n\n')
 
-        training_msg = String()
-        training_msg.data = "instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_1|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_2|"
+        self.publisher_.publish(pub_msg)
+        self.get_logger().info(f"Generated response")
+
+        # training_msg = String()
+        # training_msg.data = "instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_1|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_2|"
         # self.publisher_.publish(training_msg)
 
         torch.cuda.empty_cache()
