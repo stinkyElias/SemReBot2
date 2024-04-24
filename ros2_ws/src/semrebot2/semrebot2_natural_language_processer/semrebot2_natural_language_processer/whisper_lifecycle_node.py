@@ -1,9 +1,6 @@
 import os
 os.environ['HF_HOME'] = '/home/stinky/models'
-<<<<<<< HEAD
 # result_dir = '/home/stinky/ros2_ws/results'
-=======
->>>>>>> main
 
 import rclpy
 import torch
@@ -142,14 +139,11 @@ class WhisperNode(LifecycleNode):
         msg = String()
         msg.data = output['text']
 
-<<<<<<< HEAD
         # # write to file
         # with open(os.path.join(result_dir, 'results.txt'), 'a') as f:
         #     f.write('\n====================================================================\n')
         #     f.write(f'Transcription {str(incoming_msg.data)}:\n' + output['text'] + '\n')
 
-=======
->>>>>>> main
         self.publisher_.publish(msg)
 
         torch.cuda.empty_cache()

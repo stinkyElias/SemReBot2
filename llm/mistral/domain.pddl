@@ -13,21 +13,12 @@
     
     (robot_at ?robot - robot ?zone - zone)
     (pallet_at ?pallet - pallet ?zone - zone)
-<<<<<<< HEAD
-=======
-
-    (is_pallet ?pallet - pallet)
->>>>>>> main
     
     (pallet_not_moved ?pallet - pallet)
 
     (is_unload_zone ?zone - zone)
     (is_shelf_zone ?zone - zone)
-<<<<<<< HEAD
 )
-=======
-);
->>>>>>> main
 
 (:durative-action navigate
     :parameters (?robot - robot ?from_zone - zone ?to_zone - zone)
