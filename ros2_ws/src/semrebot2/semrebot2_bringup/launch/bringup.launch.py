@@ -41,7 +41,11 @@ def generate_launch_description():
         namespace=namespace,
         output='screen',
     )
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> main
     ld = LaunchDescription()
 
     ld.add_action(declare_namespace_cmd)

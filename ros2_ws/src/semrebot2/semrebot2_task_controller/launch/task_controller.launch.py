@@ -86,6 +86,7 @@ def generate_launch_description():
         output='screen',
     )
 
+<<<<<<< HEAD
     nav_cmd = Node(
         package='semrebot2_task_controller',
         executable='nav2_sim_node',
@@ -94,6 +95,8 @@ def generate_launch_description():
         output='screen',
     )
 
+=======
+>>>>>>> main
     ld = LaunchDescription()
 
     ld.add_action(declare_namespace_cmd)
@@ -102,6 +105,9 @@ def generate_launch_description():
     ld.add_action(recharge_cmd)
     ld.add_action(transport_cmd)
     # ld.add_action(task_controller_cmd)
+<<<<<<< HEAD
     ld.add_action(nav_cmd)
+=======
+>>>>>>> main
 
     return ld
