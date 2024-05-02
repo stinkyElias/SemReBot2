@@ -1,0 +1,48 @@
+\chapter{Preliminaries}
+
+\section{Behaviour trees}
+A behaviour tree (BT) is a tool for defining and organising decision-making processes and actions for a robot. It consists of nodes connected in a "tree" structure. Nodes are connected through parent and child nodes, where the root node is the only node without a parent. Nodes are divided into control flow nodes and execution nodes. There are four types of control flow nodes, namely Sequence, Fallback, Parallel and Decorator, and two types of execution nodes, Action and Condition.
+
+The BT is executed from the root node by a tick that is sent to its child nodes from left to right. The child node returns Running, Success or Failure to its parent based on the current state of the child. A node can only be executed if it receives a tick.
+
+A Sequence node with N children will tick all its children until one returns Failure. If all children return Success, the Sequence node will return Success to its own parent. The Fallback node is the same, except that it will tick its children until a child returns Success. If all children return Failure, the Fallback node will return Failure to its own parent.
+The Parallel node ticks its $N$ children and returns Success if $M$ children return Success, Failure if $N-M+1$ children return Failure and Running otherwise. $M$ is a user-specified number.
+Finally, the Decorator node is a node that modifies the return status of its child, based on the users need. It ticks its child based on a user-specified rule and is therefore customised based on what application the BT is used for.
+
+The two execution nodes, Action and Condition, perform an action or check if a condition holds, respectively. A Condition node never returns Running \cite[p. 5-9]{colledanchise_behavior_2018}.
+
+\textcolor{red}{figur av de forskjellige nodene}
+
+% \subsection{BT with ROS 2}
+% \textcolor{red}{Mye kopi fra The Construct! Må skrives om.}
+% \subsubsection{Part 1}
+% \subsubsection{Part 2}
+% \subsubsection{Part 3}
+% The action defined by a BT node is called a callback. A ROS node communicates with a robot and receives feedback from it. The feedback is processed and the state is sent to the BT node. The return is then sent to the Root. When designing a BT, you don't have to know the details of the ROS node, only the behaviour of the node.
+% ROS part of the program contains nodes that performs different actions on the robot. These actions are available by the BT node actions.
+
+% For a Sequence node, it ticks its children one at a time. If it returns true it ticks next. If the second returns Running, the parent node will tick again in the next frequency. The state of the first child node is remembered, so it will skip this now. If the Running node now returns Success, it moves on to the next node an so forth.
+
+% XML files are used to model a BT's logical structure.
+
+% Reactive Sequential node is an asynchronous node. When a child returns Failure or Running it will restart.
+
+% The BT.CPP framework executes nodes concurrently. The tree execution engine is single-threaded, and the tick() methods are always executed sequentially. That means if one thick() is blocked, the entire execution is blocked. An action that takes a while to execute should therefore return Running.
+
+% A Sequence star node has memory. When a children return Success, it is remembered and will not be checked again. Assume four actions A, B, C, D. Actions A and B are SUCCESS, but C is FAILURE, so the next tick will start from C (A and B are memorized).
+
+% A Blackboard is a map container that stores key-value pairs. Values between nodes flow through the blackboard. A BT node can have an input port which reads an entry from the blackboard, while an output port can write into an entry on the blackboard. It is like an interface to the memory.
+
+% \cite{auryn_robotics_about_2024}
+
+\section{The Planning Domain Definition Language}
+The Planning Domain Definition Language (PDDL) is a declarative language used to standardise automated planning problems. 
+
+\cite{ghallab_pddl_1998}
+\cite{alaboud_getting_2024}
+
+\section{PlanSys2}
+
+\section{Forward-Chaining Partial-Order Planning}
+
+\cite{martin_plansys2_2021}

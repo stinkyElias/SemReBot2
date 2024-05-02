@@ -1,0 +1,47 @@
+\documentclass[]{mtprarprt}
+
+\title{Masteroppgaven min <3}
+\subtitle{Leveraging Large Language Models to Achieve Semantic Reasoning in Robots}
+\author{Elias Helle Kalland}
+
+\addbibresource{references.bib} 
+
+\usepackage{layout}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{listings}
+\usepackage{amsthm}
+\usepackage{svg}
+
+\lstset{captionpos=b}
+
+\theoremstyle{definition}
+\newtheorem{example}{Example}[section]
+
+\begin{document}
+
+\maketitle
+
+\frontmatter
+
+\input{00_preface}
+\input{01_summary}
+\tableofcontents
+\listoffigures
+\listoftables
+\lstlistoflistings
+
+\mainmatter
+\input{02_chapter1}
+\input{03_chapter2}
+\input{04_chapter3}
+\input{05_chapter4}
+\input{06_chapter5}
+\input{98_conclusion}
+
+\printbibliography[title=References]
+
+\appendix
+\input{99_appendix}
+
+\end{document}
