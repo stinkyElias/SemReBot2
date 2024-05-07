@@ -1,0 +1,447 @@
+====================================================================================
+Test 1
+
+Received command: goal robot_at tars unload_zone|
+Planner time: 0.246944 s
+Callback time: 0.291218 s
+------------------------------ Plan -----------------------------
+0:	(navigate tars charging_station unload_zone)	[15.858]
+-----------------------------------------------------------------
+
+Answer:     navigate tars charging_station unload_zone      [4.12 m 15.85 s]
+
+Success: Yes
+Time efficiency: 1.00
+Battery efficiency: 1.00
+====================================================================================
+Test 2
+
+Received command: goal robot_at tars shelf_1|
+Planner time: 0.246729 s
+Callback time: 0.293438 s
+------------------------------ Plan -----------------------------
+0:	(navigate tars shelf_3 shelf_1)	[15.385]
+-----------------------------------------------------------------
+
+Answer:     navigate tars shelf_3 shelf_1                   [4.00 m 15.38 s]
+
+Success: Yes
+Time efficiency: 1.00
+Battery efficiency: 1.00
+====================================================================================
+Test 3
+
+Received command: instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_1|
+Planner time: 0.335587 s
+Callback time: 0.386877 s
+------------------------------ Plan -----------------------------
+0:	(navigate tars charging_station unload_zone)	[15.858]
+15.859:	(transport tars pallet_1 unload_zone shelf_1)	[8.159]
+-----------------------------------------------------------------
+
+Answer:     navigate tars charging_station unload_zone      [4.12 m 15.85 s]
+            transport tars pallet_1 unload_zone shelf_1     [2.12 m 08.15 s]
+
+            Distance traveled:  6.24 m
+            Time taken:         24 s
+
+Success: Yes
+Time efficiency: 1.00
+Battery efficiency: 1.00
+====================================================================================
+Test 4
+
+Received command: instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_4|
+Planner time: 0.350158 s
+Callback time: 0.401899 s
+------------------------------ Plan -----------------------------
+0:	(navigate tars charging_station unload_zone)	[15.858]
+15.859:	(transport tars pallet_1 unload_zone shelf_4)	[13.598]
+-----------------------------------------------------------------
+
+Answer:     navigate tars charging_station unload_zone      [4.12 m 15.85 s]
+            transport tars pallet_1 unload_zone shelf_4     [3.54 m 13.62 s]
+
+            Distance traveled:  7.66 m
+            Time taken:         29.47 s
+
+Success: Yes
+Time efficiency: 1.00
+Battery efficiency: 1.00
+====================================================================================
+Test 5
+
+Received command: instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_2|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_4|
+Planner time: 0.242428 s
+Callback time: 0.298543 s
+------------------------------ Plan -----------------------------
+0:	(navigate tars charging_station unload_zone)	[15.858]
+15.859:	(transport tars pallet_1 unload_zone shelf_2)	[11.213]
+27.073:	(navigate tars shelf_2 unload_zone)	[11.213]
+38.288:	(transport tars pallet_2 unload_zone shelf_4)	[13.598]
+-----------------------------------------------------------------
+
+Answer:     navigate tars charging_station unload_zone      [4.12 m 15.85 s]
+            transport tars pallet_2 unload_zone shelf_2     [2.92 m 11.23 s]
+            navigate tars shelf_2 unload_zone               [2.92 m 11.23 s]
+            transport tars pallet_1 unload_zone shelf_4     [3.54 m 13.62 s]
+            
+            Distance traveled:  13.50 m
+            Time taken:         51.93 s
+
+Success: Yes
+Time efficiency: 1.00
+Battery efficiency: 1.00
+====================================================================================
+Test 6
+
+Received command: instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_2|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_3|
+Planner time: 0.354813 s
+Callback time: 0.412356 s
+------------------------------ Plan -----------------------------
+0:	(navigate tars charging_station unload_zone)	[15.858]
+15.859:	(transport tars pallet_1 unload_zone shelf_2)	[11.213]
+27.073:	(navigate tars shelf_2 unload_zone)	[11.213]
+38.288:	(transport tars pallet_2 unload_zone shelf_3)	[11.213]
+-----------------------------------------------------------------
+
+Answer:     navigate tars charging_station unload_zone      [4.12 m 15.85 s]
+            transport tars pallet_1 unload_zone shelf_2     [2.92 m 11.23 s]
+            navigate tars shelf_2 unload_zone               [2.92 m 11.23 s]
+            transport tars pallet_2 unload_zone shelf_3     [2.92 m 11.23 s]
+
+            Distance traveled:   12.88 m
+            Time taken:          49.54 s
+
+Success: Yes
+Time efficiency: 1.00
+Battery efficiency: 1.00
+====================================================================================
+Test 7
+
+Received command: instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_1|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_2|
+Planner time: 0.373282 s
+Callback time: 0.431614 s
+------------------------------ Plan -----------------------------
+0:	(recharge tars charging_station)	[10]
+10.001:	(navigate tars charging_station unload_zone)	[15.858]
+25.86:	(transport tars pallet_1 unload_zone shelf_1)	[8.159]
+34.02:	(navigate tars shelf_1 unload_zone)	[8.159]
+42.18:	(transport tars pallet_2 unload_zone shelf_2)	[11.213]
+-----------------------------------------------------------------
+
+Answer:     recharge tars charging_station                  [0.00 m 10.0 s 100 %]
+            navigate tars charging_station unload_zone      [4.12 m 15.85 s 90 %]
+            transport tars pallet_1 unload_zone shelf_1     [2.12 m 08.15 s 70 %]
+            navigate tars shelf_1 unload_zone               [2.12 m 08.15 s 60 %]
+            transport tars unload_zone shelf_2              [2.92 m 11.23 s 40 %]
+
+            Distance traveled:      11.28 m
+            Time taken:             53.38 s
+            Battery capacity used:  60 %
+            Battery capacity left:  40 %
+
+Success: Yes
+Time efficiency: 1.00
+Battery efficiency: 1.00
+====================================================================================
+Test 8
+
+Received command: instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_1|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_2|
+Planner time: 0.380521 s
+Callback time: 0.438126 s
+------------------------------ Plan -----------------------------
+0:	(navigate tars shelf_1 charging_station)	[13.598]
+13.599:	(recharge tars charging_station)	[10]
+23.6:	(navigate tars charging_station unload_zone)	[15.858]
+39.459:	(transport tars pallet_1 unload_zone shelf_1)	[8.159]
+47.619:	(navigate tars shelf_1 unload_zone)	[8.159]
+55.779:	(transport tars pallet_2 unload_zone shelf_2)	[11.213]
+-----------------------------------------------------------------
+
+Answer:     navigate tars shelf_1 charging_station          [3.54 m 13.62 s 40 %]
+            recharge tars charging_station                  [0.00 m 10.0 s 100 %]
+            navigate tars charging_station unload_zone      [4.12 m 15.85 s 90 %]
+            transport tars pallet_1 unload_zone shelf_1     [2.12 m 08.15 s 70 %]
+            navigate tars shelf_1 unload_zone               [2.12 m 08.15 s 60 %]
+            transport tars pallet_2 unload_zone shelf_2     [2.92 m 11.23 s 40 %]
+
+            Distance traveled:      14.82 m
+            Time taken:             67 s
+            Battery capacity used:  70 %
+            Battery capacity left:  40 %
+
+Success: Yes
+Time efficiency: 1.00
+Battery efficiency: 1.00
+====================================================================================
+Test 9
+
+Received command: instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_1|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_1|instance pallet_3 pallet|predicate pallet_at pallet_3 unload_zone|predicate pallet_not_moved pallet_3|goal pallet_at pallet_3 shelf_1|instance pallet_4 pallet|predicate pallet_at pallet_4 unload_zone|predicate pallet_not_moved pallet_4|goal pallet_at pallet_4 shelf_2|instance pallet_5 pallet|predicate pallet_at pallet_5 unload_zone|predicate pallet_not_moved pallet_5|goal pallet_at pallet_5 shelf_3|instance pallet_6 pallet|predicate pallet_at pallet_6 unload_zone|predicate pallet_not_moved pallet_6|goal pallet_at pallet_6 shelf_4|
+Planner time: 0.438593 s
+Callback time: 0.52061 s
+------------------------------ Plan -----------------------------
+0:	        (navigate tars charging_station unload_zone)	[15.858]
+15.859:	    (transport tars pallet_1 unload_zone shelf_1)	[8.159]
+24.019:	    (navigate tars shelf_1 unload_zone)	            [8.159]
+32.179:	    (transport tars pallet_2 unload_zone shelf_1)	[8.159]
+40.339:	    (navigate tars shelf_1 unload_zone)	            [8.159]
+48.499:	    (navigate tars unload_zone charging_station)	[15.858]
+64.358:	    (recharge tars charging_station)	            [10]
+74.359:	    (navigate tars charging_station unload_zone)	[15.858]
+90.218:	    (transport tars pallet_3 unload_zone shelf_1)	[8.159]
+98.378:	    (navigate tars shelf_1 unload_zone)	            [8.159]
+106.538:	(transport tars pallet_4 unload_zone shelf_2)	[11.213]
+117.752:	(navigate tars shelf_2 unload_zone)	            [11.213]
+128.967:	(navigate tars unload_zone charging_station)	[15.858]
+144.826:	(recharge tars charging_station)	            [10]
+154.827:	(navigate tars charging_station unload_zone)	[15.858]
+170.686:	(transport tars pallet_5 unload_zone shelf_3)	[11.213]
+181.9:	    (navigate tars shelf_3 unload_zone)	            [11.213]
+193.115:	(transport tars pallet_6 unload_zone shelf_4)	[13.598]
+-----------------------------------------------------------------
+
+Answer:     navigate tars charging_station unload_zone      [4.12 m 15.85 s 90 %]
+            transport tars pallet_1 unload_zone shelf_1     [2.12 m 08.15 s 70 %]
+            navigate tars shelf_1 unload_zone               [2.12 m 08.15 s 60 %]
+            transport tars pallet_2 unload_zone shelf_1     [2.12 m 08.15 s 40 %]
+            navigate tars shelf_1 charging_station          [3.54 m 13.62 s 30 %]
+            recharge tars charging_station                  [0.00 m 10.0 s 100 %]
+            navigate tars charging_station unload_zone      [4.12 m 15.85 s 90 %]
+            transport tars pallet_3 unload_zone shelf_1     [2.12 m 08.15 s 70 %]
+            navigate tars shelf_1 charging_station          [3.54 m 13.62 s 60 %]
+            transport tars pallet_4 unload_zone shelf_2     [2.92 m 11.23 s 40 %]
+            navigate tars shelf_2 charging_station          [2.92 m 11.23 s 30 %]
+            recharge tars charging_station                  [0.00 m 10.0 s 100 %]
+            navigate tars charging_station unload_zone      [4.12 m 15.85 s 90 %]
+            transport tars pallet_5 unload_zone shelf_3     [2.92 m 11.23 s 70 %]
+            navigate tars shelf_3 unload_zone               [2.92 m 11.23 s 60 %]
+            transport tars pallet_6 unload_zone shelf_4     [3.54 m 13.62 s 40 %]          
+
+            Distance traveled:      43.14 m
+            Time taken:             185.93 s
+            Battery capacity used:  200 %
+            Battery capacity left:  40 %
+
+Success: Yes
+Time efficiency:    185.93/206.69 = 0.8996
+Battery efficiency: 200/220 = 0.9091
+Comment: The planner navigates to a intermediate zone before every recharge
+====================================================================================
+Test 10
+
+Received command: instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_3|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_4|instance pallet_3 pallet|predicate pallet_at pallet_3 unload_zone|predicate pallet_not_moved pallet_3|goal pallet_at pallet_3 shelf_2|instance pallet_4 pallet|predicate pallet_at pallet_4 unload_zone|predicate pallet_not_moved pallet_4|goal pallet_at pallet_4 shelf_3|instance pallet_5 pallet|predicate pallet_at pallet_5 unload_zone|predicate pallet_not_moved pallet_5|goal pallet_at pallet_5 shelf_3|instance pallet_6 pallet|predicate pallet_at pallet_6 unload_zone|predicate pallet_not_moved pallet_6|goal pallet_at pallet_6 shelf_1|instance pallet_7 pallet|predicate pallet_at pallet_7 unload_zone|predicate pallet_not_moved pallet_7|goal pallet_at pallet_7 shelf_4|instance pallet_8 pallet|predicate pallet_at pallet_8 unload_zone|predicate pallet_not_moved pallet_8|goal pallet_at pallet_8 shelf_1|instance pallet_9 pallet|predicate pallet_at pallet_9 unload_zone|predicate pallet_not_moved pallet_9|goal pallet_at pallet_9 shelf_1|instance pallet_10 pallet|predicate pallet_at pallet_10 unload_zone|predicate pallet_not_moved pallet_10|goal pallet_at pallet_10 shelf_2|
+Planner time: 0.552971 s
+Callback time: 0.658342 s
+------------------------------ Plan -----------------------------
+0:	        (navigate tars charging_station unload_zone)	[15.858]
+15.859:	    (transport tars pallet_6 unload_zone shelf_1)	[8.159]
+24.019:	    (navigate tars shelf_1 unload_zone)	            [8.159]
+32.179:	    (transport tars pallet_8 unload_zone shelf_1)	[8.159]
+40.339:	    (navigate tars shelf_1 unload_zone)	            [8.159]
+48.499:	    (navigate tars unload_zone charging_station)	[15.858]
+64.358:	    (recharge tars charging_station)	            [10]
+74.359:	    (navigate tars charging_station unload_zone)	[15.858]
+90.218:	    (transport tars pallet_9 unload_zone shelf_1)	[8.159]
+98.378:	    (navigate tars shelf_1 unload_zone)	            [8.159]
+106.538:	(transport tars pallet_10 unload_zone shelf_2)	[11.213]
+117.752:	(navigate tars shelf_2 unload_zone)	            [11.213]
+128.967:	(navigate tars unload_zone charging_station)	[15.858]
+144.826:	(recharge tars charging_station)	            [10]
+154.827:	(navigate tars charging_station unload_zone)	[15.858]
+170.686:	(transport tars pallet_3 unload_zone shelf_2)	[11.213]
+181.9:	    (navigate tars shelf_2 unload_zone)	            [11.213]
+193.115:	(transport tars pallet_1 unload_zone shelf_3)	[11.213]
+204.329:	(navigate tars shelf_3 unload_zone)	            [11.213]
+215.543:	(navigate tars unload_zone charging_station)	[15.858]
+231.402:	(recharge tars charging_station)	            [10]
+241.403:	(navigate tars charging_station unload_zone)	[15.858]
+257.262:	(transport tars pallet_4 unload_zone shelf_3)	[11.213]
+268.477:	(navigate tars shelf_3 unload_zone)	            [11.213]
+279.691:	(transport tars pallet_5 unload_zone shelf_3)	[11.213]
+290.906:	(navigate tars shelf_3 unload_zone)	            [11.213]
+302.12:	    (navigate tars unload_zone charging_station)	[15.858]
+317.979:	(recharge tars charging_station)	            [10]
+327.98:	    (navigate tars charging_station unload_zone)	[15.858]
+343.839:	(transport tars pallet_2 unload_zone shelf_4)	[13.598]
+357.438:	(navigate tars shelf_4 unload_zone)	            [13.598]
+371.038:	(transport tars pallet_7 unload_zone shelf_4)	[13.598]
+-----------------------------------------------------------------
+
+Answer:     navigate tars charging_station unload_zone      [4.12 m 15.85 s 90 %]
+            transport tars pallet_1 unload_zone shelf_3     [2.92 m 11.23 s 70 %]
+            navigate tars shelf_3 unload_zone               [2.92 m 11.23 s 60 %]
+            transport tars pallet_2 unload_zone shelf_4     [3.54 m 13.62 s 40 %]
+            navigate tars shelf_4 charging_station          [2.12 m 08.15 s 30 %]
+            recharge tars charging_station                  [0.00 m 10.0 s 100 %]
+            navigate tars charging_station unload_zone      [4.12 m 15.85 s 90 %]
+            transport tars pallet_3 unload_zone shelf_2     [2.92 m 11.23 s 70 %]
+            navigate tars shelf_2 unload_zone               [2.92 m 11.23 s 60 %]
+            transport tars pallet_4 unload_zone shelf_3     [2.92 m 11.23 s 40 %]
+            navigate tars shelf_3 charging_station          [2.92 m 11.23 s 30 %]
+            recharge tars charging_station                  [0.00 m 10.0 s 100 %]
+            navigate tars charging_station unload_zone      [4.12 m 15.85 s 90 %]
+            transport tars pallet_5 unload_zone shelf_3     [2.92 m 11.23 s 70 %]
+            navigate tars shelf_3 unload_zone               [2.92 m 11.23 s 60 %]
+            transport tars pallet_6 unload_zone shelf_1     [2.12 m 08.15 s 40 %]
+            navigate tars shelf_1 charging_station          [2.12 m 08.15 s 30 %]
+            recharge tars charging_station                  [0.00 m 10.0 s 100 %]
+            navigate tars charging_station unload_zone      [4.12 m 15.85 s 90 %]
+            transport tars pallet_7 unload_zone shelf_4     [3.54 m 13.62 s 70 %]
+            navigate tars shelf_4 unload_zone               [3.54 m 13.62 s 60 %]
+            transport tars pallet_8 unload_zone shelf_1     [2.12 m 08.15 s 40 %]
+            navigate tars shelf_1 charging_station          [2.12 m 08.15 s 30 %]
+            recharge tars charging_station                  [0.00 m 10.0 s 100 %]
+            navigate tars charging_station unload_zone      [4.12 m 15.85 s 90 %]
+            transport tars pallet_9 unload_zone shelf_1     [2.12 m 08.15 s 70 %]
+            navigate tars shelf_1 unload_zone               [2.12 m 08.15 s 60 %]
+            transport tars pallet_1 unload_zone shelf_2     [2.92 m 11.23 s 40 %]
+
+            Distance traveled:      72.34 m
+            Time taken:             318.23 s
+            Battery capacity used:  340 %
+            Battery capacity left:  40 %
+
+Success: Yes
+Time efficiency: 318.23/384.60 = 0.8274
+Battery efficiency: 340/380 = 0.8947
+Comment: The planner navigates to a intermediate zone before every recharge
+====================================================================================
+Test 11
+
+Received command: instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_1|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_2|goal robot_at tars shelf_4|
+Planner time: 0.329469 s
+Callback time: 0.391033 s
+------------------------------ Plan -----------------------------
+0:	    (navigate tars charging_station shelf_4)	    [8.159]
+8.16:	(navigate tars shelf_4 unload_zone)	            [13.598]
+21.759:	(transport tars pallet_1 unload_zone shelf_1)	[8.159]
+29.919:	(navigate tars shelf_1 unload_zone)	            [8.159]
+38.079:	(transport tars pallet_2 unload_zone shelf_2)	[11.213]
+49.293:	(navigate tars shelf_2 shelf_4)	                [15.385]
+-----------------------------------------------------------------
+
+Answer:     navigate tars charging_station unload_zone      [4.12 m 15.85 s 90 %]
+            transport tars pallet_1 unload_zone shelf_1     [2.12 m 08.15 s 70 %]
+            navigate tars shelf_1 unload_zone               [2.12 m 08.15 s 60 %]
+            transport tars pallet_2 unload_zone shelf_2     [2.92 m 11.23 s 40 %]
+            navigate tars shelf_2 shelf_4                   [4.00 m 15.38 s 30 %]
+            
+
+
+            Distance traveled:      15.28 m
+            Time taken:             58.76 s
+            Battery capacity used:  70 %
+            Battery capacity left:  30 %
+
+Success: Yes
+Time efficiency: 58.76/64.67 = 0.9086
+Battery efficiency: 70/80 = 0.875
+Comment: The planner navigates to goal position first every time.
+====================================================================================
+Test 12
+
+Received command: instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_4|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|goal pallet_at pallet_2 shelf_2|goal robot_at tars charging_station|
+Planner time: 0.365421 s
+Callback time: 0.424511 s
+------------------------------ Plan -----------------------------
+0:	        (navigate tars shelf_1 charging_station)	    [13.598]
+13.599:	    (navigate tars charging_station unload_zone)	[15.858]
+29.458:	    (transport tars pallet_1 unload_zone shelf_4)	[13.598]
+43.058:	    (navigate tars shelf_4 charging_station)	    [8.159]
+51.217:	    (navigate tars charging_station unload_zone)	[15.858]
+67.077:	    (navigate tars unload_zone charging_station)	[15.858]
+82.936:	    (recharge tars charging_station)	            [10]
+92.937:	    (navigate tars charging_station unload_zone)	[15.858]
+108.796:	(transport tars pallet_2 unload_zone shelf_2)	[11.213]
+120.01:	    (navigate tars shelf_2 charging_station)    	[11.213]
+-----------------------------------------------------------------
+
+Answer:     navigate tars shelf_1 unload_zone               [2.12 m 08.15 s 90 %]
+            transport tars pallet_1 unload_zone shelf_2     [2.92 m 11.23 s 70 %]
+            navigate tars shelf_2 unload_zone               [2.92 m 11.23 s 60 %]
+            transport tars pallet_2 unload_zone shelf_4     [3.54 m 13.62 s 40 %]
+            navigate tars shelf_4 charging_station          [2.12 m 08.15 s 30 %]
+
+            Distance traveled:      13.62 m
+            Time taken:             52.38 s
+            Battery capacity used:  70 %
+            Battery capacity left:  30 %
+
+Success: Yes
+Time efficiency: 52.38/131.21 = 0.3992
+Battery efficiency: 70/110 = 0.6364 
+Comment: Navigating to goal position several times means an extra recharge step
+====================================================================================
+Test 13
+
+Received command: instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_2|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|goal pallet_at pallet_2 shelf_4|
+[ERROR] [1713449974.552415723] [planner_client]: /planner/get_plan: Plan not found
+Could not find a suitable plan to reach goal (and (pallet_at pallet_1 shelf_2)(pallet_at pallet_2 shelf_4))
+
+Answer:     Error generating plan
+
+            Distance traveled:      m
+            Time taken:             s
+            Battery capacity used:  %
+            Battery capacity left:  %
+
+Success: No
+Time efficiency:
+Battery efficiency:
+Comment:
+====================================================================================
+Test 14
+
+Received command: instance pallet_1 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_not_moved pallet_1|goal pallet_at pallet_1 shelf_2|instance pallet_2 pallet|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_2|
+Planner time: 0.347458 s
+Callback time: 0.399566 s
+------------------------------ Plan -----------------------------
+0:	(navigate tars charging_station unload_zone)	[15.858]
+15.859:	(transport tars pallet_1 unload_zone shelf_2)	[11.213]
+-----------------------------------------------------------------
+
+Answer:     navigate tars charging_station unload_zone      [4.12 m 15.85 s 90 %]
+            transport tars pallet_1 unload_zone shelf_2     [2.92 m 11.23 s 70 %]
+
+
+            Distance traveled:      7.04 m
+            Time taken:             27.08 s
+            Battery capacity used:  30 %
+            Battery capacity left:  70 %
+
+Success: Yes
+Time efficiency: 1.00
+Battery efficiency: 1.00
+Comment:
+====================================================================================
+Test 15
+
+Answer:    
+
+
+            Distance traveled:      m
+            Time taken:             s
+            Battery capacity used:  %
+            Battery capacity left:  %
+
+Success:
+Time efficiency:
+Battery efficiency:
+Comment:
+====================================================================================
+Test 16
+
+Answer:    
+
+
+            Distance traveled:      m
+            Time taken:             s
+            Battery capacity used:  %
+            Battery capacity left:  %
+
+Success:
+Time efficiency:
+Battery efficiency:
+Comment:
+====================================================================================

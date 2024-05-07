@@ -76,7 +76,7 @@ For test set 2, we used the same shot set as test set. However, if Mistral was r
 },
 \end{lstlisting}
 
-\subsection{System prompts}
+\subsection{System prompts}\label{ssec:system_prompt}
 For all the tests that we ran, we created three different system prompts. A system prompt represents a chat history between a user and the assistant (read Mistral). All three system prompts explain what role Mistral has, its goal, and show one example of domain, natural language command, and expected output. The difference between the three is the length and the amount of detail Mistral is given. The prompts range between what we call "short and precise", "medium detailed", and "long and detailed". Listing \ref{lst:mistral_system_prompt} shows the short and precise system prompt.
 
 \begin{lstlisting}[caption={The short and precise system prompt. domains[0], inputs[0] and outputs[0] is the first element from the shot set.}, label=lst:mistral_system_prompt]
@@ -134,7 +134,9 @@ Every test was set up the same way: We first load the model into memory, extract
     \end{algorithmic}
 \end{algorithm}
 
-In all tests, we measured inference time, allocated GPU memory during inference, model input size, and the output from Mistral compared to the solution. The output is compared to the solution by its accuracy in predicting correct amount of instances, predicates, and goals based on the domain and natural language command. The evaluation metric is subdivided into four distinct categories: $accuracy_{instances}$, $accuracy_{predicates}$, $accuracy_{goals}$ and $accuracy_{total}$.
+In all tests, we measured inference time, allocated GPU memory during inference, model input size, and the output from Mistral compared to the solution. For the output, we defined four metrics: precision, recall,
+F1 score and our own metric accuracy. Accuracy is computed by comparing the output instances, predicates and goals compared to the solution instances, predicates and goals. The evaluation metric is subdivided
+into four distinct categories: $accuracy_{instances}$, $accuracy_{predicates}$, $accuracy_{goals}$ and $accuracy_{total}$.
 
 \begin{equation}\label{eq:mistral_accuracy_metric}
     accuracy_{type}(\text{domain}, \text{command})=
@@ -150,10 +152,43 @@ As seen in Equation \ref{eq:mistral_accuracy_metric}, each category, except for 
     accuracy_{total}=accuracy_{instances}\times accuracy_{predicates}\times accuracy_{goals}
 \end{equation}
 
+\subsubsection{Specific PDDL domain tests}
+For the specific PDDL domain tests we evaluated Mistral's performance for three different prompts, with and without generated knowledge on test set 2. The generated knowledge was given as everything in the domain
+that was true when Mistral is initiated.
+
+\begin{lstlisting}[caption={The generated knowledge available to Mistral at every test run.}, label=lst:generated_knowledge]
+    generated_knowledge = """
+        instance tars robot|instance charging_station zone|instance unload_zone zone|instance shelf_1 zone|instance shelf_2 zone|instance shelf_3 zone|instance shelf_4 zone|
+        predicate robot_availabletars|predicate is_recharge_zone charging_station|predicate is_unload_zone unload_zone|predicate is_shelf_zone shelf_1|predicate is_shelf_zone shelf_2|
+        predicate is_shelf_zone shelf_3|predicate is_shelf_zone shelf_4|"""
+\end{lstlisting}
+
+The F1 score, inference time and allocated memory for the specific domain tests can be seen below.
+
+
+
 \section{POPF}\label{sec:POPF_experiments}
+We tested POPF isolated from SemReBot2 and PlanSys2 by giving it a \verb|domain.pddl| and different
+\verb|problem.pddl| files. The domain and problems were solely relevant to SemReBot2's use case. We
+checked 14 different scenarios one time each. As POPF is a deterministic AI planner, we only had to
+check every scenario one time.
+
+The scenarios ranged from simple navigation tasks only, to picking up one to 10 pallets and placing
+them at different locations. We also checked the planners ability to plan for battery capacity,
+logical errors in the problem file and its ability to plan the shortes possible path.
+
+We created three different metrics, success rate, time and battery efficiency and planner time, where success
+is a binary metric with "Yes/No" and time and battery efficiency is the ratio of the planners output
+time and battery matched against an optimal answer created by us.
+
+\begin{equation}\label{eq:popf_efficiency_metrics}
+    0.00 \leq \eta_{time}, \eta_{battery} \leq 1.00
+\end{equation}
+
+The planner time is the time it takes for POPF to create a plan once it receives the domain and problem
+file.
+
+As with the simulation environment, the distance and time taken between waypoints is computed dynamically.
+
 
 \section{SemReBot2 full system tests}\label{sec:SemReBot2_experiments}
-Hei, fungerer dette? Jeg vet ikke, men vi sjekker.
-\begin{equation}
-    \frac{\alpha}{\beta} = \gamma
-\end{equation}
