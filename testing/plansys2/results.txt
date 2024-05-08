@@ -1,0 +1,457 @@
+====================================================================
+Transcription 1
+Whisper: Move the new pallet from the unload zone to shelf 2 and recharge at the charging station.
+Mistral: instance new\_pallet pallet|predicate pallet_at new\_pallet unload_zone|predicate pallet_not_moved new\_pallet|goal pallet_at new\_pallet shelf_2|goal robot_at tars charging\_station|
+
+------------------------------ Plan -----------------------------
+0:	(navigate tars charging_station unload_zone)	[15.858]
+15.859:	(transport tars new_pallet unload_zone shelf_2)	[11.213]
+27.073:	(navigate tars shelf_2 charging_station)	[11.213]
+-----------------------------------------------------------------
+time: 6.92
+====================================================================
+Transcription 1
+Whisper: Move the new pallet from the unload zone to shelf 2 and recharge at the charging station.
+Mistral: instance new\_pallet pallet|predicate pallet\_at new\_pallet unload\_zone|predicate pallet\_not\_moved new\_pallet|goal pallet\_at new\_pallet shelf\_2|goal robot\_at tars charging\_station|
+
+------------------------------ Plan -----------------------------
+0:	(navigate tars charging_station unload_zone)	[15.858]
+15.859:	(transport tars new_pallet unload_zone shelf_2)	[11.213]
+27.073:	(navigate tars shelf_2 charging_station)	[11.213]
+-----------------------------------------------------------------
+time: 7.05
+====================================================================
+Transcription 1
+Whisper: Move the new pallet from the unload zone to shelf 2 and recharge at the charging station.
+Mistral: instance new_pallet pallet|predicate pallet_at new_pallet unload_zone|predicate pallet_not_moved new_pallet|goal pallet_at new_pallet shelf_2|goal robot_at tars charging_station|
+
+------------------------------ Plan -----------------------------
+0:	(navigate tars charging_station unload_zone)	[15.858]
+15.859:	(transport tars new_pallet unload_zone shelf_2)	[11.213]
+27.073:	(navigate tars shelf_2 charging_station)	[11.213]
+-----------------------------------------------------------------
+time: 6.92
+====================================================================
+Transcription 1
+Whisper: Move the new pallet from the unload zone to shelf 2 and recharge at the charging station.
+Mistral: instance new_pallet pallet|predicate pallet_at new_pallet unload_zone|predicate pallet_not_moved new_pallet|goal pallet_at new_pallet shelf_2|goal robot_at tars charging_station|
+
+------------------------------ Plan -----------------------------
+0:	(navigate tars charging_station unload_zone)	[15.858]
+15.859:	(transport tars new_pallet unload_zone shelf_2)	[11.213]
+27.073:	(navigate tars shelf_2 charging_station)	[11.213]
+-----------------------------------------------------------------
+time: 6.95
+====================================================================
+Transcription 1
+Whisper: Move the new pallet from the unload zone to shelf 2 and recharge at the charging station.
+Mistral: instance new\_pallet pallet|predicate pallet_at new\_pallet unload\_zone|predicate pallet\_not\_moved new\_pallet|goal pallet\_at new\_pallet shelf\_2|goal robot\_at tars charging\_station|
+
+------------------------------ Plan -----------------------------
+0:	(navigate tars charging_station unload_zone)	[15.858]
+15.859:	(transport tars new_pallet unload_zone shelf_2)	[11.213]
+27.073:	(navigate tars shelf_2 charging_station)	[11.213]
+-----------------------------------------------------------------
+time: 6.99
+====================================================================
+Transcription 1
+Whisper: Move the new pallet from the unload zone to shelf 2 and recharge at the charging station.
+Mistral: instance new\_pallet pallet|predicate pallet\_at new\_pallet unload\_zone|predicate pallet\_not\_moved new\_pallet|goal pallet\_at new\_pallet shelf\_2|goal robot\_at tars charging\_station|
+
+------------------------------ Plan -----------------------------
+0:	(navigate tars charging_station unload_zone)	[15.858]
+15.859:	(transport tars new_pallet unload_zone shelf_2)	[11.213]
+27.073:	(navigate tars shelf_2 charging_station)	[11.213]
+-----------------------------------------------------------------
+time: 6.91
+====================================================================
+Transcription 1
+Whisper: Move the new pallet from the unload zone to shelf 2 and recharge at the charging station.
+Mistral: instance new\_pallet pallet|predicate pallet_at new\_pallet unload\_zone|predicate pallet\_not\_moved new\_pallet|goal pallet\_at new\_pallet shelf\_2|goal robot\_at tars charging\_station|
+
+------------------------------ Plan -----------------------------
+0:	(navigate tars charging_station unload_zone)	[15.858]
+15.859:	(transport tars new_pallet unload_zone shelf_2)	[11.213]
+27.073:	(navigate tars shelf_2 charging_station)	[11.213]
+-----------------------------------------------------------------
+time: 7.02
+====================================================================
+Transcription 1
+Whisper: Move the new pallet from the unload zone to shelf 2 and recharge at the charging station.
+Mistral: instance new_pallet pallet|predicate pallet_at new_pallet unload_zone|predicate pallet_not_moved new_pallet|goal pallet_at new_pallet shelf_2|goal robot_at tars charging_station|
+
+------------------------------ Plan -----------------------------
+0:	(navigate tars charging_station unload_zone)	[15.858]
+15.859:	(transport tars new_pallet unload_zone shelf_2)	[11.213]
+27.073:	(navigate tars shelf_2 charging_station)	[11.213]
+-----------------------------------------------------------------
+time: 6.87
+====================================================================
+Transcription 1
+Whisper: Move the new pallet from the unload zone to shelf 2 and recharge at the charging station.
+Mistral: instance new_pallet pallet|predicate pallet_at new_pallet unload_zone|predicate pallet_not_moved new_pallet|goal pallet_at new_pallet shelf_2|goal robot_at tars charging_station|
+
+------------------------------ Plan -----------------------------
+0:	(navigate tars charging_station unload_zone)	[15.858]
+15.859:	(transport tars new_pallet unload_zone shelf_2)	[11.213]
+27.073:	(navigate tars shelf_2 charging_station)	[11.213]
+-----------------------------------------------------------------
+time: 6.98
+====================================================================
+Transcription 1
+Whisper: Move the new pallet from the unload zone to shelf 2 and recharge at the charging station.
+Mistral: instance new\_pallet pallet|predicate pallet_at new\_pallet unload\_zone|predicate pallet\_not\_moved new\_pallet|goal pallet\_at new\_pallet shelf\_2|goal robot\_at tars charging\_station|
+
+------------------------------ Plan -----------------------------
+0:	(navigate tars charging_station unload_zone)	[15.858]
+15.859:	(transport tars new_pallet unload_zone shelf_2)	[11.213]
+27.073:	(navigate tars shelf_2 charging_station)	[11.213]
+-----------------------------------------------------------------
+time: 6.97
+====================================================================
+Transcription 2
+Whisper: Four new pallets at the unload zone. Move one to shelf one, one to shelf two and so forth. Drive back to the charging station afterwards.
+Mistral: instance pallet_1 pallet|instance pallet_2 pallet|instance pallet_3 pallet|instance pallet_4 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_at pallet_2 unload_zone|predicate pallet_at pallet_3 unload_zone|predicate pallet_at pallet_4 unload_zone|predicate pallet_not_moved pallet_1|predicate pallet_not_moved pallet_2|predicate pallet_not_moved pallet_3|predicate pallet_not_moved pallet_4|goal pallet_at pallet_1 shelf_1|goal pallet_at pallet_2 shelf_2|goal pallet_at pallet_3 shelf_3|goal pallet_at pallet_4 shelf_4|goal robot_at tars charging_station|
+
+------------------------------ Plan -----------------------------
+0:	(navigate tars charging_station unload_zone)	[15.858]
+15.859:	(transport tars pallet_1 unload_zone shelf_1)	[8.159]
+24.019:	(navigate tars shelf_1 unload_zone)	[8.159]
+32.179:	(transport tars pallet_4 unload_zone shelf_4)	[13.598]
+45.778:	(navigate tars shelf_4 charging_station)	[8.159]
+53.938:	(recharge tars charging_station)	[10]
+63.939:	(navigate tars charging_station unload_zone)	[15.858]
+79.798:	(transport tars pallet_2 unload_zone shelf_2)	[11.213]
+91.013:	(navigate tars shelf_2 charging_station)	[11.213]
+102.227:	(navigate tars charging_station unload_zone)	[15.858]
+118.086:	(transport tars pallet_3 unload_zone shelf_3)	[11.213]
+129.3:	(navigate tars shelf_3 charging_station)	[11.213]
+-----------------------------------------------------------------
+time: 16.23
+====================================================================
+Transcription 2
+Whisper: Four new pallets at the unload zone. Move one to shelf one, one to shelf two and so forth. Drive back to the charging station afterwards.
+Mistral: instance pallet_1 pallet|instance pallet_2 pallet|instance pallet_3 pallet|instance pallet_4 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_at pallet_2 unload_zone|predicate pallet_at pallet_3 unload_zone|predicate pallet_at pallet_4 unload_zone|predicate pallet_not_moved pallet_1|predicate pallet_not_moved pallet_2|predicate pallet_not_moved pallet_3|predicate pallet_not_moved pallet_4|goal pallet_at pallet_1 shelf_1|goal pallet_at pallet_2 shelf_2|goal pallet_at pallet_3 shelf_3|goal pallet_at pallet_4 shelf_4|goal robot_at tars charging_station|
+
+------------------------------ Plan -----------------------------
+0:	(navigate tars charging_station unload_zone)	[15.858]
+15.859:	(transport tars pallet_1 unload_zone shelf_1)	[8.159]
+24.019:	(navigate tars shelf_1 unload_zone)	[8.159]
+32.179:	(transport tars pallet_4 unload_zone shelf_4)	[13.598]
+45.778:	(navigate tars shelf_4 charging_station)	[8.159]
+53.938:	(recharge tars charging_station)	[10]
+63.939:	(navigate tars charging_station unload_zone)	[15.858]
+79.798:	(transport tars pallet_2 unload_zone shelf_2)	[11.213]
+91.013:	(navigate tars shelf_2 charging_station)	[11.213]
+102.227:	(navigate tars charging_station unload_zone)	[15.858]
+118.086:	(transport tars pallet_3 unload_zone shelf_3)	[11.213]
+129.3:	(navigate tars shelf_3 charging_station)	[11.213]
+-----------------------------------------------------------------
+time: 16.71
+====================================================================
+Transcription 2
+Whisper: Four new pallets at the unload zone. Move one to shelf one, one to shelf two and so forth. Drive back to the charging station afterwards.
+Mistral: instance new\_pallet\_1 pallet|instance new\_pallet\_2 pallet|instance new\_pallet\_3 pallet|instance new\_pallet\_4 pallet|predicate pallet\_at new\_pallet\_1 unload\_zone|predicate pallet\_at new\_pallet\_2 unload\_zone|predicate pallet\_at new\_pallet\_3 unload\_zone|predicate pallet\_at new\_pallet\_4 unload\_zone|predicate pallet\_not\_moved new\_pallet\_1|predicate pallet\_not\_moved new\_pallet\_2|predicate pallet\_not\_moved new\_pallet\_3|predicate pallet\_not\_moved new\_pallet\_4|goal pallet\_at new\_pallet\_1 shelf\_1|goal pallet\_at new\_pallet\_2 shelf\_2|goal pallet\_at new\_pallet\_3 shelf\_3|goal pallet\_at new\_pallet\_4 shelf\_4|goal robot\_at tars charging\_station|
+
+------------------------------ Plan -----------------------------
+0:	(navigate tars charging_station unload_zone)	[15.858]
+15.859:	(transport tars new_pallet_1 unload_zone shelf_1)	[8.159]
+24.019:	(navigate tars shelf_1 unload_zone)	[8.159]
+32.179:	(transport tars new_pallet_4 unload_zone shelf_4)	[13.598]
+45.778:	(navigate tars shelf_4 charging_station)	[8.159]
+53.938:	(recharge tars charging_station)	[10]
+63.939:	(navigate tars charging_station unload_zone)	[15.858]
+79.798:	(transport tars new_pallet_2 unload_zone shelf_2)	[11.213]
+91.013:	(navigate tars shelf_2 charging_station)	[11.213]
+102.227:	(navigate tars charging_station unload_zone)	[15.858]
+118.086:	(transport tars new_pallet_3 unload_zone shelf_3)	[11.213]
+129.3:	(navigate tars shelf_3 charging_station)	[11.213]
+-----------------------------------------------------------------
+time: 16.69
+====================================================================
+Transcription 2
+Whisper: Four new pallets at the unload zone. Move one to shelf one, one to shelf two and so forth. Drive back to the charging station afterwards.
+Mistral: instance pallet\_1 pallet|instance pallet\_2 pallet|instance pallet\_3 pallet|instance pallet\_4 pallet|predicate pallet\_at pallet\_1 unload\_zone|predicate pallet\_at pallet\_2 unload\_zone|predicate pallet\_at pallet\_3 unload\_zone|predicate pallet\_at pallet\_4 unload\_zone|predicate pallet\_not\_moved pallet\_1|predicate pallet\_not\_moved pallet\_2|predicate pallet\_not\_moved pallet\_3|predicate pallet\_not\_moved pallet\_4|goal pallet\_at pallet\_1 shelf\_1|goal pallet\_at pallet\_2 shelf\_2|goal pallet\_at pallet\_3 shelf\_3|goal pallet\_at pallet\_4 shelf\_4|goal robot\_at tars charging\_station|
+
+------------------------------ Plan -----------------------------
+0:	(navigate tars charging_station unload_zone)	[15.858]
+15.859:	(transport tars pallet_1 unload_zone shelf_1)	[8.159]
+24.019:	(navigate tars shelf_1 unload_zone)	[8.159]
+32.179:	(transport tars pallet_4 unload_zone shelf_4)	[13.598]
+45.778:	(navigate tars shelf_4 charging_station)	[8.159]
+53.938:	(recharge tars charging_station)	[10]
+63.939:	(navigate tars charging_station unload_zone)	[15.858]
+79.798:	(transport tars pallet_2 unload_zone shelf_2)	[11.213]
+91.013:	(navigate tars shelf_2 charging_station)	[11.213]
+102.227:	(navigate tars charging_station unload_zone)	[15.858]
+118.086:	(transport tars pallet_3 unload_zone shelf_3)	[11.213]
+129.3:	(navigate tars shelf_3 charging_station)	[11.213]
+-----------------------------------------------------------------
+time: 15.54
+====================================================================
+Transcription 2
+Whisper: Four new pallets at the unload zone. Move one to shelf one, one to shelf two and so forth. Drive back to the charging station afterwards.
+Mistral: instance pallet_1 new_pallet|instance pallet_2 new_pallet|instance pallet_3 new_pallet|instance pallet_4 new_pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_at pallet_2 unload_zone|predicate pallet_at pallet_3 unload_zone|predicate pallet_at pallet_4 unload_zone|predicate pallet_not_moved pallet_1|predicate pallet_not_moved pallet_2|predicate pallet_not_moved pallet_3|predicate pallet_not_moved pallet_4|goal pallet_at pallet_1 shelf_1|goal pallet_at pallet_2 shelf_2|goal pallet_at pallet_3 shelf_3|goal pallet_at pallet_4 shelf_4|goal robot_at tars charging_station|
+
+time: 15.14
+====================================================================
+Transcription 2
+Whisper: Four new pallets at the unload zone. Move one to shelf one, one to shelf two and so forth. Drive back to the charging station afterwards.
+Mistral: instance pallet_new_1 pallet|instance pallet_new_2 pallet|instance pallet_new_3 pallet|instance pallet_new_4 pallet|predicate pallet_at pallet_new_1 unload_zone|predicate pallet_at pallet_new_2 unload_zone|predicate pallet_at pallet_new_3 unload_zone|predicate pallet_at pallet_new_4 unload_zone|predicate pallet_not_moved pallet_new_1|predicate pallet_not_moved pallet_new_2|predicate pallet_not_moved pallet_new_3|predicate pallet_not_moved pallet_new_4|goal pallet_at pallet_new_1 shelf_1|goal pallet_at pallet_new_2 shelf_2|goal pallet_at pallet_new_3 shelf_3|goal pallet_at pallet_new_4 shelf_4|goal robot_at tars charging_station|
+
+------------------------------ Plan -----------------------------
+0:	(navigate tars charging_station unload_zone)	[15.858]
+15.859:	(transport tars pallet_new_1 unload_zone shelf_1)	[8.159]
+24.019:	(navigate tars shelf_1 unload_zone)	[8.159]
+32.179:	(transport tars pallet_new_4 unload_zone shelf_4)	[13.598]
+45.778:	(navigate tars shelf_4 charging_station)	[8.159]
+53.938:	(recharge tars charging_station)	[10]
+63.939:	(navigate tars charging_station unload_zone)	[15.858]
+79.798:	(transport tars pallet_new_2 unload_zone shelf_2)	[11.213]
+91.013:	(navigate tars shelf_2 charging_station)	[11.213]
+102.227:	(navigate tars charging_station unload_zone)	[15.858]
+118.086:	(transport tars pallet_new_3 unload_zone shelf_3)	[11.213]
+129.3:	(navigate tars shelf_3 charging_station)	[11.213]
+-----------------------------------------------------------------
+time: 16.45
+
+====================================================================
+Transcription 2
+Whisper: Four new pallets at the unload zone. Move one to shelf one, one to shelf two and so forth. Drive back to the charging station afterwards.
+Mistral: instance pallet_1 pallet|instance pallet_2 pallet|instance pallet_3 pallet|instance pallet_4 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_at pallet_2 unload_zone|predicate pallet_at pallet_3 unload_zone|predicate pallet_at pallet_4 unload_zone|predicate pallet_not_moved pallet_1|predicate pallet_not_moved pallet_2|predicate pallet_not_moved pallet_3|predicate pallet_not_moved pallet_4|goal pallet_at pallet_1 shelf_1|goal pallet_at pallet_2 shelf_2|goal pallet_at pallet_3 shelf_3|goal pallet_at pallet_4 shelf_4|goal robot_at tars charging_station|
+
+------------------------------ Plan -----------------------------
+0:	(navigate tars charging_station unload_zone)	[15.858]
+15.859:	(transport tars pallet_1 unload_zone shelf_1)	[8.159]
+24.019:	(navigate tars shelf_1 unload_zone)	[8.159]
+32.179:	(transport tars pallet_4 unload_zone shelf_4)	[13.598]
+45.778:	(navigate tars shelf_4 charging_station)	[8.159]
+53.938:	(recharge tars charging_station)	[10]
+63.939:	(navigate tars charging_station unload_zone)	[15.858]
+79.798:	(transport tars pallet_2 unload_zone shelf_2)	[11.213]
+91.013:	(navigate tars shelf_2 charging_station)	[11.213]
+102.227:	(navigate tars charging_station unload_zone)	[15.858]
+118.086:	(transport tars pallet_3 unload_zone shelf_3)	[11.213]
+129.3:	(navigate tars shelf_3 charging_station)	[11.213]
+-----------------------------------------------------------------
+time: 14.81
+====================================================================
+Transcription 2
+Whisper: Four new pallets at the unload zone. Move one to shelf one, one to shelf two and so forth. Drive back to the charging station afterwards.
+Mistral: instance pallet_1 pallet|instance pallet_2 pallet|instance pallet_3 pallet|instance pallet_4 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_at pallet_2 unload_zone|predicate pallet_at pallet_3 unload_zone|predicate pallet_at pallet_4 unload_zone|predicate pallet_not_moved pallet_1|predicate pallet_not_moved pallet_2|predicate pallet_not_moved pallet_3|predicate pallet_not_moved pallet_4|goal pallet_at pallet_1 shelf_1|goal pallet_at pallet_2 shelf_2|goal pallet_at pallet_3 shelf_3|goal pallet_at pallet_4 shelf_4|goal robot_at tars charging_station|
+
+------------------------------ Plan -----------------------------
+0:	(navigate tars charging_station unload_zone)	[15.858]
+15.859:	(transport tars pallet_1 unload_zone shelf_1)	[8.159]
+24.019:	(navigate tars shelf_1 unload_zone)	[8.159]
+32.179:	(transport tars pallet_4 unload_zone shelf_4)	[13.598]
+45.778:	(navigate tars shelf_4 charging_station)	[8.159]
+53.938:	(recharge tars charging_station)	[10]
+63.939:	(navigate tars charging_station unload_zone)	[15.858]
+79.798:	(transport tars pallet_2 unload_zone shelf_2)	[11.213]
+91.013:	(navigate tars shelf_2 charging_station)	[11.213]
+102.227:	(navigate tars charging_station unload_zone)	[15.858]
+118.086:	(transport tars pallet_3 unload_zone shelf_3)	[11.213]
+129.3:	(navigate tars shelf_3 charging_station)	[11.213]
+-----------------------------------------------------------------
+time: 14.77
+====================================================================
+Transcription 2
+Whisper: Four new pallets at the unload zone. Move one to shelf one, one to shelf two and so forth. Drive back to the charging station afterwards.
+Mistral: instance new\_pallet\_1 pallet|instance new\_pallet\_2 pallet|instance new\_pallet\_3 pallet|instance new\_pallet\_4 pallet|predicate pallet\_at new\_pallet\_1 unload\_zone|predicate pallet\_at new\_pallet\_2 unload\_zone|predicate pallet\_at new\_pallet\_3 unload\_zone|predicate pallet\_at new\_pallet\_4 unload\_zone|predicate pallet\_not\_moved new\_pallet\_1|predicate pallet\_not\_moved new\_pallet\_2|predicate pallet\_not\_moved new\_pallet\_3|predicate pallet\_not\_moved new\_pallet\_4|goal pallet\_at new\_pallet\_1 shelf\_1|goal pallet\_at new\_pallet\_2 shelf\_1|goal pallet\_at new\_pallet\_3 shelf\_2|goal pallet\_at new\_pallet\_4 shelf\_2|goal robot\_at tars charging\_station|
+
+------------------------------ Plan -----------------------------
+0:	(navigate tars charging_station unload_zone)	[15.858]
+15.859:	(transport tars new_pallet_1 unload_zone shelf_1)	[8.159]
+24.019:	(navigate tars shelf_1 unload_zone)	[8.159]
+32.179:	(transport tars new_pallet_2 unload_zone shelf_1)	[8.159]
+40.339:	(navigate tars shelf_1 charging_station)	[13.598]
+53.938:	(recharge tars charging_station)	[10]
+63.939:	(navigate tars charging_station unload_zone)	[15.858]
+79.798:	(transport tars new_pallet_3 unload_zone shelf_2)	[11.213]
+91.013:	(navigate tars shelf_2 charging_station)	[11.213]
+102.227:	(navigate tars charging_station unload_zone)	[15.858]
+118.086:	(transport tars new_pallet_4 unload_zone shelf_2)	[11.213]
+129.3:	(navigate tars shelf_2 charging_station)	[11.213]
+-----------------------------------------------------------------
+time: 16.37
+====================================================================
+Transcription 2
+Whisper: Four new pallets at the unload zone. Move one to shelf one, one to shelf two and so forth. Drive back to the charging station afterwards.
+Mistral: instance pallet_1 pallet|instance pallet_2 pallet|instance pallet_3 pallet|instance pallet_4 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_at pallet_2 unload_zone|predicate pallet_at pallet_3 unload_zone|predicate pallet_at pallet_4 unload_zone|predicate pallet_not_moved pallet_1|predicate pallet_not_moved pallet_2|predicate pallet_not_moved pallet_3|predicate pallet_not_moved pallet_4|goal pallet_at pallet_1 shelf_1|goal pallet_at pallet_2 shelf_2|goal pallet_at pallet_3 shelf_3|goal pallet_at pallet_4 shelf_4|goal robot_at tars charging_station|
+
+------------------------------ Plan -----------------------------
+0:	(navigate tars charging_station unload_zone)	[15.858]
+15.859:	(transport tars pallet_1 unload_zone shelf_1)	[8.159]
+24.019:	(navigate tars shelf_1 unload_zone)	[8.159]
+32.179:	(transport tars pallet_4 unload_zone shelf_4)	[13.598]
+45.778:	(navigate tars shelf_4 charging_station)	[8.159]
+53.938:	(recharge tars charging_station)	[10]
+63.939:	(navigate tars charging_station unload_zone)	[15.858]
+79.798:	(transport tars pallet_2 unload_zone shelf_2)	[11.213]
+91.013:	(navigate tars shelf_2 charging_station)	[11.213]
+102.227:	(navigate tars charging_station unload_zone)	[15.858]
+118.086:	(transport tars pallet_3 unload_zone shelf_3)	[11.213]
+129.3:	(navigate tars shelf_3 charging_station)	[11.213]
+-----------------------------------------------------------------
+time: 14.76
+
+====================================================================
+Transcription 3
+Whisper: TARS, please make your way to shelf 3.
+Mistral: goal robot_at tars shelf_3|
+
+------------------------------ Plan -----------------------------
+0:	(navigate tars charging_station shelf_3)	[11.213]
+-----------------------------------------------------------------
+time: 4.24
+
+====================================================================
+Transcription 3
+Whisper: TARS, please make your way to shelf 3.
+Mistral: goal robot_at tars shelf_3|
+
+------------------------------ Plan -----------------------------
+0:	(navigate tars charging_station shelf_3)	[11.213]
+-----------------------------------------------------------------
+time: 4.27
+
+====================================================================
+Transcription 3
+Whisper: TARS, please make your way to shelf 3.
+Mistral: goal robot_at tars shelf_3|
+
+------------------------------ Plan -----------------------------
+0:	(navigate tars charging_station shelf_3)	[11.213]
+-----------------------------------------------------------------
+time: 4.25
+
+====================================================================
+Transcription 3
+Whisper: TARS, please make your way to shelf 3.
+Mistral: goal robot_at tars shelf_3|
+
+------------------------------ Plan -----------------------------
+0:	(navigate tars charging_station shelf_3)	[11.213]
+-----------------------------------------------------------------
+time: 4.23
+
+====================================================================
+Transcription 3
+Whisper: TARS, please make your way to shelf 3.
+Mistral: goal robot_at tars shelf_3|
+
+------------------------------ Plan -----------------------------
+0:	(navigate tars charging_station shelf_3)	[11.213]
+-----------------------------------------------------------------
+time: 4.23
+
+====================================================================
+Transcription 3
+Whisper: TARS, please make your way to shelf 3.
+Mistral: 
+time: 4.21
+
+
+====================================================================
+Transcription 3
+Whisper: TARS, please make your way to shelf 3.
+Mistral: goal robot_at tars shelf_3|
+
+------------------------------ Plan -----------------------------
+0:	(navigate tars charging_station shelf_3)	[11.213]
+-----------------------------------------------------------------
+time: 4.24
+
+====================================================================
+Transcription 3
+Whisper: TARS, please make your way to shelf 3.
+Mistral: goal robot_at tars shelf_3|
+
+------------------------------ Plan -----------------------------
+0:	(navigate tars charging_station shelf_3)	[11.213]
+-----------------------------------------------------------------
+time: 4.24
+====================================================================
+Transcription 3
+Whisper: TARS, please make your way to shelf 3.
+Mistral: goal robot_at tars shelf\_3|
+
+------------------------------ Plan -----------------------------
+0:	(navigate tars charging_station shelf_3)	[11.213]
+-----------------------------------------------------------------
+time: 4.31
+====================================================================
+Transcription 3
+Whisper: TARS, please make your way to shelf 3.
+Mistral: goal robot_at tars shelf_3|
+
+------------------------------ Plan -----------------------------
+0:	(navigate tars charging_station shelf_3)	[11.213]
+-----------------------------------------------------------------
+time: 4.22
+
+====================================================================
+Transcription 4
+Whisper: Move pallet 3 from shelf 2 to shelf 1. The two pallets in the unload zone should be placed in shelf 4.
+Mistral: instance pallet_3 pallet|predicate pallet_at pallet_3 shelf_2|predicate pallet_not_moved pallet_3|goal pallet_at pallet_3 shelf_1|instance pallet_x pallet|instance pallet_y pallet|predicate pallet_at pallet_x unload_zone|predicate pallet_at pallet_y unload_zone|goal pallet_at pallet_x shelf_4|goal pallet_at pallet_y shelf_4|
+
+time: 12.04
+
+====================================================================
+Transcription 4
+Whisper: Move pallet 3 from shelf 2 to shelf 1. The two pallets in the unload zone should be placed in shelf 4.
+Mistral: instance pallet_3 pallet|predicate pallet_at pallet_3 shelf_2|predicate pallet_not_moved pallet_3|goal pallet_at pallet_3 shelf_1|instance pallet_1 pallet|instance pallet_2 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_1|predicate pallet_not_moved pallet_2|goal pallet_at pallet_1 shelf_4|goal pallet_at pallet_2 shelf_4|
+
+time: 11.53
+====================================================================
+Transcription 4
+Whisper: Move pallet 3 from shelf 2 to shelf 1. The two pallets in the unload zone should be placed in shelf 4.
+Mistral: instance pallet_3 pallet|predicate pallet_at pallet_3 shelf_2|predicate pallet_moved_from shelf_2|goal pallet_at pallet_3 shelf_1|instance pallet_1 pallet|instance pallet_2 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_1|predicate pallet_not_moved pallet_2|goal pallet_at pallet_1 shelf_4|goal pallet_at pallet_2 shelf_4|
+
+time: 11.47
+====================================================================
+Transcription 4
+Whisper: Move pallet 3 from shelf 2 to shelf 1. The two pallets in the unload zone should be placed in shelf 4.
+Mistral: instance pallet_3 pallet|predicate pallet_at pallet_3 shelf_2|goal pallet_at pallet_3 shelf_1|instance pallet_1 pallet|instance pallet_2 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_1|predicate pallet_not_moved pallet_2|goal pallet_at pallet_1 shelf_4|goal pallet_at pallet_2 shelf_4|
+
+time: 10.79
+====================================================================
+Transcription 4
+Whisper: Move pallet 3 from shelf 2 to shelf 1. The two pallets in the unload zone should be placed in shelf 4.
+Mistral: instance pallet_3 pallet|predicate pallet_at pallet_3 shelf_2|predicate pallet_moved pallet_3|goal pallet_at pallet_3 shelf_1|instance pallet_1 pallet|instance pallet_2 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_1|predicate pallet_not_moved pallet_2|goal pallet_at pallet_1 shelf_4|goal pallet_at pallet_2 shelf_4|
+
+time: 11.44
+
+
+====================================================================
+Transcription 4
+Whisper: Move pallet 3 from shelf 2 to shelf 1. The two pallets in the unload zone should be placed in shelf 4.
+Mistral: instance pallet_3 pallet|predicate pallet_at pallet_3 shelf_2|predicate pallet_not_moved pallet_3|goal pallet_at pallet_3 shelf_1|instance pallet_x pallet|instance pallet_y pallet|predicate pallet_at pallet_x unload_zone|predicate pallet_at pallet_y unload_zone|goal pallet_at pallet_x shelf_4|goal pallet_at pallet_y shelf_4|goal robot_at tars working\_zone|
+
+time: 12.38
+====================================================================
+Transcription 4
+Whisper: Move pallet 3 from shelf 2 to shelf 1. The two pallets in the unload zone should be placed in shelf 4.
+Mistral: instance pallet_3 pallet|predicate pallet_at pallet_3 shelf_2|goal pallet_at pallet_3 shelf_1|instance pallet\_1 pallet|instance pallet\_2 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_at pallet_2 unload_zone|goal pallet_at pallet_1 shelf_4|goal pallet_at pallet_2 shelf_4|
+
+time: 9.45
+
+====================================================================
+Transcription 4
+Whisper: Move pallet 3 from shelf 2 to shelf 1. The two pallets in the unload zone should be placed in shelf 4.
+Mistral: instance pallet_3 pallet|predicate pallet_at pallet_3 shelf_2|predicate pallet_not_moved pallet_3|goal pallet_at pallet_3 shelf_1|instance pallet_1 pallet|instance pallet_2 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_at pallet_2 unload_zone|goal pallet_at pallet_1 shelf_4|goal pallet_at pallet_2 shelf_4|
+
+time: 10.54
+====================================================================
+Transcription 4
+Whisper: Move pallet 3 from shelf 2 to shelf 1. The two pallets in the unload zone should be placed in shelf 4.
+Mistral: instance pallet_3 pallet|predicate pallet_at pallet_3 shelf_2|goal pallet_at pallet_3 shelf_1|instance pallet_p1 pallet|instance pallet_p2 pallet|predicate pallet_at pallet_p1 unload_zone|predicate pallet_at pallet_p2 unload_zone|predicate pallet_not_moved pallet_p1|predicate pallet_not_moved pallet_p2|goal pallet_at pallet_p1 shelf_4|goal pallet_at pallet_p2 shelf_4|
+
+time: 11.64
+====================================================================
+Transcription 4
+Whisper: Move pallet 3 from shelf 2 to shelf 1. The two pallets in the unload zone should be placed in shelf 4.
+Mistral: instance pallet_3 pallet|predicate pallet_at pallet_3 shelf_2|predicate pallet_not_moved pallet_3|goal pallet_at pallet_3 shelf_1|instance pallet_1 pallet|instance pallet_2 pallet|predicate pallet_at pallet_1 unload_zone|predicate pallet_at pallet_2 unload_zone|predicate pallet_not_moved pallet_1|predicate pallet_not_moved pallet_2|goal pallet_at pallet_1 shelf_4|goal pallet_at pallet_2 shelf_4|
+
+time: 11.99
