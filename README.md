@@ -102,6 +102,7 @@ docker container list
     ros2 run semrebot2_task_controller nav2_sim_node
     ```
 3. To use one of the four audio samples, publish to the `/speech` topic the audio file you wish to test. Audio file 3 contain logical inconsistencies not possible to solve!
+4. 
     Terminal 4:
     ```bash
     ros2 topic pub --once /speech std_msgs/msg/Int8 "{data: x}"
