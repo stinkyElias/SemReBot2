@@ -102,6 +102,6 @@ def generate_launch_description():
     ld.add_action(recharge_cmd)
     ld.add_action(transport_cmd)
     # ld.add_action(task_controller_cmd)
-    ld.add_action(nav_cmd)
+    # ld.add_action(nav_cmd)
 
     return ld
