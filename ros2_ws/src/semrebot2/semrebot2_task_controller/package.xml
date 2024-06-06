@@ -3,7 +3,7 @@
 <package format="3">
   <name>semrebot2_task_controller</name>
   <version>1.0.0</version>
-  <description>Package handling everything with PlanSys2.</description>
+  <description>Package for using PlanSys2's client API</description>
   <maintainer email="elias.kalland@outlook.com">Elias Helle Kalland</maintainer>
   <license>Apache-2.0</license>
 

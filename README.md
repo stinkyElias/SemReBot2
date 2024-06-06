@@ -1,5 +1,9 @@
 # ROS 2 Semantic Reasoning in Robots
 
+## How to use (Ubuntu)
+- 1. Clone the repo to 
+        git clone 
+
 ## How to use
 
 Terminal 1: ros2 launch semrebot2_bringup bringup.launch.py

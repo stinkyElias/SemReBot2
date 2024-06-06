@@ -130,9 +130,13 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 WORKDIR /home/stinky/ros2_ws
 RUN mkdir -p /home/stinky/ros2_ws/src \
+    # ================================================================================================
+    # When dependency issues are fixed, uncomment navigation2 and comment out navigation2_msgs_only
+    # and geographic_info
+    # ================================================================================================
     # && git clone https://github.com/ros-planning/navigation2.git --branch main ./src/navigation2 \
     && git clone https://github.com/fmrico/navigation2.git --branch nav2_msgs_only ./src/navigation2 \
-    && git clone https://github.com/ros-geographic-info/geographic_info.git --branch ros2 ./src/geographic_info \
+    && git clone https://github.com/ros-geographic-info/geographic_info.git --branch ros2 ./src/geographic_info \ 
     && git clone https://github.com/BehaviorTree/BehaviorTree.CPP.git --branch master ./src/behaviortree_cpp \
     && apt-get update && apt-get upgrade -y --no-install-recommends \
     && rosdep update \
@@ -148,10 +152,15 @@ FROM plansys2-depends AS plansys2
 ENV DEBIAN_FRONTEND=noninteractive
 WORKDIR /home/stinky/ros2_ws
 RUN git clone https://github.com/PlanSys2/ros2_planning_system.git -b rolling ./src/plansys2 \
+    # ================================================================================================
+    # Uncomment system examples package if you want to use the PlanSys2 examples
+    # ================================================================================================
     # && git clone https://github.com/PlanSys2/ros2_planning_system_examples.git -b rolling ./src/plansys2_examples \
     && git clone https://github.com/fmrico/cascade_lifecycle.git -b rolling ./src/cascade_lifecycle \
     && git clone https://github.com/fmrico/popf.git -b rolling-devel ./src/popf \
-    # testing dependencies
+    # ================================================================================================
+    # When dependency issues are fixed, comment out rcl_interfaces and test_interface_files
+    # ================================================================================================
     && git clone https://github.com/ros2/rcl_interfaces.git -b rolling ./src/rcl_interfaces \
     && git clone https://github.com/ros2/test_interface_files.git -b rolling ./src/test_interface_files \
     && apt-get update && apt-get upgrade -y --no-install-recommends \
@@ -197,6 +206,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 ENV DEBIAN_FRONTEND=
 
+# Python packages for Hugging Face Transformers, flash attention and quantisation
 FROM cuda AS transformers
 
 ENV DEBIAN_FRONTEND=noninteractive
@@ -234,6 +244,7 @@ RUN usermod -a -G audio stinky
 RUN chown -R stinky:stinky /home/stinky
 USER stinky
 
+# Enable Temporal Fast Downward planner plugin for PlanSys2
 FROM mic AS tdf
 
 ENV DEBIAN_FRONTEND=noninteractive
