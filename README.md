@@ -1,4 +1,7 @@
 # ROS 2 Semantic Reasoning in Robots
+This is the repo for SemReBot2, a ROS2 package combining Natural Language Processing, AI planning and robotics to enable semantic reasoning in robots. Specifically, it transforms natural language speech to executable robot actions enabling the possibility to command robots to do what you want. SemReBot2 uses Hugging Face's `transformers`, OpenAI's `Whisper` for automatic speech recognition, Mistral.AI's `Mistral 7B Instruct` in 4-bit precision as language model and `PlanSys2` (https://github.com/PlanSys2/ros2_planning_system) for AI planning and execution of PDDL plans with behaviour trees.
+
+Video demo: https://www.youtube.com/watch?v=13fVo1_BrCg
 
 ## Requirements
 - Dedicated GPU with min. 9 GB memory
@@ -51,7 +54,7 @@
     ./run.sh
     ```
 
-7. Build the ROS2 packages inside the container. Remember to source the workspace aftrwards
+7. Build the ROS2 packages inside the container. Remember to source the workspace afterwards
     Terminal 1:
     ```bash
     ./env.sh
@@ -88,7 +91,6 @@ docker container list
     ```
 ## Test run
 1. With all four terminals running, bring up SemReBot2, Task controller node and Nav2 sim node
-   
     Terminal 1:
     ```bash
     ros2 launch semrebot2_bringup bringup.launch.py
@@ -101,8 +103,7 @@ docker container list
     ```bash
     ros2 run semrebot2_task_controller nav2_sim_node
     ```
-3. To use one of the four audio samples, publish to the `/speech` topic the audio file you wish to test. Audio file 3 contain logical inconsistencies not possible to solve!
-4. 
+2. To use one of the four audio samples, publish to the `/speech` topic the audio file you wish to test. Audio file 3 contain logical inconsistencies not possible to solve!
     Terminal 4:
     ```bash
     ros2 topic pub --once /speech std_msgs/msg/Int8 "{data: x}"
