@@ -21,17 +21,21 @@ Video demo: https://www.youtube.com/watch?v=13fVo1_BrCg
     ```bash
     pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
     ```
-2. Install `transformers`
+2. Install `transformers` and `bitsandbytes`
     ```bash
-    pip install transformers
+    pip install transformers bitsandbytes
     ```
 
-3. Clone repo to home directory (ssh)
+3. Clone repo to home directory
     ```bash
     git clone git@github.com:stinkyElias/SemReBot2.git
     ```
 
 4. Download Whisper large with flash attention and Mistral 7B Instruct in 4-bit precision by running the `download_models.py` script. The default location is `~/semrebot2_models`, but this can be set by adding a user-specific path as command line argument. _The models take up ~18 GB of storage_
+
+    ```bash
+    cd SemReBot2
+    ```
 
     Default location:
     ```bash

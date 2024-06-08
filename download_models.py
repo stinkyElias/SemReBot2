@@ -1,15 +1,26 @@
 '''
-This script downloads and initializes models for automatic speech recognition and language modeling.
-To run, specify the directory where the models should be saved as an argument (string!).
-If no argument is provided, the models will be saved to the default directory '~/semrebot2_models'.
+Usage:
+    python3 download_models.py [hugging_face_access_token] [output_directory]
+
+Arguments:
+    hugging_face_access_token (str): The access token for the Hugging Face Hub to download models.
+    output_directory (str, optional): The directory where the models should be saved. If not provided, the models will be saved to the default directory '~/semrebot2_models'.
+
+Example:
+    python3 download_models.py "hf_huFHBXLKBugrfBHDK0t923d1" "relative/path/to/models"
+
 '''
 
 import os
 import sys
+from huggingface_hub import login
+
+# Log in to the Hugging Face Hub
+login(token=str(sys.argv[1]))
 
 try:
     # Try to get the user-specified directory
-    output_dir = os.path.expanduser(os.path.join('~/', str(sys.argv[1])))
+    output_dir = os.path.expanduser(os.path.join('~/', str(sys.argv[2])))
 except IndexError:
     # If no argument is provided, use the default directory
     output_dir = os.path.expanduser('~/semrebot2_models')
