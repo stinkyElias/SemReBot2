@@ -21,9 +21,9 @@ Video demo: https://www.youtube.com/watch?v=13fVo1_BrCg
     ```bash
     pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
     ```
-2. Install `transformers` and `bitsandbytes`
+2. Install `transformers`, `bitsandbytes` and `huggingface_hub`
     ```bash
-    pip install transformers bitsandbytes
+    pip install transformers bitsandbytes huggingface_hub
     ```
 
 3. Clone repo to home directory
@@ -31,34 +31,42 @@ Video demo: https://www.youtube.com/watch?v=13fVo1_BrCg
     git clone git@github.com:stinkyElias/SemReBot2.git
     ```
 
-4. Download Whisper large with flash attention and Mistral 7B Instruct in 4-bit precision by running the `download_models.py` script. The default location is `~/semrebot2_models`, but this can be set by adding a user-specific path as command line argument. _The models take up ~18 GB of storage_
+5. Create a user on Hugging Face: https://huggingface.co/.
 
-    ```bash
-    cd SemReBot2
-    ```
+6. Generate an access token by following this tutorial: https://huggingface.co/docs/hub/en/security-tokens
+
+7. Agree to Mistral AI's terms to access Mistral 7B Instruct v0.2: https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2
+
+8. Authenticate to the hub (scroll down to "Authentication" or check the image below): https://huggingface.co/docs/huggingface_hub/quick-start 
+
+![image.png](attachment:image.png)
+
+8. Download Whisper large with flash attention and Mistral 7B Instruct in 4-bit precision by running the `download_models.py` script. Provide your HF token as argument.
+The default location is `~/semrebot2_models`, but this can be set by adding a user-specific path as command line argument. _The models take up ~18 GB of storage_
 
     Default location:
     ```bash
-    python3 download_models.py
+    python3 download_models.py "hugging_face_access_token"
     ```
     User-specified location:
     ```bash
-    python3 download_models.py "relative/path/to/location"
+    python3 download_models.py "hugging_face_access_token" "relative/path/to/location"
     ```
 
-5. Pull Docker image from Docker Hub
+9. Pull Docker image from Docker Hub
     ```bash
     docker pull stinkyelias/rolling:whisper
     ```
 
-6. To start the container, run `run.sh` bash script in terminal 1
+10. To start the container, run `run.sh` bash script in terminal 1
     
     Terminal 1:
     ```bash
+    cd SemReBot2
     ./run.sh
     ```
 
-7. Build the ROS2 packages inside the container. Remember to source the workspace afterwards
+11. Build the ROS2 packages inside the container. Remember to source the workspace afterwards
     Terminal 1:
     ```bash
     ./env.sh
@@ -67,7 +75,7 @@ Video demo: https://www.youtube.com/watch?v=13fVo1_BrCg
     source install/setup.bash
     ```
 
-This setup of SemReBot2 requires four terminal windows. After step 7, start three new terminals. You can easily attach to the running container by first retrieving the container name.
+This setup of SemReBot2 requires four terminal windows. After step 11, start three new terminals. You can easily attach to the running container by first retrieving the container name.
 
 Terminal 2:
 ```bash
@@ -75,7 +83,7 @@ docker container list
 ```
 `>>> some_container_name`
 
-8. Attach three terminals to the running container
+12. Attach three terminals to the running container
     
     Terminal 2:
     ```bash
