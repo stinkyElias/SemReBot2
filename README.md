@@ -39,7 +39,7 @@ Video demo: https://www.youtube.com/watch?v=13fVo1_BrCg
 
 8. Authenticate to the hub (scroll down to "Authentication" or check the image below): https://huggingface.co/docs/huggingface_hub/quick-start 
 
-![image.png](attachment:image.png)
+![Screenshot from 2024-06-08 15-07-05](https://github.com/stinkyElias/SemReBot2/assets/65676062/ec4672ed-4c50-4b7a-8a56-a289cfdcde6c)
 
 8. Download Whisper large with flash attention and Mistral 7B Instruct in 4-bit precision by running the `download_models.py` script. Provide your HF token as argument.
 The default location is `~/semrebot2_models`, but this can be set by adding a user-specific path as command line argument. _The models take up ~18 GB of storage_
